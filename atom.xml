@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-01-12T04:01:58.954Z</updated>
+  <updated>2019-01-12T04:17:28.055Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/"/>
     <id>https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-配置博客/</id>
     <published>2019-01-12T04:00:01.000Z</published>
-    <updated>2019-01-12T04:01:58.954Z</updated>
+    <updated>2019-01-12T04:17:28.055Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天配置了一下博客。</p><ol><li>本地仅维护markdown文件</li><li>通过git push，将markdown文件push到腾讯云服务器</li><li>云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布</li></ol><p>最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天配置了一下博客。</p><ol><li>本地仅维护markdown文件</li><li>通过git push，将markdown文件push到腾讯云服务器</li><li>云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布</li></ol><p>最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。</p><p>test<br>test<br>test<br>test</p>]]></content>
     
     <summary type="html">
     

@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[配置博客]]></title>
     <url>%2F2019%2F01%2F12%2F2019-01-2019-01-12-%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[今天配置了一下博客。 本地仅维护markdown文件 通过git push，将markdown文件push到腾讯云服务器 云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布 最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。]]></content>
+    <content type="text"><![CDATA[今天配置了一下博客。 本地仅维护markdown文件 通过git push，将markdown文件push到腾讯云服务器 云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布 最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。 testtesttesttest]]></content>
       <categories>
         <category>test</category>
       </categories>
