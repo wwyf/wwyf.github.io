@@ -531,12 +531,21 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不作死就不会死，不应该，不应该把视频都放到git仓库中。</p>
-<p>下面知乎中的命令给了我很大的帮助。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter <span class="string">'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" '</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">git push origin --force --all</span><br><span class="line"></span><br><span class="line">git push origin --force --tags</span><br><span class="line"></span><br><span class="line">git <span class="keyword">for</span>-each-ref --format=<span class="string">'delete %(refname)'</span> refs/original | git update-ref --stdin</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br><span class="line"></span><br><span class="line">git count-objects -v</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.zhihu.com/question/54419234" target="_blank" rel="noopener">https://www.zhihu.com/question/54419234</a></p>
-
+            <p>
+              不作死就不会死，不应该，不应该把视频都放到git仓库中。
+下面知乎中的命令给了我很大的帮助。
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" ' --prune-em
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/19/2018-05-2018-05-19-git删除大文件/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -744,12 +753,23 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。</p>
-<p><a href="http://www.cnblogs.com/xiongpq/p/3384759.html" target="_blank" rel="noopener">http://www.cnblogs.com/xiongpq/p/3384759.html</a></p>
-<p>这个博客给了我很大的帮助。</p>
-<p>注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。</p>
+            <p>
+              今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。
+http://www.cnblogs.com/xiongpq/p/3384759.html
+这个博客给了我很大的帮助。
+注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。
 
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -957,41 +977,31 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>中心控制的路由选择的实现</p>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><ol>
-<li>每一个路由器维护一个线程，这个线程用来与中心服务器维持连接<ol>
-<li>该线程定期发送本地链路信息给中心服务器</li>
-<li>定期从中心服务器获取路由表，并用于替换本地路由表</li>
-</ol>
-</li>
-</ol>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><ol>
-<li>服务器对每一个路由器的连接建立一个定时器</li>
-<li>服务器上<ol>
-<li>主线程：定期从队列中取出链路信息，并更新路由表<ol>
-<li>链路信息：包括链路的存在，费用，以及某路由的下线</li>
-<li>注意：主线程需要维护每一个路由器的路由表<ol>
-<li>有一个重点：<strong>邻接矩阵-&gt;某路由器路由表这个过程需要好好实现</strong></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>其他线程：<ol>
-<li>维护一个与路由器的连接</li>
-<li>定期发送路由表</li>
-<li>将接收到的链路状态放入队列中供主线程使用用来更新路由表</li>
-<li>如果一段时间没有接收到信息，将该路由器已下线的信息放入队列中</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="如何初始化路由器"><a href="#如何初始化路由器" class="headerlink" title="如何初始化路由器"></a>如何初始化路由器</h2><ol>
-<li>配置文件里写好controller的ip</li>
-<li>就行啦</li>
-</ol>
+            <p>
+              中心控制的路由选择的实现
+路由器
+每一个路由器维护一个线程，这个线程用来与中心服务器维持连接
+该线程定期发送本地链路信息给中心服务器
+定期从中心服务器获取路由表，并用于替换本地路由表
 
+
+
+服务器
+服务器对每一个路由器的连接建立一个定时器
+服务器上
+主线程：定期从队列中取出链路信息，并更新路由表
+链
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1199,25 +1209,21 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OSPF协议</p>
-<p><a href="http://www.cnblogs.com/sddai/p/5399482.html" target="_blank" rel="noopener">http://www.cnblogs.com/sddai/p/5399482.html</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88</a></p>
-<p><a href="https://www.qingsword.com/qing/596.html" target="_blank" rel="noopener">https://www.qingsword.com/qing/596.html</a></p>
-<p>线程1：维护与多个路由器之间的连接，并得知最新本地链路情况</p>
-<p>线程2：接受包，判断是否需要转发和广播</p>
-<p>维护</p>
-<pre><code>1. 与广播有关的信息，防止风暴
-2. 网络拓扑数据库
-</code></pre><h2 id="报文类型"><a href="#报文类型" class="headerlink" title="报文类型"></a>报文类型</h2><ol>
-<li>链路状态更新报文,广播</li>
-<li>keepalive报文</li>
-<li><p><del>全局拓扑数据交换报文</del>？</p>
-<h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2></li>
-</ol>
-<p>拓扑数据库</p>
-<p><strong>1.类型1:Router LSA</strong>：每个路由器都将产生Router LSA，这种LSA只在本区域内传播，描述了路由器所有的链路和接口，状态和开销.</p>
-
+            <p>
+              OSPF协议
+http://www.cnblogs.com/sddai/p/5399482.html
+https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/13/2018-05-2018-05-13-OSPF协议/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1858,162 +1864,23 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>《计算机网络》第五章 链路层笔记</p>
-<h1 id="链路层概述"><a href="#链路层概述" class="headerlink" title="链路层概述"></a>链路层概述</h1><h2 id="链路层提供的服务"><a href="#链路层提供的服务" class="headerlink" title="链路层提供的服务"></a>链路层提供的服务</h2><p>任一链路层的基本服务都是将数据报通过单一通信链路从一个节点移动到相邻接点。不过其提供的服务细节随着链路层协议的不同而变化。</p>
-<ol>
-<li>成帧：链路层帧</li>
-<li>链路接入：媒体访问控制协议（Medium Access Control）规定了帧在链路上传输的规则.TODO</li>
-<li>可靠交付（可选）</li>
-<li>差错检测和纠正</li>
-</ol>
-<h2 id="链路层在哪里实现？"><a href="#链路层在哪里实现？" class="headerlink" title="链路层在哪里实现？"></a>链路层在哪里实现？</h2><p><img src="1525693183164.png" alt="1525693183164"></p>
-<p>链路层是软件和硬件交接的地方。</p>
-<h1 id="差错检测和纠正技术"><a href="#差错检测和纠正技术" class="headerlink" title="差错检测和纠正技术"></a>差错检测和纠正技术</h1><p><img src="1525693317553.png" alt="1525693317553"></p>
-<p>接收方的挑战是在：它只收到$D’$和$EDC’$的情况下，确定$D’$是否与初始的$D$相同.</p>
-<p>差错检测和纠正技术使接收方有时但并总是检测出已经出现的比特差错,但还是可能会有未检出比特差错.</p>
-<h2 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h2><ol>
-<li>单个奇偶校验位</li>
-<li>二维奇偶校验TODO!</li>
-</ol>
-<p>TODO:前向纠错的优点</p>
-<h2 id="检验和方法"><a href="#检验和方法" class="headerlink" title="检验和方法"></a>检验和方法</h2><p>因特网检验和(用于运输层)</p>
-<h2 id="循环冗余检测"><a href="#循环冗余检测" class="headerlink" title="循环冗余检测"></a>循环冗余检测</h2><p>CRC编码的关键思想:发送方和接收方需要协商长度$r+1$的比特$G$(即生成多项式).对于一个给定的数据段$D$</p>
-<ol>
-<li><strong>发送方</strong>要选择$r$个附加比特$R$,并将它们附加到D上,使得到的$d+r$比特用<strong>模2算术</strong>恰好能被$G$整除.</li>
-<li><strong>接收方</strong>用$G$去除接收到的$d+r$比特,如果余数为非零,就是出了差错,否则数据正确而被接受.</li>
-</ol>
-<p>关键问题:发送方需要确定$R$,如何确定?</p>
-<p>$$\displaystyle R = remainder \frac{D \cdot 2^r}{G}$$</p>
-<p>注意都是<strong>模2算术</strong></p>
-<h1 id="多路访问链路和协议"><a href="#多路访问链路和协议" class="headerlink" title="多路访问链路和协议"></a>多路访问链路和协议</h1><p>有两种链路: 点对点链路,广播链路</p>
-<p>多路访问协议的两个理想特性</p>
-<ol>
-<li>当只有一个节点活跃时,该活跃节点具有$R$ bps的吞吐量</li>
-<li>当有$M$个节点活跃时每个活跃节点的吞吐量接近$R/M$ bps</li>
-</ol>
-<p>对于广播链路,需要解决<strong>多路访问</strong>问题.</p>
-<ol>
-<li>通过多路访问协议规范多个节点在共享的广播信道上的传输行为</li>
-<li><strong>碰撞</strong>问题的解决.</li>
-</ol>
-<h2 id="信道划分协议"><a href="#信道划分协议" class="headerlink" title="信道划分协议"></a>信道划分协议</h2><ol>
-<li>时分多路复用(TDM)<ol>
-<li>时间帧,时隙</li>
-</ol>
-</li>
-<li>频分多路复用(FDM)</li>
-<li>码分多址(CDMA)</li>
-</ol>
-<h2 id="随机接入协议"><a href="#随机接入协议" class="headerlink" title="随机接入协议"></a>随机接入协议</h2><p>在随机接入协议中,一个传输节点总是以信道的全部速率(即$R$ bps)进行发送.当有碰撞时,设计碰撞的每个节点反复地重发它的帧,到该帧无碰撞为止.当一个节点经历一次碰撞时,它不必立即重发该帧,相反他再重发该帧之前等待一个随机时延.</p>
-<h3 id="时隙ALOHA"><a href="#时隙ALOHA" class="headerlink" title="时隙ALOHA"></a>时隙ALOHA</h3><p>书P299-P300</p>
-<p>下面放一些较关键的内容.</p>
-<h4 id="假设"><a href="#假设" class="headerlink" title="假设:"></a>假设:</h4><p>重点在于:节点是同步的,每个节点都知道时隙何时开始.</p>
-<h4 id="节点的行为"><a href="#节点的行为" class="headerlink" title="节点的行为"></a>节点的行为</h4><ol>
-<li>当节点有一个新帧需要发送时,它等到下一个时隙开始并在该时隙传输整个帧</li>
-<li>如果没有碰撞,该节点成功地传输它的帧从而不需要考虑重传</li>
-<li>如果有碰撞,会在时隙结束前检测到碰撞,并在后续的每个时隙中以概率$P$重传该帧,直到该帧无碰撞地传输出去.</li>
-</ol>
-<h4 id="效率的计算-注意思考推导过程"><a href="#效率的计算-注意思考推导过程" class="headerlink" title="效率的计算(注意思考推导过程)"></a>效率的计算(注意思考推导过程)</h4><p>对于有N个活跃节点的局域网中:</p>
-<ol>
-<li>计算任意一个节点成功传送的概率:$p*(1-p)^{N-1}$</li>
-<li>最大效率为:$Np*(1-p)^{N-1}$</li>
-<li>$N$取极限,最大效率为$\frac{1}{e}$,如何证明就完全是数学问题了.</li>
-</ol>
-<p><img src="1525772665125.png" alt="1525772665125"></p>
-<h3 id="纯ALOHA"><a href="#纯ALOHA" class="headerlink" title="纯ALOHA"></a>纯ALOHA</h3><h4 id="与时隙ALOHA不同在于"><a href="#与时隙ALOHA不同在于" class="headerlink" title="与时隙ALOHA不同在于"></a>与时隙ALOHA不同在于</h4><p>非时隙的,完全分散不同步的</p>
-<h4 id="最大效率的计算"><a href="#最大效率的计算" class="headerlink" title="最大效率的计算"></a>最大效率的计算</h4><p>P301</p>
-<h3 id="载波侦听多路访问-CSMA"><a href="#载波侦听多路访问-CSMA" class="headerlink" title="载波侦听多路访问(CSMA)"></a>载波侦听多路访问(CSMA)</h3><p>和下面的放在一起了</p>
-<h3 id="具有碰撞检测的载波侦听多路访问-CSMA-CD"><a href="#具有碰撞检测的载波侦听多路访问-CSMA-CD" class="headerlink" title="具有碰撞检测的载波侦听多路访问(CSMA/CD)"></a>具有碰撞检测的载波侦听多路访问(CSMA/CD)</h3><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ol>
-<li>载波侦听:如果节点检测到信道有来自其他节点的帧正在传送,则等待一段时间在检测.</li>
-<li>碰撞检测:节点在进行传输的时候仍然保持侦听,若检测到其他节点传输帧,则停止传输,等待随机时间量后再传输<ol>
-<li>等待随机时间量的确定:<strong>二进制指数后退</strong></li>
-</ol>
-</li>
-</ol>
-<h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><ol>
-<li><p>信道传播时延:信号从一个节点传播到另一个节点所花费的时间</p>
-<ol>
-<li>该传播时延越长,载波侦听节点不能真听到网络中另一个节点已经开始传输的机会就越大</li>
-</ol>
-</li>
-<li><p>CSMA/CD效率:当有大量的活跃节点,且每个节点都有大量的帧需要发送时,帧在信道中无碰撞地传输的那部分时间在长期运行时间中所占的份额.TODO:</p>
-<p><img src="1525773498192.png" alt="1525773498192"></p>
-</li>
-</ol>
-<h2 id="轮流协议"><a href="#轮流协议" class="headerlink" title="轮流协议"></a>轮流协议</h2><ol>
-<li>轮询协议<ol>
-<li><strong>主节点</strong>以循环的方式轮询每个结点,告诉每个结点可以传输的帧的最大数量</li>
-</ol>
-</li>
-<li>令牌传输协议</li>
-</ol>
-<h2 id="实例-DOCSIS"><a href="#实例-DOCSIS" class="headerlink" title="实例 DOCSIS"></a>实例 DOCSIS</h2><p>TODO:</p>
-<h1 id="交换局域网"><a href="#交换局域网" class="headerlink" title="交换局域网"></a>交换局域网</h1><h2 id="链路层寻址和ARP"><a href="#链路层寻址和ARP" class="headerlink" title="链路层寻址和ARP"></a>链路层寻址和ARP</h2><h3 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h3><ol>
-<li>与局域网相连的每个接口都有一个唯一的MAC接口</li>
-<li>适配器接收到一个帧时,将检查该帧的目的MAC地址是否与它自己的MAC地址匹配,如果匹配就提取数据包向上传递,如果不匹配就丢弃.<ol>
-<li>特例是MAC广播地址:48个连续的1组成的字符串</li>
-</ol>
-</li>
-</ol>
-<h3 id="地址解析协议ARP"><a href="#地址解析协议ARP" class="headerlink" title="地址解析协议ARP"></a>地址解析协议ARP</h3><p>作用:网络层地址(如IP地址)与链路层地址(MAC地址)之间的转换</p>
-<p>书P310</p>
-<ol>
-<li>发送一个IP包的时候,需要将其封装成一个链路层帧,这时候就需要对方的MAC地址</li>
-<li>获取MAC地址<ol>
-<li>在ARP表中有对应项的时候,直接从ARP表中取</li>
-<li>ARP表没有对应项的时候,发送方构造<strong>ARP分组</strong>并使用广播MAC地址封装成链路层帧广播之,等待一个响应ARP分组,从中取得并更新ARP表</li>
-</ol>
-</li>
-</ol>
-<p>需要注意的事情</p>
-<ol>
-<li>查询ARP报文是在广播帧发送的,响应ARP报文是在一个标准帧中发送的</li>
-<li>ARP分组中具有的字段:</li>
-</ol>
-<h3 id="发送数据报到子网外"><a href="#发送数据报到子网外" class="headerlink" title="发送数据报到子网外"></a>发送数据报到子网外</h3><p>我觉得这个要自己学会分析.</p>
-<p><img src="1525701091305.png" alt="1525701091305"></p>
-<h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ol>
-<li>以太网帧结构</li>
-</ol>
-<p><img src="1525773743015.png" alt="1525773743015"></p>
-<ol>
-<li>以太网技术</li>
-</ol>
-<h2 id="链路层交换机"><a href="#链路层交换机" class="headerlink" title="链路层交换机"></a>链路层交换机</h2><p>交换机自身对于子网中的主机和路由器是<strong>透明</strong>的.</p>
-<ol>
-<li>交换机转发和过滤<ol>
-<li>借助于交换机表</li>
-</ol>
-</li>
-</ol>
-<p>当一台交换机安装配置好之后，其工作过程如下：</p>
-<ul>
-<li>收到某网段（设为A）MAC地址为X的计算机发给MAC地址为Y的计算机的数据包。交换机从而记下了MAC地址X在网段A。这称为学习（learning）。</li>
-<li>交换机还不知道MAC地址Y在哪个网段上，于是向除了A以外的所有网段转发该数据包。这称为泛洪（flooding）。</li>
-<li>MAC地址Y的计算机收到该数据包，向MAC地址X发出确认包。交换机收到该包后，从而记录下MAC地址Y所在的网段。</li>
-<li>交换机向MAC地址X转发确认包。这称为转发（forwarding）。</li>
-<li>交换机收到一个数据包，查表后发现该数据包的来源地址与目的地址属于同一网段。交换机将不处理该数据包。这称为过滤（filtering）。</li>
-<li>交换机内部的MAC地址-网段查询表的每条记录采用时间戳记录最后一次访问的时间。早于某个阈值（用户可配置）的记录被清除。这称为老化（aging）。</li>
-</ul>
-<p><a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E8%B7%AF%E4%BA%A4%E6%8F%9B%E5%99%A8" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E7%B6%B2%E8%B7%AF%E4%BA%A4%E6%8F%9B%E5%99%A8</a></p>
-<h2 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h2><p>认识到以太网帧中新添加的802.1Q标签的作用.</p>
-<p><img src="1525773991802.png" alt="1525773991802"></p>
-<h1 id="链路虚拟化"><a href="#链路虚拟化" class="headerlink" title="链路虚拟化"></a>链路虚拟化</h1><p>多协议标签交换MPLS:在基于分组交换的网络中实现的虚电路系统</p>
-<p><img src="1525774098234.png" alt="1525774098234"></p>
-<p><img src="1525774115626.png" alt="1525774115626"></p>
-<h1 id="数据中心网络"><a href="#数据中心网络" class="headerlink" title="数据中心网络"></a>数据中心网络</h1><ol>
-<li>等级拓扑<ol>
-<li><img src="1525774224832.png" alt="1525774224832"></li>
-</ol>
-</li>
-<li>全连通拓扑<ol>
-<li><img src="1525774210505.png" alt="1525774210505"></li>
-</ol>
-</li>
-</ol>
-<p><img src="1525774187107.png" alt="1525774187107"></p>
+            <p>
+              《计算机网络》第五章 链路层笔记
+链路层概述链路层提供的服务任一链路层的基本服务都是将数据报通过单一通信链路从一个节点移动到相邻接点。不过其提供的服务细节随着链路层协议的不同而变化。
 
+成帧：链路层帧
+链路接入：媒体访问控制协议（Medium Access Control）规定了帧在链路上传输的规则
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/07/2018-05-2018-05-07-第五章链路层/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2221,39 +2088,21 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Pandas-数据处理"><a href="#Pandas-数据处理" class="headerlink" title="Pandas 数据处理"></a>Pandas 数据处理</h1><p><a href="https://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook-merge" target="_blank" rel="noopener">https://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook-merge</a></p>
-<p>其实官网教程还是讲的很清楚的，下面就是放一些我一开始没有理解的特别好的地方，以提醒自己。</p>
-<p>没理解好应该是因为我没有学过数据库吧emmmm。。。。<img src="008D282B.png" alt="img"></p>
-<h2 id="表格的合并merge-方法"><a href="#表格的合并merge-方法" class="headerlink" title="表格的合并merge()方法"></a>表格的合并<code>merge()方法</code></h2><p>关于表格的合并这一块，一开始理解了蛮久才懂。下面先放一个例子吧。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(data=&#123;<span class="string">'Area'</span> : [<span class="string">'A'</span>] * <span class="number">5</span> + [<span class="string">'C'</span>] * <span class="number">2</span>,</span><br><span class="line">                         <span class="string">'Bins'</span> : [<span class="number">110</span>] * <span class="number">2</span> + [<span class="number">160</span>] * <span class="number">3</span> + [<span class="number">40</span>] * <span class="number">2</span>,</span><br><span class="line">                         <span class="string">'Test_0'</span> : [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">                         <span class="string">'Data'</span> : np.random.randn(<span class="number">7</span>)&#125;)</span><br><span class="line">print(df)</span><br><span class="line">df[<span class="string">'Test_1'</span>] = df[<span class="string">'Test_0'</span>] - <span class="number">1</span></span><br><span class="line">print(df)</span><br><span class="line"><span class="comment"># df2 = pd.merge(df, df, left_on=['Test_0'], right_on=['Test_1'],suffixes=('_L','_R'))</span></span><br><span class="line">df2 = pd.merge(df, df, left_on=[<span class="string">'Bins'</span>, <span class="string">'Area'</span>,<span class="string">'Test_0'</span>], right_on=[<span class="string">'Bins'</span>, <span class="string">'Area'</span>,<span class="string">'Test_1'</span>],suffixes=(<span class="string">'_L'</span>,<span class="string">'_R'</span>))</span><br><span class="line">print(df2)</span><br></pre></td></tr></table></figure>
-<p>通过理解这一个例子，我总算是明白了<code>on : Columns (names) to join on.</code>的意思，下面放分析过程吧。</p>
-<p><img src="1525577843883.png" alt="1525577843883"></p>
-<p>第一个print，第二个print，相必都非常好理解。</p>
-<p>对于第三个print，为什么输出了这样的表格呢？要理解这个，必须明白理解<code>on参数</code>的意思。</p>
-<p>上面使用了left_on 和 right_on两个参数，指明了需要合并的列。</p>
-<ol>
-<li>用这些列来合并两个表格，那其他的列便会作为需要合并的数据，分别在列名后加上后缀，将这些数据放到对应的index处。<ol>
-<li>问题在于：pandas如何知道这个数据该放到哪一行？</li>
-</ol>
-</li>
-<li>如果将这个合并过程，看做重新创建一个表格，我们可以从确定表格的两个关键：索引，数据分别分析<ol>
-<li>合并后新的表格，每一个项应该准确的对应一个索引，这个索引的创建由<code>on</code>参数决定。上面中的left_on,right_on,其实我们可以这样想：在默认的inner模式下， 当right_on这些列中的元素与left_on这些列中的元素都相等，这些列中的元素便可以作为一个索引</li>
-<li>那么这个索引对应的数据有哪些呢？数据从不做索引的列中取得。<ol>
-<li>使用这个索引，在原来的left的表中不做索引的列中找到对应的项，加到新表格该项的后面去</li>
-<li>在right表中同理。</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<p>我觉得写得好像有点难理解？</p>
-<blockquote>
-<p>on参数决定的是在合并过程中作为索引找到对应数据的项</p>
-</blockquote>
-<p>最后一句话总结大概是这样吧，我总算是理解了on参数的意义。</p>
-<p>建议多练习，多去改变参数试一下，心里就很清楚了。</p>
-
+            <p>
+              Pandas 数据处理https://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook-merge
+其实官网教程还是讲的很清楚的，下面就是放一些我一开始没有理解的特别好的地方，以提醒自己。
+没理解好应该是因为我没有学过数据库吧em
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/06/2018-05-2018-05-06-Pandas数据处理笔记/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
