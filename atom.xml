@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-01-12T03:33:37.284Z</updated>
+  <updated>2019-01-12T04:01:58.954Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置博客</title>
+    <link href="https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-配置博客/</id>
+    <published>2019-01-12T04:00:01.000Z</published>
+    <updated>2019-01-12T04:01:58.954Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天配置了一下博客。</p><ol><li>本地仅维护markdown文件</li><li>通过git push，将markdown文件push到腾讯云服务器</li><li>云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布</li></ol><p>最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;今天配置了一下博客。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地仅维护markdown文
+      
+    
+    </summary>
+    
+      <category term="test" scheme="https://wwyf.github.io/categories/test/"/>
+    
+    
+      <category term="test" scheme="https://wwyf.github.io/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -491,28 +518,6 @@
         &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;OSPF协议&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.cnbl
       
-    
-    </summary>
-    
-      <category term="Computer Network" scheme="https://wwyf.github.io/categories/Computer-Network/"/>
-    
-    
-      <category term="Computer Network" scheme="https://wwyf.github.io/tags/Computer-Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RIP协议</title>
-    <link href="https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-RIP%E5%8D%8F%E8%AE%AE/"/>
-    <id>https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-RIP协议/</id>
-    <published>2018-05-13T11:45:41.000Z</published>
-    <updated>2019-01-12T03:33:37.276Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>最近在写路由选择协议相关的实现，这里放了一些有关RIP协议的细节。</p><a id="more"></a><h2 id="RIP协议原理"><a href="#RIP协议原理" class="headerlink" title="RIP协议原理"></a>RIP协议原理</h2><p>距离向量算法</p><p><a href="https://wenku.baidu.com/view/09af0ecf5fbfc77da269b14f.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/09af0ecf5fbfc77da269b14f.html</a></p><h2 id="RIP报文格式"><a href="#RIP报文格式" class="headerlink" title="RIP报文格式"></a>RIP报文格式</h2><p><img src="1526212416803.png" alt="1526212416803"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在写路由选择协议相关的实现，这里放了一些有关RIP协议的细节。&lt;/p&gt;
     
     </summary>
     
