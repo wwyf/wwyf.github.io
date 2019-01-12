@@ -378,6 +378,467 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/07/27/2018-07-2018-07-27-pytorch初学感想/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wyf">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/07/27/2018-07-2018-07-27-pytorch初学感想/" class="post-title-link" itemprop="url">pytorch初学感想</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-27 20:03:57" itemprop="dateCreated datePublished" datetime="2018-07-27T20:03:57+08:00">2018-07-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/27/2018-07-2018-07-27-pytorch初学感想/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/27/2018-07-2018-07-27-pytorch初学感想/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="pytorch初学感想"><a href="#pytorch初学感想" class="headerlink" title="pytorch初学感想"></a>pytorch初学感想</h1><p>一开始是通过莫烦的python教程来进行学习的。他的教程有一个特点，丰富的样例代码，加上对一些细节的讲解，让我能够很快的上手pytorch。不过，我看完，总觉得还缺点什么？有一些机制我始终没有想的特别明白，就像我对<code>loss.backword()</code> <code>optimizer.step()</code>， 这几个函数的作用始终一知半解，虽然大概知道一点，但是对使用pytorch实现的神经网络，还是有一些没法想清楚的地方。</p>
+<h2 id="官方教程"><a href="#官方教程" class="headerlink" title="官方教程"></a>官方教程</h2><p>pytorch的官方教程，有一篇我觉得写得特别好，可以说是给初学者稍微打开了pytorch背后封装的一些操作，让这一个黑盒，至少看起来不那么黑，自己写起代码来心中也有一些B数。</p>
+<p><a href="https://pytorch.org/tutorials/beginner/pytorch_with_examples.html" target="_blank" rel="noopener">https://pytorch.org/tutorials/beginner/pytorch_with_examples.html</a></p>
+<p>这个教程我最喜欢的一点，是它从一个使用numpy实现的两层神经网络（输入层不算一层）开始， 一点点改造成具有纯正“pytorch”风味的神经网络。这样子的教程，消除了我对pytorch封装的担心，内部的操作顿时清晰了很多。</p>
+<h2 id="使用numpy实现神经网络？"><a href="#使用numpy实现神经网络？" class="headerlink" title="使用numpy实现神经网络？"></a>使用numpy实现神经网络？</h2><p>当然可以了~</p>
+<p>下面把原教程的代码抄了过来，加上了自己的一点点注释。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># N is batch size; D_in is input dimension;</span></span><br><span class="line"><span class="comment"># H is hidden dimension; D_out is output dimension.</span></span><br><span class="line">N, D_in, H, D_out = <span class="number">64</span>, <span class="number">1000</span>, <span class="number">100</span>, <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create random input and output data</span></span><br><span class="line">x = np.random.randn(N, D_in)</span><br><span class="line">y = np.random.randn(N, D_out)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Randomly initialize weights</span></span><br><span class="line">w1 = np.random.randn(D_in, H)</span><br><span class="line">w2 = np.random.randn(H, D_out)</span><br><span class="line"></span><br><span class="line">learning_rate = <span class="number">1e-6</span></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    <span class="comment"># Forward pass: compute predicted y</span></span><br><span class="line">    <span class="comment"># 这是矩阵相乘，(N行D_in列) * (D_in行H列)，算出来(N行，H列)的矩阵，其中第i行第j列的元素表示，第i个输入对应的第j个隐藏层神经元的输出</span></span><br><span class="line">    h = x.dot(w1)</span><br><span class="line">    <span class="comment"># 这里就是relu函数啦，相比起来我们喜闻乐见的relu函数，这里不过是用矩阵的方式，使用这个函数本身的定义来计算。查一下relu函数就清楚了</span></span><br><span class="line">    h_relu = np.maximum(h, <span class="number">0</span>)</span><br><span class="line">    <span class="comment"># 再一次矩阵线程，算出输出层神经元的输出值</span></span><br><span class="line">    y_pred = h_relu.dot(w2)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute and print loss</span></span><br><span class="line">    <span class="comment"># 差的平方再求和</span></span><br><span class="line">    loss = np.square(y_pred - y).sum()</span><br><span class="line">    print(t, loss)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Backprop to compute gradients of w1 and w2 with respect to loss</span></span><br><span class="line">    <span class="comment"># 下面就是具体计算梯度的方法，这个计算方法如何得出来的，大概可以参考《机器学习》周志华书上的数学证明 P102-104</span></span><br><span class="line">    grad_y_pred = <span class="number">2.0</span> * (y_pred - y)</span><br><span class="line">    grad_w2 = h_relu.T.dot(grad_y_pred)</span><br><span class="line">    grad_h_relu = grad_y_pred.dot(w2.T)</span><br><span class="line">    grad_h = grad_h_relu.copy()</span><br><span class="line">    grad_h[h &lt; <span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">    grad_w1 = x.T.dot(grad_h)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Update weights</span></span><br><span class="line">    w1 -= learning_rate * grad_w1</span><br><span class="line">    w2 -= learning_rate * grad_w2</span><br></pre></td></tr></table></figure>
+<h2 id="如何将上面的神经网络pytorch化？"><a href="#如何将上面的神经网络pytorch化？" class="headerlink" title="如何将上面的神经网络pytorch化？"></a>如何将上面的神经网络pytorch化？</h2><p>pytorch为神经网络的编写，提供了一些方便的接口，用以替代上面的部分代码</p>
+<ol>
+<li>numpy中的array不能够跑在GPU上计算，而与之功能类似的<code>torch.tensor</code>可以跑在GPU上</li>
+<li>梯度的计算，pytorch中提供接口能够自动算<ol>
+<li>tensor中有一个grad成员用于存放梯度</li>
+<li>tensor对象在进行运算的时候，会自动建造一张计算图（<strong>computational graph</strong> ）</li>
+<li>在计算损失后，能够调用<code>backwoard()</code>，算出用于计算这个损失涉及到的有关tensor（requires_grad=True）的梯度，并存到对应的tensor的grad成员中。</li>
+</ol>
+</li>
+<li>优化器的选择：pytorch中提供了多种优化器，用以取代显式的使用梯度修改</li>
+<li>神经网络模型的建立，能够通过高层接口，简单的增加层，而不用自己麻烦的定义参数矩阵再进行相乘</li>
+<li>损失的计算：pytorch中同样提供了多种损失函数</li>
+</ol>
+<p>以上每一个点，在原教程中都有对应的代码用来与原代码对比。最终，我们得到了下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># N is batch size; D_in is input dimension;</span></span><br><span class="line"><span class="comment"># H is hidden dimension; D_out is output dimension.</span></span><br><span class="line">N, D_in, H, D_out = <span class="number">64</span>, <span class="number">1000</span>, <span class="number">100</span>, <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create random Tensors to hold inputs and outputs</span></span><br><span class="line">x = torch.randn(N, D_in)</span><br><span class="line">y = torch.randn(N, D_out)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the nn package to define our model and loss function.</span></span><br><span class="line">model = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(D_in, H),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(H, D_out),</span><br><span class="line">)</span><br><span class="line">loss_fn = torch.nn.MSELoss(size_average=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the optim package to define an Optimizer that will update the weights of</span></span><br><span class="line"><span class="comment"># the model for us. Here we will use Adam; the optim package contains many other</span></span><br><span class="line"><span class="comment"># optimization algoriths. The first argument to the Adam constructor tells the</span></span><br><span class="line"><span class="comment"># optimizer which Tensors it should update.</span></span><br><span class="line">learning_rate = <span class="number">1e-4</span></span><br><span class="line">optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)</span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    <span class="comment"># Forward pass: compute predicted y by passing x to the model.</span></span><br><span class="line">    y_pred = model(x)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute and print loss.</span></span><br><span class="line">    loss = loss_fn(y_pred, y)</span><br><span class="line">    print(t, loss.item())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Before the backward pass, use the optimizer object to zero all of the</span></span><br><span class="line">    <span class="comment"># gradients for the variables it will update (which are the learnable</span></span><br><span class="line">    <span class="comment"># weights of the model). This is because by default, gradients are</span></span><br><span class="line">    <span class="comment"># accumulated in buffers( i.e, not overwritten) whenever .backward()</span></span><br><span class="line">    <span class="comment"># is called. Checkout docs of torch.autograd.backward for more details.</span></span><br><span class="line">    optimizer.zero_grad()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Backward pass: compute gradient of the loss with respect to model</span></span><br><span class="line">    <span class="comment"># parameters</span></span><br><span class="line">    loss.backward()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Calling the step function on an Optimizer makes an update to its</span></span><br><span class="line">    <span class="comment"># parameters</span></span><br><span class="line">    optimizer.step()</span><br></pre></td></tr></table></figure>
+<p>代码其实少了很多，通过与原来numpy编写的神经网络对比，也更好的理解各个高层接口的作用。</p>
+<blockquote>
+<p>我个人觉得，编写框架的人总是喜欢把高层接口控制得尽可能优雅，就如同现在我们所使用的pytorch一样，事实上，有了pytorch的优雅的高层接口 ，十多二十行足以编写一个可以玩一玩的神经网络。然而，作为初学者而言，我们总是很难把握高层接口的作用，在使用的时候总是很不踏实，可以说，对高层接口又爱又恨，万一出bug了呢，怎么改呀，高层接口帮我做了啥我也不知道呀。官方教程这样子从底层开始展示细节到使用高层接口替换的教程，恰巧将初学者在学习过程中的不安给打消了。不管怎么说，我觉得官方的教程写的棒棒哒！让我感觉自己在调用高层api的时候心安了不少:joy:。</p>
+</blockquote>
+<h2 id="自定义nn模块还有autograd函数？"><a href="#自定义nn模块还有autograd函数？" class="headerlink" title="自定义nn模块还有autograd函数？"></a>自定义nn模块还有autograd函数？</h2><p>都可以都可以，我建议自己试多几把，这样子对这个框架也能够更加地熟悉。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/07/27/2018-07-2018-07-27-pytorch中的unsqueeze函数/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wyf">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/07/27/2018-07-2018-07-27-pytorch中的unsqueeze函数/" class="post-title-link" itemprop="url">pytorch中的unsqueeze函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-27 15:33:37" itemprop="dateCreated datePublished" datetime="2018-07-27T15:33:37+08:00">2018-07-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/27/2018-07-2018-07-27-pytorch中的unsqueeze函数/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/27/2018-07-2018-07-27-pytorch中的unsqueeze函数/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="pytorch中的unsqueeze函数"><a href="#pytorch中的unsqueeze函数" class="headerlink" title="pytorch中的unsqueeze函数"></a>pytorch中的unsqueeze函数</h1><p>一直对pytorch中的<code>unsqueeze</code>不太理解，官方文档的解释是：</p>
+<blockquote>
+<p>Returns a new tensor with a dimension of size one inserted at the specified position.</p>
+<p>The returned tensor shares the same underlying data with this tensor.</p>
+</blockquote>
+<p>其实说的已经很清楚了，但是在我搞懂这个问题前，一直没有看懂这段说明的意思，因此做了一些实验来验证自己的想法。将自己的感想放到博客上，以供以后忘记了再回看复习。</p>
+<h2 id="一句话解释"><a href="#一句话解释" class="headerlink" title="一句话解释"></a>一句话解释</h2><p>这个函数的意思，就是</p>
+<ol>
+<li>往原有的数据中，增加一个维度</li>
+<li>增加的维度值，必须是1</li>
+</ol>
+<h2 id="实验验证"><a href="#实验验证" class="headerlink" title="实验验证"></a>实验验证</h2><p>随便弄了个这样的矩阵来进行实验</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">arr = array([[[ <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>,  <span class="number">3</span>],</span><br><span class="line">        [ <span class="number">4</span>,  <span class="number">5</span>,  <span class="number">6</span>,  <span class="number">7</span>]],</span><br><span class="line"></span><br><span class="line">       [[ <span class="number">8</span>,  <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>],</span><br><span class="line">        [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]],</span><br><span class="line"></span><br><span class="line">       [[ <span class="number">8</span>,  <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>],</span><br><span class="line">        [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]]])</span><br><span class="line">        </span><br><span class="line"><span class="comment"># In [53]: arr.shape</span></span><br><span class="line"><span class="comment"># Out[53]: (3, 2, 4)</span></span><br></pre></td></tr></table></figure>
+<p>结果见下面的截图</p>
+<p><img src="http://bit.ly/2AaD5gE" alt=""></p>
+<h2 id="对numpy中维度的理解"><a href="#对numpy中维度的理解" class="headerlink" title="对numpy中维度的理解"></a>对numpy中维度的理解</h2><p><a href="https://flat2010.github.io/2017/05/31/Numpy%E6%95%B0%E7%BB%84%E8%A7%A3%E6%83%91/" target="_blank" rel="noopener">https://flat2010.github.io/2017/05/31/Numpy%E6%95%B0%E7%BB%84%E8%A7%A3%E6%83%91/</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1851,905 +2312,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/05/19/2018-05-2018-05-19-git删除大文件/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="bilibala~ bilibala~">
-      <meta itemprop="image" content="/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/19/2018-05-2018-05-19-git删除大文件/" class="post-title-link" itemprop="url">git删除大文件</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-19 10:09:20" itemprop="dateCreated datePublished" datetime="2018-05-19T10:09:20+08:00">2018-05-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/19/2018-05-2018-05-19-git删除大文件/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/05/19/2018-05-2018-05-19-git删除大文件/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article"></span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time"></span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不作死就不会死，不应该，不应该把视频都放到git仓库中。</p>
-<p>下面知乎中的命令给了我很大的帮助。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter <span class="string">'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" '</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">git push origin --force --all</span><br><span class="line"></span><br><span class="line">git push origin --force --tags</span><br><span class="line"></span><br><span class="line">git <span class="keyword">for</span>-each-ref --format=<span class="string">'delete %(refname)'</span> refs/original | git update-ref --stdin</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br><span class="line"></span><br><span class="line">git count-objects -v</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.zhihu.com/question/54419234" target="_blank" rel="noopener">https://www.zhihu.com/question/54419234</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="bilibala~ bilibala~">
-      <meta itemprop="image" content="/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/" class="post-title-link" itemprop="url">ftp服务器的配置</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-19 00:21:20" itemprop="dateCreated datePublished" datetime="2018-05-19T00:21:20+08:00">2018-05-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article"></span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time"></span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。</p>
-<p><a href="http://www.cnblogs.com/xiongpq/p/3384759.html" target="_blank" rel="noopener">http://www.cnblogs.com/xiongpq/p/3384759.html</a></p>
-<p>这个博客给了我很大的帮助。</p>
-<p>注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-中心控制路由选择/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="bilibala~ bilibala~">
-      <meta itemprop="image" content="/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/" class="post-title-link" itemprop="url">Untitled</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-13 21:07:01" itemprop="dateCreated datePublished" datetime="2018-05-13T21:07:01+08:00">2018-05-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article"></span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time"></span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>中心控制的路由选择的实现</p>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><ol>
-<li>每一个路由器维护一个线程，这个线程用来与中心服务器维持连接<ol>
-<li>该线程定期发送本地链路信息给中心服务器</li>
-<li>定期从中心服务器获取路由表，并用于替换本地路由表</li>
-</ol>
-</li>
-</ol>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><ol>
-<li>服务器对每一个路由器的连接建立一个定时器</li>
-<li>服务器上<ol>
-<li>主线程：定期从队列中取出链路信息，并更新路由表<ol>
-<li>链路信息：包括链路的存在，费用，以及某路由的下线</li>
-<li>注意：主线程需要维护每一个路由器的路由表<ol>
-<li>有一个重点：<strong>邻接矩阵-&gt;某路由器路由表这个过程需要好好实现</strong></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>其他线程：<ol>
-<li>维护一个与路由器的连接</li>
-<li>定期发送路由表</li>
-<li>将接收到的链路状态放入队列中供主线程使用用来更新路由表</li>
-<li>如果一段时间没有接收到信息，将该路由器已下线的信息放入队列中</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="如何初始化路由器"><a href="#如何初始化路由器" class="headerlink" title="如何初始化路由器"></a>如何初始化路由器</h2><ol>
-<li>配置文件里写好controller的ip</li>
-<li>就行啦</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-OSPF协议/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="bilibala~ bilibala~">
-      <meta itemprop="image" content="/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/13/2018-05-2018-05-13-OSPF协议/" class="post-title-link" itemprop="url">OSPF协议</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-13 20:19:20" itemprop="dateCreated datePublished" datetime="2018-05-13T20:19:20+08:00">2018-05-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/13/2018-05-2018-05-13-OSPF协议/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/05/13/2018-05-2018-05-13-OSPF协议/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article"></span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time"></span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OSPF协议</p>
-<p><a href="http://www.cnblogs.com/sddai/p/5399482.html" target="_blank" rel="noopener">http://www.cnblogs.com/sddai/p/5399482.html</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88</a></p>
-<p><a href="https://www.qingsword.com/qing/596.html" target="_blank" rel="noopener">https://www.qingsword.com/qing/596.html</a></p>
-<p>线程1：维护与多个路由器之间的连接，并得知最新本地链路情况</p>
-<p>线程2：接受包，判断是否需要转发和广播</p>
-<p>维护</p>
-<pre><code>1. 与广播有关的信息，防止风暴
-2. 网络拓扑数据库
-</code></pre><h2 id="报文类型"><a href="#报文类型" class="headerlink" title="报文类型"></a>报文类型</h2><ol>
-<li>链路状态更新报文,广播</li>
-<li>keepalive报文</li>
-<li><p><del>全局拓扑数据交换报文</del>？</p>
-<h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2></li>
-</ol>
-<p>拓扑数据库</p>
-<p><strong>1.类型1:Router LSA</strong>：每个路由器都将产生Router LSA，这种LSA只在本区域内传播，描述了路由器所有的链路和接口，状态和开销.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -3533,10 +3100,6 @@
 
   
   
-    
-      
-    
-      
     
       
     
