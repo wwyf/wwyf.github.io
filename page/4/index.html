@@ -2,93 +2,101 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans,en,default">
+<html class="theme-next muse use-motion" lang="zh-Hans,en,default">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
 
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="bilibala~ bilibala~">
+  <meta name="description" content="bilibala~ bilibala~">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="https://wwyf.github.io/page/4/index.html">
@@ -101,29 +109,8 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+
 
 
 
@@ -131,7 +118,11 @@
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Blog</title>
   
@@ -142,6 +133,35 @@
 
 
 
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
@@ -158,7 +178,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -168,13 +188,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">My Blog</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -182,110 +205,76 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -298,6 +287,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -307,8 +298,8 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -322,25 +313,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/02/2018-05-2018-05-02-openMP编程/" itemprop="url">openMP编程</a></h1>
+                
+                <a href="/2018/05/02/2018-05-2018-05-02-openMP编程/" class="post-title-link" itemprop="url">openMP编程</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T09:08:30+08:00">
-                2018-05-02
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-02 09:08:30" itemprop="dateCreated datePublished" datetime="2018-05-02T09:08:30+08:00">2018-05-02</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -353,14 +370,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Parallel-Programing/" itemprop="url" rel="index">
-                    <span itemprop="name">Parallel Programing</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Parallel-Programing/" itemprop="url" rel="index"><span itemprop="name">Parallel Programing</span></a></span>
 
                 
                 
@@ -369,16 +382,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/02/2018-05-2018-05-02-openMP编程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/02/2018-05-2018-05-02-openMP编程/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -406,27 +409,74 @@
       
         
           
-          OpenMP编程模型简述如图所示
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="OpenMP编程模型简述"><a href="#OpenMP编程模型简述" class="headerlink" title="OpenMP编程模型简述"></a>OpenMP编程模型简述</h1><p>如图所示</p>
+<img src="/2018/05/02/2018-05-2018-05-02-openMP编程/2018-05-02-09-09-08.png" title="这是一张图">
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp somedirective clause(value,othervalue)</span></span><br><span class="line"> &#123;</span><br><span class="line">  parallel statement <span class="number">1</span>;</span><br><span class="line">  parallel statement <span class="number">2</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="并行模式说明"><a href="#并行模式说明" class="headerlink" title="并行模式说明"></a>并行模式说明</h2><p>在OpenMP中有两种并行模式</p>
+<ol>
+<li>SPMD模型：创建一系列新的线程，这些线程执行的代码段相同</li>
+<li>MIMP模型：为了完成一个任务，创建一系列新的线程，主线程将工作分配给这一系列新的线程（也就是说这些线程执行的代码段由OpenMP决定，并不一致）</li>
+</ol>
+<h1 id="并行模式之SPMD模型"><a href="#并行模式之SPMD模型" class="headerlink" title="并行模式之SPMD模型"></a>并行模式之SPMD模型</h1><h2 id="SPMD模型"><a href="#SPMD模型" class="headerlink" title="SPMD模型"></a>SPMD模型</h2><p>新建的线程会并行地运行下面花括号扩住的代码段，并且每一个线程运行的代码相同。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// this is executed by a team of threads</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>于是，在这里如何做任务分配呢？可以通过<a href="https://gcc.gnu.org/onlinedocs/libgomp/omp_005fget_005fthread_005fnum.html" target="_blank" rel="noopener">opm_get_thread_num</a>获取线程号来判断自己应该运行的指令。<br>例：使用三个线程计算 $result = f(x)+g(x)+h(x)$.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> result,fresult,gresult,hresult;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">&#123; <span class="keyword">int</span> num = omp_get_thread_num();</span><br><span class="line">  <span class="keyword">if</span> (num==<span class="number">0</span>)      fresult = f(x);</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (num==<span class="number">1</span>) gresult = g(x);</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (num==<span class="number">2</span>) hresult = h(x);</span><br><span class="line">&#125;</span><br><span class="line">result = fresult + gresult + hresult;</span><br></pre></td></tr></table></figure>
+<p>关于OpenMP在这过程中完成的工作，教程上讲的很详细，摘录一下。</p>
+<blockquote>
+<p>This code corresponds to the model we just discussed:</p>
+<ul>
+<li><p>Immediately preceding the parallel block, one thread will be executing the code. In the main program this is the \emph{initial thread} .</p>
+</li>
+<li><p>At the start of the block, a new team of threads is created, and the thread that was active before the block becomes the master thread of that team.</p>
+</li>
+<li><p>After the block only the master thread is active.</p>
+</li>
+<li><p>Inside the block there is team of threads: each thread in the team executes the body of the block, and it will have access to all variables of the surrounding environment. How many threads there are can be determined in a number of ways; we will get to that later.</p>
+</li>
+</ul>
+</blockquote>
+<h1 id="并行模型之MIMD模型"><a href="#并行模型之MIMD模型" class="headerlink" title="并行模型之MIMD模型"></a>并行模型之MIMD模型</h1><blockquote>
+<p>take an amount of work and distribute it over the available threads in a parallel region.</p>
+</blockquote>
+<p>这种模型下，OpenMP会完成给线程分配任务的工作，如下面的例子：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">int</span> threadnum = omp_get_thread_num(),</span><br><span class="line">    numthreads = omp_get_num_threads();</span><br><span class="line">  <span class="keyword">int</span> low = N*threadnum/numthreads,</span><br><span class="line">    high = N*(threadnum+<span class="number">1</span>)/numthreads;</span><br><span class="line">  <span class="keyword">for</span> (i=low; i&lt;high; i++)</span><br><span class="line">    <span class="comment">// do something with i</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在这个例子中，我们通过获取线程号的方式显式分配任务，在OpenMP中，为了完成这样的工作，有一种更加自然的语法<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp for</span></span><br><span class="line"><span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;N; i++) &#123;</span><br><span class="line">  <span class="comment">// do something with i</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="这种模式下需要注意的地方"><a href="#这种模式下需要注意的地方" class="headerlink" title="这种模式下需要注意的地方"></a>这种模式下需要注意的地方</h2><p>可用这种模型的for循环是有很多限制的，这一些限制在下面有说明。</p>
+<p>There are some restrictions on the loop: basically, OpenMP needs to be able to determine in advance how many iterations there will be.</p>
+<ul>
+<li><p>The loop can not contains break , return , exit statements, or goto to a label outside the loop.</p>
+</li>
+<li><p>The continue (C) or cycle (F) statement is allowed.</p>
+</li>
+<li><p>The index update has to be an increment (or decrement) by a fixed amount.</p>
+</li>
+<li><p>The loop index variable is automatically private, and not changes to it inside the loop are allowed.</p>
+</li>
+</ul>
+<h1 id="并行模型的理解"><a href="#并行模型的理解" class="headerlink" title="并行模型的理解"></a>并行模型的理解</h1><p>在上面两种基础的并行模型理解之后，我们可以看一看之后这一段代码，OpenMP将会如何去实现？</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">&#123;</span><br><span class="line">  code1();</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp for</span></span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">1</span>; i&lt;=<span class="number">4</span>*N; i++) &#123;</span><br><span class="line">    code2();</span><br><span class="line">  &#125;</span><br><span class="line">  code3();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面这一个图解释的很清楚了，每一个线程都会原封不动地完成<code>code1()</code>，然后将for中包含的任务分配给各个线程完成，最后等到每一个线程for块包含的任务都完成之后，每一个线程继续各干各的<code>code3()</code>。<br><img src="http://pages.tacc.utexas.edu/~eijkhout/pcse/html/graphics/parallel-do.jpeg" alt=""></p>
+<h1 id="其他需要注意的地方"><a href="#其他需要注意的地方" class="headerlink" title="其他需要注意的地方"></a>其他需要注意的地方</h1><h2 id="Nested-parallelism"><a href="#Nested-parallelism" class="headerlink" title="Nested parallelism"></a>Nested parallelism</h2><p>在并行运行块中运行一个函数，而这个函数里又有并行运行块，openmp会如何实现这样的操作呢？<br>在默认情况下，嵌套的并行操作块只会有一个线程执行（就像没有嵌套一样），可通过<code>omp_set_nested(1)</code>显式说明可以嵌套。</p>
+<p><code>omp_set_nested(1)</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">  &#123;</span><br><span class="line">  ...</span><br><span class="line">  func(...)</span><br><span class="line">  ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="comment">// end of main</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(...)</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel</span></span><br><span class="line">  &#123;</span><br><span class="line">  ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html" target="_blank" rel="noopener">http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html</a></li>
+</ol>
 
-格式12345#pragma omp somedirective clause(value,othervalue) &#123;  parallel statement 1;  parallel statement 2; &#125;
-并行模式说明在OpenMP中
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/02/2018-05-2018-05-02-openMP编程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -457,6 +507,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -468,8 +520,8 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -483,25 +535,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/30/2018-04-2018-04-30-openGL配置/" itemprop="url">openGL配置</a></h1>
+                
+                <a href="/2018/04/30/2018-04-2018-04-30-openGL配置/" class="post-title-link" itemprop="url">openGL配置</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-30T14:07:38+08:00">
-                2018-04-30
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-30 14:07:38" itemprop="dateCreated datePublished" datetime="2018-04-30T14:07:38+08:00">2018-04-30</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -514,14 +592,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -530,16 +604,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/30/2018-04-2018-04-30-openGL配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/30/2018-04-2018-04-30-openGL配置/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -567,25 +631,50 @@
       
         
           
-          配置OpenGL的笔记linux好不容易在Window下配置好OpenGL，在博客上记录一下。
-12345sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-devsudo apt-get install freeglu
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/30/2018-04-2018-04-30-openGL配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="配置OpenGL的笔记"><a href="#配置OpenGL的笔记" class="headerlink" title="配置OpenGL的笔记"></a>配置OpenGL的笔记</h1><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>好不容易在Window下配置好OpenGL，在博客上记录一下。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev</span><br><span class="line">sudo apt-get install freeglut3-dev</span><br><span class="line">sudo apt-get install build-essential gdb subversion</span><br><span class="line">sudo apt-get install automake autoconf libtool</span><br><span class="line">sudo apt-get install libgtk2.0-dev libxmu-dev libxxf86vm-dev</span><br></pre></td></tr></table></figure>
+<p>在安装了参考资料里面的包之后，还另外安装了glfw,为了能够运行教程中的用到glfw代码的示例。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install libglfw3 libglfw3-dev</span><br><span class="line">sudo apt install libassimp-dev</span><br></pre></td></tr></table></figure>
+<h2 id="运行成功动图"><a href="#运行成功动图" class="headerlink" title="运行成功动图"></a>运行成功动图</h2><p>这个gif有点大，可能会加载的很慢（15mb)</p>
+<img src="/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30_14-19-17.gif" title="这是一张图">
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这是在wsl上配置的，为了能够让wsl里面的程序在window运行图形界面，还另外装了VcXsrv作为Xwindow server。然后在启动VcXsrv时还修改了一些配置才运行的比较正常，如截图所示。</p>
+<img src="/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30-14-26-05.png" title="这是一张图">
+<h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><h2 id="mingw"><a href="#mingw" class="headerlink" title="mingw"></a>mingw</h2><p>直接装就好了，里面有libopengl32.a,libgdi32.a等库，都是等下需要的。</p>
+<h2 id="gifw"><a href="#gifw" class="headerlink" title="gifw"></a>gifw</h2><ol>
+<li>官网下载glfw（32）</li>
+<li>将头文件放到项目文件夹下/includes中</li>
+<li>将静态链接库房贷项目文件夹/lib中</li>
+<li>获取glad.h glad.c 等文件，并将glad.c加入到项目中。</li>
+<li>编写makefile</li>
+<li>尝试运行示例代码<ol>
+<li><a href="http://www.glfw.org/documentation.html" target="_blank" rel="noopener">http://www.glfw.org/documentation.html</a></li>
+</ol>
+</li>
+</ol>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the ROOT dictionary</span></span><br><span class="line">ROOT = .</span><br><span class="line"><span class="comment"># Target File</span></span><br><span class="line">TARGET_FILE = triangle.cpp</span><br><span class="line"><span class="comment"># compile option</span></span><br><span class="line">CXX_FLAGS = -std=c++11 -g -Wall  </span><br><span class="line">CXX_INCLUDES =-I<span class="variable">$(ROOT)</span>/<span class="keyword">include</span></span><br><span class="line"><span class="comment"># 增加静态链接库的寻找目录</span></span><br><span class="line">CXX_LIB = -L<span class="variable">$(ROOT)</span>/lib</span><br><span class="line">STATIC_LINK_LIB = -lglfw3 -lopengl32 -lgdi32</span><br><span class="line"></span><br><span class="line"><span class="section">all:t.exe t.o</span></span><br><span class="line">	./t.exe</span><br><span class="line">	make clean</span><br><span class="line"><span class="section">t.exe:t.o glad.o</span></span><br><span class="line">	g++ <span class="variable">$(CXX_FLAGS)</span> t.o glad.o -o t.exe  <span class="variable">$(CXX_LIB)</span>  <span class="variable">$(STATIC_LINK_LIB)</span></span><br><span class="line"><span class="section">t.o:t.cpp</span></span><br><span class="line">	g++ <span class="variable">$(CXX_INCLUDES)</span> <span class="variable">$(CXX_FLAGS)</span> -o t.o -c <span class="variable">$(TARGET_FILE)</span></span><br><span class="line"><span class="section">glad.o:glad.c</span></span><br><span class="line">	g++ <span class="variable">$(CXX_INCLUDES)</span> <span class="variable">$(CXX_FLAGS)</span> -o glad.o -c glad.c</span><br></pre></td></tr></table></figure>
+<p>参考了这些资料</p>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/22008845/glfw-mingw-link-error" target="_blank" rel="noopener">https://stackoverflow.com/questions/22008845/glfw-mingw-link-error</a><br><a href="https://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/" target="_blank" rel="noopener">https://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/</a></p>
+</blockquote>
+<h2 id="freeglut"><a href="#freeglut" class="headerlink" title="freeglut"></a>freeglut</h2><p>如果不用glfw，用freeglut的话，也可以进行配置。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://blog.csdn.net/evenness/article/details/9150351" target="_blank" rel="noopener">https://blog.csdn.net/evenness/article/details/9150351</a></p>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -616,6 +705,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -627,8 +718,8 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -642,25 +733,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/30/2018-04-2018-04-30-tmux/" itemprop="url">tmux</a></h1>
+                
+                <a href="/2018/04/30/2018-04-2018-04-30-tmux/" class="post-title-link" itemprop="url">tmux</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-30T11:43:02+08:00">
-                2018-04-30
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-30 11:43:02" itemprop="dateCreated datePublished" datetime="2018-04-30T11:43:02+08:00">2018-04-30</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -673,14 +790,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -689,16 +802,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/30/2018-04-2018-04-30-tmux/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/30/2018-04-2018-04-30-tmux/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -726,32 +829,31 @@
       
         
           
-          Tmux 终端复用工具满足需求：
-
-一个终端窗口能够查看多个终端。
-保存环境，恢复环境。
-
-
-学习资料看了一部分资料，觉得这个已经讲得足够清楚，放在这里收藏着。
-http://louiszhai.github.io/2017/09/30/tmux/
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Tmux-终端复用工具"><a href="#Tmux-终端复用工具" class="headerlink" title="Tmux 终端复用工具"></a>Tmux 终端复用工具</h1><p>满足需求：</p>
+<ol>
+<li>一个终端窗口能够查看多个终端。</li>
+<li>保存环境，恢复环境。</li>
+</ol>
+<img src="/2018/04/30/2018-04-2018-04-30-tmux/2018-04-30-11-46-26.png" title="这是一张图">
+<h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1><p>看了一部分资料，觉得这个已经讲得足够清楚，放在这里收藏着。</p>
+<p><a href="http://louiszhai.github.io/2017/09/30/tmux/" target="_blank" rel="noopener">http://louiszhai.github.io/2017/09/30/tmux/</a></p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/30/2018-04-2018-04-30-tmux/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -782,6 +884,8 @@ http://louiszhai.github.io/2017/09/30/tmux/
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -793,8 +897,8 @@ http://louiszhai.github.io/2017/09/30/tmux/
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -808,25 +912,51 @@ http://louiszhai.github.io/2017/09/30/tmux/
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/28/2018-04-2018-04-28-物理层/" itemprop="url">物理层</a></h1>
+                
+                <a href="/2018/04/28/2018-04-2018-04-28-物理层/" class="post-title-link" itemprop="url">物理层</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T14:25:16+08:00">
-                2018-04-28
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-28 14:25:16" itemprop="dateCreated datePublished" datetime="2018-04-28T14:25:16+08:00">2018-04-28</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -839,14 +969,10 @@ http://louiszhai.github.io/2017/09/30/tmux/
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Network</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
 
                 
                 
@@ -855,16 +981,6 @@ http://louiszhai.github.io/2017/09/30/tmux/
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/28/2018-04-2018-04-28-物理层/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/28/2018-04-2018-04-28-物理层/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -892,43 +1008,52 @@ http://louiszhai.github.io/2017/09/30/tmux/
       
         
           
-          物理层2.1 物理层的基本概念
-机械特性
-接线器的形状和尺寸，引线数目和排列，固定，锁定装置
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><h2 id="2-1-物理层的基本概念"><a href="#2-1-物理层的基本概念" class="headerlink" title="2.1 物理层的基本概念"></a>2.1 物理层的基本概念</h2><ol>
+<li>机械特性<ol>
+<li>接线器的形状和尺寸，引线数目和排列，固定，锁定装置</li>
+</ol>
+</li>
+<li>电气特性<ol>
+<li>各条线的电压等</li>
+</ol>
+</li>
+<li>功能特性<ol>
+<li>某条线上出现的某一电平的电压表示的意义</li>
+</ol>
+</li>
+<li>过程特性<ol>
+<li>不同功能的各种可能事件的出现顺序</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-2-数据通信的基础知识"><a href="#2-2-数据通信的基础知识" class="headerlink" title="2.2 数据通信的基础知识"></a>2.2 数据通信的基础知识</h2><h3 id="2-2-1-数据通信系统的模型"><a href="#2-2-1-数据通信系统的模型" class="headerlink" title="2.2.1 数据通信系统的模型"></a>2.2.1 数据通信系统的模型</h3><img src="/2018/04/28/2018-04-2018-04-28-物理层/2018-04-28-14-56-18.png" title="test">
+<p>两个关键过程：调制 解调</p>
+<p>关于调制，解调过程重要性的理解。</p>
+<p>信号的衰减在数据的传播过程中不可忽略。<br>实例：使用十米的延长线连接电脑和移动硬盘，电脑无法识别。</p>
+<p>为了解决这种问题，有专家发现高频的信号衰减较小，更加适合远距离传输。于是便有了调试解调的过程。</p>
+<blockquote>
+<p>关于调制的理解<br>模拟信号-&gt;数字信号<br>两个步骤：1. 抽样 2. 量化<br>抽样后，仅仅在时间本身做了离散化，样点能取到的值仍然是连续的<br>因此需要量化进行将样点取到的值离散化， 如四舍五入等方法。</p>
+</blockquote>
+<h4 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h4><h4 id="码元"><a href="#码元" class="headerlink" title="码元"></a>码元</h4><p>码元：数字通信中一个基带波形所对应的二进制玛<strong>组</strong>。</p>
+<p><img src="2018-04-28-15-04-42.png" alt=""></p>
+<p>关于单极性和双极性的思考：单极性的码元容易出现误码，双极性会好很多。</p>
 
-
-电气特性
-各条线的电压等
-
-
-功能特性
-某条线上出现的某一电平的电压表示的意义
-
-
-过程特性
-不同功能的各种可能事件的出现顺序
-
-
-
-2.2 数据通信的基础知识2.2.1 数据通信系统的模型
-两个关键过
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/28/2018-04-2018-04-28-物理层/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -959,6 +1084,8 @@ http://louiszhai.github.io/2017/09/30/tmux/
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -970,8 +1097,8 @@ http://louiszhai.github.io/2017/09/30/tmux/
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -985,25 +1112,51 @@ http://louiszhai.github.io/2017/09/30/tmux/
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/27/2018-04-2018-04-27-Openmp笔记/" itemprop="url">OpenMP笔记</a></h1>
+                
+                <a href="/2018/04/27/2018-04-2018-04-27-Openmp笔记/" class="post-title-link" itemprop="url">OpenMP笔记</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T10:21:39+08:00">
-                2018-04-27
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-27 10:21:39" itemprop="dateCreated datePublished" datetime="2018-04-27T10:21:39+08:00">2018-04-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1016,14 +1169,10 @@ http://louiszhai.github.io/2017/09/30/tmux/
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Parallel-Programing/" itemprop="url" rel="index">
-                    <span itemprop="name">Parallel Programing</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Parallel-Programing/" itemprop="url" rel="index"><span itemprop="name">Parallel Programing</span></a></span>
 
                 
                 
@@ -1032,16 +1181,6 @@ http://louiszhai.github.io/2017/09/30/tmux/
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/27/2018-04-2018-04-27-Openmp笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/27/2018-04-2018-04-27-Openmp笔记/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1069,25 +1208,135 @@ http://louiszhai.github.io/2017/09/30/tmux/
       
         
           
-          OpenMP笔记OpenMP 框架是使用 C、C++ 和 Fortran 进行并发编程的一种强大方法。GNU Compiler Collection (GCC) V4.2 支持 OpenMP 2.5 标准，而 GCC 4.4 支持最新的 OpenMP 3 标准。
-Hello  world程序的编写1
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/27/2018-04-2018-04-27-Openmp笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="OpenMP笔记"><a href="#OpenMP笔记" class="headerlink" title="OpenMP笔记"></a>OpenMP笔记</h1><p>OpenMP 框架是使用 C、C++ 和 Fortran 进行并发编程的一种强大方法。GNU Compiler Collection (GCC) V4.2 支持 OpenMP 2.5 标准，而 GCC 4.4 支持最新的 OpenMP 3 标准。</p>
+<h1 id="Hello-world程序的编写"><a href="#Hello-world程序的编写" class="headerlink" title="Hello  world程序的编写"></a>Hello  world程序的编写</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;omp.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  omp_set_num_threads(<span class="number">5</span>); </span><br><span class="line">  <span class="meta">#<span class="meta-keyword">pragma</span> omp parallel </span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World!\n"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在本机运行的结果为<br><!-- ![](https://i.loli.net/2018/04/27/5ae28af7706bf.png) --><br><img src="/2018/04/27/2018-04-2018-04-27-Openmp笔记/2018-04-27-11-37-01.png" title="运行的结果"></p>
+<blockquote>
+<p><code>#pragma omp parallel</code> 仅在您指定了 -fopenmp 编译器选项后才会发挥作用。在编译期间，GCC 会根据硬件和操作系统配置在运行时生成代码，创建尽可能多的线程。每个线程的起始例程为代码块中位于指令之后的代码。这种行为是 隐式的并行化，而 OpenMP 本质上由一组功能强大的编译指示组成，帮您省去了编写大量样本文件的工作。（为了进行比较，您需要了解使用 Portable Operating System Interface (POSIX) 线程 [pthreads] 实现您刚才的程序将会怎样）。</p>
+</blockquote>
+<h2 id="修改并行线程数"><a href="#修改并行线程数" class="headerlink" title="修改并行线程数"></a>修改并行线程数</h2><p>默认的并行线程数由硬件决定。<br>修改的时候有如下方法：</p>
+<ol>
+<li><code>#pragma omp parallel num_threads(5)</code></li>
+<li><code>omp_set_num_threads(5);</code></li>
+<li>还可以通过修改外部环境变量来设置<ol>
+<li>在命令行中加入：<code>export OMP_NUM_THREADS=6</code></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>OpenMP 的三个方面：编译指示、运行时 API 和环境变量。<br>同时使用环境变量和运行时 API ,运行时 API 将获得更高的优先权。</p>
+</blockquote>
+<h1 id="继续深入，一个实例"><a href="#继续深入，一个实例" class="headerlink" title="继续深入，一个实例"></a>继续深入，一个实例</h1><p>两个数组之间的运算如下代码所示。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1000000</span>], b[<span class="number">1000000</span>]; </span><br><span class="line"><span class="comment">// ... some initialization code for populating arrays a and b; </span></span><br><span class="line"><span class="keyword">int</span> c[<span class="number">1000000</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i)</span><br><span class="line">  c[i] = a[i] * b[i] + a[i<span class="number">-1</span>] * b[i+<span class="number">1</span>];</span><br><span class="line"><span class="comment">// ... now do some processing with array c</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>很明显，每一次循环之间并没有前后依赖关系，很容易并行化。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1000000</span>], b[<span class="number">1000000</span>]; </span><br><span class="line"><span class="comment">// ... some initialization code for populating arrays a and b; </span></span><br><span class="line"><span class="keyword">int</span> c[<span class="number">1000000</span>];</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel for</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i)</span><br><span class="line">  c[i] = a[i] * b[i] + a[i<span class="number">-1</span>] * b[i+<span class="number">1</span>];</span><br><span class="line"><span class="comment">// ... now do some processing with array c</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当加入了这一条编译指令之后，发生了什么呢？TODO:不清楚</p>
+<h1 id="计算线程运行时间"><a href="#计算线程运行时间" class="headerlink" title="计算线程运行时间"></a>计算线程运行时间</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;omp.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, nthreads;</span><br><span class="line">    <span class="keyword">clock_t</span> clock_timer;</span><br><span class="line">    <span class="keyword">double</span> wall_timer;</span><br><span class="line">    <span class="keyword">double</span> c[<span class="number">1000000</span>]; </span><br><span class="line">    <span class="keyword">for</span> (nthreads = <span class="number">1</span>; nthreads &lt;=<span class="number">8</span>; ++nthreads) &#123;</span><br><span class="line">        clock_timer = clock();</span><br><span class="line">        wall_timer = omp_get_wtime();</span><br><span class="line">        <span class="meta">#<span class="meta-keyword">pragma</span> omp parallel for private(i) num_threads(nthreads)</span></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) </span><br><span class="line">          c[i] = <span class="built_in">sqrt</span>(i * <span class="number">4</span> + i * <span class="number">2</span> + i); </span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"threads: "</span> &lt;&lt; nthreads &lt;&lt;  <span class="string">" time on clock(): "</span> &lt;&lt; </span><br><span class="line">            (<span class="keyword">long</span> <span class="keyword">double</span>) (clock() - clock_timer) / CLOCKS_PER_SEC</span><br><span class="line">           &lt;&lt; <span class="string">" time on wall: "</span> &lt;&lt;  omp_get_wtime() - wall_timer &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><img src="https://i.loli.net/2018/04/27/5ae29579959db.png" alt=""><br><!-- ![](figure/) --><br><img src="/2018/04/27/2018-04-2018-04-27-Openmp笔记/2018-04-27-11-37-17.png" title="这是运行的结果"></p>
+<p>可以看到的结果是：随着运行的线程数不断增加，总运行时间渐渐减少，并行对程序运行的加速效果可见一斑。</p>
+<h2 id="需要注意的地方"><a href="#需要注意的地方" class="headerlink" title="需要注意的地方"></a>需要注意的地方</h2><ol>
+<li><code>#pragma parallel for private(i)</code> 意味着循环向量 i 将被作为一个线程本地存储进行处理，每个线程有一个该向量的副本。线程本地向量未进行初始化。</li>
+<li><code>omp_get_wtime</code> API 从一些任意的但是一致的点返回已用去的时间（定义很拗口，不过wtime可以看做wall time 墙上时间，即实际时间），以秒为单位。因此，<code>omp_get_wtime() - wall_timer</code> 将返回运行 for 循环所用的真实时间。</li>
+<li><code>(clock() - clock_timer)</code>返回的是CPU时间，问题在于，并行会减少实际时间，但不会减少CPU时间，因此应该用上面的<code>omp_get_wtime()</code>函数测量时间。下面的三个链接，将一些相关的疑问解释得很清楚了。</li>
+</ol>
+<blockquote>
+<p>关于<code>omp_get_wtime</code>函数的疑问，可见这个网站<a href="https://stackoverflow.com/questions/10673732/openmp-time-and-clock-calculates-two-different-results" target="_blank" rel="noopener">https://stackoverflow.com/questions/10673732/openmp-time-and-clock-calculates-two-different-results</a><br><a href="https://gcc.gnu.org/onlinedocs/libgomp/omp_005fget_005fwtime.html" target="_blank" rel="noopener">https://gcc.gnu.org/onlinedocs/libgomp/omp_005fget_005fwtime.html</a><br>CPU time与WALL time<a href="https://blog.csdn.net/qq_15514565/article/details/78220342" target="_blank" rel="noopener">https://blog.csdn.net/qq_15514565/article/details/78220342</a></p>
+</blockquote>
+<h1 id="OpenMP-中对临界区的处理"><a href="#OpenMP-中对临界区的处理" class="headerlink" title="OpenMP 中对临界区的处理"></a>OpenMP 中对临界区的处理</h1><p>通过<code>#pragma omp critical</code>指令来对临界区进行处理。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp critical (section1)</span></span><br><span class="line">&#123;</span><br><span class="line">myhashtable.insert(<span class="string">"key1"</span>, <span class="string">"value1"</span>);</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">// ... other code follows</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp critical (section1)</span></span><br><span class="line">&#123;</span><br><span class="line">myhashtable.insert(<span class="string">"key2"</span>, <span class="string">"value2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// pragma omp critical 之后的代码只能由一个线程在给定时间运行。同样，optional section name 是一个全局标识符，在同一时间，两个线程不能使用相同的全局标识符名称运行临界区段。</span></span><br></pre></td></tr></table></figure></p>
+<p>在这一代码的基础上，您可以作出一个很安全的假设：永远不会出现两个散列表同时插入的情况，因为临界区段名是相同的。</p>
+<h1 id="OpenMP-中的锁与互斥"><a href="#OpenMP-中的锁与互斥" class="headerlink" title="OpenMP 中的锁与互斥"></a>OpenMP 中的锁与互斥</h1><p>OpenMP 提供了自己的互斥锁：omp_lock_t，它被定义为 omp.h 头文件的一部分。关于互斥锁的使用，需要了解以下 5 个 API：</p>
+<p><strong>注：以下API均需要传递锁的地址作为参数。</strong></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>omp_init_lock</td>
+<td>此 API 必须是第一个访问 omp_lock_t 的 API，并且要使用它来完成初始化。注意，在完成初始化之后，锁被认为处于未设置状态</td>
+</tr>
+<tr>
+<td>omp_destroy_lock</td>
+<td>此 API 会破坏锁。在调用该 API 时，锁必须处于未设置状态，这意味着您无法调用 omp_set_lock 并随后发出调用来破坏这个锁。</td>
+</tr>
+<tr>
+<td>omp_set_lock</td>
+<td>此 API 设置 omp_lock_t，也就是说，将会获得互斥。如果一个线程无法设置锁，那么它将继续等待，直到能够执行锁操作。</td>
+</tr>
+<tr>
+<td>omp_test_lock</td>
+<td>此 API 将在锁可用时尝试执行锁操作，并在获得成功后返回 1，否则返回 0。这是一个非阻塞 API， 也就是说，该函数不需要线程等待就可以设置锁</td>
+</tr>
+<tr>
+<td>omp_unset_lock</td>
+<td>此 API 将会释放锁。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用例子"><a href="#使用例子" class="headerlink" title="使用例子"></a>使用例子</h2><p>使用一个线程不安全的队列，扩展成线程安全的队列：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;omp.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"myqueue.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">omp_q</span> :</span> <span class="keyword">public</span> myqueue&lt;<span class="keyword">int</span>&gt; &#123; </span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">   <span class="keyword">typedef</span> myqueue&lt;<span class="keyword">int</span>&gt; base; </span><br><span class="line">   omp_q( ) &#123; <span class="comment">// 构造函数，先初始化锁</span></span><br><span class="line">      omp_init_lock(&amp;lock);</span><br><span class="line">   &#125;</span><br><span class="line">   ~omp_q() &#123;</span><br><span class="line">       omp_destroy_lock(&amp;lock);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; value)</span> </span>&#123; </span><br><span class="line">      omp_set_lock(&amp;lock);</span><br><span class="line">      <span class="keyword">bool</span> result = <span class="keyword">this</span>-&gt;base::push(value);</span><br><span class="line">      omp_unset_lock(&amp;lock);</span><br><span class="line">      <span class="keyword">return</span> result;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">bool</span> <span class="title">trypush</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; value)</span> </span></span><br><span class="line"><span class="function">   </span>&#123; </span><br><span class="line">       <span class="keyword">bool</span> result = omp_test_lock(&amp;lock);</span><br><span class="line">       <span class="keyword">if</span> (result) &#123;</span><br><span class="line">          result = result &amp;&amp; <span class="keyword">this</span>-&gt;base::push(value);</span><br><span class="line">          omp_unset_lock(&amp;lock);</span><br><span class="line">      &#125; </span><br><span class="line">      <span class="keyword">return</span> result;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// likewise for pop </span></span><br><span class="line"><span class="keyword">private</span>: </span><br><span class="line">   <span class="keyword">omp_lock_t</span> lock;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="嵌套锁"><a href="#嵌套锁" class="headerlink" title="嵌套锁"></a>嵌套锁</h1><p>这个嵌套锁有点像信号量，内部会维护一个计数器，一旦使用cmp_set_nest_lock，与锁相关的计数量就会加1，不会阻塞。</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>omp_init_nest_lock(omp_nest_lock_t* )</td>
+<td>此 API 将内部嵌套计数初始化为 0。</td>
+</tr>
+<tr>
+<td>omp_destroy_nest_lock(omp_nest_lock_t* )</td>
+<td>此 API 将破坏锁。使用非零内部嵌套计数对某个锁调用此 API 将会导致出现未定义的行为。</td>
+</tr>
+<tr>
+<td>omp_set_nest_lock(omp_nest_lock_t* )</td>
+<td>此 API 类似于 omp_set_lock，不同之处是线程可以在已持有锁的情况下多次调用这个函数。</td>
+</tr>
+<tr>
+<td>omp_test_nest_lock(omp_nest_lock_t* )</td>
+<td>此 API 是 omp_set_nest_lock 的非阻塞版本。</td>
+</tr>
+<tr>
+<td>omp_unset_nest_lock(omp_nest_lock_t* )</td>
+<td>此 API 将在内部计数器为 0 时释放锁。否则，计数器将在每次调用该方法时递减。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="理解-firstprivate-和-lastprivate-指令"><a href="#理解-firstprivate-和-lastprivate-指令" class="headerlink" title="理解 firstprivate 和 lastprivate 指令"></a>理解 firstprivate 和 lastprivate 指令</h1><h2 id="firstprivate指令"><a href="#firstprivate指令" class="headerlink" title="firstprivate指令"></a>firstprivate指令</h2><p>使用主线程的变量初始化自身。<br>关于这个指令的作用，下面的链接解释得很清楚了。<br><a href="https://stackoverflow.com/questions/15304760/how-are-firstprivate-and-lastprivate-different-than-private-clauses-in-openmp" target="_blank" rel="noopener">https://stackoverflow.com/questions/15304760/how-are-firstprivate-and-lastprivate-different-than-private-clauses-in-openmp</a></p>
+<blockquote>
+<p>如果您准备将 firstprivate 用于您的 C++ 代码，那么还要注意，firstprivate 指令使用的变量是一个副本构造函数，用于从主线程的变量初始化自身，因此对您的类使用一个私有的副本构造函数肯定会产生不好的结果。</p>
+</blockquote>
+<h2 id="lastprivate指令"><a href="#lastprivate指令" class="headerlink" title="lastprivate指令"></a>lastprivate指令</h2><p>目的在于解决这样的问题：<br><em>一个全局变量被多个线程修改后，修改全局变量的线程是不确定的，每一次运行程序，多线程结束后全局变量的值都不同</em></p>
+<p>再将问题具体化，可以看以下程序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;omp.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> idx = <span class="number">100</span>;</span><br><span class="line">  <span class="keyword">int</span> main_var = <span class="number">2120</span>;</span><br><span class="line"> </span><br><span class="line">  <span class="meta">#<span class="meta-keyword">pragma</span> omp parallel for private(idx) lastprivate(main_var)</span></span><br><span class="line">  <span class="keyword">for</span> (idx = <span class="number">0</span>; idx &lt; <span class="number">12</span>; ++idx)</span><br><span class="line">  &#123;</span><br><span class="line">    main_var = idx * idx;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"In thread %d idx = %d main_var = %d\n"</span>,</span><br><span class="line">      omp_get_thread_num(), idx, main_var);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Back in main thread with main_var = %d\n"</span>, main_var);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果我希望最后main_var的值是11*11，则必须要用<code>lastprivate(main_var)</code>,否则当并行部分结束后main_var的值是不确定的。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://www.ibm.com/developerworks/cn/aix/library/au-aix-openmp-framework/" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/aix/library/au-aix-openmp-framework/</a></li>
+</ol>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1118,6 +1367,8 @@ Hello  world程序的编写1
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1129,8 +1380,8 @@ Hello  world程序的编写1
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1144,25 +1395,51 @@ Hello  world程序的编写1
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/" itemprop="url">the life of a web request</a></h1>
+                
+                <a href="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/" class="post-title-link" itemprop="url">the life of a web request</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T15:46:45+08:00">
-                2018-04-25
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-25 15:46:45" itemprop="dateCreated datePublished" datetime="2018-04-25T15:46:45+08:00">2018-04-25</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1175,14 +1452,10 @@ Hello  world程序的编写1
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Network</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
 
                 
                 
@@ -1191,16 +1464,6 @@ Hello  world程序的编写1
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1228,25 +1491,24 @@ Hello  world程序的编写1
       
         
           
-          一个web请求的例程
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一个web请求的例程</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1277,6 +1539,8 @@ Hello  world程序的编写1
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1288,8 +1552,8 @@ Hello  world程序的编写1
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1303,25 +1567,51 @@ Hello  world程序的编写1
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/25/2018-04-2018-04-25-交换机/" itemprop="url">集线器，二层交换机，三层交换机的区别</a></h1>
+                
+                <a href="/2018/04/25/2018-04-2018-04-25-交换机/" class="post-title-link" itemprop="url">集线器，二层交换机，三层交换机的区别</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T14:42:39+08:00">
-                2018-04-25
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-25 14:42:39" itemprop="dateCreated datePublished" datetime="2018-04-25T14:42:39+08:00">2018-04-25</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1334,14 +1624,10 @@ Hello  world程序的编写1
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Network</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
 
                 
                 
@@ -1350,16 +1636,6 @@ Hello  world程序的编写1
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/25/2018-04-2018-04-25-交换机/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/25/2018-04-2018-04-25-交换机/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1387,29 +1663,45 @@ Hello  world程序的编写1
       
         
           
-          集线器总线式的结构。一次只能够有一个用户占用总线发送消息。
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h1><p>总线式的结构。<br>一次只能够有一个用户占用总线发送消息。</p>
+<p><img src="https://i.loli.net/2018/04/25/5ae023ed438eb.png" alt=""></p>
+<h1 id="二层交换机"><a href="#二层交换机" class="headerlink" title="二层交换机"></a>二层交换机</h1><p>能够多用户同时发送，使用交换机。<br>缺点：<br>体积大，实现虚拟局域网复杂。</p>
+<p><img src="https://i.loli.net/2018/04/25/5ae0244f375b9.png" alt=""></p>
+<h1 id="三层交换机"><a href="#三层交换机" class="headerlink" title="三层交换机"></a>三层交换机</h1><p>三层交换技术：二层交换技术+三层转发技术</p>
+<p>网段划分之后，网段中子网必须依赖路由器进行管理。<br>三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。</p>
+<p><img src="https://i.loli.net/2018/04/25/5ae02501e49d2.png" alt=""></p>
+<ol>
+<li>二层交换引擎：实现同一个网段内的快速二层转发</li>
+<li>三层路由引擎：实现跨网段的三层路由转发</li>
+</ol>
+<h2 id="基于流交换的三层交换技术"><a href="#基于流交换的三层交换技术" class="headerlink" title="基于流交换的三层交换技术"></a>基于流交换的三层交换技术</h2><p>有个不在同一个子网内的站点需要发送消息给另一个不在同一个子网的站点。</p>
+<p>假设两个使用IP协议的站点A、B通过第三层交换机进行通信</p>
+<ol>
+<li>发送站点A在开始发送时，把自己的IP地址与B站的IP地址比较，判断B站是否与自己在同一子网内。</li>
+<li>若目的站B与发送站A在同一子网内，则进行二层的转发。</li>
+<li>若两个站点不在同一子网内，发送站A要向“缺省网关”发出ARP(地址解析)封包，而“缺省网关”的IP地址其实是三层交换机的三层交换模块。</li>
+<li>当发送站A对“缺省网关”的IP地址广播出一个ARP请求时，如果三层交换模块在以前的通信过程中已经知道B站的MAC地址，则向发送站A回复B的MAC地址。否则三层交换模块根据路由信息向B站广播一个ARP请求;</li>
+<li>B站得到此ARP请求后向三层交换模块回复其MAC地址;</li>
+<li>三层交换模块保存此地址并回复给发送站A,同时将B站的MAC地址发送到二层交换引擎的MAC地址表中。</li>
+<li>从这以后，当A向B发送的数据包便全部交给二层交换处理，信息得以高速交换。由于仅仅在路由过程中才需要三层处理，绝大部分数据都通过二层交换转发，因此三层交换机的速度很快，接近二层交换机的速度</li>
+</ol>
 
-二层交换机能够多用户同时发送，使用交换机。缺点：体积大，实现虚拟局域网复杂。
-
-三层交换机三层交换技术：二层交换技术+三层转发技术
-网段划分之后，网段中子网必须依赖路由器进行管理。三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/25/2018-04-2018-04-25-交换机/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1440,6 +1732,8 @@ Hello  world程序的编写1
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1451,8 +1745,8 @@ Hello  world程序的编写1
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1466,25 +1760,51 @@ Hello  world程序的编写1
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/24/2018-04-2018-04-24-source-insight/" itemprop="url">source-insight</a></h1>
+                
+                <a href="/2018/04/24/2018-04-2018-04-24-source-insight/" class="post-title-link" itemprop="url">source-insight</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T00:25:43+08:00">
-                2018-04-24
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-24 00:25:43" itemprop="dateCreated datePublished" datetime="2018-04-24T00:25:43+08:00">2018-04-24</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1497,14 +1817,10 @@ Hello  world程序的编写1
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -1513,16 +1829,6 @@ Hello  world程序的编写1
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/24/2018-04-2018-04-24-source-insight/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/24/2018-04-2018-04-24-source-insight/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1550,31 +1856,31 @@ Hello  world程序的编写1
       
         
           
-          source insight 源代码阅读工具下面是我使用source insight 看minix源代码时的截图。
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="source-insight-源代码阅读工具"><a href="#source-insight-源代码阅读工具" class="headerlink" title="source insight 源代码阅读工具"></a>source insight 源代码阅读工具</h1><p>下面是我使用source insight 看minix源代码时的截图。</p>
+<p><img src="https://i.loli.net/2018/04/24/5ade09737cba7.png" alt=""><br><!-- ![](figure/2018-04-24-00-29-17.png) --><br><img src="/2018/04/24/2018-04-2018-04-24-source-insight/2018-04-24-00-29-17.png" title="source insight"></p>
+<h1 id="满足需求"><a href="#满足需求" class="headerlink" title="满足需求"></a>满足需求</h1><p>这个工具大概满足了使用者的这几点需求：</p>
+<ol>
+<li>函数调用与被调用关系图的查看。</li>
+<li>对函数定义，变量定义的迅速定位与查看，不需要程序员手动寻找。</li>
+</ol>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>暂时还不是很会用这个工具。<br>对这个工具能提供的功能也还不是很清楚。<br>暂时先放在这里，以后有什么使用的技巧的话再更新吧。</p>
 
-满足需求这个工具大概满足了使用者的这几点需求：
-
-函数调用与被调用关系图的查看。
-对函数定义，变量定义的迅速定位与查看，不需要程序员手动寻找。
-
-小结暂时还不是很会用这个工具。对这个
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/24/2018-04-2018-04-24-source-insight/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1605,6 +1911,8 @@ Hello  world程序的编写1
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1616,8 +1924,8 @@ Hello  world程序的编写1
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1631,25 +1939,51 @@ Hello  world程序的编写1
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/22/2018-04-2018-04-22-markdown2ppt/" itemprop="url">markdown2ppt</a></h1>
+                
+                <a href="/2018/04/22/2018-04-2018-04-22-markdown2ppt/" class="post-title-link" itemprop="url">markdown2ppt</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T16:07:13+08:00">
-                2018-04-22
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 16:07:13" itemprop="dateCreated datePublished" datetime="2018-04-22T16:07:13+08:00">2018-04-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1662,14 +1996,10 @@ Hello  world程序的编写1
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -1678,16 +2008,6 @@ Hello  world程序的编写1
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/22/2018-04-2018-04-22-markdown2ppt/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/22/2018-04-2018-04-22-markdown2ppt/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1715,27 +2035,29 @@ Hello  world程序的编写1
       
         
           
-          markdown 可以直接变成 ppt！今天发现了一个比较好用的工具，可以将自己书写的markdown直接变成可以展示的ppt，准确来讲应该是一个网页。
-testtest!
-参考资料
-https://jk2k.com/2018/01/how-to-write-presentation-using-m
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/22/2018-04-2018-04-22-markdown2ppt/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="markdown-可以直接变成-ppt！"><a href="#markdown-可以直接变成-ppt！" class="headerlink" title="markdown 可以直接变成 ppt！"></a>markdown 可以直接变成 ppt！</h1><p>今天发现了一个比较好用的工具，可以将自己书写的markdown直接变成可以展示的ppt，准确来讲应该是一个网页。</p>
+<p>test<br>test!</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://jk2k.com/2018/01/how-to-write-presentation-using-markdown/" target="_blank" rel="noopener">https://jk2k.com/2018/01/how-to-write-presentation-using-markdown/</a></li>
+<li><a href="https://sspai.com/post/40657" target="_blank" rel="noopener">https://sspai.com/post/40657</a></li>
+</ol>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1768,6 +2090,8 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1777,8 +2101,8 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1792,25 +2116,51 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/22/test-2018-04-22-test-auto-pull/" itemprop="url">test-auto-pull</a></h1>
+                
+                <a href="/2018/04/22/test-2018-04-22-test-auto-pull/" class="post-title-link" itemprop="url">test-auto-pull</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T13:50:09+08:00">
-                2018-04-22
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-04-22 13:50:09" itemprop="dateCreated datePublished" datetime="2018-04-22T13:50:09+08:00">2018-04-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1823,14 +2173,10 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
 
                 
                 
@@ -1839,16 +2185,6 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/22/test-2018-04-22-test-auto-pull/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/22/test-2018-04-22-test-auto-pull/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1876,28 +2212,27 @@ https://jk2k.com/2018/01/how-to-write-presentation-using-m
       
         
           
-          今天试了一下，将博客部署在了公网上，并且在服务器端配置了自动pull。
-参考资料：
-https://excaliburhan.com/post/add-webhooks-to-your-project.html
-使用pm2 守护进程，守护服务器端监听的程序。
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天试了一下，将博客部署在了公网上，并且在服务器端配置了自动pull。</p>
+<p>参考资料：</p>
+<p><a href="https://excaliburhan.com/post/add-webhooks-to-your-project.html" target="_blank" rel="noopener">https://excaliburhan.com/post/add-webhooks-to-your-project.html</a></p>
+<p>使用pm2 守护进程，守护服务器端监听的程序。</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/22/test-2018-04-22-test-auto-pull/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1926,15 +2261,12 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1957,52 +2289,116 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="https://wwyf.github.io/logo.jpg" alt="wyf">
             
               <p class="site-author-name" itemprop="name">wyf</p>
               <p class="site-description motion-element" itemprop="description">bilibala~ bilibala~</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">48</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">48</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2014,69 +2410,19 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
           
 
           
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/WalkerYF" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="w.y.ff@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
+
           
 
           
           
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
-              </a>
-            </div>
-          
 
           
+            
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://tongji.baidu.com/" title="百度统计" target="_blank">百度统计</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://leancloud.cn" title="leancloud" target="_blank">leancloud</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://analytics.google.com" title="Google分析" target="_blank">Google分析</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://theme-next.iissnan.com/" title="Next主题配置文档" target="_blank">Next主题配置文档</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://hexo.io/docs/" title="Hexo官方配置文档" target="_blank">Hexo官方配置文档</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2092,17 +2438,19 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">wyf</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -2110,31 +2458,12 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.7.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
@@ -2156,11 +2485,14 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2174,7 +2506,6 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
 
 
-  
 
 
 
@@ -2187,68 +2518,48 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+
+
+
+
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script src="/js/src/utils.js?v=6.7.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script src="/js/src/motion.js?v=6.7.0"></script>
 
 
 
   
   
 
-  
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script src="/js/src/schemes/muse.js?v=6.7.0"></script>
 
 
 
   
 
-
   
 
 
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
 
 
-	
 
+  
 
 
 
@@ -2261,361 +2572,13 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
 
   
 
-
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'a53j2UQ5XFjm8AIynx8Wovci-gzGzoHsz',
-        appKey: 'ze1twuRbEWoPuPsBloXMRXLo',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
-
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('5');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
+  
 
   
 
@@ -2624,49 +2587,12 @@ https://excaliburhan.com/post/add-webhooks-to-your-project.html
   
 
   
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-    
-  </script>
 
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
 
   
 

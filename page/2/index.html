@@ -2,93 +2,101 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans,en,default">
+<html class="theme-next muse use-motion" lang="zh-Hans,en,default">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
 
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="bilibala~ bilibala~">
+  <meta name="description" content="bilibala~ bilibala~">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="https://wwyf.github.io/page/2/index.html">
@@ -101,29 +109,8 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+
 
 
 
@@ -131,7 +118,11 @@
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Blog</title>
   
@@ -142,6 +133,35 @@
 
 
 
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
@@ -158,7 +178,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -168,13 +188,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">My Blog</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -182,110 +205,76 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -298,6 +287,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -307,8 +298,8 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -322,25 +313,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/" itemprop="url">ftp服务器+内网穿透</a></h1>
+                
+                <a href="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/" class="post-title-link" itemprop="url">ftp服务器+内网穿透</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T17:22:51+08:00">
-                2018-07-26
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-07-26 17:22:51" itemprop="dateCreated datePublished" datetime="2018-07-26T17:22:51+08:00">2018-07-26</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -353,14 +370,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -369,16 +382,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -406,37 +409,61 @@
       
         
           
-          花了一下下午时间，做了自己的ftp服务器。
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>花了一下下午时间，做了自己的ftp服务器。</p>
+<ol>
+<li>配置具有多用户多权限多目录的ftp服务器</li>
+<li>内网测试</li>
+<li>买一个域名？绑定到云服务器上</li>
+<li>使用frp完成内网穿透</li>
+<li>几个比较重要的坑<ol>
+<li>必须使用被动模式</li>
+<li>vsftpd的被动模式设置数据端口段，并使用frp进行转发</li>
+</ol>
+</li>
+</ol>
+<p>主要分为两个内容来记录一下这一次的配置。</p>
+<h1 id="配置多用户多权限多目录的ftp服务器"><a href="#配置多用户多权限多目录的ftp服务器" class="headerlink" title="配置多用户多权限多目录的ftp服务器"></a>配置多用户多权限多目录的ftp服务器</h1><p>考虑到自己需要去弄多个用户都可以登录并且还具有不同权限的ftp服务器，我在网上找到了这样的一个教程，然后自己在理解了这个教程的基础上，对一些指令进行了适当的改动。</p>
+<p><a href="http://forum.ubuntu.org.cn/viewtopic.php?t=368282" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?t=368282</a></p>
+<p>为了防止该网站gg，我记录一下。</p>
+<p><img src="http://bit.ly/2Ok9k0e" alt=""></p>
+<h2 id="我自己的配置"><a href="#我自己的配置" class="headerlink" title="我自己的配置"></a>我自己的配置</h2><p>我把有关用户的配置都放在了/etc/vsftpd里面，并且把一些重要的文件的权限设置为600，这样的话，就无法查看与数据库对应的用户名密码的文件。</p>
+<h2 id="还有一个坑"><a href="#还有一个坑" class="headerlink" title="还有一个坑"></a>还有一个坑</h2><p>vsftpd-500-oops-cannot-change-directory</p>
+<p>关于这一个错误，可能有好几种原因。</p>
+<p>我见过的有，</p>
+<ol>
+<li>补上这一条指令，可能就可以了（<img src="http://bit.ly/2OhbZrn" alt=""> <code>allow_writeable_chroot=YES</code></li>
+<li>可能是对应的文件夹还没有创建（傻逼错误了这是）</li>
+</ol>
+<h1 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h1><p>大概的配置其实还是挺简单的，frp本身就易用，然后我在这一次的配置中，使用到了supervisor对frp进程进行守护。</p>
+<h2 id="使用supervisor对frp进行守护"><a href="#使用supervisor对frp进行守护" class="headerlink" title="使用supervisor对frp进行守护"></a>使用supervisor对frp进行守护</h2><p><a href="https://diannaobos.com/post/535.html" target="_blank" rel="noopener">https://diannaobos.com/post/535.html</a><br>主要参考了这一篇博客来进行配置，注意到日志文件的输出也是在配置文件里面定义好的。</p>
+<h2 id="配置服务器端"><a href="#配置服务器端" class="headerlink" title="配置服务器端"></a>配置服务器端</h2><p>frps.ini</p>
+<p><img src="http://bit.ly/2A8E1m0" alt=""></p>
+<p>很贴心的提供了token，防止别人偷偷用自己的服务器做内网穿透</p>
+<h2 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h2><p>注意客户端的token要和服务器端的一致就好</p>
+<p><img src="http://bit.ly/2mHzBZs" alt=""></p>
+<h2 id="一个坑点"><a href="#一个坑点" class="headerlink" title="一个坑点"></a>一个坑点</h2><p>在清楚ftp主动模式和被动模式之后，其实我们很容易发现，在使用一台外网服务器去做内网穿透后，我们如果使用主动模式访问ftp服务器，是会出问题的。</p>
+<p><a href="https://github.com/fatedier/frp/issues/219" target="_blank" rel="noopener">https://github.com/fatedier/frp/issues/219</a></p>
+<p>主要参考了这一个issue解决了这个问题。</p>
+<p>不过有一个显示，只能够使用被动模式访问ftp服务器，如果使用主动模式是完全行不通的。</p>
+<h1 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h1><p>注意了，如果使用域名访问的话只能够使用被动模式来访问，在命令行中，linux的ftp命令可以通过passive切换主被动模式，而window下好像没有被动模式？</p>
+<p>注意一点：使用域名的话，必须使用被动模式，而如果使用中大内网ip的话则必须使用主动模式，不能使用被动模式（原因有点复杂），不过中大内网速度飞快啊10mb/s</p>
 
-配置具有多用户多权限多目录的ftp服务器
-内网测试
-买一个域名？绑定到云服务器上
-使用frp完成内网穿透
-几个比较重要的坑
-必须使用被动模式
-vsftpd的被动模式设置数据端口段，并使用frp进行转发
-
-
-
-主要分为两个内容来记录一下这一次的配置。
-配置
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -467,6 +494,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -478,8 +507,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -493,25 +522,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/13/2018-07-2018-07-13-信号量应用实例/" itemprop="url">信号量应用实例</a></h1>
+                
+                <a href="/2018/07/13/2018-07-2018-07-13-信号量应用实例/" class="post-title-link" itemprop="url">信号量应用实例</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T00:20:57+08:00">
-                2018-07-13
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-07-13 00:20:57" itemprop="dateCreated datePublished" datetime="2018-07-13T00:20:57+08:00">2018-07-13</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -524,14 +579,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
 
                 
                 
@@ -540,16 +591,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/13/2018-07-2018-07-13-信号量应用实例/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/13/2018-07-2018-07-13-信号量应用实例/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -577,25 +618,57 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          使用信号量解决这样的问题
-某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/13/2018-07-2018-07-13-信号量应用实例/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="使用信号量解决这样的问题"><a href="#使用信号量解决这样的问题" class="headerlink" title="使用信号量解决这样的问题"></a>使用信号量解决这样的问题</h2><blockquote>
+<p>某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。 </p>
+</blockquote>
+<h2 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h2><p>使用信号量实现一些进程的按序执行，一般可以按照这样的做法。</p>
+<p>若B进程必须等候A进程的进行，以下是简单的代码说明</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">s a_finished = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">A</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* a */</span></span><br><span class="line"></span><br><span class="line">    V(a_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* b  */</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="这一道题"><a href="#这一道题" class="headerlink" title="这一道题"></a>这一道题</h2><h3 id="使用到的信号量"><a href="#使用到的信号量" class="headerlink" title="使用到的信号量"></a>使用到的信号量</h3><p>注意，使用的都是计数信号量</p>
+<table>
+<thead>
+<tr>
+<th>信号量名称</th>
+<th>信号量作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a_finished</td>
+<td>将“a已完成任务”作为一种信号，给进程B，进程C领取</td>
+</tr>
+<tr>
+<td>b_finished</td>
+<td>“b已完成任务”，告诉d进程</td>
+</tr>
+<tr>
+<td>c_finished</td>
+<td>“c已完成任务”，告诉e进程</td>
+</tr>
+<tr>
+<td>d_finished</td>
+<td>“d已完成任务”，告诉e进程</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">s a_finished = <span class="number">0</span>;</span><br><span class="line">s b_finished = <span class="number">0</span>;</span><br><span class="line">s c_finished = <span class="number">0</span>;</span><br><span class="line">s d_finished = <span class="number">0</span>;</span><br><span class="line">s e_finished = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">A</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* a */</span></span><br><span class="line"></span><br><span class="line">    V(a_finished);</span><br><span class="line">    V(a_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* b  */</span></span><br><span class="line"></span><br><span class="line">    V(b_finished);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">C</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* c */</span></span><br><span class="line"></span><br><span class="line">    V(c_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">D</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(b_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* d */</span></span><br><span class="line"></span><br><span class="line">    V(d_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">E</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(d_finished);</span><br><span class="line">    P(c_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* e */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    parbegin(A(),B(),C(),D(),E());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -626,6 +699,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -637,8 +712,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -652,25 +727,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/" itemprop="url">使用信号量解决互斥问题</a></h1>
+                
+                <a href="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/" class="post-title-link" itemprop="url">使用信号量解决互斥问题</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T15:21:47+08:00">
-                2018-07-08
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-07-08 15:21:47" itemprop="dateCreated datePublished" datetime="2018-07-08T15:21:47+08:00">2018-07-08</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -683,14 +784,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Operating-System/" itemprop="url" rel="index">
-                    <span itemprop="name">Operating System</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Operating-System/" itemprop="url" rel="index"><span itemprop="name">Operating System</span></a></span>
 
                 
                 
@@ -699,16 +796,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -736,24 +823,91 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          使用信号量解决同步问题信号量定义1234567891011121314151617struct semaphore&#123; //定义结构    int count;    queueType *queue;&#125;s;void  P(semaphore s) &#123; // P操作   
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="使用信号量解决同步问题"><a href="#使用信号量解决同步问题" class="headerlink" title="使用信号量解决同步问题"></a>使用信号量解决同步问题</h1><h2 id="信号量定义"><a href="#信号量定义" class="headerlink" title="信号量定义"></a>信号量定义</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">semaphore</span>&#123;</span> <span class="comment">//定义结构</span></span><br><span class="line">    <span class="keyword">int</span> count;</span><br><span class="line">    queueType *<span class="built_in">queue</span>;</span><br><span class="line">&#125;s;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">P</span><span class="params">(semaphore s)</span> </span>&#123; <span class="comment">// P操作</span></span><br><span class="line">    s.count--;</span><br><span class="line">    <span class="keyword">if</span> (s.count&lt;<span class="number">0</span>)  </span><br><span class="line">       Block(CurruntProcess, s.<span class="built_in">queue</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">V</span><span class="params">(semaphore s)</span> </span>&#123;<span class="comment">// V操作</span></span><br><span class="line">    s.count++;</span><br><span class="line">    <span class="keyword">if</span> (s.count&lt;=<span class="number">0</span>)  </span><br><span class="line">       WakeUp(s.<span class="built_in">queue</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="用信号量实现进程同步"><a href="#用信号量实现进程同步" class="headerlink" title="用信号量实现进程同步"></a>用信号量实现进程同步</h2><p>系统中的一些进程需要相互合作，共同完成一项任务。具体来说，一个进程运行到某一点时，要求另一伙伴进程为它提供消息，在未获得消息之前，该进程处于阻塞状态，获得消息后被唤醒进入就绪状态。</p>
+<p>这里有一个例子是：司机与售票员之间的同步。只有当售票员关门了，司机才可以进行启动汽车，而且只有当司机到站停车了，售票员才能够开门。</p>
+<h3 id="信号量实现进程同步"><a href="#信号量实现进程同步" class="headerlink" title="信号量实现进程同步"></a>信号量实现进程同步</h3><p>进程$P_I$将输入的数据写入缓冲区$B_1$,<br>进程$P_C$读出$B_1$中的数据，完成计算，把结果写入缓冲区$B_2$<br>进程$P_P$读出$B_2$中的结果，打印输出</p>
+<p>这三个进程之间的同步要求有两点</p>
+<ol>
+<li>先写后读（不能读空缓冲区）</li>
+<li>未读完不能写（不能写非空缓冲区）</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/-ugfRbGmn9sw/W0HCOZ220uI/AAAAAAAAI2U/CZyBocvneOcYFZ_mQUfiBTp60-J7VECSQCHMYCw/s0/POWERPNT_2018-07-08_15-50-15.png" alt=""></p>
+<p>对于这个问题，使用信号量可以这样解决</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">semaphore empty1 = <span class="number">1</span>;</span><br><span class="line">semaphore full1 = <span class="number">0</span>;</span><br><span class="line">semaphore empry2 = <span class="number">1</span>;</span><br><span class="line">semaphore full2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对PI进程而言</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="number">1</span>)&#123;</span><br><span class="line">    P(empty1);</span><br><span class="line">    <span class="comment">// 将数据写到B1</span></span><br><span class="line">    V(full1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对PC进程而言</span></span><br><span class="line"><span class="keyword">while</span> ( <span class="number">1</span> ) &#123;</span><br><span class="line">    P(full1);</span><br><span class="line">    <span class="comment">// 从B1中读取数据;</span></span><br><span class="line">    V(empty1);</span><br><span class="line">    <span class="comment">// 计算;</span></span><br><span class="line">    P(empty2);</span><br><span class="line">    <span class="comment">// 结果写到B2;</span></span><br><span class="line">    V(full2);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 对PP进程而言</span></span><br><span class="line"><span class="keyword">while</span> ( <span class="number">1</span> ) &#123;</span><br><span class="line">    P(full2);</span><br><span class="line">    <span class="comment">// 读取B2中的结果并输出到打印机;</span></span><br><span class="line">    V(empty2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="生产者-消费者问题"><a href="#生产者-消费者问题" class="headerlink" title="生产者/消费者问题"></a>生产者/消费者问题</h2><p>并发处理的最常见问题类型</p>
+<p>问题描述</p>
+<ol>
+<li>若干进程通过无限/有限的共享缓冲区交换数据</li>
+<li>一组“生产者”进程不断写入</li>
+<li>另一组“消费者”进程不断读出</li>
+<li>共享缓冲区无限/共有N个</li>
+<li>任何时刻只能有一个进程可对共享缓冲区进行操作</li>
+</ol>
+<h3 id="基于计数信号量的正确解决方案"><a href="#基于计数信号量的正确解决方案" class="headerlink" title="基于计数信号量的正确解决方案"></a>基于计数信号量的正确解决方案</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">semaphore n=<span class="number">0</span>; <span class="comment">/*缓冲区中的产品数*/</span></span><br><span class="line">semaphore s=<span class="number">1</span>; <span class="comment">/*互斥*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    produce();</span><br><span class="line"></span><br><span class="line">    semWait(s);</span><br><span class="line">    append();</span><br><span class="line">    semSignal(s);</span><br><span class="line"></span><br><span class="line">    semSignal(n);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    semWait(n);</span><br><span class="line"></span><br><span class="line">    semWait(s);</span><br><span class="line">    take();</span><br><span class="line">    semSignal(s);</span><br><span class="line"></span><br><span class="line">    consume();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">   parbegin(producer, consumer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="基于二元信号量的正确解决方案"><a href="#基于二元信号量的正确解决方案" class="headerlink" title="基于二元信号量的正确解决方案"></a>基于二元信号量的正确解决方案</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">Binary_semaphore s=<span class="number">1</span>; <span class="comment">// 用于控制缓冲区变量的互斥访问</span></span><br><span class="line">Binary_semaphore delay=<span class="number">0</span>; <span class="comment">// 用于确定能否访问缓冲区，如果缓冲区为空，阻塞消费者</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    produce();</span><br><span class="line">    semWaitB(s);</span><br><span class="line">    append();</span><br><span class="line">    n++;</span><br><span class="line">    <span class="keyword">if</span> (n==<span class="number">1</span>)  semSignalB(delay);</span><br><span class="line">    semSignalB(s);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line">  semWaitB(delay);</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    semWaitB(s);</span><br><span class="line">    take();</span><br><span class="line">    n--;</span><br><span class="line">    m=n;</span><br><span class="line">    semSignalB(s);</span><br><span class="line">    consume();</span><br><span class="line">    <span class="keyword">if</span> (m==<span class="number">0</span>)  semWaitB(delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="有限循环缓冲区的解决方案"><a href="#有限循环缓冲区的解决方案" class="headerlink" title="有限循环缓冲区的解决方案"></a>有限循环缓冲区的解决方案</h3><p>一种这样的思想：生产者在将产品放入缓冲区前，先申请一个空闲位置（空闲信号量-1），然后在将产品放入到缓冲区中，然后再申请增加一个产品。（感觉是一种比较保守的做法）</p>
+<p>消费者也是采取了一种保守的做法。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> sizebuffer=N</span><br><span class="line">semaphore n=<span class="number">0</span>; <span class="comment">/*产品数*/</span></span><br><span class="line">semaphore s=<span class="number">1</span>;  <span class="comment">/*互斥*/</span></span><br><span class="line">semaphore e=N; <span class="comment">/*空闲数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    produce();</span><br><span class="line">    semWait(e);</span><br><span class="line"></span><br><span class="line">    semWait(s);</span><br><span class="line">    append();</span><br><span class="line">    semSignal(s);</span><br><span class="line"></span><br><span class="line">    semSignal(n);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">    semWait(n);</span><br><span class="line"></span><br><span class="line">    semWait(s);</span><br><span class="line">    take();</span><br><span class="line">    semSignal(s);</span><br><span class="line"></span><br><span class="line">    semSignal(e);</span><br><span class="line">    consume();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">   parbegin(producer, consumer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="写者-读者问题"><a href="#写者-读者问题" class="headerlink" title="写者/读者问题"></a>写者/读者问题</h2><p>同步与并发机制设计的著名问题<br>问题描述</p>
+<ol>
+<li>有一个多个进程共享的数据区，有一些只读取这个数据区的进程(reader)和一些只往数据区中写数据的进程(writer)</li>
+</ol>
+<p>必须满足下列条件：</p>
+<ol>
+<li>任意多的读进程可以同时读这个数据区</li>
+<li>一次只有一个写进程可以往数据区写</li>
+<li>如果一个写进程正在往数据区中写，禁止任何读进程读数据区</li>
+</ol>
+<h3 id="读者优先信号量方案"><a href="#读者优先信号量方案" class="headerlink" title="读者优先信号量方案"></a>读者优先信号量方案</h3><ol>
+<li>一旦有一个读进程正在读，写进程就一直被阻塞</li>
+<li>直到没有读进程在读了写进程才可以在写。</li>
+<li>读者优先，写者可能饥饿</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* program reader_and_writer */</span></span><br><span class="line"><span class="keyword">int</span> readcount;  </span><br><span class="line">semaphore x=<span class="number">1</span>; <span class="comment">// 用于保证readcount被正确更新</span></span><br><span class="line">semaphore wsem=<span class="number">1</span>;  <span class="comment">// 用于实现互斥</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">      P(x);</span><br><span class="line">      readcount++;</span><br><span class="line">      <span class="comment">// 如果本来没有进程在读，这是第一个进程，就需要防止该单元被写</span></span><br><span class="line">      <span class="keyword">if</span> (readcount==<span class="number">1</span>) P(wsem);</span><br><span class="line">      V(x);</span><br><span class="line">      READUNIT();</span><br><span class="line">      P(x);</span><br><span class="line">      readcount--;</span><br><span class="line">      <span class="comment">// 如果没有进程在读了，这是最后一个进程，就需要释放这一个单元</span></span><br><span class="line">      <span class="keyword">if</span> (readcount==<span class="number">0</span>) V(wsem);</span><br><span class="line">      V(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">      P(wsem);</span><br><span class="line">      WRITEUNIT();</span><br><span class="line">      V(wsem);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   readcount=<span class="number">0</span>;</span><br><span class="line">   parbegin(reader(), writer());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="写者优先信号量方案"><a href="#写者优先信号量方案" class="headerlink" title="写者优先信号量方案"></a>写者优先信号量方案</h3><p>为了保证写进程优先，写进程声明想写时，不允许新的读进程访问该数据块。</p>
+<p>一旦有一个写者要写，读者就无法读取，读者只能够等待所有写者写完才能够进行读取。</p>
+<ol>
+<li>当写进程声明想写时，不允许有新的进程继续读</li>
+<li>思路<ol>
+<li>读进程在一个队列上进行排队（信号量z）<ol>
+<li>信号量z初值设为1，这就意味着所有想要读的进程想要排队的时候，只有一个能够排到队头去获取读的权力</li>
+<li>概括：通过信号量z，多个读者在队列中排队，并且每次只能够派出一名读者尝试获取读的权力</li>
+</ol>
+</li>
+<li>尝试获取读的权力（信号量rsem）<ol>
+<li>rsem信号量，读者写者都在争取，写者获得了运行权限后，第一个写者会锁住“读的权力”rsem信号量，从而此时的读者无法获得读的权力，阻塞着</li>
+<li>若此时仍有写者要来写，writecount的值会大于1，因此rsem不会被第一个写者立马释放。</li>
+<li>实现了：一旦有一个写者要写，读者就无法读取，读者只能够等待所有写者写完才能够进行读取。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* program reader_and_writer */</span></span><br><span class="line"><span class="keyword">int</span> readcount, writecount;  </span><br><span class="line">semaphore x=<span class="number">1</span>, y=<span class="number">1</span>, z=<span class="number">1</span>, rsem=<span class="number">1</span>, wsem=<span class="number">1</span>; </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">信号量z：</span></span><br><span class="line"><span class="comment">信号量x：控制readcount的更新</span></span><br><span class="line"><span class="comment">-------------------------</span></span><br><span class="line"><span class="comment">writecount：控制rsem的设置</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">信号量rsem : 『读的权力』当有写进程准备访问数据区的时候，用于禁止所有的读进程</span></span><br><span class="line"><span class="comment">信号量wsem：『写的权力』</span></span><br><span class="line"><span class="comment">信号量y：控制writecount的更新</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">       <span class="comment">// rsem表示『读的权力』，应该像一个二元信号量一样</span></span><br><span class="line">       <span class="comment">// 有了z在rsem前面，那么rsem最多被读进程要一次，其他的进程都会在z上排队。</span></span><br><span class="line">      P(z); P(rsem); </span><br><span class="line">	 P(x);</span><br><span class="line">      readcount++;</span><br><span class="line">      <span class="keyword">if</span> (readcount==<span class="number">1</span>) P(wsem);</span><br><span class="line">      V(x); </span><br><span class="line">	 V(rsem); V(z);</span><br><span class="line">	 READUNIT();</span><br><span class="line">      P(x);</span><br><span class="line">      readcount--;</span><br><span class="line">      <span class="keyword">if</span> (readcount==<span class="number">0</span>) V(wsem);</span><br><span class="line">      V(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">      P(y); </span><br><span class="line">      writecount++;</span><br><span class="line">      <span class="keyword">if</span> (writecount==<span class="number">1</span>) P(rsem);</span><br><span class="line">      V(y);</span><br><span class="line">      P(wsem);</span><br><span class="line">      WRITEUNIT();</span><br><span class="line">      V(wsem);</span><br><span class="line">      P(y); </span><br><span class="line">      writecount--;</span><br><span class="line">      <span class="keyword">if</span> (writecount==<span class="number">0</span>) V(rsem);</span><br><span class="line">      V(y);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   readcount = writecount = <span class="number">0</span>;</span><br><span class="line">   parbegin(reader(), writer());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="公平方案"><a href="#公平方案" class="headerlink" title="公平方案"></a>公平方案</h3><p>如何体现公平？</p>
+<p>读者/写者的公平方案是指：无论读者还是写者，都有可能获取到一个锁用以锁住文件访问权限。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">void</span> read-justice()&#123;</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    p(q);</span><br><span class="line"></span><br><span class="line">    p(rcountsem)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (rcount == <span class="number">0</span>)</span><br><span class="line">      p(fsem)</span><br><span class="line">    rcount++;</span><br><span class="line"></span><br><span class="line">    r(rcountsem)</span><br><span class="line">    </span><br><span class="line">    v(q) ; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// reading... </span></span><br><span class="line"></span><br><span class="line">    p(rcountsem)</span><br><span class="line"></span><br><span class="line">    rcount--;</span><br><span class="line">    <span class="keyword">if</span> (rcount == <span class="number">0</span>)</span><br><span class="line">      v(fsem);</span><br><span class="line"></span><br><span class="line">    v(rcountsem)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write_justice</span><span class="params">()</span></span>&#123; </span><br><span class="line">  p(q) ; </span><br><span class="line">  p(fsem) ; </span><br><span class="line">  v(q); </span><br><span class="line">  <span class="comment">// writing... </span></span><br><span class="line">  v (fsem) ; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="哲学家就餐问题"><a href="#哲学家就餐问题" class="headerlink" title="哲学家就餐问题"></a>哲学家就餐问题</h2><h3 id="信号量解决方案一"><a href="#信号量解决方案一" class="headerlink" title="信号量解决方案一"></a>信号量解决方案一</h3><p>这一种方案有死锁风险</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">semaphore fork[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">philosopher</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">      think();</span><br><span class="line">      P(fork[i]);</span><br><span class="line">      P(fork[(i+<span class="number">1</span>) mod <span class="number">5</span>]);</span><br><span class="line">      eat();</span><br><span class="line">      V(fork[(i+<span class="number">1</span>) mod <span class="number">5</span>]);</span><br><span class="line">      V(fork[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    parbegin(</span><br><span class="line">       philosopher(<span class="number">1</span>),</span><br><span class="line">       philosopher(<span class="number">2</span>),</span><br><span class="line">       philosopher(<span class="number">3</span>),</span><br><span class="line">       philosopher(<span class="number">4</span>),</span><br><span class="line">       philosopher(<span class="number">5</span>)</span><br><span class="line">     )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="信号量解决方案二"><a href="#信号量解决方案二" class="headerlink" title="信号量解决方案二"></a>信号量解决方案二</h3><p>这里增加了一个服务员，这个服务员只允许四位哲学家同时进入餐厅。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">semaphore fork[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">semaphore room=<span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">philosopher</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">while</span> (<span class="literal">true</span>)  &#123;</span><br><span class="line">      think();</span><br><span class="line">      P(room);</span><br><span class="line">      P(fork[i]);</span><br><span class="line">      P(fork[(i+<span class="number">1</span>) mod <span class="number">5</span>]);</span><br><span class="line">      eat();</span><br><span class="line">      V(fork[(i+<span class="number">1</span>) mod <span class="number">5</span>]);</span><br><span class="line">      V(fork[i]);</span><br><span class="line">      V(room); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    parbegin(</span><br><span class="line">       philosopher(<span class="number">0</span>),</span><br><span class="line">       philosopher(<span class="number">1</span>),</span><br><span class="line">       philosopher(<span class="number">2</span>),</span><br><span class="line">       philosopher(<span class="number">3</span>),</span><br><span class="line">       philosopher(<span class="number">4</span>)</span><br><span class="line">     )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -784,6 +938,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -795,8 +951,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -810,25 +966,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/03/2018-06-2018-06-03-scipy题目/" itemprop="url">scipy题目</a></h1>
+                
+                <a href="/2018/06/03/2018-06-2018-06-03-scipy题目/" class="post-title-link" itemprop="url">scipy题目</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-03T01:06:26+08:00">
-                2018-06-03
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-06-03 01:06:26" itemprop="dateCreated datePublished" datetime="2018-06-03T01:06:26+08:00">2018-06-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -841,14 +1023,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -857,16 +1035,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/03/2018-06-2018-06-03-scipy题目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/03/2018-06-2018-06-03-scipy题目/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -894,27 +1062,49 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          scipy题目（高级编程技术 week-13）
-第一题 Least squares
-关于这一道题，使用scipy库中的leastsq函数即可求解。
-第一步：先生成可用的矩阵和向量在本题中，我需要先生成矩阵$A$，向量$b$，考虑到后期该问题需要有解，向量$b$不随机生成，而是先随机生成x，然后算出b
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/03/2018-06-2018-06-03-scipy题目/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>scipy题目（高级编程技术 week-13）</p>
+<h1 id="第一题-Least-squares"><a href="#第一题-Least-squares" class="headerlink" title="第一题 Least squares"></a>第一题 Least squares</h1><p><img src="https://lh3.googleusercontent.com/-dDrRXVqhk3Q/WxK883E-l5I/AAAAAAAAIGw/aqsnsx414eUyVTsb4Er8ROkleqtKVnIWQCHMYCw/s0/Acrobat_2018-06-02_23-51-12.png" alt=""></p>
+<p>关于这一道题，使用<code>scipy</code>库中的leastsq函数即可求解。</p>
+<h2 id="第一步：先生成可用的矩阵和向量"><a href="#第一步：先生成可用的矩阵和向量" class="headerlink" title="第一步：先生成可用的矩阵和向量"></a>第一步：先生成可用的矩阵和向量</h2><p>在本题中，我需要先生成矩阵$A$，向量$b$，考虑到后期该问题需要有解，向量$b$不随机生成，而是先随机生成x，然后算出b。代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy <span class="keyword">as</span> sp</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># 维数</span></span><br><span class="line">m = <span class="number">20</span></span><br><span class="line">n = <span class="number">10</span></span><br><span class="line"><span class="comment"># 生成矩阵A</span></span><br><span class="line">A = np.random.normal(size=(m,n), scale=<span class="number">15</span>, loc=<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 生成假想的该问题应有的解</span></span><br><span class="line">xx = np.random.normal(size=n,scale=<span class="number">15</span>, loc=<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 生成该解对应的向量b</span></span><br><span class="line">b = np.dot(A, xx)</span><br></pre></td></tr></table></figure>
+<p>在生成了可用的数据后，便使用<code>leastsq</code>函数解决问题，代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> leastsq</span><br><span class="line"><span class="comment"># 问题求解初始向量</span></span><br><span class="line">x = np.ones(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 误差函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error</span><span class="params">(xx)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.dot(A, xx) - b</span><br><span class="line"></span><br><span class="line">x_result,cov_x = leastsq(error, x)</span><br><span class="line"></span><br><span class="line">print(x_result, cov_x)</span><br><span class="line"><span class="comment"># 计算误差向量的范数</span></span><br><span class="line">norm_residual = np.linalg.norm(np.dot(A, x_result) - b)</span><br><span class="line">print(norm_residual)</span><br></pre></td></tr></table></figure>
+<p>运行以上代码后，可以得到下面的解：</p>
+<p><img src="https://lh3.googleusercontent.com/-s2hBkNNeRjc/WxK-gTRv7DI/AAAAAAAAIHA/JRLBcM8fMsQueKjikFqli8j4ofSbpyGGACHMYCw/s0/Snipaste_2018-06-02_23-57-51.png" alt=""></p>
+<h1 id="第二题-Optimization"><a href="#第二题-Optimization" class="headerlink" title="第二题 Optimization"></a>第二题 Optimization</h1><p>求函数最大值，使用scipy自带的<code>fmin</code>函数即可，这里稍微转换一下，由于只有fmin这个函数可用，而我们找的又是最大值，我们就只需要给函数加个负数，就变成了求最小值，这样子就把问题转换过来了。下面是代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> -(np.sin(x<span class="number">-2</span>) * np.sin(x<span class="number">-2</span>) * np.exp(-x**<span class="number">2</span>))</span><br><span class="line">minimum = sp.optimize.fmin(func, <span class="number">1</span>)</span><br><span class="line">print(minimum)</span><br></pre></td></tr></table></figure>
+<p>求得的结果是</p>
+<p><img src="https://lh3.googleusercontent.com/-IvETNo_juTo/WxLAFdrZDwI/AAAAAAAAIHc/7_Py8ig2HPAkhIxYjZLLkd_o7WOzy339gCHMYCw/s0/chrome_2018-06-03_00-04-36.png" alt=""></p>
+<p>经过绘图检验，可见的确是在$x  \approx  0.2162$左右这个点处取得最大值。</p>
+<p><img src="https://lh3.googleusercontent.com/-SkeVUHyos0w/WxK_mgpVPXI/AAAAAAAAIHQ/jse6SOy5lcoIsnnyhtVsCvLig_ziCXnAwCHMYCw/s0/chrome_2018-06-03_00-02-34.png" alt=""></p>
+<h1 id="第三题-Pairwise-distances"><a href="#第三题-Pairwise-distances" class="headerlink" title="第三题 Pairwise distances"></a>第三题 Pairwise distances</h1><p><img src="https://lh3.googleusercontent.com/-5aEeTC6bIP8/WxLA0AuD_aI/AAAAAAAAIHk/MJxRkLpbFcsJY3WMCFoq2ipq6rS4H6PiQCHMYCw/s0/Acrobat_2018-06-03_00-07-43.png" alt=""></p>
+<p>在scipy文档中，找到了这样的函数可以实现计算行之间的距离的功能：<code>pdist</code></p>
+<p><img src="https://lh3.googleusercontent.com/-Tsoa0YGUm1E/WxLF6UXmGWI/AAAAAAAAIHw/jhuLv28CyiYp9fFCZxAIb0kHXuhNTCVRwCHMYCw/s0/zeal_2018-06-03_00-29-28.png" alt=""></p>
+<p>因此实现的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> pdist</span><br><span class="line">m = <span class="number">30</span></span><br><span class="line">n = <span class="number">20</span></span><br><span class="line">X = np.random.normal(size=(n, m), scale=<span class="number">10</span>, loc=<span class="number">10</span>)</span><br><span class="line">Y = pdist(X, <span class="string">'sqeuclidean'</span>)</span><br><span class="line">print(Y.shape)</span><br><span class="line">print(Y)</span><br></pre></td></tr></table></figure>
+<p>注意，这里需要说明的数，这里使用的是欧拉距离公式，因此在函数参数中有一个<code>sqeuclidean</code>的项。</p>
+<p>文档内容可见</p>
+<p><img src="https://lh3.googleusercontent.com/-NRkKbXszA4A/WxLGnXHik_I/AAAAAAAAIIE/mxnQxzD8N7YJp2HtGXbzLBUe4IG3SGLrQCHMYCw/s0/zeal_2018-06-03_00-32-28.png" alt=""></p>
+<p>结果可见</p>
+<p><img src="https://lh3.googleusercontent.com/-tX2q0DHAWfw/WxLGJLypZYI/AAAAAAAAIH0/VEq0zx9SVJoUgWjUmFzC9Kz6VvEeZJAKACHMYCw/s0/chrome_2018-06-03_00-30-27.png" alt=""></p>
+<p>经过检验，的确应该是190个数（毕竟 20 * 19 /2 )， 其余的结果也是正确的。</p>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -945,6 +1135,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -956,8 +1148,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -971,25 +1163,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/" itemprop="url">matlibplot.pyplot的使用</a></h1>
+                
+                <a href="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/" class="post-title-link" itemprop="url">matlibplot.pyplot的使用</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T19:02:35+08:00">
-                2018-05-26
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-26 19:02:35" itemprop="dateCreated datePublished" datetime="2018-05-26T19:02:35+08:00">2018-05-26</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1002,14 +1220,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -1018,16 +1232,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1055,28 +1259,43 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          matlibplot 相关题目在这节课中，老师给我们讲了python中matplotlib库的用法，基于这些，我完成了以下三道习题。
-第一题
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="matlibplot-相关题目"><a href="#matlibplot-相关题目" class="headerlink" title="matlibplot 相关题目"></a>matlibplot 相关题目</h1><p>在这节课中，老师给我们讲了python中<code>matplotlib</code>库的用法，基于这些，我完成了以下三道习题。</p>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p><img src="https://lh3.googleusercontent.com/-Aae8ozqHe9Y/WwmYqG774oI/AAAAAAAAIBs/Xxt9JYakSLkQcixclsrdCLn03a3r7dUUgCHMYCw/s0/Acrobat_2018-05-27_01-26-00.png" alt=""></p>
+<!-- [t1] -->
+<p>该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">2</span>,<span class="number">50</span>)</span><br><span class="line">y = np.sin(x<span class="number">-2</span>) * np.sin(x<span class="number">-2</span>) * np.exp(-x**<span class="number">2</span>)</span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.xlabel(<span class="string">"x"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"y"</span>)</span><br><span class="line">plt.ylim(<span class="number">-0.1</span>, <span class="number">1</span>)</span><br><span class="line">plt.title(<span class="string">r"$f(x) = sin^2(x-2)e^&#123;-x^2&#125;$"</span>)</span><br><span class="line">plt.annotate(<span class="string">'local max'</span>, xy=(<span class="number">0.22</span>, <span class="number">0.9</span>), xytext=(<span class="number">0.13</span>, <span class="number">0.5</span>),</span><br><span class="line">            arrowprops=dict(facecolor=<span class="string">'black'</span>, shrink=<span class="number">0.05</span>))</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>运行的结果可见下图</p>
+<p><img src="https://lh3.googleusercontent.com/-GAGUouCHD5Q/WwmZBaFnWgI/AAAAAAAAIB0/2gHHcX9ycZwNrudSTXXPHVlTJ75XPgZCgCHMYCw/s0/Typora_2018-05-27_01-27-34.png" alt=""></p>
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>这一道题的题目可见：</p>
+<p><img src="https://lh3.googleusercontent.com/-pW38bOuWQ1o/WwmZK6-93RI/AAAAAAAAIB4/_HaQ0cbw2i0QG6oN_x2fqjdhjYIxQdUpgCHMYCw/s0/Acrobat_2018-05-27_01-28-12.png" alt=""></p>
+<p>在这里，题目要求我们自己给出方程的$y = Xb+z$各个量的值，然后使用$X$和$y$去反过来估计出原来的$b$。</p>
+<p>根据题目提示，此处为多元线性回归模型，使用最小二乘法即可，在<code>scipy</code>模块中有<code>leastsq</code>函数，可以用来寻找此种回归模型的解。于是我的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">X = np.random.normal(loc=<span class="number">5</span>,scale=<span class="number">5</span>,size=(<span class="number">20</span>,<span class="number">10</span>))</span><br><span class="line">b = np.random.normal(loc=<span class="number">0</span>,scale=<span class="number">5</span>,size=<span class="number">10</span>)</span><br><span class="line">z = np.random.normal(size=<span class="number">20</span>)</span><br><span class="line">y = np.dot(X,b) + z</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始向量</span></span><br><span class="line">b_e = np.ones(<span class="number">10</span>)</span><br><span class="line">print(b_e)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 误差函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error</span><span class="params">(p,xxx,yyy)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.dot(xxx,p)-yyy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最小二乘法</span></span><br><span class="line">b_e,cost=leastsq(error,b_e,args=(X,y)) </span><br><span class="line"></span><br><span class="line">plt.figure(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">"index"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"value"</span>)</span><br><span class="line">plt.plot(b, <span class="string">'rx'</span>, label=<span class="string">"True coefficients"</span>)</span><br><span class="line">plt.plot(b_e, <span class="string">'b'</span>, label=<span class="string">"Estimated coefficients"</span>)</span><br><span class="line">plt.legend(bbox_to_anchor=(<span class="number">1.05</span>, <span class="number">1</span>), loc=<span class="number">2</span>, borderaxespad=<span class="number">0.</span>)</span><br><span class="line">plt.axis([<span class="number">0</span>,<span class="number">9</span>,<span class="number">-10</span>,<span class="number">10</span>])</span><br><span class="line">plt.hlines(<span class="number">0</span>,<span class="number">0</span>,<span class="number">9</span> ,colors = <span class="string">"c"</span>, linestyles = <span class="string">"dashed"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>运行后，结果可见下图</p>
+<p><img src="https://lh3.googleusercontent.com/-QnpNTzDT-aY/WwmZRBpPQtI/AAAAAAAAIB8/2-FK9r2_ydsjxG92OL-DlpHz8LnG08GXwCHMYCw/s0/Typora_2018-05-27_01-28-38.png" alt=""></p>
+<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p>该题题面如下：</p>
+<p><img src="https://lh3.googleusercontent.com/-zggHcCV9uGY/WwmZWNuaN9I/AAAAAAAAICA/C7Je5XQCUnMAJsVZVFKdEthfpe6ERRhtwCHMYCw/s0/Acrobat_2018-05-27_01-28-57.png" alt=""></p>
+<p>这一道题主要要求我们掌握关于直方图的绘制以及核函数密度估计的方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.normal(scale=<span class="number">100</span>, size=<span class="number">10000</span>)</span><br><span class="line">kernel = stats.gaussian_kde(data)</span><br><span class="line">full_data = np.linspace(<span class="number">-500</span>,<span class="number">500</span>,<span class="number">10000</span>)</span><br><span class="line">est_data = kernel.evaluate(full_data)</span><br><span class="line">plt.figure(<span class="number">3</span>)</span><br><span class="line">plt.hist(data, <span class="number">30</span>, density=<span class="keyword">True</span>)</span><br><span class="line">plt.plot(full_data, est_data)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>运行的结果可见下图：</p>
+<p><img src="https://lh3.googleusercontent.com/-TTnRiT58NZ4/WwmZc7MENhI/AAAAAAAAICI/mhozONBX_NgNSE6KLCHSLX006flazqbEQCHMYCw/s0/Snipaste_2018-05-27_01-29-24.png" alt=""></p>
 
-该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。
-1234567891011x = np.linspace(0,2
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1107,6 +1326,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1118,8 +1339,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1133,25 +1354,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/20/2018-05-2018-05-20-Numpy实战/" itemprop="url">Numpy实战</a></h1>
+                
+                <a href="/2018/05/20/2018-05-2018-05-20-Numpy实战/" class="post-title-link" itemprop="url">Numpy实战</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T17:23:16+08:00">
-                2018-05-20
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-20 17:23:16" itemprop="dateCreated datePublished" datetime="2018-05-20T17:23:16+08:00">2018-05-20</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1164,14 +1411,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -1180,16 +1423,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/20/2018-05-2018-05-20-Numpy实战/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/20/2018-05-2018-05-20-Numpy实战/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1217,26 +1450,71 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          numpy实战（高级编程技术week 11）做题前
-在这里，我使用了这样的代码来产生符合题目条件的矩阵
-12345import numpy as npfrom scipy.linalg import toeplitzA = np.mat(np.random.normal(size=(200,500)
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/20/2018-05-2018-05-20-Numpy实战/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="numpy实战（高级编程技术week-11）"><a href="#numpy实战（高级编程技术week-11）" class="headerlink" title="numpy实战（高级编程技术week 11）"></a>numpy实战（高级编程技术week 11）</h1><h2 id="做题前"><a href="#做题前" class="headerlink" title="做题前"></a>做题前</h2><p><img src="1526808338244.png" alt="1526808338244"></p>
+<p>在这里，我使用了这样的代码来产生符合题目条件的矩阵</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> toeplitz</span><br><span class="line">A = np.mat(np.random.normal(size=(<span class="number">200</span>,<span class="number">500</span>)))</span><br><span class="line">B = np.mat(toeplitz(np.random.normal(size=<span class="number">500</span>),np.random.normal(size=<span class="number">500</span>)))</span><br><span class="line">A,B</span><br></pre></td></tr></table></figure>
+<p><img src="1526817524358.png" alt="1526817524358"></p>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p><img src="1526816368513.png" alt="1526816368513"></p>
+<p>这里还是一些比较简单正常的计算，代码如下</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a1 = A + A</span><br><span class="line">a2 = A.dot(A.T)</span><br><span class="line">a3 = A.T.dot(A)</span><br><span class="line">a4 = A.dot(B)</span><br><span class="line">a1,a2,a3,a4</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<p><img src="1526817566141.png" alt="1526817566141"></p>
+<p>同时，根据题目要求，我还写了这样的一个函数，并且测试了一下。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">t1</span><span class="params">(lamda)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> A.dot(B-lamda*np.eye(<span class="number">500</span>))</span><br><span class="line">t1(<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>结果如图所示</p>
+<p><img src="1526817629902.png" alt="1526817629902"></p>
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p><img src="1526817674473.png" alt="1526817674473"></p>
+<p>首先使用<code>np.random.normal</code>函数生成这样的向量，为了求解该方程，可以考虑方程左右两边同时乘上矩阵$B$的逆，即$x = B’b$。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = np.random.normal(size=(<span class="number">500</span>,<span class="number">1</span>))</span><br><span class="line">x = B.I.dot(b)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+<p>结果如下</p>
+<p><img src="1526817829216.png" alt="1526817829216"></p>
+<h2 id="问题三：范数"><a href="#问题三：范数" class="headerlink" title="问题三：范数"></a>问题三：范数</h2><p><img src="1526817860292.png" alt="1526817860292"></p>
+<p>这一道题主要考虑的是<code>np.linalg.norm</code>函数的使用。</p>
+<p>查阅文档得知，该函数的原型为<code>numpy.linalg.norm(x, ord=None, axis=None, keepdims=False)</code>同时参数的功能如下表：</p>
+<p><img src="1526818006366.png" alt="1526818006366"></p>
+<p>由此，可以写出这道题的代码</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.norm(A, ord=<span class="string">'fro'</span>) <span class="comment"># Frobenius norm</span></span><br><span class="line">np.linalg.norm(B, ord=np.inf) <span class="comment"># infinity norm</span></span><br><span class="line">np.linalg.norm(B, ord=<span class="number">2</span>) <span class="comment"># biggest singular values</span></span><br><span class="line">np.linalg.norm(B, ord=<span class="number">-2</span>) <span class="comment"># smallest singular values</span></span><br></pre></td></tr></table></figure>
+<p>结果可见</p>
+<p><img src="1526818519102.png" alt="1526818519102"></p>
+<h2 id="问题四"><a href="#问题四" class="headerlink" title="问题四"></a>问题四</h2><p><img src="1526818798465.png" alt="1526818798465"></p>
+<p>关于这个幂迭代法求解矩阵的特征向量，我使用了以下代码来实现。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">power_iteration</span><span class="params">(A, error)</span>:</span></span><br><span class="line">    v_k = np.random.rand(A.shape[<span class="number">1</span>])</span><br><span class="line">    v_k1 = np.random.rand(A.shape[<span class="number">1</span>])</span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> np.linalg.norm(v_k - v_k1) &gt;= error:</span><br><span class="line">        v_k = v_k1</span><br><span class="line">        u_k1 = np.dot(A, v_k)</span><br><span class="line">        m_k1 = np.max(u_k1)</span><br><span class="line">        v_k1 = u_k1/m_k1</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (np.max(u_k1), v_k1, count)</span><br><span class="line"></span><br><span class="line">power_iteration(np.array([[<span class="number">-4</span>, <span class="number">14</span>, <span class="number">0</span>], [<span class="number">-5</span>, <span class="number">13</span>, <span class="number">0</span>], [<span class="number">-1</span>, <span class="number">0</span>, <span class="number">2</span>]]), <span class="number">0.00000001</span>)</span><br><span class="line"><span class="comment">#Z = np.random.normal(size=(200,200))</span></span><br><span class="line"><span class="comment">#power_iteration(Z, 0.000000001)</span></span><br></pre></td></tr></table></figure>
+<p>在进一步的测试中，验证了该程序的正确性。</p>
+<p>我计算了$\begin{bmatrix} -4 &amp; 14 &amp; 0 \ -5 &amp; 13 &amp; 0 \ -1 &amp; 0 &amp; 2 \end{bmatrix} $该矩阵的特征值和特征向量，与自己算的值是一致的。见下图：</p>
+<p><img src="1526821761320.png" alt="1526821761320"></p>
+<h2 id="问题五"><a href="#问题五" class="headerlink" title="问题五"></a>问题五</h2><p><img src="1526822090378.png" alt="1526822090378"></p>
+<p>这里需要探寻$n$, $p$,还有最大奇异值之间的关系。从<code>scipy</code>的文档中找到关于求奇异值的函数：<code>scipy.linalg.svd(C)</code>,其中第二个返回值就是奇异值列表。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> linalg</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_singular_value</span><span class="params">(size, p)</span>:</span></span><br><span class="line">	t = np.random.rand(size, size) &gt; p</span><br><span class="line">	C = np.zeros((size,size))</span><br><span class="line">	C[t]=<span class="number">1</span></span><br><span class="line">	s_v = linalg.svd(C)[<span class="number">1</span>]</span><br><span class="line">	l_s_v = np.max(s_v)</span><br><span class="line">	<span class="keyword">return</span> l_s_v</span><br><span class="line"></span><br><span class="line">get_singular_valut(<span class="number">200</span>,<span class="number">0.6</span>)</span><br><span class="line"></span><br><span class="line">t = []</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">5</span>,<span class="number">300</span>):</span><br><span class="line">     t.append(get_singular_value(n,<span class="number">0.6</span>))</span><br><span class="line">plt.plot(range(<span class="number">5</span>,<span class="number">300</span>), t)</span><br><span class="line"></span><br><span class="line">t = []</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> np.linspace(<span class="number">0</span>,<span class="number">1</span>,<span class="number">30</span>):</span><br><span class="line">	t.append(get_singular_value(<span class="number">100</span>,n))</span><br><span class="line">plt.plot(np.linspace(<span class="number">0</span>,<span class="number">1</span>,<span class="number">30</span>),t)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>通过实验，得知，当n渐渐变大时，最大奇异值也在变大</p>
+<p><img src="1526824805194.png" alt="1526824805194"></p>
+<p>当p变小的时候，最大奇异值变小，如下图</p>
+<p><img src="1526825105402.png" alt="1526825105402"></p>
+<h2 id="问题六"><a href="#问题六" class="headerlink" title="问题六"></a>问题六</h2><p><img src="1526822550858.png" alt="1526822550858"></p>
+<p>这里要写一个函数，去寻找数据A中最接近$z$的数，函数需要返回最接近的值，以下是代码实现。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_nearest</span><span class="params">(A, z)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> A[np.argmin(np.abs(A-z))]</span><br></pre></td></tr></table></figure>
+<p>以下是运行截图：</p>
+<p><img src="1526823900930.png" alt="1526823900930"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li>wiki：<a href="https://en.wikipedia.org/wiki/Power_iteration" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Power_iteration</a></li>
+<li>numpy文档：<a href="https://www.numpy.org/devdocs/reference/" target="_blank" rel="noopener">https://www.numpy.org/devdocs/reference/</a></li>
+</ol>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1267,6 +1545,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1278,8 +1558,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1293,25 +1573,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/2018-05-2018-05-19-git删除大文件/" itemprop="url">git删除大文件</a></h1>
+                
+                <a href="/2018/05/19/2018-05-2018-05-19-git删除大文件/" class="post-title-link" itemprop="url">git删除大文件</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T10:09:20+08:00">
-                2018-05-19
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-19 10:09:20" itemprop="dateCreated datePublished" datetime="2018-05-19T10:09:20+08:00">2018-05-19</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1324,14 +1630,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
 
                 
                 
@@ -1340,16 +1642,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/19/2018-05-2018-05-19-git删除大文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/19/2018-05-2018-05-19-git删除大文件/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1377,26 +1669,27 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          不作死就不会死，不应该，不应该把视频都放到git仓库中。
-下面知乎中的命令给了我很大的帮助。
-12345678910111213git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "这里是文件名匹配的地
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/19/2018-05-2018-05-19-git删除大文件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不作死就不会死，不应该，不应该把视频都放到git仓库中。</p>
+<p>下面知乎中的命令给了我很大的帮助。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter <span class="string">'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" '</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">git push origin --force --all</span><br><span class="line"></span><br><span class="line">git push origin --force --tags</span><br><span class="line"></span><br><span class="line">git <span class="keyword">for</span>-each-ref --format=<span class="string">'delete %(refname)'</span> refs/original | git update-ref --stdin</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br><span class="line"></span><br><span class="line">git count-objects -v</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.zhihu.com/question/54419234" target="_blank" rel="noopener">https://www.zhihu.com/question/54419234</a></p>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1427,6 +1720,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1438,8 +1733,8 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1453,25 +1748,51 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/" itemprop="url">ftp服务器的配置</a></h1>
+                
+                <a href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/" class="post-title-link" itemprop="url">ftp服务器的配置</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T00:21:20+08:00">
-                2018-05-19
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-19 00:21:20" itemprop="dateCreated datePublished" datetime="2018-05-19T00:21:20+08:00">2018-05-19</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1484,14 +1805,10 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
 
                 
                 
@@ -1500,16 +1817,6 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1537,28 +1844,27 @@ vsftpd的被动模式设置数据端口段，并使用frp进行转发
       
         
           
-          今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。
-http://www.cnblogs.com/xiongpq/p/3384759.html
-这个博客给了我很大的帮助。
-注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。</p>
+<p><a href="http://www.cnblogs.com/xiongpq/p/3384759.html" target="_blank" rel="noopener">http://www.cnblogs.com/xiongpq/p/3384759.html</a></p>
+<p>这个博客给了我很大的帮助。</p>
+<p>注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/19/2018-05-2018-05-19-ftp服务器的配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1589,6 +1895,8 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1600,8 +1908,8 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1615,25 +1923,51 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/" itemprop="url">未命名</a></h1>
+                
+                <a href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T21:07:01+08:00">
-                2018-05-13
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-13 21:07:01" itemprop="dateCreated datePublished" datetime="2018-05-13T21:07:01+08:00">2018-05-13</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1646,14 +1980,10 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Network</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
 
                 
                 
@@ -1662,16 +1992,6 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1699,36 +2019,56 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
       
         
           
-          中心控制的路由选择的实现
-路由器
-每一个路由器维护一个线程，这个线程用来与中心服务器维持连接
-该线程定期发送本地链路信息给中心服务器
-定期从中心服务器获取路由表，并用于替换本地路由表
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>中心控制的路由选择的实现</p>
+<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><ol>
+<li>每一个路由器维护一个线程，这个线程用来与中心服务器维持连接<ol>
+<li>该线程定期发送本地链路信息给中心服务器</li>
+<li>定期从中心服务器获取路由表，并用于替换本地路由表</li>
+</ol>
+</li>
+</ol>
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><ol>
+<li>服务器对每一个路由器的连接建立一个定时器</li>
+<li>服务器上<ol>
+<li>主线程：定期从队列中取出链路信息，并更新路由表<ol>
+<li>链路信息：包括链路的存在，费用，以及某路由的下线</li>
+<li>注意：主线程需要维护每一个路由器的路由表<ol>
+<li>有一个重点：<strong>邻接矩阵-&gt;某路由器路由表这个过程需要好好实现</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>其他线程：<ol>
+<li>维护一个与路由器的连接</li>
+<li>定期发送路由表</li>
+<li>将接收到的链路状态放入队列中供主线程使用用来更新路由表</li>
+<li>如果一段时间没有接收到信息，将该路由器已下线的信息放入队列中</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="如何初始化路由器"><a href="#如何初始化路由器" class="headerlink" title="如何初始化路由器"></a>如何初始化路由器</h2><ol>
+<li>配置文件里写好controller的ip</li>
+<li>就行啦</li>
+</ol>
 
-
-
-服务器
-服务器对每一个路由器的连接建立一个定时器
-服务器上
-主线程：定期从队列中取出链路信息，并更新路由表
-链
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/13/2018-05-2018-05-13-中心控制路由选择/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1761,6 +2101,8 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1770,8 +2112,8 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://wwyf.github.io/logo.jpg">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1785,25 +2127,51 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/13/2018-05-2018-05-13-OSPF协议/" itemprop="url">OSPF协议</a></h1>
+                
+                <a href="/2018/05/13/2018-05-2018-05-13-OSPF协议/" class="post-title-link" itemprop="url">OSPF协议</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T20:19:20+08:00">
-                2018-05-13
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-13 20:19:20" itemprop="dateCreated datePublished" datetime="2018-05-13T20:19:20+08:00">2018-05-13</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
+              
             
           </span>
 
@@ -1816,14 +2184,10 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Network</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
 
                 
                 
@@ -1832,16 +2196,6 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/13/2018-05-2018-05-13-OSPF协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/13/2018-05-2018-05-13-OSPF协议/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1869,26 +2223,40 @@ http://www.cnblogs.com/xiongpq/p/3384759.html
       
         
           
-          OSPF协议
-http://www.cnblogs.com/sddai/p/5399482.html
-https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/13/2018-05-2018-05-13-OSPF协议/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OSPF协议</p>
+<p><a href="http://www.cnblogs.com/sddai/p/5399482.html" target="_blank" rel="noopener">http://www.cnblogs.com/sddai/p/5399482.html</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88</a></p>
+<p><a href="https://www.qingsword.com/qing/596.html" target="_blank" rel="noopener">https://www.qingsword.com/qing/596.html</a></p>
+<p>线程1：维护与多个路由器之间的连接，并得知最新本地链路情况</p>
+<p>线程2：接受包，判断是否需要转发和广播</p>
+<p>维护</p>
+<pre><code>1. 与广播有关的信息，防止风暴
+2. 网络拓扑数据库
+</code></pre><h2 id="报文类型"><a href="#报文类型" class="headerlink" title="报文类型"></a>报文类型</h2><ol>
+<li>链路状态更新报文,广播</li>
+<li>keepalive报文</li>
+<li><p><del>全局拓扑数据交换报文</del>？</p>
+<h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2></li>
+</ol>
+<p>拓扑数据库</p>
+<p><strong>1.类型1:Router LSA</strong>：每个路由器都将产生Router LSA，这种LSA只在本区域内传播，描述了路由器所有的链路和接口，状态和开销.</p>
+
+          
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1917,15 +2285,12 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1948,52 +2313,116 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="https://wwyf.github.io/logo.jpg" alt="wyf">
             
               <p class="site-author-name" itemprop="name">wyf</p>
               <p class="site-description motion-element" itemprop="description">bilibala~ bilibala~</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">48</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">48</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2005,69 +2434,19 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
           
 
           
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/WalkerYF" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="w.y.ff@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
+
           
 
           
           
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
-              </a>
-            </div>
-          
 
           
+            
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://tongji.baidu.com/" title="百度统计" target="_blank">百度统计</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://leancloud.cn" title="leancloud" target="_blank">leancloud</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://analytics.google.com" title="Google分析" target="_blank">Google分析</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://theme-next.iissnan.com/" title="Next主题配置文档" target="_blank">Next主题配置文档</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://hexo.io/docs/" title="Hexo官方配置文档" target="_blank">Hexo官方配置文档</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2083,17 +2462,19 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">wyf</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -2101,31 +2482,12 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.7.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
@@ -2147,11 +2509,14 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2165,7 +2530,6 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
 
 
-  
 
 
 
@@ -2178,68 +2542,48 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+
+
+
+
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script src="/js/src/utils.js?v=6.7.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script src="/js/src/motion.js?v=6.7.0"></script>
 
 
 
   
   
 
-  
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script src="/js/src/schemes/muse.js?v=6.7.0"></script>
 
 
 
   
 
-
   
 
 
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
 
 
-	
 
+  
 
 
 
@@ -2252,361 +2596,13 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
 
   
 
-
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'a53j2UQ5XFjm8AIynx8Wovci-gzGzoHsz',
-        appKey: 'ze1twuRbEWoPuPsBloXMRXLo',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
-
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('5');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
+  
 
   
 
@@ -2615,49 +2611,12 @@ https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B
   
 
   
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-    
-  </script>
 
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
 
   
 
