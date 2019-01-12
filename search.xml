@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[配置博客]]></title>
-    <url>%2F2019%2F01%2F12%2F2019-01-2019-01-12-%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[今天配置了一下博客。 本地仅维护markdown文件 通过git push，将markdown文件push到腾讯云服务器 云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布 最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。 testtesttesttesttesttest]]></content>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F12%2Ftest-2018-hello-world%2F</url>
+    <content type="text"><![CDATA[testtest imag test math$$ a^2 = b $$ test chinese这是中文。 换了个头像 发现可以在_posts文件夹下创建自己的文件夹，然后hexo是不会管你的文件夹的！继续测试。 使用 typora的话，设置图片根目录后可以很方便的复制粘贴图片。 写好了一个脚本这个脚本用来自动创建一个新页面，并且填写yml模板信息 测试脚注脚注是^ 1]]></content>
       <categories>
         <category>test</category>
       </categories>
@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F01%2F12%2Ftest-2018-hello-world%2F</url>
-    <content type="text"><![CDATA[testtest imag test math$$ a^2 = b $$ test chinese这是中文。 换了个头像 发现可以在_posts文件夹下创建自己的文件夹，然后hexo是不会管你的文件夹的！继续测试。 使用 typora的话，设置图片根目录后可以很方便的复制粘贴图片。 写好了一个脚本这个脚本用来自动创建一个新页面，并且填写yml模板信息 测试脚注脚注是^ 1]]></content>
+    <title><![CDATA[配置博客]]></title>
+    <url>%2F2019%2F01%2F12%2F2019-01-2019-01-12-%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[今天配置了一下博客。 本地仅维护markdown文件 通过git push，将markdown文件push到腾讯云服务器 云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布 最重要的一个改变在于：本地不需要存储博客的配置文件，仅需维护内容即可，一切配置文件都存放在了云服务器上，而且网页静态文件的生成也放在了云服务器上。 testtesttesttesttesttest]]></content>
       <categories>
         <category>test</category>
       </categories>
