@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-01-12T07:36:03.302Z</updated>
+  <updated>2019-01-12T09:55:58.855Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分布式系统中的无层次命名</title>
+    <link href="https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E6%97%A0%E5%B1%82%E6%AC%A1%E5%91%BD%E5%90%8D/"/>
+    <id>https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-分布式系统中的无层次命名/</id>
+    <published>2019-01-12T09:49:37.000Z</published>
+    <updated>2019-01-12T09:55:58.855Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="分布式系统中的无层次命名"><a href="#分布式系统中的无层次命名" class="headerlink" title="分布式系统中的无层次命名"></a>分布式系统中的无层次命名</h1><p>今天整理了一下笔记，打算将无层次命名这一部分的笔记重新编辑一下，放到这里分享给大家。</p><h2 id="命名系统-基本概念"><a href="#命名系统-基本概念" class="headerlink" title="命名系统-基本概念"></a>命名系统-基本概念</h2><p>在分布式系统中，命名系统起着名称解析的作用，即，允许进程访问对应命名的实体。关于命名系统中的一些概念，这里需要弄清楚：</p><ol><li>实体与访问点的关系<ol><li>访问点是一个特殊的实体</li><li>通过访问点访问实体</li><li>实体可能具有多个访问点</li><li>实体的访问点可能会改变</li></ol></li><li><strong>名称</strong>：用于指向一个实体<ol><li><strong>位置无关</strong>的名称：独立于实体地址</li></ol></li><li><strong>地址</strong>：实体对应的某个<strong>访问点</strong>的名称</li><li><strong>标识符</strong>：用于唯一标识实体，实体与标识符是一对一的关系，且不可重用</li><li><strong>用户友好的名称</strong>：一般是字符串</li></ol><p>为了解决：把名称和标识符解析成地址 的问题，需要：</p><p><strong>名称到地址的绑定</strong></p><h2 id="无层次命名"><a href="#无层次命名" class="headerlink" title="无层次命名"></a>无层次命名</h2><blockquote><p>无层次命名是一种与实体空间位置无关的，扁平化的一种命名方法，一般用做实体的<strong>标识符</strong>。</p><p>名称解析：只给定实体的标识符（常用标识符做非结构化或无层次的名称），定位该实体。</p></blockquote><p>大体有四种方法：</p><ol><li><p>简单方法</p><ol><li>广播和多播<ol><li>包含该实体所用标识符的消息会通过广播发送到所有机器上，请求每一套机器检查它是否拥有该实体（实例：ARP 地址解析协议）</li></ol></li><li>转发指针（<strong>移动实体定位</strong>）<ol><li>每个转发指针都已（客户端存根，服务器存根）对的形式实现，当对象从地址空间A移动到地址空间B时，它会将一个客户存根留在A中，并且在B安装一个应用它的服务器存根。移动的细节对客户是透明的，客户可以顺着转发指针形成的链来查找实体对应的当前地址。</li><li>两种策略：<ol><li>直接向起始客户存根发送相应</li><li>按照转发指针的相反方向发送响应</li></ol></li></ol></li></ol></li><li><p>基于宿主位置</p><ol><li>所有与某主机地址的通信一开始都被转发到移动主机的宿主代理中。对移动主机来说，如果要转移到另一个网络，会获得一个新的地址，该<strong>转交地址</strong>要在宿主代理中注册<ol><li><img src="/1547286768306.png" alt="1547286768306"></li></ol></li></ol></li><li><p>分布式散列表</p><ol><li><p>主要解决问题：m位的标识符$k$，解析为$succ(k)$的地址</p></li><li><p>如何高效解决：在每一个节点上维护一个指状表</p><ol><li><p><img src="/1546940003091.png" alt="1546940003091"></p></li><li><p><img src="/1546940017315.png" alt="1546940017315"></p></li></ol></li><li><p>加入与退出：</p><ol><li>节点p加入很简单，只需要请求$succ(p+1)$即可</li><li>更新指状表会比较复杂</li></ol></li></ol></li><li><p>分层方法</p><ol><li>目录节点：维护目录下的域所有实体的位置记录</li><li>低级的只有低级域的位置记录，高级域有多个低级域的位置记录</li><li>查询实体：自底向上，如果目录节点没有某记录，那转发到父节点继续查询</li></ol></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;分布式系统中的无层次命名&quot;&gt;&lt;a href=&quot;#分布式系统中的无层
+      
+    
+    </summary>
+    
+      <category term="Distributed System" scheme="https://wwyf.github.io/categories/Distributed-System/"/>
+    
+    
+      <category term="Distributed System" scheme="https://wwyf.github.io/tags/Distributed-System/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -491,32 +516,6 @@
       
         &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;中心控制的路由选择的实现&lt;/p&gt;
 &lt;h2 id=&quot;路由器&quot;&gt;&lt;a href=
-      
-    
-    </summary>
-    
-      <category term="Computer Network" scheme="https://wwyf.github.io/categories/Computer-Network/"/>
-    
-    
-      <category term="Computer Network" scheme="https://wwyf.github.io/tags/Computer-Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OSPF协议</title>
-    <link href="https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-OSPF%E5%8D%8F%E8%AE%AE/"/>
-    <id>https://wwyf.github.io/2018/05/13/2018-05-2018-05-13-OSPF协议/</id>
-    <published>2018-05-13T12:19:20.000Z</published>
-    <updated>2019-01-12T03:33:37.276Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OSPF协议</p><p><a href="http://www.cnblogs.com/sddai/p/5399482.html" target="_blank" rel="noopener">http://www.cnblogs.com/sddai/p/5399482.html</a></p><p><a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88</a></p><p><a href="https://www.qingsword.com/qing/596.html" target="_blank" rel="noopener">https://www.qingsword.com/qing/596.html</a></p><p>线程1：维护与多个路由器之间的连接，并得知最新本地链路情况</p><p>线程2：接受包，判断是否需要转发和广播</p><p>维护</p><pre><code>1. 与广播有关的信息，防止风暴2. 网络拓扑数据库</code></pre><h2 id="报文类型"><a href="#报文类型" class="headerlink" title="报文类型"></a>报文类型</h2><ol><li>链路状态更新报文,广播</li><li>keepalive报文</li><li><p><del>全局拓扑数据交换报文</del>？</p><h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2></li></ol><p>拓扑数据库</p><p><strong>1.类型1:Router LSA</strong>：每个路由器都将产生Router LSA，这种LSA只在本区域内传播，描述了路由器所有的链路和接口，状态和开销.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;OSPF协议&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.cnbl
       
     
     </summary>
