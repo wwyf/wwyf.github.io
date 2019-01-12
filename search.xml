@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F12%2Ftest-2018-hello-world%2F</url>
+    <content type="text"><![CDATA[testtest imag test math$$ a^2 = b $$ test chinese这是中文。 换了个头像 发现可以在_posts文件夹下创建自己的文件夹，然后hexo是不会管你的文件夹的！继续测试。 使用 typora的话，设置图片根目录后可以很方便的复制粘贴图片。 写好了一个脚本这个脚本用来自动创建一个新页面，并且填写yml模板信息 测试脚注脚注是^ 1]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo配置评论系统]]></title>
+    <url>%2F2019%2F01%2F12%2F2018-05-2018-05-06-hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[hexo 评论系统有这样的想法，为自己的博客弄一个评论系统。 不过由于时间精力的缘故，还没有去弄。 先放一下要弄评论系统可能需要的一些资料。 第三方的评论系统似乎都不太好使，打算自建 http://www.candura.us/posts/post-348/ https://wzfou.com/hashover/ https://zhuanlan.zhihu.com/p/26955370]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo中的评论系统]]></title>
+    <url>%2F2019%2F01%2F11%2F2019-01-2019-01-11-hexo%E4%B8%AD%E7%9A%84%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[关于hexo的评论系统这里要推荐一个极简无后端的评论系统！！！ Valine 诞生于2017年8月7日，是一款基于Leancloud的快速、简洁且高效的无后端评论系统。理论上支持但不限于静态博客，目前已有Hexo、Jekyll、Typecho、Hugo 等博客程序在使用Valine。 官网是这一个：https://valine.js.org/ 使用感受到leancloud上创建一个应用，然后找到把appid和appkey填到hexo的config里就好了！别的什么都不用怎么配置，哇比其他的方便多了，特别是之前那一个已经没有人维护的gitment。 引用几个博客的链接： https://blog.csdn.net/esa_dsq/article/details/78626509https://xiaotiandi.github.io/publicBlog/2018-09-19-d196c9ad.html]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[立一个flag]]></title>
+    <url>%2F2019%2F01%2F11%2F2019-01-2019-01-11-%E7%AB%8B%E4%B8%80%E4%B8%AAflag%2F</url>
+    <content type="text"><![CDATA[test 目录就是让我用来随便测试的吧。 吐槽一下，现在考试进度 6/8，加油吧~ 我想测试一个图片]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BCNF与4NF]]></title>
+    <url>%2F2018%2F11%2F01%2F2018-11-2018-11-01-BCNF%E4%B8%8E4NF%2F</url>
+    <content type="text"><![CDATA[数据库关系模式的BCNF分解与4NF分解这两种分解看得我云里雾里，今早好不容易觉得看懂了，觉得要写成一篇blog记下来，不然以后回来再看的时候可能又要看半天才能看懂了o(╥﹏╥)o。 书本上说的会比较抽象，虽然这保证了定义和方法的准确性，但是要去理解实在是有点困难，我想，将我解答题目的过程放上来能帮助这几种分解的理解。 BCNF分解实例题目有这样的关系模式$r(A,B,C,D,E,F)$，其中该关系模式需要满足以下函数依赖： $ A \rightarrow BCD $ $ BC \rightarrow DE $ $ B \rightarrow D $ $ D \rightarrow A $ 分析原理 如何判断一个关系模式是否满足BCNF模式 书本P196最上面：一个最简单的判定方法，但不可用于分解后的关系模式的判定 书本P196中间：可用于分解后的关系模式的判定 这两种方法，我觉得后者会相对比较难理解，但是在实际题目中还是的确能够使用上的。 具体的定义书本上就有，这里也照抄一份： 第一种方法： 第二种方法： 实际操作就，按顺序一个函数依赖一个函数依赖的看就好了。 第一步分解目前的关系模式$r$还没有分解，就使用第一种方法来进行分析： 对于函数依赖$A \rightarrow BCD$来说，根据第一种方法，我先计算$A^{+} = ABCDE$，发现$A^{+}$并没有包含关系$r$中的所有属性（$ABCDEF$，少了个$F$），因此$A$不是关系模式$r$的超码。 这样子，我就根据函数依赖$A \rightarrow BCD$说明了关系模式$r$不属于BCNF，因此将原有的关系模式$r$分解为$ (r-BCD) \cup (A,BCD) $ 因此此步分解得到以下关系模式： $ r_1(A,B,C,D) $$ r_2(A,E,F) $ 检验第一步分解结果在第二步分解结果前，需要检验第一步的分解结果是否满足BCNF条件，注意到这两个关系模式是分解后产生的，原先的第一种用来判断关系模式是否属于BCNF的方法不能够再使用，后面均使用第二种方法。 先看关系模式$r_1(A,B,C,D)$。 第二种方法要求$r_1$中属性的每一个子集$\alpha$，确保$\alpha^{+}$（F下$\alpha$的属性闭包）要么不包含$r-\alpha$的任何属性，要么包含$r_1$的所有属性。 这里为遍历$r_1$中属性子集的过程对于属性$A$，$A^{+} = ABCDE$，包含了$r_1$的所有属性对于属性$B$，$B^{+} = ABCDE$，包含了$r_1$的所有属性对于属性$C$，$C^{+} = C$，不包含$r_1 - C$的任何属性对于属性$D$，$D^{+} = ABCDE$,包含了$r_1$的所有属性对于属性$E$，$E^{+} = E$，不包含$r_1 - E$的任何属性对于属性子集$AB，AC，AD，AE，BC，BD，BE，CD，DE$，属性闭包均为$ABCDE$，包含了$r_1$的所有属性对于属性子集$CD$，$CD^{+} = CD$，不包含$r_1 - C$的任何属性对于三个属性以上的属性子集，属性闭包均为$ABCDE$，包含了$r_1$的所有属性 综上，$r_1$满足BCNF条件。 再看关系模式$r_2(A,E,F)$: 这里为遍历$r_2$属性子集的过程对于属性$A$，$A^{+} = ABCDE$，而$r_2 - A = EF$，会发现$A^{+}$包含了$r_2 - A$中的属性$E$，且没有包含$r_2$的所有属性（如属性$F$） 找到了一个属性违反该条件，那么就可以证明有这样的一个函数依赖出现在$F^{+}$中： $$A \rightarrow (A^{+} - A) \cap r_2$$ 算一算，$A^{+} - A \cap r_2 = BCDE \cap AEF = E$ 因此便找到了这样的一个函数依赖$A \rightarrow E$，让$r_2$不满足BCNF 第二步分解上面找到了这样的一个函数依赖$A \rightarrow E$，让$r_2(A,E,F)$不满足BCNF，因此$r_2$可以这样子分解： $r_3(A, E)$ $r_4(A, F)$ 此步骤得到的分解结果为 $r_1(A,B,C,D)$$r_3(A, E)$$r_4(A, F)$ 检验第二步结果$r_1$上面已经检验过了，这里只需要检验$r_3$和$r_4$即可。 对于关系模式$r_3$： 对于属性$A$， $A^{+} = ABCDE$，包含了$r_3$的所有属性对于属性$E$，$E^{+} = E$，不包含$r_3 - E$的任何属性 对于关系模式$r_4$： 对于属性$A$，$A^{+} = ABCDE$，而$r_4 - A = F$，$A^{+}$不包含$r_4 - A$的所有属性对于属性$F$，$F^{+} = F$，不包含$r_3 - F$的任何属性 综上，关系模式$r_3$,$r_4$，都已经满足BCNF条件 最终结果已经检验过了，每一个关系模式都满足BCNF条件，因此，最终结果便是： $r_1(A,B,C,D)$$r_3(A, E)$$r_4(A, F)$ 3NF分解实例我觉得3NF比BCNF简单很多，不想写了hhh 4NF分解实例分解原理关于4NF，其实课本P201上已经说明了检验模式是否满足4NF的方法。 一种方法便是4NF的定义，定义可以好好看看书本，和BCNF的定义类似，但问题在于这一个定义无法用于分解后的关系模式中。 第二种方法可以用在分解后的关系模式，其实就是找到在分解后的关系模式上的限定$D_i$，然后对于该限定$D_i$里面的每一个依赖，都使用4NF的定义去检查是否满足条件。 题目$R = (A,B,C,G,H,I)$$F = {$$A \rightarrow\rightarrow B$,$B \rightarrow\rightarrow HI$,$CG \rightarrow\rightarrow H$$}$ 分解流程第一步分解使用第一种方法来判断，注意到多值依赖是一种比函数依赖更弱的依赖，因此这里我觉得较难判断关系模式$R$的超码，就暂且认为该关系模式中的每一个属性都不是超码。 因为$A \rightarrow\rightarrow B$满足，且$A$不是关系模式$R$的超码，因此分解$R$得到 $R_1(A,B)$$R_2(A,C,G,H,I)$ 判断第一步分解结果判断分解后的关系模式是否满足4NF条件，需要使用第二种方法，这里需要计算函数依赖和多值依赖的集合$D$在$R_1$和$R_2$上的限定。 判断1先判断关系模式$R_1(A,B)$，我通过如下方式寻找函数依赖和多值依赖的集合$D$在$R_1$上的限定$D_1$: $D^{+}$中所有只含有$R_1$中属性的函数依赖：无 所有形如$\alpha \rightarrow\rightarrow \beta \cap R_1$的多值依赖，其中$\alpha \in R_1$，且$\alpha \rightarrow\rightarrow \beta$ 属于$D^{+}$: 当$\alpha = A$，能够找到$A\rightarrow\rightarrow B$，还有$A\rightarrow\rightarrow HI$，使用$\beta \cap R_1$处理后得到仅有$A\rightarrow\rightarrow B$在限定$D_1$中当$\alpha = B$，能够找到$B\rightarrow\rightarrow HI$，使用$\beta \cap R_1$处理后发现没有多值依赖在限定$D_1$中 因此函数依赖和多值依赖的集合$D$在$R_1$上的限定$D_1$为${ (A\rightarrow\rightarrow B) }$。 接下来判断限定里面的依赖是否能够让关系模式$R_1$满足4NF条件。因为在关系模式$R_1$中仅有两个属性$A,B$，因此多值依赖$A\rightarrow\rightarrow B$是一个平凡的多值依赖。因此满足4NF条件。 判断2判断关系模式$R_2(A,C,G,H,I)$是否满足4NF条件。 同样是两个步骤，显示找到函数依赖和多值依赖的集合$D$在$R_2$上的限定$D_2$，然后在限定$D_2$中，遍历每一个依赖关系，寻找是否有使得$R_2$不满足条件的依赖关系，若有则不满足4NF条件，若无则该关系模式满足4NF条件。 在限定$D_2$中，我找到了这样的依赖关系$CG \rightarrow\rightarrow H$ 该依赖关系并不平凡，并且$CG$也不是$R_2$的一个超码 因此关系模式$R_2$不满足4NF条件，需要分解 第二步分解前面说到，根据依赖关系$CG \rightarrow\rightarrow H$，$R_2(A,C,G,H,I)$并不满足4NF条件。 因此进行分解得到以下关系模式 $R_3(C,G,H)$$R_4(A,C,G,I)$ 判断第二步分解结果是否满足4NF条件然后又需要判断$R_3$,$R_4$是否满足4NF条件。 判断$R_3$判断仍然是两步走，先寻找函数依赖和多值依赖的集合$D$在$R_3$上的限定$D_3$，然后遍历该限定$D_3$中的每一个依赖关系。 $D_3 = { (CG \rightarrow\rightarrow H) }$ $D_3$中仅有一个依赖关系，且$CG \rightarrow\rightarrow H$是一个平凡的多值依赖（因为$CG \cap H = R_3$），满足4NF条件 因此$R_3$满足4NF条件 判断$R_4$对$R_4(A,C,G,I)$一样的方法，寻找$D_4$,然后遍历$D_4$。这里我会更详细地说明限定$D_4$的计算方法 $D^{+}$中所有只含有$R_4(A,C,H,I)$中属性的函数依赖：无 所有形如$\alpha \rightarrow\rightarrow \beta \cap R_4$的多值依赖，其中$\alpha \in R_4$，且$\alpha \rightarrow\rightarrow \beta$ 属于$D^{+}$: 当$\alpha = A$，能够找到$A\rightarrow\rightarrow B$，还有$A\rightarrow\rightarrow HI$，使用$\beta \cap R_1$处理后得到仅有$A\rightarrow\rightarrow I$在限定$D_4$中当$\alpha = C$，或$\alpha = H$ 或$\alpha = I$，均找不到符合条件的多值依赖当$\alpha = AC$,$\alpha = AH$,$\alpha = AI$,等等等，所有子集都找不到符合条件的多值依赖 因此$D_4 = { (A \rightarrow\rightarrow I) }$ 对着一个函数依赖我会发现，$A$并不是关系模式$R_4$的主键，因此该关系模式不符合4NF条件。 第三步分解上面找到了$A \rightarrow\rightarrow I$让关系模式$R_4$不满足4NF条件，因此分解成以下两个关系模式 $R_5(A,I)$ $R_6(A,C,G)$ 判断第三步结果是否符合4NF条件判断的过程依然是两步走 判断$R_5$计算得到$D_5 = { (A\rightarrow\rightarrow I) }$ 该依赖关系在$R_5$中是平凡的，因为$A \cap I = R_5$ 因此$R_5$满足4NF条件 判断$R_6$计算$D_6$: $D^{+}$中所有只含有$R_6(A,C,G)$中属性的函数依赖：无 所有形如$\alpha \rightarrow\rightarrow \beta \cap R_6$的多值依赖，其中$\alpha \in R_6$，且$\alpha \rightarrow\rightarrow \beta$ 属于$D^{+}$: 当$\alpha = A$，能够找到$A\rightarrow\rightarrow B$，还有$A\rightarrow\rightarrow HI$，使用$\beta \cap R_1$处理后得找不到符合条件的多值依赖当$\alpha = C$，或$\alpha = G$均找不到符合条件的多值依赖当$\alpha = AC$,$\alpha = AG$,$\alpha = CG$,等等等，能够找到$CG \rightarrow\rightarrow H$，但是在使用$\beta \cap R_6$后，依然是空集 因此，$D_6 = \emptyset$。 这个时候也可以说，对$D_6$中所有依赖，均满足4NF条件。 因此$R_6$满足4NF条件 最终分解的结果最终分解得到 $R_1(A,B)$$R_3(C,G,H)$$R_5(A,I)$$R_6(A,C,G)$ 感想总之就是严格按照课本定义，一点一点地推导和证明。 课本上的定义和方法实在是太过抽象了，我希望自己可以通过对这一些实例的详细探讨，对这一些分解方法有一个比较清晰的认识就好，昨天做作业的时候还是感觉自己迷迷糊糊的，现在就感觉，注意到了一些昨天没有注意到的细节，然后对书本这些理论的自洽性也有了一些比较深的理解，本来一些觉得诶好像证明不了的，回去一看看定义，哦原来是我对定义本身就不清楚……诸如此类的问题还是蛮多的.啊希望以后期末的时候对这一块的内容可以通过这篇博客更好地复习。]]></content>
+      <categories>
+        <category>Datebase</category>
+      </categories>
+      <tags>
+        <tag>Datebase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MPI]]></title>
+    <url>%2F2018%2F10%2F23%2F2018-10-2018-10-23-MPI%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>High Performance Calculate</category>
+      </categories>
+      <tags>
+        <tag>High Performance Calculate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于word-embedding的理解]]></title>
+    <url>%2F2018%2F07%2F28%2F2018-07-2018-07-28-%E5%85%B3%E4%BA%8Eword-embedding%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[关于word-embedding的理解与pytorch实现在NLP中，计算机需要一种方法，表示一个单词。我们马上可以想到，可以直接使用ascii来保存呀，计算机也能够识别。 用ascii并不是不可以，但是，大家都知道，如果能够把单词表示成向量的形式，无论在怎样的数学处理中都会更加方便，即使是用ascii，最终也必须在计算机中有一种数学的方法表达，才能够完成后续的语义识别的工作。这种，为单词寻找到一种在计算机中表示的方法，可以称之为”Word embedding”(这里的定义是不完整的，后面继续补充。) 那么，什么办法可以表示一个单词呢？一种显而易见的办法是使用“one-hot encoding”,也就是说，每一个单词，在这样的一个向量中，都有一个独一不二的索引。对不同的词，便在不同的位置为1，其余的位置为0. 不妨将单词向量化后的那一个向量空间称之为单词空间？那么，对于单词空间中的每一个具有“one-hot encoding”性质的向量，我们都能够找到一个单词一一对应。 “one-hot encoding”已经解决了单词-单词空间向量的映射问题，但是，似乎不太好呢。大家都知道，每一个单词之间都有着或多或少的关联。one-hot encoding方法，将单词之间可能具有的关联信息全部都抛弃掉，只留下一一对应的性质，这样的单词嵌入方法，并不是特别的理想。 真正的word-embedding的定义摘自知乎 Embedding在数学上表示一个maping, f: X -&gt; Y， 也就是一个function，其中该函数是injective（就是我们所说的单射函数，每个Y只有唯一的X对应，反之亦然）和structure-preserving (结构保存，比如在X所属的空间上X1 &lt; X2,那么映射后在Y所属空间上同理 Y1 &lt; Y2)。那么对于word embedding，就是将单词word映射到另外一个空间，其中这个映射具有injective和structure-preserving的特点。 个人觉得这位网友说的还是很不错的。word embedding的关键在于两点 单射 结构保存（原本关联度较大的两个词，在新的向量空间中的相似度也应该较大？） word-embedding的输入输出输入：一个单词输出：这一个单词对应的向量 其中为了达到结构保存的目的，前期还需要很多的语料库进行训练。 pytorch中的word embeddingpytorch中预先已经提供了很多可用了“神经元层”，其中有一个nn.Embedding(a,b)就是专门用于完成“word embedding”工作的神经元层。该层的功能是：将一个具有$a$个单词的字典中的所有单词，映射到一个$b$维的向量空间中。 简单的代码如下： 1234567891011import torchimport torch.nn as nnimport torch.nn.functional as Fimport torch.optim as optimtorch.manual_seed(1)word_to_ix = &#123;"hello": 0, "world": 1&#125;embeds = nn.Embedding(2, 5) # 2 words in vocab, 5 dimensional embeddingslookup_tensor = torch.tensor([word_to_ix["hello"]], dtype=torch.long)# print(lookup_tensor) # tensor([0])hello_embed = embeds(lookup_tensor) # 输入单词索引即可print(hello_embed) An Example: N-Gram Language Modeling([ word_i-2, word_i-1 ], target word) 官网上提供了一个根据上文预测下一个单词的神经网络以供参考。代码我就不放上来了。 参考 pytorch官方教程 https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html 一个知乎的回答：https://www.zhihu.com/question/32275069/answer/80188672]]></content>
+      <categories>
+        <category>Machine-Learning</category>
+      </categories>
+      <tags>
+        <tag>Machine-Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pytorch初学感想]]></title>
+    <url>%2F2018%2F07%2F27%2F2018-07-2018-07-27-pytorch%E5%88%9D%E5%AD%A6%E6%84%9F%E6%83%B3%2F</url>
+    <content type="text"><![CDATA[pytorch初学感想一开始是通过莫烦的python教程来进行学习的。他的教程有一个特点，丰富的样例代码，加上对一些细节的讲解，让我能够很快的上手pytorch。不过，我看完，总觉得还缺点什么？有一些机制我始终没有想的特别明白，就像我对loss.backword() optimizer.step()， 这几个函数的作用始终一知半解，虽然大概知道一点，但是对使用pytorch实现的神经网络，还是有一些没法想清楚的地方。 官方教程pytorch的官方教程，有一篇我觉得写得特别好，可以说是给初学者稍微打开了pytorch背后封装的一些操作，让这一个黑盒，至少看起来不那么黑，自己写起代码来心中也有一些B数。 https://pytorch.org/tutorials/beginner/pytorch_with_examples.html 这个教程我最喜欢的一点，是它从一个使用numpy实现的两层神经网络（输入层不算一层）开始， 一点点改造成具有纯正“pytorch”风味的神经网络。这样子的教程，消除了我对pytorch封装的担心，内部的操作顿时清晰了很多。 使用numpy实现神经网络？当然可以了~ 下面把原教程的代码抄了过来，加上了自己的一点点注释。 1234567891011121314151617181920212223242526272829303132333435363738394041import numpy as np# N is batch size; D_in is input dimension;# H is hidden dimension; D_out is output dimension.N, D_in, H, D_out = 64, 1000, 100, 10# Create random input and output datax = np.random.randn(N, D_in)y = np.random.randn(N, D_out)# Randomly initialize weightsw1 = np.random.randn(D_in, H)w2 = np.random.randn(H, D_out)learning_rate = 1e-6for t in range(500): # Forward pass: compute predicted y # 这是矩阵相乘，(N行D_in列) * (D_in行H列)，算出来(N行，H列)的矩阵，其中第i行第j列的元素表示，第i个输入对应的第j个隐藏层神经元的输出 h = x.dot(w1) # 这里就是relu函数啦，相比起来我们喜闻乐见的relu函数，这里不过是用矩阵的方式，使用这个函数本身的定义来计算。查一下relu函数就清楚了 h_relu = np.maximum(h, 0) # 再一次矩阵线程，算出输出层神经元的输出值 y_pred = h_relu.dot(w2) # Compute and print loss # 差的平方再求和 loss = np.square(y_pred - y).sum() print(t, loss) # Backprop to compute gradients of w1 and w2 with respect to loss # 下面就是具体计算梯度的方法，这个计算方法如何得出来的，大概可以参考《机器学习》周志华书上的数学证明 P102-104 grad_y_pred = 2.0 * (y_pred - y) grad_w2 = h_relu.T.dot(grad_y_pred) grad_h_relu = grad_y_pred.dot(w2.T) grad_h = grad_h_relu.copy() grad_h[h &lt; 0] = 0 grad_w1 = x.T.dot(grad_h) # Update weights w1 -= learning_rate * grad_w1 w2 -= learning_rate * grad_w2 如何将上面的神经网络pytorch化？pytorch为神经网络的编写，提供了一些方便的接口，用以替代上面的部分代码 numpy中的array不能够跑在GPU上计算，而与之功能类似的torch.tensor可以跑在GPU上 梯度的计算，pytorch中提供接口能够自动算 tensor中有一个grad成员用于存放梯度 tensor对象在进行运算的时候，会自动建造一张计算图（computational graph ） 在计算损失后，能够调用backwoard()，算出用于计算这个损失涉及到的有关tensor（requires_grad=True）的梯度，并存到对应的tensor的grad成员中。 优化器的选择：pytorch中提供了多种优化器，用以取代显式的使用梯度修改 神经网络模型的建立，能够通过高层接口，简单的增加层，而不用自己麻烦的定义参数矩阵再进行相乘 损失的计算：pytorch中同样提供了多种损失函数 以上每一个点，在原教程中都有对应的代码用来与原代码对比。最终，我们得到了下面的代码。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546import torch# N is batch size; D_in is input dimension;# H is hidden dimension; D_out is output dimension.N, D_in, H, D_out = 64, 1000, 100, 10# Create random Tensors to hold inputs and outputsx = torch.randn(N, D_in)y = torch.randn(N, D_out)# Use the nn package to define our model and loss function.model = torch.nn.Sequential( torch.nn.Linear(D_in, H), torch.nn.ReLU(), torch.nn.Linear(H, D_out),)loss_fn = torch.nn.MSELoss(size_average=False)# Use the optim package to define an Optimizer that will update the weights of# the model for us. Here we will use Adam; the optim package contains many other# optimization algoriths. The first argument to the Adam constructor tells the# optimizer which Tensors it should update.learning_rate = 1e-4optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)for t in range(500): # Forward pass: compute predicted y by passing x to the model. y_pred = model(x) # Compute and print loss. loss = loss_fn(y_pred, y) print(t, loss.item()) # Before the backward pass, use the optimizer object to zero all of the # gradients for the variables it will update (which are the learnable # weights of the model). This is because by default, gradients are # accumulated in buffers( i.e, not overwritten) whenever .backward() # is called. Checkout docs of torch.autograd.backward for more details. optimizer.zero_grad() # Backward pass: compute gradient of the loss with respect to model # parameters loss.backward() # Calling the step function on an Optimizer makes an update to its # parameters optimizer.step() 代码其实少了很多，通过与原来numpy编写的神经网络对比，也更好的理解各个高层接口的作用。 我个人觉得，编写框架的人总是喜欢把高层接口控制得尽可能优雅，就如同现在我们所使用的pytorch一样，事实上，有了pytorch的优雅的高层接口 ，十多二十行足以编写一个可以玩一玩的神经网络。然而，作为初学者而言，我们总是很难把握高层接口的作用，在使用的时候总是很不踏实，可以说，对高层接口又爱又恨，万一出bug了呢，怎么改呀，高层接口帮我做了啥我也不知道呀。官方教程这样子从底层开始展示细节到使用高层接口替换的教程，恰巧将初学者在学习过程中的不安给打消了。不管怎么说，我觉得官方的教程写的棒棒哒！让我感觉自己在调用高层api的时候心安了不少:joy:。 自定义nn模块还有autograd函数？都可以都可以，我建议自己试多几把，这样子对这个框架也能够更加地熟悉。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pytorch中的unsqueeze函数]]></title>
+    <url>%2F2018%2F07%2F27%2F2018-07-2018-07-27-pytorch%E4%B8%AD%E7%9A%84unsqueeze%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[pytorch中的unsqueeze函数一直对pytorch中的unsqueeze不太理解，官方文档的解释是： Returns a new tensor with a dimension of size one inserted at the specified position. The returned tensor shares the same underlying data with this tensor. 其实说的已经很清楚了，但是在我搞懂这个问题前，一直没有看懂这段说明的意思，因此做了一些实验来验证自己的想法。将自己的感想放到博客上，以供以后忘记了再回看复习。 一句话解释这个函数的意思，就是 往原有的数据中，增加一个维度 增加的维度值，必须是1 实验验证随便弄了个这样的矩阵来进行实验 1234567891011arr = array([[[ 0, 1, 2, 3], [ 4, 5, 6, 7]], [[ 8, 9, 10, 11], [12, 13, 14, 15]], [[ 8, 9, 10, 11], [12, 13, 14, 15]]]) # In [53]: arr.shape# Out[53]: (3, 2, 4) 结果见下面的截图 对numpy中维度的理解https://flat2010.github.io/2017/05/31/Numpy%E6%95%B0%E7%BB%84%E8%A7%A3%E6%83%91/]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ftp服务器+内网穿透]]></title>
+    <url>%2F2018%2F07%2F26%2F2018-07-2018-07-26-ftp%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%2F</url>
+    <content type="text"><![CDATA[花了一下下午时间，做了自己的ftp服务器。 配置具有多用户多权限多目录的ftp服务器 内网测试 买一个域名？绑定到云服务器上 使用frp完成内网穿透 几个比较重要的坑 必须使用被动模式 vsftpd的被动模式设置数据端口段，并使用frp进行转发 主要分为两个内容来记录一下这一次的配置。 配置多用户多权限多目录的ftp服务器考虑到自己需要去弄多个用户都可以登录并且还具有不同权限的ftp服务器，我在网上找到了这样的一个教程，然后自己在理解了这个教程的基础上，对一些指令进行了适当的改动。 http://forum.ubuntu.org.cn/viewtopic.php?t=368282 为了防止该网站gg，我记录一下。 我自己的配置我把有关用户的配置都放在了/etc/vsftpd里面，并且把一些重要的文件的权限设置为600，这样的话，就无法查看与数据库对应的用户名密码的文件。 还有一个坑vsftpd-500-oops-cannot-change-directory 关于这一个错误，可能有好几种原因。 我见过的有， 补上这一条指令，可能就可以了（ allow_writeable_chroot=YES 可能是对应的文件夹还没有创建（傻逼错误了这是） 内网穿透大概的配置其实还是挺简单的，frp本身就易用，然后我在这一次的配置中，使用到了supervisor对frp进程进行守护。 使用supervisor对frp进行守护https://diannaobos.com/post/535.html主要参考了这一篇博客来进行配置，注意到日志文件的输出也是在配置文件里面定义好的。 配置服务器端frps.ini 很贴心的提供了token，防止别人偷偷用自己的服务器做内网穿透 配置客户端注意客户端的token要和服务器端的一致就好 一个坑点在清楚ftp主动模式和被动模式之后，其实我们很容易发现，在使用一台外网服务器去做内网穿透后，我们如果使用主动模式访问ftp服务器，是会出问题的。 https://github.com/fatedier/frp/issues/219 主要参考了这一个issue解决了这个问题。 不过有一个显示，只能够使用被动模式访问ftp服务器，如果使用主动模式是完全行不通的。 访问注意了，如果使用域名访问的话只能够使用被动模式来访问，在命令行中，linux的ftp命令可以通过passive切换主被动模式，而window下好像没有被动模式？ 注意一点：使用域名的话，必须使用被动模式，而如果使用中大内网ip的话则必须使用主动模式，不能使用被动模式（原因有点复杂），不过中大内网速度飞快啊10mb/s]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[信号量应用实例]]></title>
+    <url>%2F2018%2F07%2F13%2F2018-07-2018-07-13-%E4%BF%A1%E5%8F%B7%E9%87%8F%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[使用信号量解决这样的问题 某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。 一些说明使用信号量实现一些进程的按序执行，一般可以按照这样的做法。 若B进程必须等候A进程的进行，以下是简单的代码说明 123456789101112131415s a_finished = 0;void A()&#123; /* a */ V(a_finished);&#125;void B()&#123; P(a_finished); /* b */&#125; 这一道题使用到的信号量注意，使用的都是计数信号量 信号量名称 信号量作用 a_finished 将“a已完成任务”作为一种信号，给进程B，进程C领取 b_finished “b已完成任务”，告诉d进程 c_finished “c已完成任务”，告诉e进程 d_finished “d已完成任务”，告诉e进程 代码说明123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051s a_finished = 0;s b_finished = 0;s c_finished = 0;s d_finished = 0;s e_finished = 0;void A()&#123; /* a */ V(a_finished); V(a_finished);&#125;void B()&#123; P(a_finished); /* b */ V(b_finished);&#125;void C()&#123; P(a_finished); /* c */ V(c_finished);&#125;void D()&#123; P(b_finished); /* d */ V(d_finished);&#125;void E()&#123; P(d_finished); P(c_finished); /* e */&#125;void main()&#123; parbegin(A(),B(),C(),D(),E());&#125;]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用信号量解决互斥问题]]></title>
+    <url>%2F2018%2F07%2F08%2F2018-07-2018-07-08-%E4%BD%BF%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E8%A7%A3%E5%86%B3%E4%BA%92%E6%96%A5%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[使用信号量解决同步问题信号量定义1234567891011121314151617struct semaphore&#123; //定义结构 int count; queueType *queue;&#125;s;void P(semaphore s) &#123; // P操作 s.count--; if (s.count&lt;0) Block(CurruntProcess, s.queue);&#125;void V(semaphore s) &#123;// V操作 s.count++; if (s.count&lt;=0) WakeUp(s.queue);&#125; 用信号量实现进程同步系统中的一些进程需要相互合作，共同完成一项任务。具体来说，一个进程运行到某一点时，要求另一伙伴进程为它提供消息，在未获得消息之前，该进程处于阻塞状态，获得消息后被唤醒进入就绪状态。 这里有一个例子是：司机与售票员之间的同步。只有当售票员关门了，司机才可以进行启动汽车，而且只有当司机到站停车了，售票员才能够开门。 信号量实现进程同步进程$P_I$将输入的数据写入缓冲区$B_1$,进程$P_C$读出$B_1$中的数据，完成计算，把结果写入缓冲区$B_2$进程$P_P$读出$B_2$中的结果，打印输出 这三个进程之间的同步要求有两点 先写后读（不能读空缓冲区） 未读完不能写（不能写非空缓冲区） 对于这个问题，使用信号量可以这样解决 12345678910111213141516171819202122232425262728293031semaphore empty1 = 1;semaphore full1 = 0;semaphore empry2 = 1;semaphore full2 = 0;// 对PI进程而言while (1)&#123; P(empty1); // 将数据写到B1 V(full1);&#125;//对PC进程而言while ( 1 ) &#123; P(full1); // 从B1中读取数据; V(empty1); // 计算; P(empty2); // 结果写到B2; V(full2);&#125; // 对PP进程而言while ( 1 ) &#123; P(full2); // 读取B2中的结果并输出到打印机; V(empty2);&#125; 生产者/消费者问题并发处理的最常见问题类型 问题描述 若干进程通过无限/有限的共享缓冲区交换数据 一组“生产者”进程不断写入 另一组“消费者”进程不断读出 共享缓冲区无限/共有N个 任何时刻只能有一个进程可对共享缓冲区进行操作 基于计数信号量的正确解决方案1234567891011121314151617181920212223242526272829semaphore n=0; /*缓冲区中的产品数*/semaphore s=1; /*互斥*/void producer() &#123; while (true) &#123; produce(); semWait(s); append(); semSignal(s); semSignal(n); &#125;&#125; void consumer() &#123; while (true) &#123; semWait(n); semWait(s); take(); semSignal(s); consume(); &#125;&#125; void main() &#123; parbegin(producer, consumer);&#125; 基于二元信号量的正确解决方案12345678910111213141516171819202122232425262728int n;Binary_semaphore s=1; // 用于控制缓冲区变量的互斥访问Binary_semaphore delay=0; // 用于确定能否访问缓冲区，如果缓冲区为空，阻塞消费者void producer() &#123; while (true) &#123; produce(); semWaitB(s); append(); n++; if (n==1) semSignalB(delay); semSignalB(s); &#125;&#125; void consumer() &#123; int m; semWaitB(delay); while (true) &#123; semWaitB(s); take(); n--; m=n; semSignalB(s); consume(); if (m==0) semWaitB(delay); &#125;&#125; 有限循环缓冲区的解决方案一种这样的思想：生产者在将产品放入缓冲区前，先申请一个空闲位置（空闲信号量-1），然后在将产品放入到缓冲区中，然后再申请增加一个产品。（感觉是一种比较保守的做法） 消费者也是采取了一种保守的做法。 1234567891011121314151617181920212223242526272829303132const int sizebuffer=Nsemaphore n=0; /*产品数*/semaphore s=1; /*互斥*/semaphore e=N; /*空闲数*/void producer() &#123; while (true) &#123; produce(); semWait(e); semWait(s); append(); semSignal(s); semSignal(n); &#125;&#125; void consumer() &#123; while (true) &#123; semWait(n); semWait(s); take(); semSignal(s); semSignal(e); consume(); &#125;&#125; void main() &#123; parbegin(producer, consumer);&#125; 写者/读者问题同步与并发机制设计的著名问题问题描述 有一个多个进程共享的数据区，有一些只读取这个数据区的进程(reader)和一些只往数据区中写数据的进程(writer) 必须满足下列条件： 任意多的读进程可以同时读这个数据区 一次只有一个写进程可以往数据区写 如果一个写进程正在往数据区中写，禁止任何读进程读数据区 读者优先信号量方案 一旦有一个读进程正在读，写进程就一直被阻塞 直到没有读进程在读了写进程才可以在写。 读者优先，写者可能饥饿 1234567891011121314151617181920212223242526272829303132/* program reader_and_writer */int readcount; semaphore x=1; // 用于保证readcount被正确更新semaphore wsem=1; // 用于实现互斥void reader() &#123; while(true) &#123; P(x); readcount++; // 如果本来没有进程在读，这是第一个进程，就需要防止该单元被写 if (readcount==1) P(wsem); V(x); READUNIT(); P(x); readcount--; // 如果没有进程在读了，这是最后一个进程，就需要释放这一个单元 if (readcount==0) V(wsem); V(x); &#125;&#125;void writer() &#123; while(true) &#123; P(wsem); WRITEUNIT(); V(wsem); &#125;&#125;void main() &#123; readcount=0; parbegin(reader(), writer());&#125; 写者优先信号量方案为了保证写进程优先，写进程声明想写时，不允许新的读进程访问该数据块。 一旦有一个写者要写，读者就无法读取，读者只能够等待所有写者写完才能够进行读取。 当写进程声明想写时，不允许有新的进程继续读 思路 读进程在一个队列上进行排队（信号量z） 信号量z初值设为1，这就意味着所有想要读的进程想要排队的时候，只有一个能够排到队头去获取读的权力 概括：通过信号量z，多个读者在队列中排队，并且每次只能够派出一名读者尝试获取读的权力 尝试获取读的权力（信号量rsem） rsem信号量，读者写者都在争取，写者获得了运行权限后，第一个写者会锁住“读的权力”rsem信号量，从而此时的读者无法获得读的权力，阻塞着 若此时仍有写者要来写，writecount的值会大于1，因此rsem不会被第一个写者立马释放。 实现了：一旦有一个写者要写，读者就无法读取，读者只能够等待所有写者写完才能够进行读取。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* program reader_and_writer */int readcount, writecount; semaphore x=1, y=1, z=1, rsem=1, wsem=1; /*信号量z：信号量x：控制readcount的更新-------------------------writecount：控制rsem的设置信号量rsem : 『读的权力』当有写进程准备访问数据区的时候，用于禁止所有的读进程信号量wsem：『写的权力』信号量y：控制writecount的更新*/void reader() &#123; while(true) &#123; // rsem表示『读的权力』，应该像一个二元信号量一样 // 有了z在rsem前面，那么rsem最多被读进程要一次，其他的进程都会在z上排队。 P(z); P(rsem); P(x); readcount++; if (readcount==1) P(wsem); V(x); V(rsem); V(z); READUNIT(); P(x); readcount--; if (readcount==0) V(wsem); V(x); &#125;&#125;void writer() &#123; while(true) &#123; P(y); writecount++; if (writecount==1) P(rsem); V(y); P(wsem); WRITEUNIT(); V(wsem); P(y); writecount--; if (writecount==0) V(rsem); V(y); &#125;&#125;void main() &#123; readcount = writecount = 0; parbegin(reader(), writer());&#125; 公平方案如何体现公平？ 读者/写者的公平方案是指：无论读者还是写者，都有可能获取到一个锁用以锁住文件访问权限。 12345678910111213141516171819202122232425262728293031323334void read-justice()&#123; while(1)&#123; p(q); p(rcountsem) if (rcount == 0) p(fsem) rcount++; r(rcountsem) v(q) ; // reading... p(rcountsem) rcount--; if (rcount == 0) v(fsem); v(rcountsem) &#125;&#125;void write_justice()&#123; p(q) ; p(fsem) ; v(q); // writing... v (fsem) ; &#125; 哲学家就餐问题信号量解决方案一这一种方案有死锁风险 123456789101112131415161718192021222324semaphore fork[5]=&#123;1,1,1,1,1&#125;;int i;void philosopher(int i) &#123; while (true) &#123; think(); P(fork[i]); P(fork[(i+1) mod 5]); eat(); V(fork[(i+1) mod 5]); V(fork[i]); &#125;&#125;void main() &#123; parbegin( philosopher(1), philosopher(2), philosopher(3), philosopher(4), philosopher(5) )&#125; 信号量解决方案二这里增加了一个服务员，这个服务员只允许四位哲学家同时进入餐厅。 123456789101112131415161718192021222324semaphore fork[5]=&#123;1,1,1,1,1&#125;;semaphore room=4;int i;void philosopher(int i) &#123; while (true) &#123; think(); P(room); P(fork[i]); P(fork[(i+1) mod 5]); eat(); V(fork[(i+1) mod 5]); V(fork[i]); V(room); &#125;&#125;void main() &#123; parbegin( philosopher(0), philosopher(1), philosopher(2), philosopher(3), philosopher(4) )&#125;]]></content>
+      <categories>
+        <category>Operating System</category>
+      </categories>
+      <tags>
+        <tag>Operating System</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[scipy题目]]></title>
+    <url>%2F2018%2F06%2F03%2F2018-06-2018-06-03-scipy%E9%A2%98%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[scipy题目（高级编程技术 week-13） 第一题 Least squares 关于这一道题，使用scipy库中的leastsq函数即可求解。 第一步：先生成可用的矩阵和向量在本题中，我需要先生成矩阵$A$，向量$b$，考虑到后期该问题需要有解，向量$b$不随机生成，而是先随机生成x，然后算出b。代码如下 123456789101112import scipy as spimport numpy as npimport matplotlib.pyplot as plt# 维数m = 20n = 10# 生成矩阵AA = np.random.normal(size=(m,n), scale=15, loc=10)# 生成假想的该问题应有的解xx = np.random.normal(size=n,scale=15, loc=10)# 生成该解对应的向量bb = np.dot(A, xx) 在生成了可用的数据后，便使用leastsq函数解决问题，代码如下 12345678910111213from scipy.optimize import leastsq# 问题求解初始向量x = np.ones(10)# 误差函数def error(xx): return np.dot(A, xx) - bx_result,cov_x = leastsq(error, x)print(x_result, cov_x)# 计算误差向量的范数norm_residual = np.linalg.norm(np.dot(A, x_result) - b)print(norm_residual) 运行以上代码后，可以得到下面的解： 第二题 Optimization求函数最大值，使用scipy自带的fmin函数即可，这里稍微转换一下，由于只有fmin这个函数可用，而我们找的又是最大值，我们就只需要给函数加个负数，就变成了求最小值，这样子就把问题转换过来了。下面是代码： 1234def func(x): return -(np.sin(x-2) * np.sin(x-2) * np.exp(-x**2))minimum = sp.optimize.fmin(func, 1)print(minimum) 求得的结果是 经过绘图检验，可见的确是在$x \approx 0.2162$左右这个点处取得最大值。 第三题 Pairwise distances 在scipy文档中，找到了这样的函数可以实现计算行之间的距离的功能：pdist 因此实现的代码如下： 1234567from scipy.spatial.distance import pdistm = 30n = 20X = np.random.normal(size=(n, m), scale=10, loc=10)Y = pdist(X, 'sqeuclidean')print(Y.shape)print(Y) 注意，这里需要说明的数，这里使用的是欧拉距离公式，因此在函数参数中有一个sqeuclidean的项。 文档内容可见 结果可见 经过检验，的确应该是190个数（毕竟 20 * 19 /2 )， 其余的结果也是正确的。]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[matlibplot.pyplot的使用]]></title>
+    <url>%2F2018%2F05%2F26%2F2018-05-2018-05-26-matlibplot-pyplot%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[matlibplot 相关题目在这节课中，老师给我们讲了python中matplotlib库的用法，基于这些，我完成了以下三道习题。 第一题 该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。 1234567891011x = np.linspace(0,2,50)y = np.sin(x-2) * np.sin(x-2) * np.exp(-x**2)plt.figure(1)plt.xlabel("x")plt.ylabel("y")plt.ylim(-0.1, 1)plt.title(r"$f(x) = sin^2(x-2)e^&#123;-x^2&#125;$")plt.annotate('local max', xy=(0.22, 0.9), xytext=(0.13, 0.5), arrowprops=dict(facecolor='black', shrink=0.05))plt.plot(x,y)plt.show() 运行的结果可见下图 第二题这一道题的题目可见： 在这里，题目要求我们自己给出方程的$y = Xb+z$各个量的值，然后使用$X$和$y$去反过来估计出原来的$b$。 根据题目提示，此处为多元线性回归模型，使用最小二乘法即可，在scipy模块中有leastsq函数，可以用来寻找此种回归模型的解。于是我的代码如下： 1234567891011121314151617181920212223242526X = np.random.normal(loc=5,scale=5,size=(20,10))b = np.random.normal(loc=0,scale=5,size=10)z = np.random.normal(size=20)y = np.dot(X,b) + z# 初始向量b_e = np.ones(10)print(b_e)# 误差函数def error(p,xxx,yyy): return np.dot(xxx,p)-yyy# 最小二乘法b_e,cost=leastsq(error,b_e,args=(X,y)) plt.figure(2)plt.xlabel("index")plt.ylabel("value")plt.plot(b, 'rx', label="True coefficients")plt.plot(b_e, 'b', label="Estimated coefficients")plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)plt.axis([0,9,-10,10])plt.hlines(0,0,9 ,colors = "c", linestyles = "dashed")plt.show() 运行后，结果可见下图 第三题该题题面如下： 这一道题主要要求我们掌握关于直方图的绘制以及核函数密度估计的方法。 12345678data = np.random.normal(scale=100, size=10000)kernel = stats.gaussian_kde(data)full_data = np.linspace(-500,500,10000)est_data = kernel.evaluate(full_data)plt.figure(3)plt.hist(data, 30, density=True)plt.plot(full_data, est_data)plt.show() 运行的结果可见下图：]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Numpy实战]]></title>
+    <url>%2F2018%2F05%2F20%2F2018-05-2018-05-20-Numpy%E5%AE%9E%E6%88%98%2F</url>
+    <content type="text"><![CDATA[numpy实战（高级编程技术week 11）做题前 在这里，我使用了这样的代码来产生符合题目条件的矩阵 12345import numpy as npfrom scipy.linalg import toeplitzA = np.mat(np.random.normal(size=(200,500)))B = np.mat(toeplitz(np.random.normal(size=500),np.random.normal(size=500)))A,B 第一题 这里还是一些比较简单正常的计算，代码如下 12345a1 = A + Aa2 = A.dot(A.T)a3 = A.T.dot(A)a4 = A.dot(B)a1,a2,a3,a4 结果如下： 同时，根据题目要求，我还写了这样的一个函数，并且测试了一下。 123def t1(lamda): return A.dot(B-lamda*np.eye(500))t1(4) 结果如图所示 第二题 首先使用np.random.normal函数生成这样的向量，为了求解该方程，可以考虑方程左右两边同时乘上矩阵$B$的逆，即$x = B’b$。 123b = np.random.normal(size=(500,1))x = B.I.dot(b)x 结果如下 问题三：范数 这一道题主要考虑的是np.linalg.norm函数的使用。 查阅文档得知，该函数的原型为numpy.linalg.norm(x, ord=None, axis=None, keepdims=False)同时参数的功能如下表： 由此，可以写出这道题的代码 1234np.linalg.norm(A, ord='fro') # Frobenius normnp.linalg.norm(B, ord=np.inf) # infinity normnp.linalg.norm(B, ord=2) # biggest singular valuesnp.linalg.norm(B, ord=-2) # smallest singular values 结果可见 问题四 关于这个幂迭代法求解矩阵的特征向量，我使用了以下代码来实现。 12345678910111213141516def power_iteration(A, error): v_k = np.random.rand(A.shape[1]) v_k1 = np.random.rand(A.shape[1]) count = 0 while np.linalg.norm(v_k - v_k1) &gt;= error: v_k = v_k1 u_k1 = np.dot(A, v_k) m_k1 = np.max(u_k1) v_k1 = u_k1/m_k1 count += 1 return (np.max(u_k1), v_k1, count)power_iteration(np.array([[-4, 14, 0], [-5, 13, 0], [-1, 0, 2]]), 0.00000001)#Z = np.random.normal(size=(200,200))#power_iteration(Z, 0.000000001) 在进一步的测试中，验证了该程序的正确性。 我计算了$\begin{bmatrix} -4 &amp; 14 &amp; 0 \ -5 &amp; 13 &amp; 0 \ -1 &amp; 0 &amp; 2 \end{bmatrix} $该矩阵的特征值和特征向量，与自己算的值是一致的。见下图： 问题五 这里需要探寻$n$, $p$,还有最大奇异值之间的关系。从scipy的文档中找到关于求奇异值的函数：scipy.linalg.svd(C),其中第二个返回值就是奇异值列表。 12345678910111213141516171819202122from scipy import linalgdef get_singular_value(size, p): t = np.random.rand(size, size) &gt; p C = np.zeros((size,size)) C[t]=1 s_v = linalg.svd(C)[1] l_s_v = np.max(s_v) return l_s_vget_singular_valut(200,0.6)t = []for n in range(5,300): t.append(get_singular_value(n,0.6))plt.plot(range(5,300), t)t = []for n in np.linspace(0,1,30): t.append(get_singular_value(100,n))plt.plot(np.linspace(0,1,30),t)plt.show() 通过实验，得知，当n渐渐变大时，最大奇异值也在变大 当p变小的时候，最大奇异值变小，如下图 问题六 这里要写一个函数，去寻找数据A中最接近$z$的数，函数需要返回最接近的值，以下是代码实现。 12def find_nearest(A, z): return A[np.argmin(np.abs(A-z))] 以下是运行截图： 参考资料 wiki：https://en.wikipedia.org/wiki/Power_iteration numpy文档：https://www.numpy.org/devdocs/reference/]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git删除大文件]]></title>
+    <url>%2F2018%2F05%2F19%2F2018-05-2018-05-19-git%E5%88%A0%E9%99%A4%E5%A4%A7%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[不作死就不会死，不应该，不应该把视频都放到git仓库中。 下面知乎中的命令给了我很大的帮助。 12345678910111213git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" ' --prune-empty --tag-name-filter cat -- --allgit push origin --force --allgit push origin --force --tagsgit for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdingit reflog expire --expire=now --allgit gc --prune=nowgit count-objects -v https://www.zhihu.com/question/54419234]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ftp服务器的配置]]></title>
+    <url>%2F2018%2F05%2F19%2F2018-05-2018-05-19-ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[今天在自己的远程服务器上配置好了ftp服务器，有必要记录下来。 http://www.cnblogs.com/xiongpq/p/3384759.html 这个博客给了我很大的帮助。 注意有一个坑：配置文件每一行后面都不能够有空格，不然会发生读取配置文件错误的坑。]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F13%2F2018-05-2018-05-13-%E4%B8%AD%E5%BF%83%E6%8E%A7%E5%88%B6%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%2F</url>
+    <content type="text"><![CDATA[中心控制的路由选择的实现 路由器 每一个路由器维护一个线程，这个线程用来与中心服务器维持连接 该线程定期发送本地链路信息给中心服务器 定期从中心服务器获取路由表，并用于替换本地路由表 服务器 服务器对每一个路由器的连接建立一个定时器 服务器上 主线程：定期从队列中取出链路信息，并更新路由表 链路信息：包括链路的存在，费用，以及某路由的下线 注意：主线程需要维护每一个路由器的路由表 有一个重点：邻接矩阵-&gt;某路由器路由表这个过程需要好好实现 其他线程： 维护一个与路由器的连接 定期发送路由表 将接收到的链路状态放入队列中供主线程使用用来更新路由表 如果一段时间没有接收到信息，将该路由器已下线的信息放入队列中 如何初始化路由器 配置文件里写好controller的ip 就行啦]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[OSPF协议]]></title>
+    <url>%2F2018%2F05%2F13%2F2018-05-2018-05-13-OSPF%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[OSPF协议 http://www.cnblogs.com/sddai/p/5399482.html https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88 https://www.qingsword.com/qing/596.html 线程1：维护与多个路由器之间的连接，并得知最新本地链路情况 线程2：接受包，判断是否需要转发和广播 维护 1. 与广播有关的信息，防止风暴 2. 网络拓扑数据库 报文类型 链路状态更新报文,广播 keepalive报文 全局拓扑数据交换报文？ 维护 拓扑数据库 1.类型1:Router LSA：每个路由器都将产生Router LSA，这种LSA只在本区域内传播，描述了路由器所有的链路和接口，状态和开销.]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[RIP协议]]></title>
+    <url>%2F2018%2F05%2F13%2F2018-05-2018-05-13-RIP%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[最近在写路由选择协议相关的实现，这里放了一些有关RIP协议的细节。 RIP协议原理距离向量算法 https://wenku.baidu.com/view/09af0ecf5fbfc77da269b14f.html RIP报文格式]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[补充-物理层]]></title>
+    <url>%2F2018%2F05%2F08%2F2018-05-2018-05-08-%E8%A1%A5%E5%85%85-%E7%89%A9%E7%90%86%E5%B1%82%2F</url>
+    <content type="text"><![CDATA[这里主要放一些关于计算机网络-协议栈中物理层的相关笔记. 参考自谢希仁&lt;计算机网络&gt; 1 物理层的基本概念作用 在连接各种计算机的传输媒体上传输数据比特流. 屏蔽硬件的差异,使物理层上面的数据链路层感觉不到差异 特性 机械特性:指明接口所用接线器的形状和尺寸,引线数目和排列,固定和锁定转置等 电气特性:指明在接口电缆的各条线上出现的电压的范围。 功能特性:指明某条线上出现的某一电平的电压表示何种意义。 过程特性:指明对于不同功能的各种可能事件的出现顺序。 2 数据通信的基础知识2.1 数据通信系统的模型一个数据通信系统可划分为三大部分: 源系统 传输系统 目的系统 根据信号中代表消息的参数的取值方式不同,信号可分为两大类 模拟信号-代表消息的参数的趋势是连续的 数字信号-代表消息的参数的取值是离散的 使用时域中的波形表示数字信号时,代表不同离散数值的基本波形称为码元 2.2 信道的几个基本概念 信道:表示向某一个方向传送信息的媒体 带宽:信道最高信号频率-信道最低信号频率,单位是Hz 信道容量:信道能无错误传送的的最高比特率,bps 通信的双方信息交互的方式的分类 单向通信 双向交替通信 双向同时通信 基带信号需要通过带通调制,生成带通信号 来自信源的信号称为基带信号 基带信号往往含有较多的低频成分,许多信道是无法传输这种低频分量和直流分量的,于是就有了调制 调制的种类 基带调制(仅变换信号波形) 带通调制(使用载波,把基带信号的频率范围搬移到较高的频段,生成带通信号) 带通调制又分很多种:调幅,调频,调相,正交振幅调制 2.3 信道的极限容量数字通信优越性:接收端只需要从失真的波形识别出原来的信号,这种失真就对通信质量没有影响. 影响码元传输速率的因素 信道能够通过的频率范围 理想条件下(无噪声干扰),避免码间串扰,码元传输速率的上限值由奈氏准则得出 信噪比 带宽受限且有高斯白噪声干扰的信道的极限,无差错的信息传输速率由香农公式得出 3 物理层下面的传输媒体导引型传输媒体 双绞线 同轴电缆 光缆 多模光纤 单模光纤 非导引型传输媒体 短波通信 微波通信 4 信道复用技术频分复用,时分复用,统计时分复用波分复用码分复用重点掌握CDMA,码分多址技术TODO: 5 数字传播系统6 宽带接入技术6.1 ADSL6.2 光纤同轴混合网HFC6.3 FTTx 技术]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第五章链路层]]></title>
+    <url>%2F2018%2F05%2F07%2F2018-05-2018-05-07-%E7%AC%AC%E4%BA%94%E7%AB%A0%E9%93%BE%E8%B7%AF%E5%B1%82%2F</url>
+    <content type="text"><![CDATA[《计算机网络》第五章 链路层笔记 链路层概述链路层提供的服务任一链路层的基本服务都是将数据报通过单一通信链路从一个节点移动到相邻接点。不过其提供的服务细节随着链路层协议的不同而变化。 成帧：链路层帧 链路接入：媒体访问控制协议（Medium Access Control）规定了帧在链路上传输的规则.TODO 可靠交付（可选） 差错检测和纠正 链路层在哪里实现？ 链路层是软件和硬件交接的地方。 差错检测和纠正技术 接收方的挑战是在：它只收到$D’$和$EDC’$的情况下，确定$D’$是否与初始的$D$相同. 差错检测和纠正技术使接收方有时但并总是检测出已经出现的比特差错,但还是可能会有未检出比特差错. 奇偶校验 单个奇偶校验位 二维奇偶校验TODO! TODO:前向纠错的优点 检验和方法因特网检验和(用于运输层) 循环冗余检测CRC编码的关键思想:发送方和接收方需要协商长度$r+1$的比特$G$(即生成多项式).对于一个给定的数据段$D$ 发送方要选择$r$个附加比特$R$,并将它们附加到D上,使得到的$d+r$比特用模2算术恰好能被$G$整除. 接收方用$G$去除接收到的$d+r$比特,如果余数为非零,就是出了差错,否则数据正确而被接受. 关键问题:发送方需要确定$R$,如何确定? $$\displaystyle R = remainder \frac{D \cdot 2^r}{G}$$ 注意都是模2算术 多路访问链路和协议有两种链路: 点对点链路,广播链路 多路访问协议的两个理想特性 当只有一个节点活跃时,该活跃节点具有$R$ bps的吞吐量 当有$M$个节点活跃时每个活跃节点的吞吐量接近$R/M$ bps 对于广播链路,需要解决多路访问问题. 通过多路访问协议规范多个节点在共享的广播信道上的传输行为 碰撞问题的解决. 信道划分协议 时分多路复用(TDM) 时间帧,时隙 频分多路复用(FDM) 码分多址(CDMA) 随机接入协议在随机接入协议中,一个传输节点总是以信道的全部速率(即$R$ bps)进行发送.当有碰撞时,设计碰撞的每个节点反复地重发它的帧,到该帧无碰撞为止.当一个节点经历一次碰撞时,它不必立即重发该帧,相反他再重发该帧之前等待一个随机时延. 时隙ALOHA书P299-P300 下面放一些较关键的内容. 假设:重点在于:节点是同步的,每个节点都知道时隙何时开始. 节点的行为 当节点有一个新帧需要发送时,它等到下一个时隙开始并在该时隙传输整个帧 如果没有碰撞,该节点成功地传输它的帧从而不需要考虑重传 如果有碰撞,会在时隙结束前检测到碰撞,并在后续的每个时隙中以概率$P$重传该帧,直到该帧无碰撞地传输出去. 效率的计算(注意思考推导过程)对于有N个活跃节点的局域网中: 计算任意一个节点成功传送的概率:$p*(1-p)^{N-1}$ 最大效率为:$Np*(1-p)^{N-1}$ $N$取极限,最大效率为$\frac{1}{e}$,如何证明就完全是数学问题了. 纯ALOHA与时隙ALOHA不同在于非时隙的,完全分散不同步的 最大效率的计算P301 载波侦听多路访问(CSMA)和下面的放在一起了 具有碰撞检测的载波侦听多路访问(CSMA/CD)特性 载波侦听:如果节点检测到信道有来自其他节点的帧正在传送,则等待一段时间在检测. 碰撞检测:节点在进行传输的时候仍然保持侦听,若检测到其他节点传输帧,则停止传输,等待随机时间量后再传输 等待随机时间量的确定:二进制指数后退 性能 信道传播时延:信号从一个节点传播到另一个节点所花费的时间 该传播时延越长,载波侦听节点不能真听到网络中另一个节点已经开始传输的机会就越大 CSMA/CD效率:当有大量的活跃节点,且每个节点都有大量的帧需要发送时,帧在信道中无碰撞地传输的那部分时间在长期运行时间中所占的份额.TODO: 轮流协议 轮询协议 主节点以循环的方式轮询每个结点,告诉每个结点可以传输的帧的最大数量 令牌传输协议 实例 DOCSISTODO: 交换局域网链路层寻址和ARPMAC地址 与局域网相连的每个接口都有一个唯一的MAC接口 适配器接收到一个帧时,将检查该帧的目的MAC地址是否与它自己的MAC地址匹配,如果匹配就提取数据包向上传递,如果不匹配就丢弃. 特例是MAC广播地址:48个连续的1组成的字符串 地址解析协议ARP作用:网络层地址(如IP地址)与链路层地址(MAC地址)之间的转换 书P310 发送一个IP包的时候,需要将其封装成一个链路层帧,这时候就需要对方的MAC地址 获取MAC地址 在ARP表中有对应项的时候,直接从ARP表中取 ARP表没有对应项的时候,发送方构造ARP分组并使用广播MAC地址封装成链路层帧广播之,等待一个响应ARP分组,从中取得并更新ARP表 需要注意的事情 查询ARP报文是在广播帧发送的,响应ARP报文是在一个标准帧中发送的 ARP分组中具有的字段: 发送数据报到子网外我觉得这个要自己学会分析. 以太网 以太网帧结构 以太网技术 链路层交换机交换机自身对于子网中的主机和路由器是透明的. 交换机转发和过滤 借助于交换机表 当一台交换机安装配置好之后，其工作过程如下： 收到某网段（设为A）MAC地址为X的计算机发给MAC地址为Y的计算机的数据包。交换机从而记下了MAC地址X在网段A。这称为学习（learning）。 交换机还不知道MAC地址Y在哪个网段上，于是向除了A以外的所有网段转发该数据包。这称为泛洪（flooding）。 MAC地址Y的计算机收到该数据包，向MAC地址X发出确认包。交换机收到该包后，从而记录下MAC地址Y所在的网段。 交换机向MAC地址X转发确认包。这称为转发（forwarding）。 交换机收到一个数据包，查表后发现该数据包的来源地址与目的地址属于同一网段。交换机将不处理该数据包。这称为过滤（filtering）。 交换机内部的MAC地址-网段查询表的每条记录采用时间戳记录最后一次访问的时间。早于某个阈值（用户可配置）的记录被清除。这称为老化（aging）。 https://zh.wikipedia.org/wiki/%E7%B6%B2%E8%B7%AF%E4%BA%A4%E6%8F%9B%E5%99%A8 虚拟局域网认识到以太网帧中新添加的802.1Q标签的作用. 链路虚拟化多协议标签交换MPLS:在基于分组交换的网络中实现的虚电路系统 数据中心网络 等级拓扑 全连通拓扑]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Pandas数据处理笔记]]></title>
+    <url>%2F2018%2F05%2F06%2F2018-05-2018-05-06-Pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[Pandas 数据处理https://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook-merge 其实官网教程还是讲的很清楚的，下面就是放一些我一开始没有理解的特别好的地方，以提醒自己。 没理解好应该是因为我没有学过数据库吧emmmm。。。。 表格的合并merge()方法关于表格的合并这一块，一开始理解了蛮久才懂。下面先放一个例子吧。 1234567891011121314import pandas as pdimport numpy as npimport matplotlib.pyplot as pltdf = pd.DataFrame(data=&#123;'Area' : ['A'] * 5 + ['C'] * 2, 'Bins' : [110] * 2 + [160] * 3 + [40] * 2, 'Test_0' : [0, 1, 0, 1, 2, 0, 1], 'Data' : np.random.randn(7)&#125;)print(df)df['Test_1'] = df['Test_0'] - 1print(df)# df2 = pd.merge(df, df, left_on=['Test_0'], right_on=['Test_1'],suffixes=('_L','_R'))df2 = pd.merge(df, df, left_on=['Bins', 'Area','Test_0'], right_on=['Bins', 'Area','Test_1'],suffixes=('_L','_R'))print(df2) 通过理解这一个例子，我总算是明白了on : Columns (names) to join on.的意思，下面放分析过程吧。 第一个print，第二个print，相必都非常好理解。 对于第三个print，为什么输出了这样的表格呢？要理解这个，必须明白理解on参数的意思。 上面使用了left_on 和 right_on两个参数，指明了需要合并的列。 用这些列来合并两个表格，那其他的列便会作为需要合并的数据，分别在列名后加上后缀，将这些数据放到对应的index处。 问题在于：pandas如何知道这个数据该放到哪一行？ 如果将这个合并过程，看做重新创建一个表格，我们可以从确定表格的两个关键：索引，数据分别分析 合并后新的表格，每一个项应该准确的对应一个索引，这个索引的创建由on参数决定。上面中的left_on,right_on,其实我们可以这样想：在默认的inner模式下， 当right_on这些列中的元素与left_on这些列中的元素都相等，这些列中的元素便可以作为一个索引 那么这个索引对应的数据有哪些呢？数据从不做索引的列中取得。 使用这个索引，在原来的left的表中不做索引的列中找到对应的项，加到新表格该项的后面去 在right表中同理。 我觉得写得好像有点难理解？ on参数决定的是在合并过程中作为索引找到对应数据的项 最后一句话总结大概是这样吧，我总算是理解了on参数的意义。 建议多练习，多去改变参数试一下，心里就很清楚了。]]></content>
+      <categories>
+        <category>Data Analysis</category>
+      </categories>
+      <tags>
+        <tag>Data Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test_git_hook]]></title>
+    <url>%2F2018%2F05%2F06%2Ftest-2018-05-06-test-git-hook%2F</url>
+    <content type="text"><![CDATA[测试一些githook test success! 当我push的时候，就会将网站自动部署到我宿舍的服务器中。 ! 可以直接push到我的服务器，不需要经过github 再试一下，ok 出现了一点小问题 我的主页的连接的链接没有更新]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pandas入门]]></title>
+    <url>%2F2018%2F05%2F04%2F2018-05-2018-05-04-pandas%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"><![CDATA[pandas 功能介绍以及入门材料指引pandas给我们提供了以下功能。 读取文件中的数据，并且支持常见的格式，如json，csv 灵活的行选择和列选择 列：有两种方法，一种是使用字符串索引，另一种是直接. 行：有数字索引和字符串索引，字符串索引有各种过滤器可设置。 对于表格中的值 支持一些过滤方法，用于将表格中满足特定条件的数据提取出来，生成新的表格 可以对值进行简单的处理，如value_counts()方法 groupby()方法：将一列中含有同样值的行合并起来，合并后其他行的处理方法有很多种（如min,max,mean,sum等） 封装了matplotlib的功能，支持常见的画图 入门材料本来想写一些入门材料，想到网上入门材料多的是，其实并没有这个必要。 直接放一些入门材料的链接总比自己写的入门材料靠谱。 也方便自己以后参考。 首先得看这个：https://github.com/jvns/pandas-cookbook 该代码仓库有代码还有对应的数据，可以边看教程边练习 该教程主要以实例练习为主，先提出一个需求（如要实现什么功能），然后再教程中穿插讲解各个函数的用法，最后实现功能 好评！ 当然是pandas 官方 document了，https://pandas.pydata.org/pandas-docs/stable/ pandas官方的document里面有一个 10 Minutes to pandas,如果看了上面那个教程对pandas有了初步的了解，就可以再看看这个，了解更多pandas的内置函数的用法 https://pandas.pydata.org/pandas-docs/stable/10min.html 这个也可以平时用作速查panda常用函数。 其他的我觉得需要用就再查文档就好。]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[leetcode-565]]></title>
+    <url>%2F2018%2F05%2F03%2F2018-05-2018-05-03-leetcode-565%2F</url>
+    <content type="text"><![CDATA[leetcode 565题目链接可见https://leetcode.com/problems/array-nesting/description/ 题目A zero-indexed array A of length N contains all integers from 0 to N-1. Find and return the longest length of set S, where S[i] = {A[i], A[A[i]], A[A[A[i]]], … } subjected to the rule below. Suppose the first element in S starts with the selection of element A[i] of index = i, the next element in S should be A[A[i]], and then A[A[A[i]]]… By that analogy, we stop adding right before a duplicate element occurs in S. 12345678910111213Example 1:Input: A = [5,4,0,3,1,6,2]Output: 4Explanation: A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.One of the longest S[K]:S[0] = &#123;A[0], A[5], A[6], A[2]&#125; = &#123;5, 6, 2, 0&#125;Note:N is an integer within the range [1, 20,000].The elements of A are all distinct.Each element of A is an integer within the range [0, N-1]. 题目分析这里题目要求的是：返回一个最大集合的长度。其中这个集合需要满足的条件如题目所示。 仔细分析这个集合的特点，若一个数字在这样的一个集合中，这个集合内的元素必然连成一个环。 如题目的示例，可构成这样的一个环 可知数组中的所有元素最后必定能够划分为独立的M个环，现在的问题就是求最大的环的长度了。 毫无疑问，我需要遍历每一个元素。 若这个元素所在的环我已经算过了，那我就直接返回这个环的长度 若这个元素所在的环我没有算过，那我就算一算 现在的问题是，对一个元素，我如何知道它所在的环被算过？知道被算过我又如何找到对应的环的长度？ 这就需要我先清楚使用什么数据结构来存储我的计算结果。 当一个元素我没有计算过的时候，我通过一个集合存放当前环的元素，循环将下一个元素放入集合中，直到下一个元素已经在集合中。此时我们便计算得出了一个环的长度，并且这个环里的所有元素我以集合的方式存储进来。 我使用一个额外的数组存放每一个数组对应的环的长度，在计算一个环的长度后，我可以将环内的所有元素在数组中对应的位置的值置为环的长度，此后我便可以通过直接访问该数组的方式来得到环的长度，若为0，表示没计算过，那就去算。 代码展示123456789101112131415161718192021222324252627class Solution: def arrayNesting(self, nums): """ :type nums: List[int] :rtype: int """ self.nums = nums self.lens = [0 for _ in range(len(nums))] max_len = 0 for i in range(len(nums)): cur_len = self.get_len(self.nums[i]) if max_len &lt; cur_len: max_len = cur_len return max_len def get_len(self, num): if self.lens[num]: return self.lens[num] loop = set() loop.add(num) cur_num = num while (self.nums[cur_num] not in loop): loop.add(self.nums[cur_num]) cur_num = self.nums[cur_num] for i in loop: self.lens[i] = len(loop) # print(loop) return len(loop) 这个方法似乎还不够快,其实想了一下，没有必要用集合。 优化这里放一个大神的代码参考，简洁，优雅。 123456789101112131415class Solution(object): def arrayNesting(self, nums): """ :type nums: List[int] :rtype: int """ ans, step, n = 0, 0, len(nums) seen = [False] * n for i in range(n): while not seen[i]: seen[i] = True i, step = nums[i], step + 1 ans = max(ans, step) step = 0 return ans 这个代码beat了84.44%的python3 solutions。]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[leetcode442]]></title>
+    <url>%2F2018%2F05%2F03%2F2018-05-2018-05-03-leetcode442%2F</url>
+    <content type="text"><![CDATA[leetcode 442(高级编程技术 week9-1)原题可见：https://leetcode.com/problems/find-all-duplicates-in-an-array/description/ 题目Given an array of integers, $1 ≤ a[i] ≤ n$ (n = size of array), some elements appear twice and others appear once. Find all the elements that appear twice in this array. Could you do it without extra space and in O(n) runtime? 123456Example:Input:[4,3,2,7,8,2,3,1]Output:[2,3] 题目分析仔细看题，会发现一个很明显的提示： $$1 &lt;= a[i] &lt;= n$$ 看到这个，基本就可以确定使用类似于桶排序的方式记录每一个元素的个数，又考虑到题目给的数组中的数字最多也只会出现两次，所以就设置为如果只要某一个桶大于1，就将该桶对应的数字放进答案中。 代码展示12345678910111213class Solution: def findDuplicates(self, nums): """ :type nums: List[int] :rtype: List[int] """ ans = [] tong = [0 for _ in range(len(nums))] for i in range(0,len(nums)): tong[nums[i]-1] += 1 if tong[nums[i]-1] &gt; 1: ans.append(nums[i]) return ans]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[leetcode665]]></title>
+    <url>%2F2018%2F05%2F02%2F2018-05-2018-05-02-leetcode665%2F</url>
+    <content type="text"><![CDATA[Leetcode 665题目描述Given an array with n integers, your task is to check if it could become non-decreasing by modifying at most 1 element. We define an array is non-decreasing if array[i] &lt;= array[i + 1] holds for every i (1 &lt;= i &lt; n). 题目分析我们要做的是：判断一个数组：能否至多只移动一个数字，就能够使得该数组变为不减数组。 来思考符合题目要求的数组应该具有怎样的特征？由于题目要求不降数组，我们可以先遍历数组，将每个数与它右侧的数进行比较，若发生了“降”，则记录降的次数加1。 首先，已经有序，不降的数组显然是满足题目要求的，此时数组中“降”的次数为0。（由于这一个一开始没有注意到，结果搞了半天都没有AC） 其次，如果这一个数组可以通过只移动一个数字的方式就能恢复成不降序列，该数组发生“降”的次数必然是1，如果不是1的话，假设是2，那么就有两个位置都发生了“降”的情况。这时候如果仅仅移动一个数字，只可能将一个“降”消去，但是另一个降是不可能消失的。 因此，我们先确认，满足这样的数组的一个必要条件是dec_time == 0，这个在代码中可以了解他的意思。 但是这样的条件还不够，我们仍然可以找到这样的数组，它满足dec_time == 0，但是仅移动一个数字是不能够将数组恢复成不降序列的。如下面的例子： $$[4,5,6,7,1,2,3,4]$$ 我们可以进一步思考符合题目要求的数组需要满足的特征。仅移动一个数组便能恢复，说明该数组只有一个数字是无序的，并且将这个数字从数组中拿出后，新的数组应该要保持有序不降。很显然，我们现在的必要条件，并不能保证新的数组仍能有序不降。 在计算dec_time时，我们可以找到数组中第一个降序的数对的位置。设这个数对中较大的数的索引为index。因为现在的条件，并不足以让我们判断失序的两个数中是哪一个数导致了数组的失序，这时候可以将这样的数组分成两类来讨论： 失序的数比周围的数大 失序的数比周围的数小 情况1：大对于失序的数比周围的数大的情况，那么这个时候，失序的数应该是索引index对应的数字，那么当我将这个数字从数组中拿出来时，这个数组应该是不降的，因此我们得到 $$array[index-1] &lt;= array[index+1]$$ 情况2：小对失序的数比周围的数小的情况，这时我们可以判断失序的数应该是索引index+1对应的数字。同样由于新数组是不降的，因此得到： $$arrry[index] &lt;= array[index+2]$$ 将以上的情况判断后，再将一些边界条件处理一下（如失序的数位于数组首尾的情况），就可以完成这一道题目了。 代码展示12345678910111213141516171819202122class Solution: def checkPossibility(self, nums): """ :type nums: List[int] :rtype: bool """ dec_time = 0 index = 0 for i in range(0, len(nums)-1): if nums[i] &gt; nums[i+1]: dec_time += 1 index = i if dec_time == 0: return True if dec_time == 1: if index == 0 or index == len(nums)-2: return True if nums[index-1]&lt;=nums[index+1]: return True if nums[index] &lt;= nums[index+2]: return True return False 感想卡了很久，后来发现自己没有处理数组原本就有序的情况，傻逼了。]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[leetcode561]]></title>
+    <url>%2F2018%2F05%2F02%2F2018-05-2018-05-02-leetcode561%2F</url>
+    <content type="text"><![CDATA[leetcode 561 习题解答原题网址见 https://leetcode.com/problems/array-partition-i/description/ 题目描述Given an array of $2n$ integers, your task is to group these integers into n pairs of integer, say ($a_1$, $b_1$), ($a_2$, $b_2$), …, ($a_n$, $b_n$) which makes sum of min($a_i$, $b_i$) for all i from 1 to n as large as possible. 题目分析这里要求对$2n$个数字进行配对，并且对每一对数字，取出他们中的最小者，并且对这些最小者进行求和得出最大的和。 求最大的和，这是这道题最关键的突破点。如何在两两取最小值的情况下得出尽可能大的和呢？ 注意到样例，1，3，4，2这四个数字中，我们来探究(1,2)(3,4)与(1,3)(2,4)这两种不同的组合的差别。 (1,3)之所以是比(1,2)这个组合要差，一个很重要的原因是在(1,3)中取最小值的时候，从3到1，损失了2，而相比起这个，(1,2)只损失了1。这里损失的减少，带来的直接好处就是最后和能尽可能大。 因此，为了和尽可能大，我们要做的是，每一对数中的两个数之间的差要尽可能小，这样子求和加起来的时候损失就能够达到最小，从而求和最大，而能够让两个数之间的差尽可能小的排列很明显，一定是按序排好的情况。 代码展示1234567891011class Solution: def arrayPairSum(self, nums): """ :type nums: List[int] :rtype: int """ sort_nums = sorted(nums) s = 0 for i in sort_nums[::2]: s += i return s 这里用到了一个切片的技巧，减少了很多代码量。sort_nums[::2]能够做到从原有的列表中隔一个取一个，这样子就必然能够取到每对数中最小的那一个数。]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[openMP编程]]></title>
+    <url>%2F2018%2F05%2F02%2F2018-05-2018-05-02-openMP%E7%BC%96%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[OpenMP编程模型简述如图所示 格式12345#pragma omp somedirective clause(value,othervalue) &#123; parallel statement 1; parallel statement 2; &#125; 并行模式说明在OpenMP中有两种并行模式 SPMD模型：创建一系列新的线程，这些线程执行的代码段相同 MIMP模型：为了完成一个任务，创建一系列新的线程，主线程将工作分配给这一系列新的线程（也就是说这些线程执行的代码段由OpenMP决定，并不一致） 并行模式之SPMD模型SPMD模型新建的线程会并行地运行下面花括号扩住的代码段，并且每一个线程运行的代码相同。1234#pragma omp parallel&#123; // this is executed by a team of threads&#125; 于是，在这里如何做任务分配呢？可以通过opm_get_thread_num获取线程号来判断自己应该运行的指令。例：使用三个线程计算 $result = f(x)+g(x)+h(x)$. 12345678double result,fresult,gresult,hresult;#pragma omp parallel&#123; int num = omp_get_thread_num(); if (num==0) fresult = f(x); else if (num==1) gresult = g(x); else if (num==2) hresult = h(x);&#125;result = fresult + gresult + hresult; 关于OpenMP在这过程中完成的工作，教程上讲的很详细，摘录一下。 This code corresponds to the model we just discussed: Immediately preceding the parallel block, one thread will be executing the code. In the main program this is the \emph{initial thread} . At the start of the block, a new team of threads is created, and the thread that was active before the block becomes the master thread of that team. After the block only the master thread is active. Inside the block there is team of threads: each thread in the team executes the body of the block, and it will have access to all variables of the surrounding environment. How many threads there are can be determined in a number of ways; we will get to that later. 并行模型之MIMD模型 take an amount of work and distribute it over the available threads in a parallel region. 这种模型下，OpenMP会完成给线程分配任务的工作，如下面的例子：123456789#pragma omp parallel&#123; int threadnum = omp_get_thread_num(), numthreads = omp_get_num_threads(); int low = N*threadnum/numthreads, high = N*(threadnum+1)/numthreads; for (i=low; i&lt;high; i++) // do something with i&#125; 在这个例子中，我们通过获取线程号的方式显式分配任务，在OpenMP中，为了完成这样的工作，有一种更加自然的语法12345#pragma omp parallel#pragma omp forfor (i=0; i&lt;N; i++) &#123; // do something with i&#125; 这种模式下需要注意的地方可用这种模型的for循环是有很多限制的，这一些限制在下面有说明。 There are some restrictions on the loop: basically, OpenMP needs to be able to determine in advance how many iterations there will be. The loop can not contains break , return , exit statements, or goto to a label outside the loop. The continue (C) or cycle (F) statement is allowed. The index update has to be an increment (or decrement) by a fixed amount. The loop index variable is automatically private, and not changes to it inside the loop are allowed. 并行模型的理解在上面两种基础的并行模型理解之后，我们可以看一看之后这一段代码，OpenMP将会如何去实现？ 123456789#pragma omp parallel&#123; code1();#pragma omp for for (i=1; i&lt;=4*N; i++) &#123; code2(); &#125; code3();&#125; 下面这一个图解释的很清楚了，每一个线程都会原封不动地完成code1()，然后将for中包含的任务分配给各个线程完成，最后等到每一个线程for块包含的任务都完成之后，每一个线程继续各干各的code3()。 其他需要注意的地方Nested parallelism在并行运行块中运行一个函数，而这个函数里又有并行运行块，openmp会如何实现这样的操作呢？在默认情况下，嵌套的并行操作块只会有一个线程执行（就像没有嵌套一样），可通过omp_set_nested(1)显式说明可以嵌套。 omp_set_nested(1) 123456789101112131415int main() &#123; ...#pragma omp parallel &#123; ... func(...) ... &#125;&#125; // end of mainvoid func(...) &#123;#pragma omp parallel &#123; ... &#125;&#125; 参考资料 http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html]]></content>
+      <categories>
+        <category>Parallel Programing</category>
+      </categories>
+      <tags>
+        <tag>OpenMP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[openGL配置]]></title>
+    <url>%2F2018%2F04%2F30%2F2018-04-2018-04-30-openGL%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[配置OpenGL的笔记linux好不容易在Window下配置好OpenGL，在博客上记录一下。 12345sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-devsudo apt-get install freeglut3-devsudo apt-get install build-essential gdb subversionsudo apt-get install automake autoconf libtoolsudo apt-get install libgtk2.0-dev libxmu-dev libxxf86vm-dev 在安装了参考资料里面的包之后，还另外安装了glfw,为了能够运行教程中的用到glfw代码的示例。 12sudo apt install libglfw3 libglfw3-devsudo apt install libassimp-dev 运行成功动图这个gif有点大，可能会加载的很慢（15mb) 小结这是在wsl上配置的，为了能够让wsl里面的程序在window运行图形界面，还另外装了VcXsrv作为Xwindow server。然后在启动VcXsrv时还修改了一些配置才运行的比较正常，如截图所示。 windowmingw直接装就好了，里面有libopengl32.a,libgdi32.a等库，都是等下需要的。 gifw 官网下载glfw（32） 将头文件放到项目文件夹下/includes中 将静态链接库房贷项目文件夹/lib中 获取glad.h glad.c 等文件，并将glad.c加入到项目中。 编写makefile 尝试运行示例代码 http://www.glfw.org/documentation.html 1234567891011121314151617181920# the ROOT dictionaryROOT = .# Target FileTARGET_FILE = triangle.cpp# compile optionCXX_FLAGS = -std=c++11 -g -Wall CXX_INCLUDES =-I$(ROOT)/include# 增加静态链接库的寻找目录CXX_LIB = -L$(ROOT)/libSTATIC_LINK_LIB = -lglfw3 -lopengl32 -lgdi32all:t.exe t.o ./t.exe make cleant.exe:t.o glad.o g++ $(CXX_FLAGS) t.o glad.o -o t.exe $(CXX_LIB) $(STATIC_LINK_LIB)t.o:t.cpp g++ $(CXX_INCLUDES) $(CXX_FLAGS) -o t.o -c $(TARGET_FILE)glad.o:glad.c g++ $(CXX_INCLUDES) $(CXX_FLAGS) -o glad.o -c glad.c 参考了这些资料 https://stackoverflow.com/questions/22008845/glfw-mingw-link-errorhttps://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/ freeglut如果不用glfw，用freeglut的话，也可以进行配置。 参考资料https://blog.csdn.net/evenness/article/details/9150351]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>OpenGL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tmux]]></title>
+    <url>%2F2018%2F04%2F30%2F2018-04-2018-04-30-tmux%2F</url>
+    <content type="text"><![CDATA[Tmux 终端复用工具满足需求： 一个终端窗口能够查看多个终端。 保存环境，恢复环境。 学习资料看了一部分资料，觉得这个已经讲得足够清楚，放在这里收藏着。 http://louiszhai.github.io/2017/09/30/tmux/]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[物理层]]></title>
+    <url>%2F2018%2F04%2F28%2F2018-04-2018-04-28-%E7%89%A9%E7%90%86%E5%B1%82%2F</url>
+    <content type="text"><![CDATA[物理层2.1 物理层的基本概念 机械特性 接线器的形状和尺寸，引线数目和排列，固定，锁定装置 电气特性 各条线的电压等 功能特性 某条线上出现的某一电平的电压表示的意义 过程特性 不同功能的各种可能事件的出现顺序 2.2 数据通信的基础知识2.2.1 数据通信系统的模型 两个关键过程：调制 解调 关于调制，解调过程重要性的理解。 信号的衰减在数据的传播过程中不可忽略。实例：使用十米的延长线连接电脑和移动硬盘，电脑无法识别。 为了解决这种问题，有专家发现高频的信号衰减较小，更加适合远距离传输。于是便有了调试解调的过程。 关于调制的理解模拟信号-&gt;数字信号两个步骤：1. 抽样 2. 量化抽样后，仅仅在时间本身做了离散化，样点能取到的值仍然是连续的因此需要量化进行将样点取到的值离散化， 如四舍五入等方法。 几个概念码元码元：数字通信中一个基带波形所对应的二进制玛组。 关于单极性和双极性的思考：单极性的码元容易出现误码，双极性会好很多。]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[OpenMP笔记]]></title>
+    <url>%2F2018%2F04%2F27%2F2018-04-2018-04-27-Openmp%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[OpenMP笔记OpenMP 框架是使用 C、C++ 和 Fortran 进行并发编程的一种强大方法。GNU Compiler Collection (GCC) V4.2 支持 OpenMP 2.5 标准，而 GCC 4.4 支持最新的 OpenMP 3 标准。 Hello world程序的编写12345678910#include &lt;omp.h&gt;#include &lt;iostream&gt;int main()&#123; omp_set_num_threads(5); #pragma omp parallel &#123; std::cout &lt;&lt; "Hello World!\n"; &#125;&#125; 在本机运行的结果为 #pragma omp parallel 仅在您指定了 -fopenmp 编译器选项后才会发挥作用。在编译期间，GCC 会根据硬件和操作系统配置在运行时生成代码，创建尽可能多的线程。每个线程的起始例程为代码块中位于指令之后的代码。这种行为是 隐式的并行化，而 OpenMP 本质上由一组功能强大的编译指示组成，帮您省去了编写大量样本文件的工作。（为了进行比较，您需要了解使用 Portable Operating System Interface (POSIX) 线程 [pthreads] 实现您刚才的程序将会怎样）。 修改并行线程数默认的并行线程数由硬件决定。修改的时候有如下方法： #pragma omp parallel num_threads(5) omp_set_num_threads(5); 还可以通过修改外部环境变量来设置 在命令行中加入：export OMP_NUM_THREADS=6 OpenMP 的三个方面：编译指示、运行时 API 和环境变量。同时使用环境变量和运行时 API ,运行时 API 将获得更高的优先权。 继续深入，一个实例两个数组之间的运算如下代码所示。123456789int main( )&#123;int a[1000000], b[1000000]; // ... some initialization code for populating arrays a and b; int c[1000000];for (int i = 0; i &lt; 1000000; ++i) c[i] = a[i] * b[i] + a[i-1] * b[i+1];// ... now do some processing with array c&#125; 很明显，每一次循环之间并没有前后依赖关系，很容易并行化。 12345678910int main( )&#123;int a[1000000], b[1000000]; // ... some initialization code for populating arrays a and b; int c[1000000];#pragma omp parallel forfor (int i = 0; i &lt; 1000000; ++i) c[i] = a[i] * b[i] + a[i-1] * b[i+1];// ... now do some processing with array c&#125; 当加入了这一条编译指令之后，发生了什么呢？TODO:不清楚 计算线程运行时间123456789101112131415161718192021#include &lt;omp.h&gt;#include &lt;math.h&gt;#include &lt;time.h&gt;#include &lt;iostream&gt; int main(int argc, char *argv[]) &#123; int i, nthreads; clock_t clock_timer; double wall_timer; double c[1000000]; for (nthreads = 1; nthreads &lt;=8; ++nthreads) &#123; clock_timer = clock(); wall_timer = omp_get_wtime(); #pragma omp parallel for private(i) num_threads(nthreads) for (i = 0; i &lt; 1000000; i++) c[i] = sqrt(i * 4 + i * 2 + i); std::cout &lt;&lt; "threads: " &lt;&lt; nthreads &lt;&lt; " time on clock(): " &lt;&lt; (long double) (clock() - clock_timer) / CLOCKS_PER_SEC &lt;&lt; " time on wall: " &lt;&lt; omp_get_wtime() - wall_timer &lt;&lt; "\n"; &#125;&#125; 运行结果： 可以看到的结果是：随着运行的线程数不断增加，总运行时间渐渐减少，并行对程序运行的加速效果可见一斑。 需要注意的地方 #pragma parallel for private(i) 意味着循环向量 i 将被作为一个线程本地存储进行处理，每个线程有一个该向量的副本。线程本地向量未进行初始化。 omp_get_wtime API 从一些任意的但是一致的点返回已用去的时间（定义很拗口，不过wtime可以看做wall time 墙上时间，即实际时间），以秒为单位。因此，omp_get_wtime() - wall_timer 将返回运行 for 循环所用的真实时间。 (clock() - clock_timer)返回的是CPU时间，问题在于，并行会减少实际时间，但不会减少CPU时间，因此应该用上面的omp_get_wtime()函数测量时间。下面的三个链接，将一些相关的疑问解释得很清楚了。 关于omp_get_wtime函数的疑问，可见这个网站https://stackoverflow.com/questions/10673732/openmp-time-and-clock-calculates-two-different-resultshttps://gcc.gnu.org/onlinedocs/libgomp/omp_005fget_005fwtime.htmlCPU time与WALL timehttps://blog.csdn.net/qq_15514565/article/details/78220342 OpenMP 中对临界区的处理通过#pragma omp critical指令来对临界区进行处理。12345678910#pragma omp critical (section1)&#123;myhashtable.insert("key1", "value1");&#125; // ... other code follows#pragma omp critical (section1)&#123;myhashtable.insert("key2", "value2");&#125;// pragma omp critical 之后的代码只能由一个线程在给定时间运行。同样，optional section name 是一个全局标识符，在同一时间，两个线程不能使用相同的全局标识符名称运行临界区段。 在这一代码的基础上，您可以作出一个很安全的假设：永远不会出现两个散列表同时插入的情况，因为临界区段名是相同的。 OpenMP 中的锁与互斥OpenMP 提供了自己的互斥锁：omp_lock_t，它被定义为 omp.h 头文件的一部分。关于互斥锁的使用，需要了解以下 5 个 API： 注：以下API均需要传递锁的地址作为参数。 API 功能 omp_init_lock 此 API 必须是第一个访问 omp_lock_t 的 API，并且要使用它来完成初始化。注意，在完成初始化之后，锁被认为处于未设置状态 omp_destroy_lock 此 API 会破坏锁。在调用该 API 时，锁必须处于未设置状态，这意味着您无法调用 omp_set_lock 并随后发出调用来破坏这个锁。 omp_set_lock 此 API 设置 omp_lock_t，也就是说，将会获得互斥。如果一个线程无法设置锁，那么它将继续等待，直到能够执行锁操作。 omp_test_lock 此 API 将在锁可用时尝试执行锁操作，并在获得成功后返回 1，否则返回 0。这是一个非阻塞 API， 也就是说，该函数不需要线程等待就可以设置锁 omp_unset_lock 此 API 将会释放锁。 使用例子使用一个线程不安全的队列，扩展成线程安全的队列： 12345678910111213141516171819202122232425262728293031#include &lt;omp.h&gt; #include "myqueue.h"class omp_q : public myqueue&lt;int&gt; &#123; public: typedef myqueue&lt;int&gt; base; omp_q( ) &#123; // 构造函数，先初始化锁 omp_init_lock(&amp;lock); &#125; ~omp_q() &#123; omp_destroy_lock(&amp;lock); &#125; bool push(const int&amp; value) &#123; omp_set_lock(&amp;lock); bool result = this-&gt;base::push(value); omp_unset_lock(&amp;lock); return result; &#125; bool trypush(const int&amp; value) &#123; bool result = omp_test_lock(&amp;lock); if (result) &#123; result = result &amp;&amp; this-&gt;base::push(value); omp_unset_lock(&amp;lock); &#125; return result; &#125; // likewise for pop private: omp_lock_t lock;&#125;; 嵌套锁这个嵌套锁有点像信号量，内部会维护一个计数器，一旦使用cmp_set_nest_lock，与锁相关的计数量就会加1，不会阻塞。 API 功能 omp_init_nest_lock(omp_nest_lock_t* ) 此 API 将内部嵌套计数初始化为 0。 omp_destroy_nest_lock(omp_nest_lock_t* ) 此 API 将破坏锁。使用非零内部嵌套计数对某个锁调用此 API 将会导致出现未定义的行为。 omp_set_nest_lock(omp_nest_lock_t* ) 此 API 类似于 omp_set_lock，不同之处是线程可以在已持有锁的情况下多次调用这个函数。 omp_test_nest_lock(omp_nest_lock_t* ) 此 API 是 omp_set_nest_lock 的非阻塞版本。 omp_unset_nest_lock(omp_nest_lock_t* ) 此 API 将在内部计数器为 0 时释放锁。否则，计数器将在每次调用该方法时递减。 理解 firstprivate 和 lastprivate 指令firstprivate指令使用主线程的变量初始化自身。关于这个指令的作用，下面的链接解释得很清楚了。https://stackoverflow.com/questions/15304760/how-are-firstprivate-and-lastprivate-different-than-private-clauses-in-openmp 如果您准备将 firstprivate 用于您的 C++ 代码，那么还要注意，firstprivate 指令使用的变量是一个副本构造函数，用于从主线程的变量初始化自身，因此对您的类使用一个私有的副本构造函数肯定会产生不好的结果。 lastprivate指令目的在于解决这样的问题：一个全局变量被多个线程修改后，修改全局变量的线程是不确定的，每一次运行程序，多线程结束后全局变量的值都不同 再将问题具体化，可以看以下程序 1234567891011121314151617#include &lt;stdio.h&gt;#include &lt;omp.h&gt; int main()&#123; int idx = 100; int main_var = 2120; #pragma omp parallel for private(idx) lastprivate(main_var) for (idx = 0; idx &lt; 12; ++idx) &#123; main_var = idx * idx; printf("In thread %d idx = %d main_var = %d\n", omp_get_thread_num(), idx, main_var); &#125; printf("Back in main thread with main_var = %d\n", main_var);&#125; 如果我希望最后main_var的值是11*11，则必须要用lastprivate(main_var),否则当并行部分结束后main_var的值是不确定的。 参考资料 https://www.ibm.com/developerworks/cn/aix/library/au-aix-openmp-framework/]]></content>
+      <categories>
+        <category>Parallel Programing</category>
+      </categories>
+      <tags>
+        <tag>OpenMP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[the life of a web request]]></title>
+    <url>%2F2018%2F04%2F25%2F2018-04-2018-04-25-the-life-of-a-web-request%2F</url>
+    <content type="text"><![CDATA[一个web请求的例程]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[集线器，二层交换机，三层交换机的区别]]></title>
+    <url>%2F2018%2F04%2F25%2F2018-04-2018-04-25-%E4%BA%A4%E6%8D%A2%E6%9C%BA%2F</url>
+    <content type="text"><![CDATA[集线器总线式的结构。一次只能够有一个用户占用总线发送消息。 二层交换机能够多用户同时发送，使用交换机。缺点：体积大，实现虚拟局域网复杂。 三层交换机三层交换技术：二层交换技术+三层转发技术 网段划分之后，网段中子网必须依赖路由器进行管理。三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。 二层交换引擎：实现同一个网段内的快速二层转发 三层路由引擎：实现跨网段的三层路由转发 基于流交换的三层交换技术有个不在同一个子网内的站点需要发送消息给另一个不在同一个子网的站点。 假设两个使用IP协议的站点A、B通过第三层交换机进行通信 发送站点A在开始发送时，把自己的IP地址与B站的IP地址比较，判断B站是否与自己在同一子网内。 若目的站B与发送站A在同一子网内，则进行二层的转发。 若两个站点不在同一子网内，发送站A要向“缺省网关”发出ARP(地址解析)封包，而“缺省网关”的IP地址其实是三层交换机的三层交换模块。 当发送站A对“缺省网关”的IP地址广播出一个ARP请求时，如果三层交换模块在以前的通信过程中已经知道B站的MAC地址，则向发送站A回复B的MAC地址。否则三层交换模块根据路由信息向B站广播一个ARP请求; B站得到此ARP请求后向三层交换模块回复其MAC地址; 三层交换模块保存此地址并回复给发送站A,同时将B站的MAC地址发送到二层交换引擎的MAC地址表中。 从这以后，当A向B发送的数据包便全部交给二层交换处理，信息得以高速交换。由于仅仅在路由过程中才需要三层处理，绝大部分数据都通过二层交换转发，因此三层交换机的速度很快，接近二层交换机的速度]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[source-insight]]></title>
+    <url>%2F2018%2F04%2F24%2F2018-04-2018-04-24-source-insight%2F</url>
+    <content type="text"><![CDATA[source insight 源代码阅读工具下面是我使用source insight 看minix源代码时的截图。 满足需求这个工具大概满足了使用者的这几点需求： 函数调用与被调用关系图的查看。 对函数定义，变量定义的迅速定位与查看，不需要程序员手动寻找。 小结暂时还不是很会用这个工具。对这个工具能提供的功能也还不是很清楚。暂时先放在这里，以后有什么使用的技巧的话再更新吧。]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdown2ppt]]></title>
+    <url>%2F2018%2F04%2F22%2F2018-04-2018-04-22-markdown2ppt%2F</url>
+    <content type="text"><![CDATA[markdown 可以直接变成 ppt！今天发现了一个比较好用的工具，可以将自己书写的markdown直接变成可以展示的ppt，准确来讲应该是一个网页。 testtest! 参考资料 https://jk2k.com/2018/01/how-to-write-presentation-using-markdown/ https://sspai.com/post/40657]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test-auto-pull]]></title>
+    <url>%2F2018%2F04%2F22%2Ftest-2018-04-22-test-auto-pull%2F</url>
+    <content type="text"><![CDATA[今天试了一下，将博客部署在了公网上，并且在服务器端配置了自动pull。 参考资料： https://excaliburhan.com/post/add-webhooks-to-your-project.html 使用pm2 守护进程，守护服务器端监听的程序。]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[广播与多播]]></title>
+    <url>%2F2018%2F04%2F22%2F2018-04-2018-04-22-%E5%B9%BF%E6%92%AD%E4%B8%8E%E5%A4%9A%E6%92%AD%2F</url>
+    <content type="text"><![CDATA[[toc] 简介广播路由选择：从一个源节点到网络中其他所有节点交付分组的服务. 多播路由选择：单个源节点能够向其他网络节点的一个子集发送分组的副本。 广播常见实现方法 N次单播 无控制泛洪 受控泛红 序号控制泛洪 反向路径转发 生成树广播 N次单播使用单播路由选择，向N个目的地传输N份副本。 优点 实现简单 缺点 效率低：每一个副本都需要重复经过同一段链路传播 缺陷：难以得到所有接收方的地址 无控制泛洪提高点某节点接受了一个广播分组后，复制该分组，并向其余所有邻居转发（除了从其接收分组的那个邻居） 优点解决了传播冗余副本的问题。 缺点若网络图具有圈，将导致广播风暴。 受控泛洪序号控制泛洪每个节点维护它已经收到的，复制的，转发的原地址和每个广播分组的序号列表。当结点接收到一个广播分组时，它先检查该分组是否在列表中，如果在，则丢弃，否则复制并转发。 反向路径转发当一台路由器接收到具有给定源地址的广播分组时，仅当该分组到达的链路正好是位于他自己返回其源的最短单播路径上，它才向所有出链路（除了它接收分组的那个）传输报文。 生成树广播通过某种分布式生成树算法（TODO:分布式生成树算法！记得吗？），结点能够得到它的哪些邻居位于生成树上，并只向这些邻居转发。 多播因特网中的网络层多播是由两个互补的组件组成的：IGMP和多播路由选择协议。 IGMP生效范围与作用 IGMP 并非在因特网范围内对所有多播组成员进行管理的协议。 IGMP 不知道IP 多播组包含的成员数，也不知道这些成员都分布在哪些网络上。 IGMP 协议是让连接在本地局域网上的多播路由器知道本局域网上是否有主机（严格讲，是主机上的某个进程）参加或退出了某个多播组。 IGMP报文类型 membership_query membership_report leave_group(optional) 另一种可选的退出多播组的方法是使用软状态机制 多播路由选择协议多播路由选择的目标：发现一颗链路的树，这些链路连接了所有具有该多播组的相连主机的路由器。由此，多播分组将能够沿着这棵树从发送方路由，发送到所有处于该多播树的主机。 一般的实现有两种方法： 使用一棵组共享树的多播路由选择 使用一棵基于源的树的多播路由选择 注意，一台接收到多播分组的多播路由器，如它没有加入到该组的相连主机，则它向上游路由器发送一个剪枝报文。 因特网中的多播路由选择协议无关的多播路由选择协议：明确辨识两种多播分发情形：稠密模式与稀疏模式。 可以参考因特网中的单播路由选择。对BGP的扩展，使得BGP能够为其他协议承载路由选择信息，包括多播信息。 小结对多播这一块的内容还没有完全消化。看了老师PPT，对硬件多播的内容还没看懂。下面放一个不懂的图。 不过多播的学习，我觉得可以参考单播。多播中的很多技术与单播是类似的，甚至可以说，是在单播的基础上，fork了一个分支出来，并且为了适应多播做了相应的修改。无论是在硬件层面，还是协议栈往上的几个协议，对于多播都有对应的协议来支持，并且这些协议的核心都来源于单播的实现算法。 还有个问题没有想清楚，多播路由协议是如何与传输层的协议合作的呢？ 参考资料 《计算机网络》第六版]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>广播</tag>
+        <tag>多播</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BGP协议]]></title>
+    <url>%2F2018%2F04%2F21%2F2018-04-2018-04-21-BGP%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[BGP简介BGP全称是Border Gateway Protocol, 对应中文是边界网关协议。这个名字比较抽象，而维基中文的解释我觉得比较好（维基英文甚至都没有类似的解释）。BGP是互联网上一个核心的去中心化自治路由协议。从这个解释来看，首先这是一个用于互联网（Internet）上的路由协议。它的地位是核心的（目前是最重要的，互联网上唯一使用的路由协议），它的目的是去中心化，以达到各个网络自治。 这个协议，最终的结果，会反映到路由器的主路由表中，因此在发包寻路由的过程中，并不会有变动，变的，只是路由表的计算算法。 BGP协议环境前提BGP可以说是最复杂的路由协议。它是应用层协议，其传输层使用TCP，默认端口号是179。因为是应用层协议，可以认为它的连接是可靠的，并且不用考虑底层的工作，例如fragment，确认，重传等等。BGP是唯一使用TCP作为传输层的路由协议。 协议消息格式工作方式概述几个概念：BGP peer，BGP route 与距离向量算法类似，可以说是基于距离向量算法的实现。 BGP route指的是BGP自己维护的路由信息，区分于设备的主路由表，路由表项包括(列出部分) AS_PATH NEXT-HOP 时序 收到别的BGP实体发来的可达消息 AS_PATH通过该AS能够去到哪个子网，以什么路径去到 开始这一个路径的路由器接口:NEXT-HOP 通过本地的输入策略决定是否接受或者过滤该路由信息 接受这路由消息后，若本机拥有了新的可达对象，则构造新的消息，向其他的BGP实体发送 BGP更像是一个可达协议，可达信息传来传去，本地根据收到的信息判断决策，再应用到路由表。 关于策略经常使用人为指定的策略，控制数据流量的流向。如控制某AS防止帮别的BGP实体转发流量。如何控制呢？不告诉别的实体我可达其他子网。 BGP route 如何进入路由器的转发表书本P266 参考资料 https://zhuanlan.zhihu.com/p/25433049]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[因特网中的路由选择]]></title>
+    <url>%2F2018%2F04%2F21%2F2018-04-2018-04-21-%E5%9B%A0%E7%89%B9%E7%BD%91%E4%B8%AD%E7%9A%84%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%2F</url>
+    <content type="text"><![CDATA[路由选择在因特网下的问题在前面学习过，对于路由选择而言，有两种常用的算法：DV，LS算法。这些算法在比较小的网络规模中还是适用的，但是当网络规模开始膨胀（比如当今的因特网），这些算法会遇到下面的两个问题。 运行算法计算路径所需信息大小过大，路由器内存无法存下。 数据规模过大，路由器计算力跟不上 算法的正常运行，需要向网络广播或点对点发送运行路由选择算法所需的报文，而这会几乎占据所有带宽。 在这样的情况下，原先的算法不再适用，因特网中是如何做的呢？ 层次路由选择抽象总是能够解决问题，因特网的做法，也大概如此。在规模巨大的网络中，将一组通常处于相同管理控制下的路由器组成一个自治系统（AS），在自治系统内，路由的选择由自治系统内部路由选择协议（intra-autonomous system routing protocol）完成，在自治系统间，通过网关路由器实现自治系统之间的互连，对于自治系统间的路由寻址，由自治系统间路由选择协议（inter-autonomous system routing protocol)完成。 常见协议简介自治系统内部路由选择协议 RIP(核心：距离向量DV算法) OSPF(核心：Dijkstra最低费用路径算法) 自治系统间路由选择协议 BGP协议 参考资料 《计算机网络》第六版]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[面包店算法（bakery）]]></title>
+    <url>%2F2018%2F04%2F21%2F2018-04-2018-04-21-%E9%9D%A2%E5%8C%85%E5%BA%97%E7%AE%97%E6%B3%95%EF%BC%88bakery%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[面包店算法Lamport面包店算法是解决多个线程并发访问一个共享的单用户资源的互斥问题的算法。 来自《操作系统-精髓与设计原理》第五章课后习题5.7 算法描述面包店算法的基本思想来源于顾客在面包店购买面包时的排队原理。顾客进入面包店前，首先抓取一个号码，然后按号码从小到大的次序依次进入面包店购买面包，这里假定： (1)—面包店按由小到大的次序发放号码，且两个或两个以上的顾客有可能得到相同号码（要使顾客的号码不同，需互斥机制）； (2)—若多个顾客抓到相同号码，则按顾客名字的字典次序排序（假定顾客没有重名）。 计算机系统中，顾客相当于进程，每个进程有一个唯一的标识，用Pi表示，对于Pi和Pj，若有i&lt;j，即Pi先进入临界区，则先为Pi服务。 面包店算法的基本思想：首先设置一个发号器，按由小到大的次序发放号码。进程进入临界区前先抓取一个号码，然后按号码从小到大的次序依次进入临界区。若多个进程抓到相同的号码则按进程编号依次进入。 实现面包店算法所需的数据结构： 12int choosing[n]; //表示进程是否正在抓号，初值为0。若进程i正在抓号，则choosing[i]=1.int number[n]; //记录进程抓到的号码，初值为0。若number[i]=0，则进程i没有抓号 伪代码如下：123456789101112131415161718192021222324252627// declaration &amp; initial values of global variablesChoosing, Number: array [1..N] of integer = &#123;0&#125;;// logic used by each process...// where "(a, b)＜(c, d)"// means "(a＜c) or ((a == c) and (b＜d))"Process(i) &#123; //注意：此处测试的是进程Pi while (true) &#123; Choosing[i] = 1; Number[i] = 1 + max(Number[1],...,Number[N]); Choosing [i] = 0; for (j=1; j＜=N; ++j) &#123; while (Choosing[j] != 0) &#123;//保证编号较小的进程先进入临界区 // wait until process j receives its number &#125; while ((Number[j]!=0) &amp;&amp; ((Number[j],j) ＜(Number[i],i))) &#123; //进程Pj是其他线程 // wait until processes with smaller numbers // or with the same number, but with higher // priority, finish their work &#125; &#125; // critical section... Number[i] = 0; // non-critical section... &#125;&#125; 使用条件这个算法不需要基于硬件的原子(atomic)操作实现，即它可以纯软件实现。 直观理解每个线程只写它自己的Entering[i]、Number[i]，只读取其它线程的这两个数据项。 摘自wiki：使用Entering数组是必须的。假设不使用Entering数组，那么就可能会出现这种情况：设进程i的优先级高于进程j(即i&lt;j)，两个进程获得了相同的排队登记号(Number数组的元素值相等)。进程i在写Number[i]之前，被优先级低的进程j抢先获得了CPU时间片，这时进程j读取到的Number[i]为0，因此进程j进入了临界区. 随后进程i又获得CPU时间片，它读取到的Number[i]与Number[j]相等，且i&lt;j，因此进程i也进入了临界区。这样，两个进程同时在临界区内访问，可能会导致数据腐烂(data corruption)。算法使用了Entering数组变量，使得修改Number数组的元素值变得“原子化”，解决了上述问题。 严格证明证明：当有一个进程$i$已经处于临界区的时候，对于此时打算进入的进程$k$,始终有下面的关系式： $$( number[i], i ) &lt; ( number[k], k )$$ 书本答案 123456789101112Tw1 Pi reads choosing[k] for the last time, for j = k, in its first wait, so we have choosing[k] = false at Tw1.Tw2 Pi begins its final execution, for j = k, of the second while loop. Wetherefore have Tw1 &lt; Tw2.Tk1 Pk enters the beginning of the repeat loop.Tk2 Pk finishes calculating number[k].Tk3 Pk sets choosing[k] to false. We have Tk1 &lt; Tk2 &lt; Tk3.Since at Tw1, choosing[k] = false, we have either Tw1 &lt; Tk1 or Tk3 &lt; Tw1. In the first case, we have number[i] &lt; number[k], since Pi was assigned its number prior to Pk; this satisfies the condition of the lemma.In the second case, we have Tk2 &lt; Tk3 &lt; Tw1 &lt; Tw2, and therefore Tk2 &lt; Tw2.This means that at Tw2, Pi has read the current value of number[k]. Moreover, as Tw2 is the moment at which the final execution of the second while for j = k takes place, we have (number[i], i ) &lt; ( number[k], k), which completes the proof of the lemma.It is now easy to show the mutual exclusion is enforced. Assume that Pi is in its critical section and Pk is attempting to enter its critical section. Pk will be unable to enter its critical section, as it will find number[i] ≠ 0 and 参考资料 https://zh.wikipedia.org/wiki/Lamport%E9%9D%A2%E5%8C%85%E5%BA%97%E7%AE%97%E6%B3%95 https://blog.csdn.net/asce1885/article/details/5735565 《操作系统-精髓与设计原理》第七版 http://yoncise.com/assets/%E7%BB%8F%E5%85%B8%E4%BA%92%E6%96%A5%E7%AE%97%E6%B3%95.pdf]]></content>
+      <categories>
+        <category>Operating System</category>
+      </categories>
+      <tags>
+        <tag>并发</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[操作系统-精髓与设计原理-第五章]]></title>
+    <url>%2F2018%2F04%2F21%2F2018-04-2018-04-21-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%B2%BE%E9%AB%93%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-%E7%AC%AC%E4%BA%94%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[操作系统-精髓与设计原理-第五章 读书笔记并发的原理擦偶偶系统中的进程交替执行，表现出一种并发执行的外部特征。在实现并发的过程中，会遇到很多问题，这个问题源于多道程序设计系统的一个基本特性：进程的相对执行速度不可预测。 操作系统关注并发的哪方面问题？ 操作系统必须能够跟踪不同的进程 操作系统必须为每个活跃进程分配和释放各种资源 操作系统必须保护每个进程的数据和物理资源 进程的功能和输出结果必须和执行速度无关。 互斥的要求最重要的是保证对临界资源的访问没有问题，一次只能有一个程序在临界区中。 进程之间的交互 进程间的资源竞争 进程间通过共享的合作 进程间通过通信的合作 竞争进程之间的交互面临的三个控制问题? 访问不可共享的资源（打印机）需要互斥 死锁 饥饿 互斥:硬件的支持 比较和交换指令 exchange指令 可使用忙等待(自旋等待)来实现互斥.(进程在得到临界区访问权限的时候,只能继续执行测试变量的指令来得到访问权限,除此之外不能做别的事情) 比较和交换指令 TODO:如何使用这两条指令实现互斥？P148 互斥:信号量信号量定义： 信号量可以初始化成非负数 semWait操作可以使信号量减1.若值为&lt;0,则执行semWait的进程被阻塞。 semSignal操作时信号量加1，若原本的值&lt;=0,则原恩被阻塞的一个进程被解除阻塞。 与二元信号量相关的一个概念是互斥量。两者的关键区别在于为互斥量加锁的进程和为互斥量解锁的进程必须是同一个进程信号量：可能由某个进程对二元信号量进行加锁操作，而由另一个进程解锁。 使用信号量解决消费者与生产者问题TODO:P154 信号量的实现12345struct semaphore&#123; int count; int flag; Queue q;&#125; TODO:信号量的实现，可以使用比较并交换，也可以使用exchange P158，目的是实现互斥，实现原子操作。 互斥:管程TODO:不想看了 互斥：消息传递发送消息有两种实现： 阻塞，直到目标进程接收到 不阻塞 收到消息有两种实现： 阻塞，直到等待的消息到达 不阻塞 消息传递模型中，一般实现的是：无阻塞send，阻塞receive 读者/写者问题TODO: 具体的解决？？？有点困 关于发送者与接受者之间的解耦合问题，可使用间接寻址：信箱。]]></content>
+      <categories>
+        <category>Operating System</category>
+      </categories>
+      <tags>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用wordpress建立自己的网站]]></title>
+    <url>%2F2018%2F04%2F19%2F2018-04-2018-04-19-wordpress%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[参考资料 重点参考资料：https://blog.csdn.net/w_bu_neng_ku/article/details/79175479 http://blog.51cto.com/xpleaf/1903115]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[http协议]]></title>
+    <url>%2F2018%2F04%2F19%2F2018-04-2018-04-19-http%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[http协议 笔记HTTP协议作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息。 HTTP（超文本传输协议）基于TCP/IP传输层协议传输数据。 参考资料 https://www.jianshu.com/p/80e25cb1d81a https://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html http报头详解http://lvwenwen.iteye.com/blog/1570468 http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html]]></content>
+      <categories>
+        <category>Computer Network</category>
+      </categories>
+      <tags>
+        <tag>Http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo + next 主题 博客安装与简单配置]]></title>
+    <url>%2F2018%2F01%2F25%2Ftest-test-my-site%2F</url>
+    <content type="text"><![CDATA[hexo + next 主题 博客安装与简单配置hexo 是一个快速、简洁且高效的博客框架。该框架使用markdown解析文章，并使用主题生成静态网页 hexo文档链接 安装hexo依赖 Node.js Git 安装确认已经安装依赖后，开始安装1npm install -g hexo-cli 建站建站过程中，建站所需的命令都是在站点初始化所在文件夹中进行的！ 初始化博客文件夹 hexo init &lt;folder&gt; 这条指令会在运行命令的目录下新建一个文件夹 之后各种配置站点都会在该文件夹中的 进入博客文件夹 cd &lt;folder&gt; 使用默认主题，生成网页静态文件 hexo g g 为 generate 的简写 启动服务器 hexo s s 为 server 的缩写 访问地址一般为：http://localhost:4000/ 将网站部署到github pages上 设置部署地址 ./_config.yml修改该配置文件 1234deploy: type: gitrepo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .gitbranch: master 安装git部署插件 npm install hexo-deployer-git --save 部署 hexo d github pages 简单说明只需要建一个仓库，该仓库命名为”用户名.github.io”这个仓库就可以存放静态页面，通过网址”用户名.github.io”即可访问 修改主题默认的主题其实蛮丑的。。修改主题可以这样子。 将主题对应的库clone到博客文件夹中themes文件夹下 1git clone https://github.com/iissnan/hexo-theme-next themes/next 修改站点的配置文件”./_config.yml” 12# Extensionstheme: next 修改主题的配置文件”./theme/_config.yml”next主题下有三种主题选择此步骤是为了选取更好看的主题我选的是Mist 1234# Schemes# scheme: Musescheme: Mist# scheme: Pisces 支持数学公式next主题本身就支持数学公式，只需要修改一下主题的配置文件就可以了 12345# MathJax Supportmathjax: enable: true # 修改此项为true即可 per_page: false cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML 总结暂时，一个简单的博客就配置完成了还有很多东西需要配置，这个就留到之后吧]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+</search>
