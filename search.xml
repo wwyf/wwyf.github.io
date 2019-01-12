@@ -268,7 +268,7 @@
   <entry>
     <title><![CDATA[test_git_hook]]></title>
     <url>%2F2018%2F05%2F06%2Ftest-2018-05-06-test-git-hook%2F</url>
-    <content type="text"><![CDATA[测试一些githook test success! 当我push的时候，就会将网站自动部署到我宿舍的服务器中。 ! 可以直接push到我的服务器，不需要经过github 再试一下，ok 出现了一点小问题 我的主页的连接的链接没有更新]]></content>
+    <content type="text"><![CDATA[测试一些githook test success! 当我push的时候，就会将网站自动部署到我宿舍的服务器中。 ! 可以直接push到我的服务器，不需要经过github 再试一下，ok 出现了一点小问题 我的主页的连接的链接没有更新 测试了一下，typora可以复制富文本中的图片，可以可以。 可以在_posts文件夹下创建自己的文件夹，然后hexo是不会管你的文件夹的！继续测试。]]></content>
       <categories>
         <category>test</category>
       </categories>

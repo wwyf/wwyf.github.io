@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wwyf.github.io/2018/05/06/test-2018-05-06-test-git-hook/</loc>
+    
+    <lastmod>2019-01-12T08:31:17.676Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wwyf.github.io/2018/01/25/test-test-my-site/</loc>
+    
+    <lastmod>2019-01-12T08:31:17.676Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wwyf.github.io/2019/01/12/test-2018-hello-world/</loc>
     
     <lastmod>2019-01-12T07:36:03.302Z</lastmod>
@@ -87,20 +101,6 @@
   
   <url>
     <loc>https://wwyf.github.io/2018/04/22/test-2018-04-22-test-auto-pull/</loc>
-    
-    <lastmod>2019-01-12T03:33:37.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wwyf.github.io/2018/05/06/test-2018-05-06-test-git-hook/</loc>
-    
-    <lastmod>2019-01-12T03:33:37.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wwyf.github.io/2018/01/25/test-test-my-site/</loc>
     
     <lastmod>2019-01-12T03:33:37.284Z</lastmod>
     
