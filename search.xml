@@ -79,17 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MPI]]></title>
-    <url>%2F2018%2F10%2F23%2F2018-10-2018-10-23-MPI%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>High Performance Calculate</category>
-      </categories>
-      <tags>
-        <tag>High Performance Calculate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[关于word-embedding的理解]]></title>
     <url>%2F2018%2F07%2F28%2F2018-07-2018-07-28-%E5%85%B3%E4%BA%8Eword-embedding%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[关于word-embedding的理解与pytorch实现在NLP中，计算机需要一种方法，表示一个单词。我们马上可以想到，可以直接使用ascii来保存呀，计算机也能够识别。 用ascii并不是不可以，但是，大家都知道，如果能够把单词表示成向量的形式，无论在怎样的数学处理中都会更加方便，即使是用ascii，最终也必须在计算机中有一种数学的方法表达，才能够完成后续的语义识别的工作。这种，为单词寻找到一种在计算机中表示的方法，可以称之为”Word embedding”(这里的定义是不完整的，后面继续补充。) 那么，什么办法可以表示一个单词呢？一种显而易见的办法是使用“one-hot encoding”,也就是说，每一个单词，在这样的一个向量中，都有一个独一不二的索引。对不同的词，便在不同的位置为1，其余的位置为0. 不妨将单词向量化后的那一个向量空间称之为单词空间？那么，对于单词空间中的每一个具有“one-hot encoding”性质的向量，我们都能够找到一个单词一一对应。 “one-hot encoding”已经解决了单词-单词空间向量的映射问题，但是，似乎不太好呢。大家都知道，每一个单词之间都有着或多或少的关联。one-hot encoding方法，将单词之间可能具有的关联信息全部都抛弃掉，只留下一一对应的性质，这样的单词嵌入方法，并不是特别的理想。 真正的word-embedding的定义摘自知乎 Embedding在数学上表示一个maping, f: X -&gt; Y， 也就是一个function，其中该函数是injective（就是我们所说的单射函数，每个Y只有唯一的X对应，反之亦然）和structure-preserving (结构保存，比如在X所属的空间上X1 &lt; X2,那么映射后在Y所属空间上同理 Y1 &lt; Y2)。那么对于word embedding，就是将单词word映射到另外一个空间，其中这个映射具有injective和structure-preserving的特点。 个人觉得这位网友说的还是很不错的。word embedding的关键在于两点 单射 结构保存（原本关联度较大的两个词，在新的向量空间中的相似度也应该较大？） word-embedding的输入输出输入：一个单词输出：这一个单词对应的向量 其中为了达到结构保存的目的，前期还需要很多的语料库进行训练。 pytorch中的word embeddingpytorch中预先已经提供了很多可用了“神经元层”，其中有一个nn.Embedding(a,b)就是专门用于完成“word embedding”工作的神经元层。该层的功能是：将一个具有$a$个单词的字典中的所有单词，映射到一个$b$维的向量空间中。 简单的代码如下： 1234567891011import torchimport torch.nn as nnimport torch.nn.functional as Fimport torch.optim as optimtorch.manual_seed(1)word_to_ix = &#123;"hello": 0, "world": 1&#125;embeds = nn.Embedding(2, 5) # 2 words in vocab, 5 dimensional embeddingslookup_tensor = torch.tensor([word_to_ix["hello"]], dtype=torch.long)# print(lookup_tensor) # tensor([0])hello_embed = embeds(lookup_tensor) # 输入单词索引即可print(hello_embed) An Example: N-Gram Language Modeling([ word_i-2, word_i-1 ], target word) 官网上提供了一个根据上文预测下一个单词的神经网络以供参考。代码我就不放上来了。 参考 pytorch官方教程 https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html 一个知乎的回答：https://www.zhihu.com/question/32275069/answer/80188672]]></content>
