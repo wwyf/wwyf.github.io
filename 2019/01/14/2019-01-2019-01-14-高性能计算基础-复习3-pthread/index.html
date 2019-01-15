@@ -111,19 +111,19 @@
 
 
 
-  <meta name="description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+  <meta name="description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
 <meta name="keywords" content="High Performance Computing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高性能计算基础-复习3-pthread">
 <meta property="og:url" content="https://wwyf.github.io/2019/01/14/2019-01-2019-01-14-高性能计算基础-复习3-pthread/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+<meta property="og:description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-LJMIfdNhooo/XDyQgxv4XJI/AAAAAAAANqI/8lBb1o5SPBUV1Gn6uK0sRuGp0bH87hCJQCHMYCw/s0/Typora_2019-01-14_21-37-07.png">
-<meta property="og:updated_time" content="2019-01-14T13:39:25.530Z">
+<meta property="og:updated_time" content="2019-01-15T14:10:11.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能计算基础-复习3-pthread">
-<meta name="twitter:description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+<meta name="twitter:description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
 <meta name="twitter:image" content="https://lh3.googleusercontent.com/-LJMIfdNhooo/XDyQgxv4XJI/AAAAAAAANqI/8lBb1o5SPBUV1Gn6uK0sRuGp0bH87hCJQCHMYCw/s0/Typora_2019-01-14_21-37-07.png">
 
 
@@ -437,12 +437,24 @@
                 
               
 
-              <time title="Created: 2019-01-14 21:38:29 / Modified: 21:39:25" itemprop="dateCreated datePublished" datetime="2019-01-14T21:38:29+08:00">2019-01-14</time>
+              <time title="Created: 2019-01-14 21:38:29" itemprop="dateCreated datePublished" datetime="2019-01-14T21:38:29+08:00">2019-01-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-15 22:10:11" itemprop="dateModified" datetime="2019-01-15T22:10:11+08:00">2019-01-15</time>
               
             
           </span>
@@ -508,7 +520,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">2.9k</span>
+                <span title="Symbols count in article">3.4k</span>
               
 
               
@@ -522,7 +534,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">6 mins.</span>
+                <span title="Reading time">7 mins.</span>
               
             </div>
           
@@ -542,7 +554,8 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习3-pthread"><a href="#HPC复习3-pthread" class="headerlink" title="HPC复习3-pthread"></a>HPC复习3-pthread</h1><p><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank" rel="noopener">toturial</a></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h2 id="typora-copy-images-to-figure"><a href="#typora-copy-images-to-figure" class="headerlink" title="typora-copy-images-to: figure"></a>typora-copy-images-to: figure</h2><h1 id="HPC复习3-pthread"><a href="#HPC复习3-pthread" class="headerlink" title="HPC复习3-pthread"></a>HPC复习3-pthread</h1><p><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank" rel="noopener">toturial</a></p>
 <p>这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：</p>
 <ol>
 <li>pthread中的hello,world</li>
@@ -601,7 +614,7 @@
 </li>
 <li><p>信号量实现路障</p>
 <ol>
-<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> counter;</span><br><span class="line"><span class="keyword">sem_t</span> count_sem;</span><br><span class="line"><span class="keyword">sem_t</span> barrier_sem;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>* <span class="title">Thread_work</span><span class="params">(...)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/* barrier */</span></span><br><span class="line">    <span class="comment">// 先获得计数器的信号量</span></span><br><span class="line">    sem_wait(&amp;count_sem);</span><br><span class="line">    <span class="keyword">if</span> (counter == thread_count<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="comment">// 最后一个到达路障的线程负责初始化counter以及释放其他线程</span></span><br><span class="line">        counter = <span class="number">0</span>;</span><br><span class="line">        sem_post(&amp;count_sem);</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; thread_count<span class="number">-1</span>; j++)</span><br><span class="line">            sem_post(&amp;barrier_sem);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        counter++;</span><br><span class="line">        sem_post(&amp;count_sem);</span><br><span class="line">        sem_wait(&amp;barrier_sem);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> counter;</span><br><span class="line"><span class="keyword">sem_t</span> count_sem;</span><br><span class="line"><span class="keyword">sem_t</span> barrier_sem;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>* <span class="title">Thread_work</span><span class="params">(...)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/* barrier */</span></span><br><span class="line">    <span class="comment">// 先获得计数器的信号量</span></span><br><span class="line">    sem_wait(&amp;count_sem);</span><br><span class="line">    <span class="keyword">if</span> (counter == thread_count<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="comment">// 最后一个到达路障的线程负责初始化counter以及释放其他线程</span></span><br><span class="line">        counter = <span class="number">0</span>;</span><br><span class="line">        sem_post(&amp;count_sem);</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; thread_count<span class="number">-1</span>; j++)</span><br><span class="line">            sem_post(&amp;barrier_sem);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        counter++;</span><br><span class="line">        sem_postq(&amp;count_sem);</span><br><span class="line">        sem_wait(&amp;barrier_sem);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>该路障的重用可能会导致竞争条件</p>
 </li>
@@ -609,7 +622,9 @@
 </li>
 <li><p>使用条件变量实现路障</p>
 <ol>
-<li>TODO</li>
+<li><p>条件变量是：允许线程在某个特定条件或事前发生前都处于挂起状态。当事件发生时，另一个线程可以通过信号来唤醒挂起的线程。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> * <span class="title">Thread_work</span><span class="params">(...)</span></span>&#123;</span><br><span class="line">    ....</span><br><span class="line">    <span class="comment">/* barrier */</span></span><br><span class="line">    pthread_mutex_lock(&amp;mutex);</span><br><span class="line">    counter++;</span><br><span class="line">    <span class="keyword">if</span> (counter == thread_count)&#123;</span><br><span class="line">        counter = <span class="number">0</span>;</span><br><span class="line">        pthread_cond_broadcast(&amp;cond_var);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">while</span>(pthread_cond_wait(&amp;cond_var, &amp;mutex) != <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pthread_mutex_unlock(&amp;mutex);    </span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
 </ol>
@@ -1002,7 +1017,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习3-pthread"><span class="nav-number">1.</span> <span class="nav-text">HPC复习3-pthread</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程、线程和pthread"><span class="nav-number">1.1.</span> <span class="nav-text">进程、线程和pthread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">1.2.</span> <span class="nav-text">Hello,world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pthread中的临界区"><span class="nav-number">1.3.</span> <span class="nav-text">pthread中的临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忙等待"><span class="nav-number">1.4.</span> <span class="nav-text">忙等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥量"><span class="nav-number">1.5.</span> <span class="nav-text">互斥量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者-消费者同步和信号量"><span class="nav-number">1.6.</span> <span class="nav-text">生产者-消费者同步和信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路障和条件变量"><span class="nav-number">1.7.</span> <span class="nav-text">路障和条件变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读写锁"><span class="nav-number">1.8.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存一致性"><span class="nav-number">1.9.</span> <span class="nav-text">缓存一致性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typora-copy-images-to-figure"><span class="nav-number">1.</span> <span class="nav-text">typora-copy-images-to: figure</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习3-pthread"><span class="nav-number"></span> <span class="nav-text">HPC复习3-pthread</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程、线程和pthread"><span class="nav-number">1.</span> <span class="nav-text">进程、线程和pthread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">2.</span> <span class="nav-text">Hello,world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pthread中的临界区"><span class="nav-number">3.</span> <span class="nav-text">pthread中的临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忙等待"><span class="nav-number">4.</span> <span class="nav-text">忙等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥量"><span class="nav-number">5.</span> <span class="nav-text">互斥量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者-消费者同步和信号量"><span class="nav-number">6.</span> <span class="nav-text">生产者-消费者同步和信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路障和条件变量"><span class="nav-number">7.</span> <span class="nav-text">路障和条件变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读写锁"><span class="nav-number">8.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存一致性"><span class="nav-number">9.</span> <span class="nav-text">缓存一致性</span></a></li></ol></li></div>
             
 
           </div>
@@ -1047,7 +1062,7 @@
     
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">3:34</span>
+    <span title="Reading time total">3:35</span>
   
 </div>
 
