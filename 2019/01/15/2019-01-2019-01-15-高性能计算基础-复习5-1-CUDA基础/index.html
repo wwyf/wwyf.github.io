@@ -111,17 +111,28 @@
 
 
 
-  <meta name="description" content="This is the “about” site.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://wwyf.github.io/about/index.html">
+  <meta name="description" content="HPC复习5.1-CUDA基础复习了一下cuda，主要以自问自答的方式，整理了一下知识点。  相关背景：前言 逻辑上的cuda架构大概是怎样的？ gpu上实际的硬件情况 cuda架构与硬件之间的关系 一个简单实例：矩阵相乘的简单实现">
+<meta name="keywords" content="High Performance Computing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高性能计算基础-复习5.1-CUDA基础">
+<meta property="og:url" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="This is the “about” site.">
+<meta property="og:description" content="HPC复习5.1-CUDA基础复习了一下cuda，主要以自问自答的方式，整理了一下知识点。  相关背景：前言 逻辑上的cuda架构大概是怎样的？ gpu上实际的硬件情况 cuda架构与硬件之间的关系 一个简单实例：矩阵相乘的简单实现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T02:52:44.093Z">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-U6dLqQSsc_U/XD0vGdcz0oI/AAAAAAAANqg/skeMgQgw4NMZnsCU87OTm8bNWqoBnac0ACHMYCw/s0/Acrobat_2019-01-15_08-53-44.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-FlqXBhfrtAQ/XD0vjzixC7I/AAAAAAAANqo/F_57eojX4nAF3CnPqXjbN-gl2nDc0mk0wCHMYCw/s0/Acrobat_2019-01-15_08-55-43.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-4LwbA1Aj2MQ/XD0v2jCDuHI/AAAAAAAANq0/64pcOu7Onqc837_4Q79DnfvvoSzWXocaQCHMYCw/s0/Acrobat_2019-01-15_08-56-58.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-7Id_bAjJjD4/XD0xXYp4HTI/AAAAAAAANrA/g7kkEfzz_Zgxa6JaHZhGRdDckKAqbXEfACHMYCw/s0/Acrobat_2019-01-15_09-03-24.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-qmYboKb3JQM/XD0xsCp_K6I/AAAAAAAANrI/Hkgu4X-fusoYYnf2q3B-DWv1BcjVEPLYQCHMYCw/s0/Acrobat_2019-01-15_09-04-49.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Plh4mq88QdE/XD0y2ywS9aI/AAAAAAAANrU/w50XC5epme4HVSkv4vKG0C-aRc06ujnmwCHMYCw/s0/Acrobat_2019-01-15_09-09-46.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-M9QwhzmB0pI/XD02cA_ftZI/AAAAAAAANrg/NpkbQH9Eo2I7kq1FcXk2uzkxt10DuWbUgCHMYCw/s0/Acrobat_2019-01-15_09-25-04.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Frw4biWiTdw/XD063lkpXrI/AAAAAAAANrs/2FySYbhR3EsgK3TcHH6cPOlsy7x_zxzTQCHMYCw/s0/Acrobat_2019-01-15_09-43-58.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-3jJ-qYk5SD8/XD09D8JLBTI/AAAAAAAANr4/HjWn0Aj36A4S0xuZEoZ70EqhyJ6waYYGwCHMYCw/s0/Acrobat_2019-01-15_09-53-19.png">
+<meta property="og:updated_time" content="2019-01-15T02:04:25.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="This is the “about” site.">
+<meta name="twitter:title" content="高性能计算基础-复习5.1-CUDA基础">
+<meta name="twitter:description" content="HPC复习5.1-CUDA基础复习了一下cuda，主要以自问自答的方式，整理了一下知识点。  相关背景：前言 逻辑上的cuda架构大概是怎样的？ gpu上实际的硬件情况 cuda架构与硬件之间的关系 一个简单实例：矩阵相乘的简单实现">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-U6dLqQSsc_U/XD0vGdcz0oI/AAAAAAAANqg/skeMgQgw4NMZnsCU87OTm8bNWqoBnac0ACHMYCw/s0/Acrobat_2019-01-15_08-53-44.png">
 
 
 
@@ -130,7 +141,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/about/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/">
 
 
 
@@ -140,7 +151,7 @@
   };
 </script>
 
-  <title>about | Blog</title>
+  <title>高性能计算基础-复习5.1-CUDA基础 | Blog</title>
   
 
 
@@ -247,7 +258,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -369,74 +380,444 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wyf">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">about
-
-</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body han-init-context">
         
         
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>This is the “about” site.</p>
+          <h2 class="post-title" itemprop="name headline">高性能计算基础-复习5.1-CUDA基础
 
+              
+            
+          </h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:03:26 / Modified: 10:04:25" itemprop="dateCreated datePublished" datetime="2019-01-15T10:03:26+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/High-Performance-Computing/" itemprop="url" rel="index"><span itemprop="name">High Performance Computing</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/" class="leancloud_visitors" data-flag-title="高性能计算基础-复习5.1-CUDA基础">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">2.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">5 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
       
       
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习5-1-CUDA基础"><a href="#HPC复习5-1-CUDA基础" class="headerlink" title="HPC复习5.1-CUDA基础"></a>HPC复习5.1-CUDA基础</h1><p>复习了一下cuda，主要以自问自答的方式，整理了一下知识点。</p>
+<ol>
+<li>相关背景：前言</li>
+<li>逻辑上的cuda架构大概是怎样的？</li>
+<li>gpu上实际的硬件情况</li>
+<li>cuda架构与硬件之间的关系</li>
+<li>一个简单实例：矩阵相乘的简单实现</li>
+</ol>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="为什么需要gpu？"><a href="#为什么需要gpu？" class="headerlink" title="为什么需要gpu？"></a>为什么需要gpu？</h3><ol>
+<li>CPU处理能力不断强大，但在进入3D时代后，人们发现庞大的3D图像处理数据计算使得CPU越来越不堪重荷，并且远远超出其计算能力；</li>
+<li>图形计算需求日益增多，作为计算机的显示芯片也飞速发展。图形，图像计算等计算的功能被脱离出来，单独设计为一块芯片——GPU （也就是显卡）。</li>
+</ol>
+<h3 id="gpu与cpu的主要区别在？"><a href="#gpu与cpu的主要区别在？" class="headerlink" title="gpu与cpu的主要区别在？"></a>gpu与cpu的主要区别在？</h3><ol>
+<li>gpu采用了大量的执行单元，并且一个控制单元可以同时控制多个执行单元进行计算，实现类似于SIMD的加速。</li>
+<li><img src="https://lh3.googleusercontent.com/-U6dLqQSsc_U/XD0vGdcz0oI/AAAAAAAANqg/skeMgQgw4NMZnsCU87OTm8bNWqoBnac0ACHMYCw/s0/Acrobat_2019-01-15_08-53-44.png" alt=""></li>
+</ol>
+<h3 id="cuda是什么？"><a href="#cuda是什么？" class="headerlink" title="cuda是什么？"></a>cuda是什么？</h3><ol>
+<li>是一种专门针对GPU的开发工具，可以使用类C语言进行通用计算。</li>
+<li>用于编写host+device异构并行C应用程序</li>
+<li><img src="https://lh3.googleusercontent.com/-FlqXBhfrtAQ/XD0vjzixC7I/AAAAAAAANqo/F_57eojX4nAF3CnPqXjbN-gl2nDc0mk0wCHMYCw/s0/Acrobat_2019-01-15_08-55-43.png" alt=""></li>
+</ol>
+<h2 id="CUDA-架构（逻辑上）"><a href="#CUDA-架构（逻辑上）" class="headerlink" title="CUDA 架构（逻辑上）"></a>CUDA 架构（逻辑上）</h2><h3 id="CUDA中线程的组织方式？"><a href="#CUDA中线程的组织方式？" class="headerlink" title="CUDA中线程的组织方式？"></a>CUDA中线程的组织方式？</h3><ol>
+<li>三级：Grid-Block-Thread<ol>
+<li>Thread ：单个线程，是并行的基本单位</li>
+<li>Block：互相合作的线程组</li>
+<li>Grid：一组Block</li>
+</ol>
+</li>
+<li>需要关注到，一个kernel对应一个Grid</li>
+<li><img src="https://lh3.googleusercontent.com/-4LwbA1Aj2MQ/XD0v2jCDuHI/AAAAAAAANq0/64pcOu7Onqc837_4Q79DnfvvoSzWXocaQCHMYCw/s0/Acrobat_2019-01-15_08-56-58.png" alt=""></li>
+</ol>
+<h3 id="CUDA中的访存模式？"><a href="#CUDA中的访存模式？" class="headerlink" title="CUDA中的访存模式？"></a>CUDA中的访存模式？</h3><p>线程可以访问以下空间</p>
+<ol>
+<li>以线程为单位的<ol>
+<li>线程有内部的<strong>寄存器</strong></li>
+<li>在寄存器不够用的情况下，可以在<strong>Global Memory</strong>中申请一块内存空间作为<strong>Local Memory</strong></li>
+</ol>
+</li>
+<li>以Block为单位的<ol>
+<li>单个block中的线程共享<strong>Shared Memory</strong></li>
+</ol>
+</li>
+<li>以Grid为单位的<ol>
+<li>一个Grid中的所有线程共享<strong>Glocal Memory</strong></li>
+<li>特殊的，一个Grid中的所有线程共享<strong>只读的</strong> <strong>constant memory</strong>(常量存储器),<strong>texture memory</strong>(纹理存储器)</li>
+</ol>
+</li>
+<li>图示如下：<img src="https://lh3.googleusercontent.com/-7Id_bAjJjD4/XD0xXYp4HTI/AAAAAAAANrA/g7kkEfzz_Zgxa6JaHZhGRdDckKAqbXEfACHMYCw/s0/Acrobat_2019-01-15_09-03-24.png" alt=""></li>
+</ol>
+<h2 id="cuda与硬件的关系"><a href="#cuda与硬件的关系" class="headerlink" title="cuda与硬件的关系"></a>cuda与硬件的关系</h2><h3 id="cuda中有哪些硬件？是如何组织的？"><a href="#cuda中有哪些硬件？是如何组织的？" class="headerlink" title="cuda中有哪些硬件？是如何组织的？"></a>cuda中有哪些硬件？是如何组织的？</h3><p>由低到高分别是：</p>
+<ol>
+<li>SP：流处理器</li>
+<li>SM：流多处理器</li>
+<li>TPC：线程处理集群</li>
+<li>SPA：流处理器阵列</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/-qmYboKb3JQM/XD0xsCp_K6I/AAAAAAAANrI/Hkgu4X-fusoYYnf2q3B-DWv1BcjVEPLYQCHMYCw/s0/Acrobat_2019-01-15_09-04-49.png" alt=""></p>
+<h3 id="cuda架构与实际硬件的关系？"><a href="#cuda架构与实际硬件的关系？" class="headerlink" title="cuda架构与实际硬件的关系？"></a>cuda架构与实际硬件的关系？</h3><ol>
+<li>Grid：运行在SPA上</li>
+<li>Block的执行方式：<ol>
+<li>一般的cuda应用程序具有多个Block组成的线程组，这些Block会分配到多个SM核上分别执行。</li>
+<li>怎么分配？见下图：<img src="https://lh3.googleusercontent.com/-Plh4mq88QdE/XD0y2ywS9aI/AAAAAAAANrU/w50XC5epme4HVSkv4vKG0C-aRc06ujnmwCHMYCw/s0/Acrobat_2019-01-15_09-09-46.png" alt=""></li>
+<li>注意到这里的分配，会受到以下两个限制的影响：<ol>
+<li>一个SM核上分配的Blcok数量是有限制，G80中的SM核最多8个block</li>
+<li>G80中的SM核最多768个线程。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>SM核上具有多个Block需要运行后，这些线程更具体的，是如何执行的呢？<ol>
+<li>一个SM核上的多个Block，每个block会分成多个Warp（32个线程）</li>
+<li>这些Warp会在SM核上并发地执行，由于一个Warp有32个线程，而一个SM核上仅有8个SP，因此一个Warp运行4个Clock cycles</li>
+</ol>
+</li>
+</ol>
+<h3 id="Warp的调度具有开销吗？"><a href="#Warp的调度具有开销吗？" class="headerlink" title="Warp的调度具有开销吗？"></a>Warp的调度具有开销吗？</h3><ol>
+<li>（联想）cpu中的硬件多线程之间的调度是几乎没有开销的，原因？是因为CPU中已经有了多个可以用于存储线程context的区域，每次调度切换线程的时候，切换context是在CPU硬件内完成的，不是由操作系统完成的，不需要访存，因此几乎0开销。</li>
+<li>GPU中的warp调度，类似的，也是0开销的。</li>
+</ol>
+<h3 id="怎样的Warp会被调度出来执行？"><a href="#怎样的Warp会被调度出来执行？" class="headerlink" title="怎样的Warp会被调度出来执行？"></a>怎样的Warp会被调度出来执行？</h3><ol>
+<li>很明显的，每一个时刻，都会有很多个Warp在等待被GPU调度执行，那么问题是：满足什么条件的Warp，会被调度出来执行？<ol>
+<li>Warp中没有线程被阻塞的（如访存等）</li>
+<li>合适的Warp挑出来优先执行。</li>
+</ol>
+</li>
+</ol>
+<h3 id="为什么要设计成warp的并发执行？"><a href="#为什么要设计成warp的并发执行？" class="headerlink" title="为什么要设计成warp的并发执行？"></a>为什么要设计成warp的并发执行？</h3><ol>
+<li>结论：Warp的并发执行，能够很好的隐藏访存时间（原理类似于cpu中的硬件多线程）</li>
+<li>简单例子：<ol>
+<li><img src="https://lh3.googleusercontent.com/-M9QwhzmB0pI/XD02cA_ftZI/AAAAAAAANrg/NpkbQH9Eo2I7kq1FcXk2uzkxt10DuWbUgCHMYCw/s0/Acrobat_2019-01-15_09-25-04.png" alt=""></li>
+<li>上图中，一个单位长度为一个warp的执行（实际上其实是4个时钟周期，这里简化成了1个）。</li>
+<li>可以发现，每当一个Warp由于访存阻塞了，GPU会马上从调度其他可用的Warp来执行，从而保证GPU中的计算负载保持在100%，这个Warp的访存时间就被别的Warp的执行隐藏掉了</li>
+</ol>
+</li>
+<li>复杂例子：如何计算完全隐藏访存时间所需要的Warp的数量。<ol>
+<li>假设：<ol>
+<li>运行一次一个Warp中的所有线程需要4个clock cycles</li>
+<li>每n个指令需要一次全局内存访问（200个时钟周期）</li>
+</ol>
+</li>
+<li>解答：<ol>
+<li>假设每个指令都需要访存，访存的这一段时间里，可以使用$200/4=50$个warp的执行来隐藏。<ol>
+<li>隐藏假设：单个Warp一次运行仅使用了4个clock cycles就被阻塞了</li>
+</ol>
+</li>
+<li>由于是每n个指令访存一次，因此实际上，单个warp执行了$4*n$后才会被阻塞</li>
+<li>因此，需要$200/(4*n)+1$个warp。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="SM核上具有的存储空间及分配情况？"><a href="#SM核上具有的存储空间及分配情况？" class="headerlink" title="SM核上具有的存储空间及分配情况？"></a>SM核上具有的存储空间及分配情况？</h3><ol>
+<li>SM核上拥有16KB的shared memory(有些GPU是48KB)</li>
+<li>基于前面，一个SM核上分配多个Block的前提<ol>
+<li>多个block分享一个SM核上的shared memory。</li>
+</ol>
+</li>
+<li>由于单个block可能会要求shared memory至少多大，而一个SM核上的shared memory是有限制的，所以，block要看情况，不能分配太多，不然shared memory就不够用了。<ol>
+<li>Shared Memory也会限制Block的分配</li>
+</ol>
+</li>
+</ol>
+<h2 id="cuda的软件接口"><a href="#cuda的软件接口" class="headerlink" title="cuda的软件接口"></a>cuda的软件接口</h2><p>写了这么多，终于写到要写一个真正的cuda程序了。</p>
+<h3 id="cuda编程中的函数声明"><a href="#cuda编程中的函数声明" class="headerlink" title="cuda编程中的函数声明"></a>cuda编程中的函数声明</h3><ol>
+<li>在cuda编程中，当然既要写在gpu上运行的函数又要写在cpu上运行的函数了，那么如何区分呢？</li>
+<li><img src="https://lh3.googleusercontent.com/-Frw4biWiTdw/XD063lkpXrI/AAAAAAAANrs/2FySYbhR3EsgK3TcHH6cPOlsy7x_zxzTQCHMYCw/s0/Acrobat_2019-01-15_09-43-58.png" alt=""></li>
+<li>好吧，之前我没有好好想<code>__device__</code>还有<code>__global__</code>的区别，所以这里要特地给自己强调一下。</li>
+</ol>
+<h3 id="cuda中的5个内建设备变量"><a href="#cuda中的5个内建设备变量" class="headerlink" title="cuda中的5个内建设备变量"></a>cuda中的5个内建设备变量</h3><ol>
+<li><code>gridDim</code></li>
+<li><code>blockDim</code></li>
+<li><code>blockIdx</code></li>
+<li><code>threadIdx</code></li>
+<li><code>warpSize</code></li>
+</ol>
+<h3 id="cuda中的各种各样的内存操作"><a href="#cuda中的各种各样的内存操作" class="headerlink" title="cuda中的各种各样的内存操作"></a>cuda中的各种各样的内存操作</h3><p><code>cudaMemcpy(void * dst, void * src, size_t nbytes, enum cudaMemcpyType direction);</code></p>
+<p><code>cudaMalloc</code></p>
+<p><code>cudaFree</code></p>
+<h3 id="cuda中的同步操作"><a href="#cuda中的同步操作" class="headerlink" title="cuda中的同步操作"></a>cuda中的同步操作</h3><p><code>__syncThreads()</code>：同步一个block里面的所有线程，作用相当于一个Barrier</p>
+<h2 id="实例：very-simple的矩阵相乘"><a href="#实例：very-simple的矩阵相乘" class="headerlink" title="实例：very simple的矩阵相乘"></a>实例：very simple的矩阵相乘</h2><p>可以看我的<a href="https://gitee.com/wwyf/class_hpc/blob/master/e6/code/multi.cu" target="_blank" rel="noopener">git仓库</a>（我具体的实现可能没有这么naive）</p>
+<p>具体思路是：</p>
+<p><img src="https://lh3.googleusercontent.com/-3jJ-qYk5SD8/XD09D8JLBTI/AAAAAAAANr4/HjWn0Aj36A4S0xuZEoZ70EqhyJ6waYYGwCHMYCw/s0/Acrobat_2019-01-15_09-53-19.png" alt=""></p>
+<p>对该程序优化的思考</p>
+<ol>
+<li>性能问题：<ol>
+<li>每计算一次，访问两次内存（如从矩阵Md中取一个数，以及从Nd中取一个数，然后只做了一次加法）</li>
+<li>访存限制</li>
+</ol>
+</li>
+<li>矩阵的大小受到一个block大小的限制。</li>
+</ol>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wechat.jpg" alt="wyf WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="wyf Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/High-Performance-Computing/" rel="tag"># High Performance Computing</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+            <span class="post-meta-divider">|</span>
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/14/2019-01-2019-01-14-高性能计算基础-复习3-pthread/" rel="next" title="高性能计算基础-复习3-pthread">
+                <i class="fa fa-chevron-left"></i> 高性能计算基础-复习3-pthread
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -470,8 +851,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -677,6 +1067,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习5-1-CUDA基础"><span class="nav-number">1.</span> <span class="nav-text">HPC复习5.1-CUDA基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要gpu？"><span class="nav-number">1.1.1.</span> <span class="nav-text">为什么需要gpu？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gpu与cpu的主要区别在？"><span class="nav-number">1.1.2.</span> <span class="nav-text">gpu与cpu的主要区别在？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda是什么？"><span class="nav-number">1.1.3.</span> <span class="nav-text">cuda是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA-架构（逻辑上）"><span class="nav-number">1.2.</span> <span class="nav-text">CUDA 架构（逻辑上）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CUDA中线程的组织方式？"><span class="nav-number">1.2.1.</span> <span class="nav-text">CUDA中线程的组织方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CUDA中的访存模式？"><span class="nav-number">1.2.2.</span> <span class="nav-text">CUDA中的访存模式？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cuda与硬件的关系"><span class="nav-number">1.3.</span> <span class="nav-text">cuda与硬件的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda中有哪些硬件？是如何组织的？"><span class="nav-number">1.3.1.</span> <span class="nav-text">cuda中有哪些硬件？是如何组织的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda架构与实际硬件的关系？"><span class="nav-number">1.3.2.</span> <span class="nav-text">cuda架构与实际硬件的关系？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Warp的调度具有开销吗？"><span class="nav-number">1.3.3.</span> <span class="nav-text">Warp的调度具有开销吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎样的Warp会被调度出来执行？"><span class="nav-number">1.3.4.</span> <span class="nav-text">怎样的Warp会被调度出来执行？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要设计成warp的并发执行？"><span class="nav-number">1.3.5.</span> <span class="nav-text">为什么要设计成warp的并发执行？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SM核上具有的存储空间及分配情况？"><span class="nav-number">1.3.6.</span> <span class="nav-text">SM核上具有的存储空间及分配情况？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cuda的软件接口"><span class="nav-number">1.4.</span> <span class="nav-text">cuda的软件接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda编程中的函数声明"><span class="nav-number">1.4.1.</span> <span class="nav-text">cuda编程中的函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda中的5个内建设备变量"><span class="nav-number">1.4.2.</span> <span class="nav-text">cuda中的5个内建设备变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda中的各种各样的内存操作"><span class="nav-number">1.4.3.</span> <span class="nav-text">cuda中的各种各样的内存操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cuda中的同步操作"><span class="nav-number">1.4.4.</span> <span class="nav-text">cuda中的同步操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例：very-simple的矩阵相乘"><span class="nav-number">1.5.</span> <span class="nav-text">实例：very simple的矩阵相乘</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1302,6 +1709,25 @@
 
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 16021,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
   
@@ -1323,7 +1749,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#more");
   
   </script>
 

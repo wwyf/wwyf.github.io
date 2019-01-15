@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-01-14T13:39:25.530Z</updated>
+  <updated>2019-01-15T02:04:25.938Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高性能计算基础-复习5.1-CUDA基础</title>
+    <link href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80-%E5%A4%8D%E4%B9%A05-1-CUDA%E5%9F%BA%E7%A1%80/"/>
+    <id>https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-1-CUDA基础/</id>
+    <published>2019-01-15T02:03:26.000Z</published>
+    <updated>2019-01-15T02:04:25.938Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习5-1-CUDA基础"><a href="#HPC复习5-1-CUDA基础" class="headerlink" title="HPC复习5.1-CUDA基础"></a>HPC复习5.1-CUDA基础</h1><p>复习了一下cuda，主要以自问自答的方式，整理了一下知识点。</p><ol><li>相关背景：前言</li><li>逻辑上的cuda架构大概是怎样的？</li><li>gpu上实际的硬件情况</li><li>cuda架构与硬件之间的关系</li><li>一个简单实例：矩阵相乘的简单实现</li></ol><a id="more"></a><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="为什么需要gpu？"><a href="#为什么需要gpu？" class="headerlink" title="为什么需要gpu？"></a>为什么需要gpu？</h3><ol><li>CPU处理能力不断强大，但在进入3D时代后，人们发现庞大的3D图像处理数据计算使得CPU越来越不堪重荷，并且远远超出其计算能力；</li><li>图形计算需求日益增多，作为计算机的显示芯片也飞速发展。图形，图像计算等计算的功能被脱离出来，单独设计为一块芯片——GPU （也就是显卡）。</li></ol><h3 id="gpu与cpu的主要区别在？"><a href="#gpu与cpu的主要区别在？" class="headerlink" title="gpu与cpu的主要区别在？"></a>gpu与cpu的主要区别在？</h3><ol><li>gpu采用了大量的执行单元，并且一个控制单元可以同时控制多个执行单元进行计算，实现类似于SIMD的加速。</li><li><img src="https://lh3.googleusercontent.com/-U6dLqQSsc_U/XD0vGdcz0oI/AAAAAAAANqg/skeMgQgw4NMZnsCU87OTm8bNWqoBnac0ACHMYCw/s0/Acrobat_2019-01-15_08-53-44.png" alt=""></li></ol><h3 id="cuda是什么？"><a href="#cuda是什么？" class="headerlink" title="cuda是什么？"></a>cuda是什么？</h3><ol><li>是一种专门针对GPU的开发工具，可以使用类C语言进行通用计算。</li><li>用于编写host+device异构并行C应用程序</li><li><img src="https://lh3.googleusercontent.com/-FlqXBhfrtAQ/XD0vjzixC7I/AAAAAAAANqo/F_57eojX4nAF3CnPqXjbN-gl2nDc0mk0wCHMYCw/s0/Acrobat_2019-01-15_08-55-43.png" alt=""></li></ol><h2 id="CUDA-架构（逻辑上）"><a href="#CUDA-架构（逻辑上）" class="headerlink" title="CUDA 架构（逻辑上）"></a>CUDA 架构（逻辑上）</h2><h3 id="CUDA中线程的组织方式？"><a href="#CUDA中线程的组织方式？" class="headerlink" title="CUDA中线程的组织方式？"></a>CUDA中线程的组织方式？</h3><ol><li>三级：Grid-Block-Thread<ol><li>Thread ：单个线程，是并行的基本单位</li><li>Block：互相合作的线程组</li><li>Grid：一组Block</li></ol></li><li>需要关注到，一个kernel对应一个Grid</li><li><img src="https://lh3.googleusercontent.com/-4LwbA1Aj2MQ/XD0v2jCDuHI/AAAAAAAANq0/64pcOu7Onqc837_4Q79DnfvvoSzWXocaQCHMYCw/s0/Acrobat_2019-01-15_08-56-58.png" alt=""></li></ol><h3 id="CUDA中的访存模式？"><a href="#CUDA中的访存模式？" class="headerlink" title="CUDA中的访存模式？"></a>CUDA中的访存模式？</h3><p>线程可以访问以下空间</p><ol><li>以线程为单位的<ol><li>线程有内部的<strong>寄存器</strong></li><li>在寄存器不够用的情况下，可以在<strong>Global Memory</strong>中申请一块内存空间作为<strong>Local Memory</strong></li></ol></li><li>以Block为单位的<ol><li>单个block中的线程共享<strong>Shared Memory</strong></li></ol></li><li>以Grid为单位的<ol><li>一个Grid中的所有线程共享<strong>Glocal Memory</strong></li><li>特殊的，一个Grid中的所有线程共享<strong>只读的</strong> <strong>constant memory</strong>(常量存储器),<strong>texture memory</strong>(纹理存储器)</li></ol></li><li>图示如下：<img src="https://lh3.googleusercontent.com/-7Id_bAjJjD4/XD0xXYp4HTI/AAAAAAAANrA/g7kkEfzz_Zgxa6JaHZhGRdDckKAqbXEfACHMYCw/s0/Acrobat_2019-01-15_09-03-24.png" alt=""></li></ol><h2 id="cuda与硬件的关系"><a href="#cuda与硬件的关系" class="headerlink" title="cuda与硬件的关系"></a>cuda与硬件的关系</h2><h3 id="cuda中有哪些硬件？是如何组织的？"><a href="#cuda中有哪些硬件？是如何组织的？" class="headerlink" title="cuda中有哪些硬件？是如何组织的？"></a>cuda中有哪些硬件？是如何组织的？</h3><p>由低到高分别是：</p><ol><li>SP：流处理器</li><li>SM：流多处理器</li><li>TPC：线程处理集群</li><li>SPA：流处理器阵列</li></ol><p><img src="https://lh3.googleusercontent.com/-qmYboKb3JQM/XD0xsCp_K6I/AAAAAAAANrI/Hkgu4X-fusoYYnf2q3B-DWv1BcjVEPLYQCHMYCw/s0/Acrobat_2019-01-15_09-04-49.png" alt=""></p><h3 id="cuda架构与实际硬件的关系？"><a href="#cuda架构与实际硬件的关系？" class="headerlink" title="cuda架构与实际硬件的关系？"></a>cuda架构与实际硬件的关系？</h3><ol><li>Grid：运行在SPA上</li><li>Block的执行方式：<ol><li>一般的cuda应用程序具有多个Block组成的线程组，这些Block会分配到多个SM核上分别执行。</li><li>怎么分配？见下图：<img src="https://lh3.googleusercontent.com/-Plh4mq88QdE/XD0y2ywS9aI/AAAAAAAANrU/w50XC5epme4HVSkv4vKG0C-aRc06ujnmwCHMYCw/s0/Acrobat_2019-01-15_09-09-46.png" alt=""></li><li>注意到这里的分配，会受到以下两个限制的影响：<ol><li>一个SM核上分配的Blcok数量是有限制，G80中的SM核最多8个block</li><li>G80中的SM核最多768个线程。</li></ol></li></ol></li><li>SM核上具有多个Block需要运行后，这些线程更具体的，是如何执行的呢？<ol><li>一个SM核上的多个Block，每个block会分成多个Warp（32个线程）</li><li>这些Warp会在SM核上并发地执行，由于一个Warp有32个线程，而一个SM核上仅有8个SP，因此一个Warp运行4个Clock cycles</li></ol></li></ol><h3 id="Warp的调度具有开销吗？"><a href="#Warp的调度具有开销吗？" class="headerlink" title="Warp的调度具有开销吗？"></a>Warp的调度具有开销吗？</h3><ol><li>（联想）cpu中的硬件多线程之间的调度是几乎没有开销的，原因？是因为CPU中已经有了多个可以用于存储线程context的区域，每次调度切换线程的时候，切换context是在CPU硬件内完成的，不是由操作系统完成的，不需要访存，因此几乎0开销。</li><li>GPU中的warp调度，类似的，也是0开销的。</li></ol><h3 id="怎样的Warp会被调度出来执行？"><a href="#怎样的Warp会被调度出来执行？" class="headerlink" title="怎样的Warp会被调度出来执行？"></a>怎样的Warp会被调度出来执行？</h3><ol><li>很明显的，每一个时刻，都会有很多个Warp在等待被GPU调度执行，那么问题是：满足什么条件的Warp，会被调度出来执行？<ol><li>Warp中没有线程被阻塞的（如访存等）</li><li>合适的Warp挑出来优先执行。</li></ol></li></ol><h3 id="为什么要设计成warp的并发执行？"><a href="#为什么要设计成warp的并发执行？" class="headerlink" title="为什么要设计成warp的并发执行？"></a>为什么要设计成warp的并发执行？</h3><ol><li>结论：Warp的并发执行，能够很好的隐藏访存时间（原理类似于cpu中的硬件多线程）</li><li>简单例子：<ol><li><img src="https://lh3.googleusercontent.com/-M9QwhzmB0pI/XD02cA_ftZI/AAAAAAAANrg/NpkbQH9Eo2I7kq1FcXk2uzkxt10DuWbUgCHMYCw/s0/Acrobat_2019-01-15_09-25-04.png" alt=""></li><li>上图中，一个单位长度为一个warp的执行（实际上其实是4个时钟周期，这里简化成了1个）。</li><li>可以发现，每当一个Warp由于访存阻塞了，GPU会马上从调度其他可用的Warp来执行，从而保证GPU中的计算负载保持在100%，这个Warp的访存时间就被别的Warp的执行隐藏掉了</li></ol></li><li>复杂例子：如何计算完全隐藏访存时间所需要的Warp的数量。<ol><li>假设：<ol><li>运行一次一个Warp中的所有线程需要4个clock cycles</li><li>每n个指令需要一次全局内存访问（200个时钟周期）</li></ol></li><li>解答：<ol><li>假设每个指令都需要访存，访存的这一段时间里，可以使用$200/4=50$个warp的执行来隐藏。<ol><li>隐藏假设：单个Warp一次运行仅使用了4个clock cycles就被阻塞了</li></ol></li><li>由于是每n个指令访存一次，因此实际上，单个warp执行了$4*n$后才会被阻塞</li><li>因此，需要$200/(4*n)+1$个warp。</li></ol></li></ol></li></ol><h3 id="SM核上具有的存储空间及分配情况？"><a href="#SM核上具有的存储空间及分配情况？" class="headerlink" title="SM核上具有的存储空间及分配情况？"></a>SM核上具有的存储空间及分配情况？</h3><ol><li>SM核上拥有16KB的shared memory(有些GPU是48KB)</li><li>基于前面，一个SM核上分配多个Block的前提<ol><li>多个block分享一个SM核上的shared memory。</li></ol></li><li>由于单个block可能会要求shared memory至少多大，而一个SM核上的shared memory是有限制的，所以，block要看情况，不能分配太多，不然shared memory就不够用了。<ol><li>Shared Memory也会限制Block的分配</li></ol></li></ol><h2 id="cuda的软件接口"><a href="#cuda的软件接口" class="headerlink" title="cuda的软件接口"></a>cuda的软件接口</h2><p>写了这么多，终于写到要写一个真正的cuda程序了。</p><h3 id="cuda编程中的函数声明"><a href="#cuda编程中的函数声明" class="headerlink" title="cuda编程中的函数声明"></a>cuda编程中的函数声明</h3><ol><li>在cuda编程中，当然既要写在gpu上运行的函数又要写在cpu上运行的函数了，那么如何区分呢？</li><li><img src="https://lh3.googleusercontent.com/-Frw4biWiTdw/XD063lkpXrI/AAAAAAAANrs/2FySYbhR3EsgK3TcHH6cPOlsy7x_zxzTQCHMYCw/s0/Acrobat_2019-01-15_09-43-58.png" alt=""></li><li>好吧，之前我没有好好想<code>__device__</code>还有<code>__global__</code>的区别，所以这里要特地给自己强调一下。</li></ol><h3 id="cuda中的5个内建设备变量"><a href="#cuda中的5个内建设备变量" class="headerlink" title="cuda中的5个内建设备变量"></a>cuda中的5个内建设备变量</h3><ol><li><code>gridDim</code></li><li><code>blockDim</code></li><li><code>blockIdx</code></li><li><code>threadIdx</code></li><li><code>warpSize</code></li></ol><h3 id="cuda中的各种各样的内存操作"><a href="#cuda中的各种各样的内存操作" class="headerlink" title="cuda中的各种各样的内存操作"></a>cuda中的各种各样的内存操作</h3><p><code>cudaMemcpy(void * dst, void * src, size_t nbytes, enum cudaMemcpyType direction);</code></p><p><code>cudaMalloc</code></p><p><code>cudaFree</code></p><h3 id="cuda中的同步操作"><a href="#cuda中的同步操作" class="headerlink" title="cuda中的同步操作"></a>cuda中的同步操作</h3><p><code>__syncThreads()</code>：同步一个block里面的所有线程，作用相当于一个Barrier</p><h2 id="实例：very-simple的矩阵相乘"><a href="#实例：very-simple的矩阵相乘" class="headerlink" title="实例：very simple的矩阵相乘"></a>实例：very simple的矩阵相乘</h2><p>可以看我的<a href="https://gitee.com/wwyf/class_hpc/blob/master/e6/code/multi.cu" target="_blank" rel="noopener">git仓库</a>（我具体的实现可能没有这么naive）</p><p>具体思路是：</p><p><img src="https://lh3.googleusercontent.com/-3jJ-qYk5SD8/XD09D8JLBTI/AAAAAAAANr4/HjWn0Aj36A4S0xuZEoZ70EqhyJ6waYYGwCHMYCw/s0/Acrobat_2019-01-15_09-53-19.png" alt=""></p><p>对该程序优化的思考</p><ol><li>性能问题：<ol><li>每计算一次，访问两次内存（如从矩阵Md中取一个数，以及从Nd中取一个数，然后只做了一次加法）</li><li>访存限制</li></ol></li><li>矩阵的大小受到一个block大小的限制。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HPC复习5-1-CUDA基础&quot;&gt;&lt;a href=&quot;#HPC复习5-1-CUDA基础&quot; class=&quot;headerlink&quot; title=&quot;HPC复习5.1-CUDA基础&quot;&gt;&lt;/a&gt;HPC复习5.1-CUDA基础&lt;/h1&gt;&lt;p&gt;复习了一下cuda，主要以自问自答的方式，整理了一下知识点。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;相关背景：前言&lt;/li&gt;
+&lt;li&gt;逻辑上的cuda架构大概是怎样的？&lt;/li&gt;
+&lt;li&gt;gpu上实际的硬件情况&lt;/li&gt;
+&lt;li&gt;cuda架构与硬件之间的关系&lt;/li&gt;
+&lt;li&gt;一个简单实例：矩阵相乘的简单实现&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="High Performance Computing" scheme="https://wwyf.github.io/categories/High-Performance-Computing/"/>
+    
+    
+      <category term="High Performance Computing" scheme="https://wwyf.github.io/tags/High-Performance-Computing/"/>
+    
+  </entry>
   
   <entry>
     <title>高性能计算基础-复习3-pthread</title>
@@ -516,32 +545,6 @@
     
     
       <category term="Python" scheme="https://wwyf.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git删除大文件</title>
-    <link href="https://wwyf.github.io/2018/05/19/2018-05-2018-05-19-git%E5%88%A0%E9%99%A4%E5%A4%A7%E6%96%87%E4%BB%B6/"/>
-    <id>https://wwyf.github.io/2018/05/19/2018-05-2018-05-19-git删除大文件/</id>
-    <published>2018-05-19T02:09:20.000Z</published>
-    <updated>2019-01-12T03:33:37.276Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不作死就不会死，不应该，不应该把视频都放到git仓库中。</p><p>下面知乎中的命令给了我很大的帮助。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter <span class="string">'git rm --cached --ignore-unmatch "这里是文件名匹配的地方！！" '</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">git push origin --force --all</span><br><span class="line"></span><br><span class="line">git push origin --force --tags</span><br><span class="line"></span><br><span class="line">git <span class="keyword">for</span>-each-ref --format=<span class="string">'delete %(refname)'</span> refs/original | git update-ref --stdin</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br><span class="line"></span><br><span class="line">git count-objects -v</span><br></pre></td></tr></table></figure><p><a href="https://www.zhihu.com/question/54419234" target="_blank" rel="noopener">https://www.zhihu.com/question/54419234</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;不作死就不会死，不应该，不应该把视频都放到git仓库中。&lt;/p&gt;
-&lt;p&gt;下面
-      
-    
-    </summary>
-    
-      <category term="test" scheme="https://wwyf.github.io/categories/test/"/>
-    
-    
-      <category term="test" scheme="https://wwyf.github.io/tags/test/"/>
     
   </entry>
   
