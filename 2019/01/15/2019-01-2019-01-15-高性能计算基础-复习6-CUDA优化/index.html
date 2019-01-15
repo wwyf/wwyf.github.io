@@ -111,21 +111,23 @@
 
 
 
-  <meta name="description" content="配置OpenGL的笔记linux好不容易在Window下配置好OpenGL，在博客上记录一下。 12345sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-devsudo apt-get install freeglut3-devsudo apt-get install build-essential gdb sub">
-<meta name="keywords" content="OpenGL">
+  <meta name="description" content="HPC复习6-cuda优化在cuda程序的优化中，需要考虑以下几个问题  了解SM核中所提供的资源，并合理分配。 确定kernel的启动参数，以尽可能提高cuda程序的性能。 理解warp隐藏延时的作用，知道为什么warp越多越能隐藏延时。 通过数据预读取隐藏访存延时。 了解不同指令的吞吐量，并优化之。">
+<meta name="keywords" content="High Performance Computing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="openGL配置">
-<meta property="og:url" content="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/index.html">
+<meta property="og:title" content="高性能计算基础-复习6-CUDA优化">
+<meta property="og:url" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="配置OpenGL的笔记linux好不容易在Window下配置好OpenGL，在博客上记录一下。 12345sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-devsudo apt-get install freeglut3-devsudo apt-get install build-essential gdb sub">
+<meta property="og:description" content="HPC复习6-cuda优化在cuda程序的优化中，需要考虑以下几个问题  了解SM核中所提供的资源，并合理分配。 确定kernel的启动参数，以尽可能提高cuda程序的性能。 理解warp隐藏延时的作用，知道为什么warp越多越能隐藏延时。 通过数据预读取隐藏访存延时。 了解不同指令的吞吐量，并优化之。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30_14-19-17.gif">
-<meta property="og:image" content="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30-14-26-05.png">
-<meta property="og:updated_time" content="2019-01-12T03:33:37.196Z">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-kTJQHo2890Y/XD2P6Ak0g2I/AAAAAAAANx4/HmgaxgQefeAXjfCrvVLuaHq1WeG4QGtAwCHMYCw/s0/Acrobat_2019-01-15_15-46-48.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-lbe-eNMWhP0/XD2PuXTO_aI/AAAAAAAANx0/Z0Grw8p5d0sLkhYhQM5eEafxGO_6aMF8ACHMYCw/s0/Acrobat_2019-01-15_15-46-01.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-_DlX9mCbLX8/XD2Sz8Y7WRI/AAAAAAAANyI/clacnlWedsAqyV5mozO0HiLdBlBAskVVwCHMYCw/s0/Acrobat_2019-01-15_15-59-11.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-pgQYXjs0hrU/XD2S4yZQCiI/AAAAAAAANyM/rwa9BCsy02EMvIOUSQZmUg4dURBSj05LACHMYCw/s0/Acrobat_2019-01-15_15-59-31.png">
+<meta property="og:updated_time" content="2019-01-15T08:13:49.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="openGL配置">
-<meta name="twitter:description" content="配置OpenGL的笔记linux好不容易在Window下配置好OpenGL，在博客上记录一下。 12345sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-devsudo apt-get install freeglut3-devsudo apt-get install build-essential gdb sub">
-<meta name="twitter:image" content="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30_14-19-17.gif">
+<meta name="twitter:title" content="高性能计算基础-复习6-CUDA优化">
+<meta name="twitter:description" content="HPC复习6-cuda优化在cuda程序的优化中，需要考虑以下几个问题  了解SM核中所提供的资源，并合理分配。 确定kernel的启动参数，以尽可能提高cuda程序的性能。 理解warp隐藏延时的作用，知道为什么warp越多越能隐藏延时。 通过数据预读取隐藏访存延时。 了解不同指令的吞吐量，并优化之。">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-kTJQHo2890Y/XD2P6Ak0g2I/AAAAAAAANx4/HmgaxgQefeAXjfCrvVLuaHq1WeG4QGtAwCHMYCw/s0/Acrobat_2019-01-15_15-46-48.png">
 
 
 
@@ -134,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/">
 
 
 
@@ -144,7 +146,7 @@
   };
 </script>
 
-  <title>openGL配置 | Blog</title>
+  <title>高性能计算基础-复习6-CUDA优化 | Blog</title>
   
 
 
@@ -395,7 +397,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/04/30/2018-04-2018-04-30-openGL配置/">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
@@ -412,7 +414,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">openGL配置
+          <h2 class="post-title" itemprop="name headline">高性能计算基础-复习6-CUDA优化
 
               
             
@@ -438,24 +440,12 @@
                 
               
 
-              <time title="Created: 2018-04-30 14:07:38" itemprop="dateCreated datePublished" datetime="2018-04-30T14:07:38+08:00">2018-04-30</time>
+              <time title="Created: 2019-01-15 16:13:09 / Modified: 16:13:49" itemprop="dateCreated datePublished" datetime="2019-01-15T16:13:09+08:00">2019-01-15</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
               
             
           </span>
@@ -472,7 +462,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/High-Performance-Computing/" itemprop="url" rel="index"><span itemprop="name">High Performance Computing</span></a></span>
 
                 
                 
@@ -487,8 +477,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/30/2018-04-2018-04-30-openGL配置/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/30/2018-04-2018-04-30-openGL配置/" itemprop="commentCount"></span>
+                <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -496,7 +486,7 @@
 
           
           
-            <span id="/2018/04/30/2018-04-2018-04-30-openGL配置/" class="leancloud_visitors" data-flag-title="openGL配置">
+            <span id="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习6-CUDA优化/" class="leancloud_visitors" data-flag-title="高性能计算基础-复习6-CUDA优化">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -521,7 +511,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1.6k</span>
+                <span title="Symbols count in article">2.8k</span>
               
 
               
@@ -535,7 +525,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">3 mins.</span>
+                <span title="Reading time">6 mins.</span>
               
             </div>
           
@@ -555,33 +545,145 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="配置OpenGL的笔记"><a href="#配置OpenGL的笔记" class="headerlink" title="配置OpenGL的笔记"></a>配置OpenGL的笔记</h1><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>好不容易在Window下配置好OpenGL，在博客上记录一下。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev</span><br><span class="line">sudo apt-get install freeglut3-dev</span><br><span class="line">sudo apt-get install build-essential gdb subversion</span><br><span class="line">sudo apt-get install automake autoconf libtool</span><br><span class="line">sudo apt-get install libgtk2.0-dev libxmu-dev libxxf86vm-dev</span><br></pre></td></tr></table></figure>
-<p>在安装了参考资料里面的包之后，还另外安装了glfw,为了能够运行教程中的用到glfw代码的示例。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install libglfw3 libglfw3-dev</span><br><span class="line">sudo apt install libassimp-dev</span><br></pre></td></tr></table></figure>
-<h2 id="运行成功动图"><a href="#运行成功动图" class="headerlink" title="运行成功动图"></a>运行成功动图</h2><p>这个gif有点大，可能会加载的很慢（15mb)</p>
-<img src="/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30_14-19-17.gif" title="这是一张图">
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这是在wsl上配置的，为了能够让wsl里面的程序在window运行图形界面，还另外装了VcXsrv作为Xwindow server。然后在启动VcXsrv时还修改了一些配置才运行的比较正常，如截图所示。</p>
-<img src="/2018/04/30/2018-04-2018-04-30-openGL配置/2018-04-30-14-26-05.png" title="这是一张图">
-<h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><h2 id="mingw"><a href="#mingw" class="headerlink" title="mingw"></a>mingw</h2><p>直接装就好了，里面有libopengl32.a,libgdi32.a等库，都是等下需要的。</p>
-<h2 id="gifw"><a href="#gifw" class="headerlink" title="gifw"></a>gifw</h2><ol>
-<li>官网下载glfw（32）</li>
-<li>将头文件放到项目文件夹下/includes中</li>
-<li>将静态链接库房贷项目文件夹/lib中</li>
-<li>获取glad.h glad.c 等文件，并将glad.c加入到项目中。</li>
-<li>编写makefile</li>
-<li>尝试运行示例代码<ol>
-<li><a href="http://www.glfw.org/documentation.html" target="_blank" rel="noopener">http://www.glfw.org/documentation.html</a></li>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习6-cuda优化"><a href="#HPC复习6-cuda优化" class="headerlink" title="HPC复习6-cuda优化"></a>HPC复习6-cuda优化</h1><p>在cuda程序的优化中，需要考虑以下几个问题</p>
+<ol>
+<li>了解SM核中所提供的资源，并合理分配。</li>
+<li>确定kernel的启动参数，以尽可能提高cuda程序的性能。</li>
+<li>理解warp隐藏延时的作用，知道为什么warp越多越能隐藏延时。</li>
+<li>通过数据预读取隐藏访存延时。</li>
+<li>了解不同指令的吞吐量，并优化之。</li>
+</ol>
+<a id="more"></a>
+<h2 id="SM资源分割"><a href="#SM资源分割" class="headerlink" title="SM资源分割"></a>SM资源分割</h2><h3 id="需要确定的值"><a href="#需要确定的值" class="headerlink" title="需要确定的值"></a>需要确定的值</h3><ol>
+<li>block的数量</li>
+<li>thread的数量</li>
+</ol>
+<h3 id="与分配资源有关的参数"><a href="#与分配资源有关的参数" class="headerlink" title="与分配资源有关的参数"></a>与分配资源有关的参数</h3><ol>
+<li>线程块槽数量（thread block slot）：block数量的上限</li>
+<li>线程槽数量（thread slot）</li>
+<li>寄存器的数量</li>
+<li>shared memory的大小</li>
+</ol>
+<h3 id="分配资源的数量，与哪些因素有关"><a href="#分配资源的数量，与哪些因素有关" class="headerlink" title="分配资源的数量，与哪些因素有关"></a>分配资源的数量，与哪些因素有关</h3><ol>
+<li>原则一：单个SM核上分配的线程数（block*每个block具有的线程数）越大，线程级别的并行越大（前提与sm核实际运行的状况有关，需要想清楚）<ol>
+<li>线程越多，warp越多，可运行的用来隐藏访存时间的warp就越多，因此就可以尽可能让GPU达到满负荷工作，不会由于访存延迟使得gpu空闲。</li>
+</ol>
+</li>
+<li>原则二：单个SM核上的所有寄存器，平均分配给各个线程，因此，线程数量越多，单个线程可用的寄存器越少<ol>
+<li>性能悬崖警惕：减少1/3的线程（并行度），仅仅让每一个线程增加了1个寄存器，除非由于寄存器不足导致了较大的访存开销，否则小心调整。</li>
+</ol>
+</li>
+<li>原则三：对block的数量需要注意，尽量让每一个SM核上都具有多个block，这样子如果一个block在等待同步，可以启动另一个block<ol>
+<li>需要知道SM核的数量</li>
+</ol>
+</li>
+<li>原则五：『关于shared memory』<ol>
+<li>shared memory按block分割，block过多可能会让单个block所具有的shared memory脱销</li>
 </ol>
 </li>
 </ol>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the ROOT dictionary</span></span><br><span class="line">ROOT = .</span><br><span class="line"><span class="comment"># Target File</span></span><br><span class="line">TARGET_FILE = triangle.cpp</span><br><span class="line"><span class="comment"># compile option</span></span><br><span class="line">CXX_FLAGS = -std=c++11 -g -Wall  </span><br><span class="line">CXX_INCLUDES =-I<span class="variable">$(ROOT)</span>/<span class="keyword">include</span></span><br><span class="line"><span class="comment"># 增加静态链接库的寻找目录</span></span><br><span class="line">CXX_LIB = -L<span class="variable">$(ROOT)</span>/lib</span><br><span class="line">STATIC_LINK_LIB = -lglfw3 -lopengl32 -lgdi32</span><br><span class="line"></span><br><span class="line"><span class="section">all:t.exe t.o</span></span><br><span class="line">	./t.exe</span><br><span class="line">	make clean</span><br><span class="line"><span class="section">t.exe:t.o glad.o</span></span><br><span class="line">	g++ <span class="variable">$(CXX_FLAGS)</span> t.o glad.o -o t.exe  <span class="variable">$(CXX_LIB)</span>  <span class="variable">$(STATIC_LINK_LIB)</span></span><br><span class="line"><span class="section">t.o:t.cpp</span></span><br><span class="line">	g++ <span class="variable">$(CXX_INCLUDES)</span> <span class="variable">$(CXX_FLAGS)</span> -o t.o -c <span class="variable">$(TARGET_FILE)</span></span><br><span class="line"><span class="section">glad.o:glad.c</span></span><br><span class="line">	g++ <span class="variable">$(CXX_INCLUDES)</span> <span class="variable">$(CXX_FLAGS)</span> -o glad.o -c glad.c</span><br></pre></td></tr></table></figure>
-<p>参考了这些资料</p>
+<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><p>对G80而言，与分配相关的参数可见：</p>
+<p><img src="https://lh3.googleusercontent.com/-kTJQHo2890Y/XD2P6Ak0g2I/AAAAAAAANx4/HmgaxgQefeAXjfCrvVLuaHq1WeG4QGtAwCHMYCw/s0/Acrobat_2019-01-15_15-46-48.png" alt=""></p>
+<p>有这样的一个情景，在每个block都含256个线程的情况下，一个SM核可能有以下两种情况：</p>
+<p><img src="https://lh3.googleusercontent.com/-lbe-eNMWhP0/XD2PuXTO_aI/AAAAAAAANx0/Z0Grw8p5d0sLkhYhQM5eEafxGO_6aMF8ACHMYCw/s0/Acrobat_2019-01-15_15-46-01.png" alt=""></p>
+<p>这里就可以发现，每个线程多了一个寄存器，但是带来的影响是，总的可以运行的线程的数量变为原来的2/3，也就是说，并行度是原来的2/3了。</p>
+<p>这个可以给我一个启示：除非为了隐藏global memory访存延迟，否则尽可能不要为了增加寄存器数量而降低并行性。</p>
+<h2 id="Kernel启动参数配置"><a href="#Kernel启动参数配置" class="headerlink" title="Kernel启动参数配置"></a>Kernel启动参数配置</h2><h3 id="需要确定以下参数"><a href="#需要确定以下参数" class="headerlink" title="需要确定以下参数"></a>需要确定以下参数</h3><ol>
+<li><p>grid（block的数量）：主要看$\frac{blocks}{sm}$</p>
+<ol>
+<li>大于1：每个SM至少有一个block在执行</li>
+<li>大于2：多个block可以在SM核上并发执行，如果一个block在等待同步，可以启动另一个block</li>
+<li>大于100：对未来设备有很好的伸缩性</li>
+</ol>
+</li>
+<li><p>block（thread的数量）</p>
+<ol>
+<li><p>块大小必须为32的倍数</p>
+</li>
+<li><p>warp尽可能多，隐藏延时</p>
+</li>
+<li><p>64,128,256 等等，试一下，经验成分比较多</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="隐藏延时-相关计算"><a href="#隐藏延时-相关计算" class="headerlink" title="隐藏延时-相关计算"></a>隐藏延时-相关计算</h2><p>问题：需要使用多少个warp来隐藏某操作的延时，此时占用率多大？</p>
 <blockquote>
-<p><a href="https://stackoverflow.com/questions/22008845/glfw-mingw-link-error" target="_blank" rel="noopener">https://stackoverflow.com/questions/22008845/glfw-mingw-link-error</a><br><a href="https://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/" target="_blank" rel="noopener">https://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/</a></p>
+<p>占用率：激活warp与最大可容纳warp数目的比值</p>
+<p>最大warp数目: 32 in Tesla, 48 in Fermi</p>
 </blockquote>
-<h2 id="freeglut"><a href="#freeglut" class="headerlink" title="freeglut"></a>freeglut</h2><p>如果不用glfw，用freeglut的话，也可以进行配置。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://blog.csdn.net/evenness/article/details/9150351" target="_blank" rel="noopener">https://blog.csdn.net/evenness/article/details/9150351</a></p>
+<h3 id="例子1"><a href="#例子1" class="headerlink" title="例子1"></a>例子1</h3><p><img src="https://lh3.googleusercontent.com/-_DlX9mCbLX8/XD2Sz8Y7WRI/AAAAAAAANyI/clacnlWedsAqyV5mozO0HiLdBlBAskVVwCHMYCw/s0/Acrobat_2019-01-15_15-59-11.png" alt=""></p>
+<h3 id="例子2"><a href="#例子2" class="headerlink" title="例子2"></a>例子2</h3><p><img src="https://lh3.googleusercontent.com/-pgQYXjs0hrU/XD2S4yZQCiI/AAAAAAAANyM/rwa9BCsy02EMvIOUSQZmUg4dURBSj05LACHMYCw/s0/Acrobat_2019-01-15_15-59-31.png" alt=""></p>
+<h2 id="数据预读"><a href="#数据预读" class="headerlink" title="数据预读"></a>数据预读</h2><blockquote>
+<p>数据预读：在某global memroy变量的读操作，与该变量的实际使用语句之间，插入与该数据无关的独立指令，可以隐藏访存延迟</p>
+</blockquote>
+<p>例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> m = Md[i];</span><br><span class="line"><span class="keyword">float</span> f = a*b + c*d; <span class="comment">// 无关指令，隐藏访存延时</span></span><br><span class="line"><span class="keyword">float</span> f2 = m * f;</span><br></pre></td></tr></table></figure>
+<h3 id="如何在矩阵乘法中使用预读操作进行优化"><a href="#如何在矩阵乘法中使用预读操作进行优化" class="headerlink" title="如何在矩阵乘法中使用预读操作进行优化"></a>如何在矩阵乘法中使用预读操作进行优化</h3><p>代码模板如下，</p>
+<p>注意到中间的预读在计算点积前面，这样子中间的点积在运算时便可以隐藏预读内存产生的误差了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Load first tile into registers</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="comment">/* ... */</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Deposit registers into shared memory</span></span><br><span class="line">    __syncthreads();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Load next tile into registers</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Accumulate dot product</span></span><br><span class="line">    __syncthreads();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="指令吞吐量优化"><a href="#指令吞吐量优化" class="headerlink" title="指令吞吐量优化"></a>指令吞吐量优化</h2><p>了解每一种指令的吞吐量，减少使用昂贵的指令。</p>
+<h3 id="一些指令的吞吐量"><a href="#一些指令的吞吐量" class="headerlink" title="一些指令的吞吐量"></a>一些指令的吞吐量</h3><table>
+<thead>
+<tr>
+<th>int &amp; fp32</th>
+<th>2 cycles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fp64:</td>
+<td>2 cycles</td>
+</tr>
+<tr>
+<td>fp32 transendental</td>
+<td>8 cycles</td>
+</tr>
+<tr>
+<td>int devide/modulo</td>
+<td>expensive</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>优化建议：</p>
+<ol>
+<li>与<code>2^n</code>运算，尽量使用位运算，如<code>&gt;&gt; n``&lt;&lt; n</code></li>
+<li>在float常量中添加f，（缺省是double，会导致隐式的类型转换）</li>
+</ol>
+</blockquote>
+<h3 id="数学函数的吞吐量提高"><a href="#数学函数的吞吐量提高" class="headerlink" title="数学函数的吞吐量提高"></a>数学函数的吞吐量提高</h3><ol>
+<li>cuda中两种类型的运行时数学函数<ol>
+<li>func()</li>
+<li>__func()：使用硬件加速，SFU，精度低</li>
+</ol>
+</li>
+<li><code>--use-fast-math</code>编译指令，强制使用硬件加速的数学函数</li>
+</ol>
+<h3 id="循环展开"><a href="#循环展开" class="headerlink" title="循环展开"></a>循环展开</h3><blockquote>
+<p>原理：循环中除了循环体，还有更新计数器，判断条件，计算地址等指令，减少这些无关指令的运算可以加速</p>
+</blockquote>
+<p>例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k =<span class="number">0</span>;k &lt; <span class="number">16</span>;++k)</span><br><span class="line">&#123;</span><br><span class="line">	Pvalue +=Ms[ty][k]*Ns[k][tx];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这其中含有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2条浮点运算</span><br><span class="line">1条循环分支</span><br><span class="line">2条地址运算</span><br><span class="line">1条循环计数器自增</span><br></pre></td></tr></table></figure>
+<p><strong>仅1/3是浮点计算！！！</strong></p>
+<p>做以下改动：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Pvalue += </span><br><span class="line">    Ms[ty][<span class="number">0</span>] * Ns[<span class="number">0</span>][tx] + </span><br><span class="line">    Ms[ty][<span class="number">1</span>] * Ns[<span class="number">1</span>][tx] + </span><br><span class="line">    ...</span><br><span class="line">    Ms[ty][<span class="number">15</span>] * Ns[<span class="number">15</span>][tx];</span><br></pre></td></tr></table></figure>
+<p>从而减少了循环分支，自增，同时地址运算也可以减少。</p>
+<p>自动完成循环展开：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> unroll 16</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k =<span class="number">0</span>;k &lt; <span class="number">16</span>;++k)</span><br><span class="line">&#123;</span><br><span class="line">	Pvalue +=Ms[ty][k]*Ns[k][tx];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>由于展开能够消除分支以及一些管理归纳变量的代码，因此可以摊销一些分支开销。<br>展开可以积极调度（或管道化）循环以掩盖一些延迟。如果有足够的空闲寄存器使变量保持活动状态，因为通过展开相关性链展露了关键路径，这将非常有用。</p>
+</blockquote>
+<p>但</p>
+<blockquote>
+<p>展开过度或展开非常大的循环时，可能导致代码篇幅增加。如果展开后的循环不能再放入跟踪缓存 (TC)，这将有害无益。</p>
+<p>展开循环体中包含分支的循环时，会增加对 BTB 容量的需求。如果展开后循环的迭代次数是 16 或更少，则分支预测应该能正确预测循环体中改变方向的分支。</p>
+</blockquote>
+<h2 id="课上提醒"><a href="#课上提醒" class="headerlink" title="课上提醒"></a>课上提醒</h2><ol>
+<li>如果一整个warp没有指令要执行，不会占住SP，一上来就下去，但只要warp中有一个线程要执行，那就一定会占住SP</li>
+</ol>
 
       
     </div>
@@ -634,7 +736,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
+            <a href="/tags/High-Performance-Computing/" rel="tag"># High Performance Computing</a>
           
         </div>
       
@@ -673,8 +775,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/30/2018-04-2018-04-30-tmux/" rel="next" title="tmux">
-                <i class="fa fa-chevron-left"></i> tmux
+              <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/" rel="next" title="高性能计算基础-复习5.3-CUDA线程">
+                <i class="fa fa-chevron-left"></i> 高性能计算基础-复习5.3-CUDA线程
               </a>
             
           </div>
@@ -682,10 +784,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/02/2018-05-2018-05-02-openMP编程/" rel="prev" title="openMP编程">
-                openMP编程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -961,7 +1059,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置OpenGL的笔记"><span class="nav-number">1.</span> <span class="nav-text">配置OpenGL的笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">1.1.</span> <span class="nav-text">linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行成功动图"><span class="nav-number">1.2.</span> <span class="nav-text">运行成功动图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#window"><span class="nav-number">2.</span> <span class="nav-text">window</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mingw"><span class="nav-number">2.1.</span> <span class="nav-text">mingw</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gifw"><span class="nav-number">2.2.</span> <span class="nav-text">gifw</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#freeglut"><span class="nav-number">2.3.</span> <span class="nav-text">freeglut</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习6-cuda优化"><span class="nav-number">1.</span> <span class="nav-text">HPC复习6-cuda优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SM资源分割"><span class="nav-number">1.1.</span> <span class="nav-text">SM资源分割</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要确定的值"><span class="nav-number">1.1.1.</span> <span class="nav-text">需要确定的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与分配资源有关的参数"><span class="nav-number">1.1.2.</span> <span class="nav-text">与分配资源有关的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分配资源的数量，与哪些因素有关"><span class="nav-number">1.1.3.</span> <span class="nav-text">分配资源的数量，与哪些因素有关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子："><span class="nav-number">1.1.4.</span> <span class="nav-text">例子：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel启动参数配置"><span class="nav-number">1.2.</span> <span class="nav-text">Kernel启动参数配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要确定以下参数"><span class="nav-number">1.2.1.</span> <span class="nav-text">需要确定以下参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐藏延时-相关计算"><span class="nav-number">1.3.</span> <span class="nav-text">隐藏延时-相关计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子1"><span class="nav-number">1.3.1.</span> <span class="nav-text">例子1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子2"><span class="nav-number">1.3.2.</span> <span class="nav-text">例子2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预读"><span class="nav-number">1.4.</span> <span class="nav-text">数据预读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在矩阵乘法中使用预读操作进行优化"><span class="nav-number">1.4.1.</span> <span class="nav-text">如何在矩阵乘法中使用预读操作进行优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令吞吐量优化"><span class="nav-number">1.5.</span> <span class="nav-text">指令吞吐量优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些指令的吞吐量"><span class="nav-number">1.5.1.</span> <span class="nav-text">一些指令的吞吐量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学函数的吞吐量提高"><span class="nav-number">1.5.2.</span> <span class="nav-text">数学函数的吞吐量提高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环展开"><span class="nav-number">1.5.3.</span> <span class="nav-text">循环展开</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课上提醒"><span class="nav-number">1.6.</span> <span class="nav-text">课上提醒</span></a></li></ol></li></ol></div>
             
 
           </div>
