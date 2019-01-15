@@ -389,6 +389,230 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wyf">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/" class="post-title-link" itemprop="url">高性能计算基础-复习5.3-CUDA线程</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 15:21:22 / Modified: 15:21:49" itemprop="dateCreated datePublished" datetime="2019-01-15T15:21:22+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/High-Performance-Computing/" itemprop="url" rel="index"><span itemprop="name">High Performance Computing</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/" class="leancloud_visitors" data-flag-title="高性能计算基础-复习5.3-CUDA线程">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">4 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<h2 id="typora-copy-images-to-figure"><a href="#typora-copy-images-to-figure" class="headerlink" title="typora-copy-images-to: figure"></a>typora-copy-images-to: figure</h2><h1 id="HPC复习5-3-CUDA线程"><a href="#HPC复习5-3-CUDA线程" class="headerlink" title="HPC复习5.3-CUDA线程"></a>HPC复习5.3-CUDA线程</h1><p>这里主要想想明白一个事：</p>
+<p>已知的是，会有多个block，分配到SM核上来执行。</p>
+<p>也知道，单一时间上，SM核仅有一个warp在运行。</p>
+<p>问题是：</p>
+<ol>
+<li>SM核内部的结构是如何的？</li>
+<li>warp的实际执行情况是如何的？</li>
+<li>warp的并发执行是否会引发一些问题？如何解决？</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-2-CUDA访存/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1952,231 +2176,6 @@ test chinese这是中文。
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/12/2019-01-2019-01-12-配置博客/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wyf">
-      <meta itemprop="description" content="bilibala~ bilibala~">
-      <meta itemprop="image" content="/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/12/2019-01-2019-01-12-配置博客/" class="post-title-link" itemprop="url">配置博客</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-12 12:00:01 / Modified: 17:40:14" itemprop="dateCreated datePublished" datetime="2019-01-12T12:00:01+08:00">2019-01-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/12/2019-01-2019-01-12-配置博客/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/12/2019-01-2019-01-12-配置博客/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/2019/01/12/2019-01-2019-01-12-配置博客/" class="leancloud_visitors" data-flag-title="配置博客">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article">203</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">1 mins.</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              今天配置了一下博客。
-
-本地仅维护markdown文件
-通过git push，将markdown文件push到腾讯云服务器
-云服务器中的远程git仓库触发hooks，cd到服务器的博客文件中，拉取最新博客文件，并执行hexo g -d 生成博客文件并发布
-
-最重要的一个改变在于：本地不需要存储博客的
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/12/2019-01-2019-01-12-配置博客/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2226,7 +2225,7 @@ test chinese这是中文。
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2443,7 +2442,7 @@ test chinese这是中文。
     
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">85k</span>
+    <span title="Symbols count total">87k</span>
   
 
   
@@ -2454,7 +2453,7 @@ test chinese这是中文。
     
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">2:51</span>
+    <span title="Reading time total">2:55</span>
   
 </div>
 
