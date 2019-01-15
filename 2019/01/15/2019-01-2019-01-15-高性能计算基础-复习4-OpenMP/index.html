@@ -111,21 +111,30 @@
 
 
 
-  <meta name="description" content="集线器总线式的结构。一次只能够有一个用户占用总线发送消息。  二层交换机能够多用户同时发送，使用交换机。缺点：体积大，实现虚拟局域网复杂。  三层交换机三层交换技术：二层交换技术+三层转发技术 网段划分之后，网段中子网必须依赖路由器进行管理。三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。   二层交换引擎：实现同一个网段内的快速二层转发 三层路由引擎：实现跨网段的三层路由转发  基于流">
+  <meta name="description" content="typora-copy-images-to: figureHPC复习4-OpenMP OpenMP简介 OpenMP编译制导 OpenMP库函数 OpenMP环境变量 OpenMP示例–性能改善">
+<meta name="keywords" content="High Performance Computing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集线器，二层交换机，三层交换机的区别">
-<meta property="og:url" content="https://wwyf.github.io/2018/04/25/2018-04-2018-04-25-交换机/index.html">
+<meta property="og:title" content="高性能计算基础-复习4-OpenMP">
+<meta property="og:url" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="集线器总线式的结构。一次只能够有一个用户占用总线发送消息。  二层交换机能够多用户同时发送，使用交换机。缺点：体积大，实现虚拟局域网复杂。  三层交换机三层交换技术：二层交换技术+三层转发技术 网段划分之后，网段中子网必须依赖路由器进行管理。三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。   二层交换引擎：实现同一个网段内的快速二层转发 三层路由引擎：实现跨网段的三层路由转发  基于流">
+<meta property="og:description" content="typora-copy-images-to: figureHPC复习4-OpenMP OpenMP简介 OpenMP编译制导 OpenMP库函数 OpenMP环境变量 OpenMP示例–性能改善">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/04/25/5ae023ed438eb.png">
-<meta property="og:image" content="https://i.loli.net/2018/04/25/5ae0244f375b9.png">
-<meta property="og:image" content="https://i.loli.net/2018/04/25/5ae02501e49d2.png">
-<meta property="og:updated_time" content="2019-01-12T03:33:37.192Z">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-2y771w5Yl0Y/XD3UJrbnJDI/AAAAAAAAN1A/sj3jk-OsMMYb-x7sjX6OEqeoPdSZ0EmaACHMYCw/s0/Acrobat_2019-01-15_20-37-57.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-CvLoMA9lHL0/XD3h6muXSmI/AAAAAAAAN1M/mu9RelbjSocH1CzKVCmrsuxTsTSGf9mpACHMYCw/s0/Acrobat_2019-01-15_21-36-40.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-0QjMf3-Fjjk/XD3iFQgDyrI/AAAAAAAAN1Q/5yFImqC7IDkjChF_xy5GmiZ227IFTUtcwCHMYCw/s0/Acrobat_2019-01-15_21-37-20.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Qq6sgKD2ji0/XD3i5oH9VvI/AAAAAAAAN1c/Ry8Ay8PLx0ICJfQERdUhafUk00ta3cIZwCHMYCw/s0/Acrobat_2019-01-15_21-40-53.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-JhjPfP392W0/XD3i8nOBkoI/AAAAAAAAN1g/b0rFfhaRdXE7qo4bSY36EMmF0PoL8DCDQCHMYCw/s0/Acrobat_2019-01-15_21-41-06.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-y7KBSiWaDl4/XD3i_TPH8OI/AAAAAAAAN1k/Q3pjVu3MC-YArhkz1VxhLnJFlenauZjhgCHMYCw/s0/Acrobat_2019-01-15_21-41-17.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-y7KBSiWaDl4/XD3i_TPH8OI/AAAAAAAAN1k/Q3pjVu3MC-YArhkz1VxhLnJFlenauZjhgCHMYCw/s0/Acrobat_2019-01-15_21-41-17.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Ccf5agIIOL8/XD3jFewuXmI/AAAAAAAAN1s/825ZKEyguzkYXD8gA7sOIZjctwbZf9CdwCHMYCw/s0/Acrobat_2019-01-15_21-41-39.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-JQovoZ2MIzk/XD3jWTZcajI/AAAAAAAAN2A/jrZd8dFECb4lNtCWV3poWFlnx2709pZOACHMYCw/s0/Acrobat_2019-01-15_21-42-48.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-RY1UDZes6Q4/XD3jZY1-7PI/AAAAAAAAN2E/1-F2Y4dXSngZLhY54tNDClmQt-uVcFF-ACHMYCw/s0/Acrobat_2019-01-15_21-43-01.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-sfXhe5-b9qg/XD3jcESZ9CI/AAAAAAAAN2I/tN-9ENQk29AezWKTJLkPA9IcBcboBEHHQCHMYCw/s0/Acrobat_2019-01-15_21-43-12.png">
+<meta property="og:updated_time" content="2019-01-15T13:45:41.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="集线器，二层交换机，三层交换机的区别">
-<meta name="twitter:description" content="集线器总线式的结构。一次只能够有一个用户占用总线发送消息。  二层交换机能够多用户同时发送，使用交换机。缺点：体积大，实现虚拟局域网复杂。  三层交换机三层交换技术：二层交换技术+三层转发技术 网段划分之后，网段中子网必须依赖路由器进行管理。三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。   二层交换引擎：实现同一个网段内的快速二层转发 三层路由引擎：实现跨网段的三层路由转发  基于流">
-<meta name="twitter:image" content="https://i.loli.net/2018/04/25/5ae023ed438eb.png">
+<meta name="twitter:title" content="高性能计算基础-复习4-OpenMP">
+<meta name="twitter:description" content="typora-copy-images-to: figureHPC复习4-OpenMP OpenMP简介 OpenMP编译制导 OpenMP库函数 OpenMP环境变量 OpenMP示例–性能改善">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-2y771w5Yl0Y/XD3UJrbnJDI/AAAAAAAAN1A/sj3jk-OsMMYb-x7sjX6OEqeoPdSZ0EmaACHMYCw/s0/Acrobat_2019-01-15_20-37-57.png">
 
 
 
@@ -134,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/2018/04/25/2018-04-2018-04-25-交换机/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/">
 
 
 
@@ -144,7 +153,7 @@
   };
 </script>
 
-  <title>集线器，二层交换机，三层交换机的区别 | Blog</title>
+  <title>高性能计算基础-复习4-OpenMP | Blog</title>
   
 
 
@@ -395,7 +404,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/04/25/2018-04-2018-04-25-交换机/">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
@@ -412,7 +421,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">集线器，二层交换机，三层交换机的区别
+          <h2 class="post-title" itemprop="name headline">高性能计算基础-复习4-OpenMP
 
               
             
@@ -438,24 +447,12 @@
                 
               
 
-              <time title="Created: 2018-04-25 14:42:39" itemprop="dateCreated datePublished" datetime="2018-04-25T14:42:39+08:00">2018-04-25</time>
+              <time title="Created: 2019-01-15 21:44:24 / Modified: 21:45:41" itemprop="dateCreated datePublished" datetime="2019-01-15T21:44:24+08:00">2019-01-15</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
               
             
           </span>
@@ -472,7 +469,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Network/" itemprop="url" rel="index"><span itemprop="name">Computer Network</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/High-Performance-Computing/" itemprop="url" rel="index"><span itemprop="name">High Performance Computing</span></a></span>
 
                 
                 
@@ -487,8 +484,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/25/2018-04-2018-04-25-交换机/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/25/2018-04-2018-04-25-交换机/" itemprop="commentCount"></span>
+                <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -496,7 +493,7 @@
 
           
           
-            <span id="/2018/04/25/2018-04-2018-04-25-交换机/" class="leancloud_visitors" data-flag-title="集线器，二层交换机，三层交换机的区别">
+            <span id="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习4-OpenMP/" class="leancloud_visitors" data-flag-title="高性能计算基础-复习4-OpenMP">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -521,7 +518,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">693</span>
+                <span title="Symbols count in article">1.9k</span>
               
 
               
@@ -535,7 +532,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">1 mins.</span>
+                <span title="Reading time">4 mins.</span>
               
             </div>
           
@@ -555,28 +552,151 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h1><p>总线式的结构。<br>一次只能够有一个用户占用总线发送消息。</p>
-<p><img src="https://i.loli.net/2018/04/25/5ae023ed438eb.png" alt=""></p>
-<h1 id="二层交换机"><a href="#二层交换机" class="headerlink" title="二层交换机"></a>二层交换机</h1><p>能够多用户同时发送，使用交换机。<br>缺点：<br>体积大，实现虚拟局域网复杂。</p>
-<p><img src="https://i.loli.net/2018/04/25/5ae0244f375b9.png" alt=""></p>
-<h1 id="三层交换机"><a href="#三层交换机" class="headerlink" title="三层交换机"></a>三层交换机</h1><p>三层交换技术：二层交换技术+三层转发技术</p>
-<p>网段划分之后，网段中子网必须依赖路由器进行管理。<br>三层交换机解决了传统路由器低速，复杂所造成的网络瓶颈问题。</p>
-<p><img src="https://i.loli.net/2018/04/25/5ae02501e49d2.png" alt=""></p>
-<ol>
-<li>二层交换引擎：实现同一个网段内的快速二层转发</li>
-<li>三层路由引擎：实现跨网段的三层路由转发</li>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h2 id="typora-copy-images-to-figure"><a href="#typora-copy-images-to-figure" class="headerlink" title="typora-copy-images-to: figure"></a>typora-copy-images-to: figure</h2><h1 id="HPC复习4-OpenMP"><a href="#HPC复习4-OpenMP" class="headerlink" title="HPC复习4-OpenMP"></a>HPC复习4-OpenMP</h1><ol>
+<li>OpenMP简介</li>
+<li>OpenMP编译制导</li>
+<li>OpenMP库函数</li>
+<li>OpenMP环境变量</li>
+<li>OpenMP示例–性能改善</li>
 </ol>
-<h2 id="基于流交换的三层交换技术"><a href="#基于流交换的三层交换技术" class="headerlink" title="基于流交换的三层交换技术"></a>基于流交换的三层交换技术</h2><p>有个不在同一个子网内的站点需要发送消息给另一个不在同一个子网的站点。</p>
-<p>假设两个使用IP协议的站点A、B通过第三层交换机进行通信</p>
-<ol>
-<li>发送站点A在开始发送时，把自己的IP地址与B站的IP地址比较，判断B站是否与自己在同一子网内。</li>
-<li>若目的站B与发送站A在同一子网内，则进行二层的转发。</li>
-<li>若两个站点不在同一子网内，发送站A要向“缺省网关”发出ARP(地址解析)封包，而“缺省网关”的IP地址其实是三层交换机的三层交换模块。</li>
-<li>当发送站A对“缺省网关”的IP地址广播出一个ARP请求时，如果三层交换模块在以前的通信过程中已经知道B站的MAC地址，则向发送站A回复B的MAC地址。否则三层交换模块根据路由信息向B站广播一个ARP请求;</li>
-<li>B站得到此ARP请求后向三层交换模块回复其MAC地址;</li>
-<li>三层交换模块保存此地址并回复给发送站A,同时将B站的MAC地址发送到二层交换引擎的MAC地址表中。</li>
-<li>从这以后，当A向B发送的数据包便全部交给二层交换处理，信息得以高速交换。由于仅仅在路由过程中才需要三层处理，绝大部分数据都通过二层交换转发，因此三层交换机的速度很快，接近二层交换机的速度</li>
+<a id="more"></a>
+<h2 id="OpenMP简介"><a href="#OpenMP简介" class="headerlink" title="OpenMP简介"></a>OpenMP简介</h2><ol>
+<li>是一种基于线程的并行编程模型<ol>
+<li>编译制导</li>
+<li>运行库函数</li>
+<li>环境变量</li>
 </ol>
+</li>
+<li>采用<strong>Fork-Join</strong>并行执行方式<ol>
+<li>OpenMP程序开始于一个单独的主线程（Master Thread），然后主线程一直串行执行，直到遇见第一个并行域(Parallel Region)，然后开始并行执行并行域。并行域代码执行完后再回到主线程，直到遇到下一个并行域，以此类推，直至程序运行结束。</li>
+<li><img src="https://lh3.googleusercontent.com/-2y771w5Yl0Y/XD3UJrbnJDI/AAAAAAAAN1A/sj3jk-OsMMYb-x7sjX6OEqeoPdSZ0EmaACHMYCw/s0/Acrobat_2019-01-15_20-37-57.png" alt=""></li>
+</ol>
+</li>
+</ol>
+<h2 id="OpenMP-编译制导"><a href="#OpenMP-编译制导" class="headerlink" title="OpenMP 编译制导"></a>OpenMP 编译制导</h2><p>编译制导语句格式：<strong>制导标识符 制导名称 [Cluase,…]</strong></p>
+<h3 id="并行域制导"><a href="#并行域制导" class="headerlink" title="并行域制导"></a>并行域制导</h3><blockquote>
+<p>一个并行域就是一个能被多个线程并行执行的程序段</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> ompparallel [clauses]</span></span><br><span class="line">&#123;</span><br><span class="line">	BLOCK</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在并行域结尾有一个隐式同步（barrier）。</li>
+<li>子句（clause）用来说明并行域的附加信息。</li>
+<li>在C/C++中，子句间用空格分开。（Fortran语言中，子句间用逗号或空格分隔）</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/-CvLoMA9lHL0/XD3h6muXSmI/AAAAAAAAN1M/mu9RelbjSocH1CzKVCmrsuxTsTSGf9mpACHMYCw/s0/Acrobat_2019-01-15_21-36-40.png" alt=""></p>
+<h3 id="数据访问相关子句"><a href="#数据访问相关子句" class="headerlink" title="数据访问相关子句"></a>数据访问相关子句</h3><p><img src="https://lh3.googleusercontent.com/-0QjMf3-Fjjk/XD3iFQgDyrI/AAAAAAAAN1Q/5yFImqC7IDkjChF_xy5GmiZ227IFTUtcwCHMYCw/s0/Acrobat_2019-01-15_21-37-20.png" alt=""></p>
+<blockquote>
+<p>如何决定哪些变量是共享哪些是私有？</p>
+<ol>
+<li>通常循环变量、临时变量、写变量一般是私有的；</li>
+<li>数组变量、仅用于读的变量通常是共享的。默认时为公有</li>
+</ol>
+</blockquote>
+<h3 id="并行域结构：reduction子句"><a href="#并行域结构：reduction子句" class="headerlink" title="并行域结构：reduction子句"></a>并行域结构：reduction子句</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">inti,myid,n; <span class="keyword">double</span> a[][];</span><br><span class="line"><span class="keyword">double</span> sum;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> omp parallel reduction(+: sum), private(i, myid)</span></span><br><span class="line">&#123;</span><br><span class="line">    myid=omp_get_thread_num();</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;i++)</span><br><span class="line">    	sum=sum+a[i][myid];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>特别说明：要理解reduction操作</p>
+<ol>
+<li>在reduction子句中，编译器为每个线程创建变量sum的私有副本。当循环完成后，将这些值加在一起并把结果放到原始的变量sum中;</li>
+<li>Reduction中的op操作必须满足算术结合律和交换律。</li>
+</ol>
+</blockquote>
+<p>剩下的，详细可见总结或文档。</p>
+<h3 id="任务划分并行制导"><a href="#任务划分并行制导" class="headerlink" title="任务划分并行制导"></a>任务划分并行制导</h3><ol>
+<li>并行for循环制导<ol>
+<li>schedule 调度子句<ol>
+<li>static</li>
+<li>dynamic</li>
+<li>guided</li>
+<li>runtime</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>并行sections制导</li>
+<li>single和master制导</li>
+<li>其他制导</li>
+</ol>
+<h3 id="同步制导"><a href="#同步制导" class="headerlink" title="同步制导"></a>同步制导</h3><ol>
+<li>barrier制导</li>
+<li>nowait制导</li>
+<li>critical制导</li>
+<li>atomic制导</li>
+<li>lock例程</li>
+<li>flush制导：高速缓存会刷新恢复到内存，影响性能</li>
+</ol>
+<h2 id="OpenMP库函数"><a href="#OpenMP库函数" class="headerlink" title="OpenMP库函数"></a>OpenMP库函数</h2><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int omp_get_num_threads()</code></td>
+<td>得到线程队列中的线程数</td>
+</tr>
+<tr>
+<td><code>int omp_get_thread_num()</code></td>
+<td>得到执行线程的线程号：</td>
+</tr>
+<tr>
+<td><code>void omp_set_num_threads(4)</code></td>
+<td>设定执行线程的数量为4</td>
+</tr>
+<tr>
+<td><code>double omp_get_wtime(void)</code></td>
+<td>返回挂钟“自过去任意时刻以来”经过的时间（秒）</td>
+</tr>
+<tr>
+<td><code>double omp_get_wtick(void);</code></td>
+<td>返回连续时钟滴答声之间的秒数。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="OpenMP环境变量"><a href="#OpenMP环境变量" class="headerlink" title="OpenMP环境变量"></a>OpenMP环境变量</h2><table>
+<thead>
+<tr>
+<th>环境变量名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMP_NUM_THREADS</td>
+<td>设定最大线程数</td>
+</tr>
+<tr>
+<td>OMP_SCHEDULE</td>
+<td>调度方式 “DYNAMIC,4”</td>
+</tr>
+<tr>
+<td>OMP_DYNAMIC</td>
+<td>是否动态设定并行域执行的线程数</td>
+</tr>
+<tr>
+<td>OMP_NESTED</td>
+<td>确定是否可以并行嵌套</td>
+</tr>
+</tbody>
+</table>
+<h2 id="OpenMP示例–性能改善"><a href="#OpenMP示例–性能改善" class="headerlink" title="OpenMP示例–性能改善"></a>OpenMP示例–性能改善</h2><h3 id="例子1"><a href="#例子1" class="headerlink" title="例子1"></a>例子1</h3><p>如何处理循环中存在的依赖关系？例子如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++)</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">		a[i][j]=<span class="number">2.0</span>*a[i<span class="number">-1</span>][j];</span><br></pre></td></tr></table></figure>
+<p>可以变为(交换循环位置)；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++)</span><br><span class="line">		a[i][j]=<span class="number">2.0</span>*a[i<span class="number">-1</span>][j];</span><br></pre></td></tr></table></figure>
+<h3 id="例子2"><a href="#例子2" class="headerlink" title="例子2"></a>例子2</h3><p>下面这一个循环是存在循环依赖的。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">2</span>;i&lt;<span class="number">20</span>;i++)</span><br><span class="line">	a[i]=a[i<span class="number">-2</span>]+<span class="number">4</span> ;</span><br></pre></td></tr></table></figure>
+<p>不过我们可以将这一个循环分解为多个循环，这多个循环间不存在依赖关系</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">2</span>;i&lt;<span class="number">20</span>;i=i+<span class="number">2</span>)</span><br><span class="line">	a[i]=a[i<span class="number">-2</span>]+<span class="number">4</span> ;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">3</span>;i&lt;<span class="number">20</span>;i=i+<span class="number">2</span>)</span><br><span class="line">	a[i]=a[i<span class="number">-2</span>]+<span class="number">4</span> ;</span><br></pre></td></tr></table></figure>
+<h2 id="制导指令总结"><a href="#制导指令总结" class="headerlink" title="制导指令总结"></a>制导指令总结</h2><h3 id="并行域指令"><a href="#并行域指令" class="headerlink" title="并行域指令"></a>并行域指令</h3><p><img src="https://lh3.googleusercontent.com/-Qq6sgKD2ji0/XD3i5oH9VvI/AAAAAAAAN1c/Ry8Ay8PLx0ICJfQERdUhafUk00ta3cIZwCHMYCw/s0/Acrobat_2019-01-15_21-40-53.png" alt=""></p>
+<h3 id="工作共享指令"><a href="#工作共享指令" class="headerlink" title="工作共享指令"></a>工作共享指令</h3><p><img src="https://lh3.googleusercontent.com/-JhjPfP392W0/XD3i8nOBkoI/AAAAAAAAN1g/b0rFfhaRdXE7qo4bSY36EMmF0PoL8DCDQCHMYCw/s0/Acrobat_2019-01-15_21-41-06.png" alt=""></p>
+<h3 id="并行域与工作共享指令的结合"><a href="#并行域与工作共享指令的结合" class="headerlink" title="并行域与工作共享指令的结合"></a>并行域与工作共享指令的结合</h3><p><img src="https://lh3.googleusercontent.com/-y7KBSiWaDl4/XD3i_TPH8OI/AAAAAAAAN1k/Q3pjVu3MC-YArhkz1VxhLnJFlenauZjhgCHMYCw/s0/Acrobat_2019-01-15_21-41-17.png" alt=""></p>
+<h3 id="同步指令"><a href="#同步指令" class="headerlink" title="同步指令"></a>同步指令</h3><p><img src="https://lh3.googleusercontent.com/-y7KBSiWaDl4/XD3i_TPH8OI/AAAAAAAAN1k/Q3pjVu3MC-YArhkz1VxhLnJFlenauZjhgCHMYCw/s0/Acrobat_2019-01-15_21-41-17.png" alt=""></p>
+<h3 id="数据环境指令"><a href="#数据环境指令" class="headerlink" title="数据环境指令"></a>数据环境指令</h3><p><img src="https://lh3.googleusercontent.com/-Ccf5agIIOL8/XD3jFewuXmI/AAAAAAAAN1s/825ZKEyguzkYXD8gA7sOIZjctwbZf9CdwCHMYCw/s0/Acrobat_2019-01-15_21-41-39.png" alt=""></p>
+<h2 id="OpenMP子句总结"><a href="#OpenMP子句总结" class="headerlink" title="OpenMP子句总结"></a>OpenMP子句总结</h2><h3 id="数据作用域属性子句"><a href="#数据作用域属性子句" class="headerlink" title="数据作用域属性子句"></a>数据作用域属性子句</h3><p><img src="https://lh3.googleusercontent.com/-JQovoZ2MIzk/XD3jWTZcajI/AAAAAAAAN2A/jrZd8dFECb4lNtCWV3poWFlnx2709pZOACHMYCw/s0/Acrobat_2019-01-15_21-42-48.png" alt=""></p>
+<p><img src="https://lh3.googleusercontent.com/-RY1UDZes6Q4/XD3jZY1-7PI/AAAAAAAAN2E/1-F2Y4dXSngZLhY54tNDClmQt-uVcFF-ACHMYCw/s0/Acrobat_2019-01-15_21-43-01.png" alt=""></p>
+<h3 id="其他子句"><a href="#其他子句" class="headerlink" title="其他子句"></a>其他子句</h3><p><img src="https://lh3.googleusercontent.com/-sfXhe5-b9qg/XD3jcESZ9CI/AAAAAAAAN2I/tN-9ENQk29AezWKTJLkPA9IcBcboBEHHQCHMYCw/s0/Acrobat_2019-01-15_21-43-12.png" alt=""></p>
 
       
     </div>
@@ -627,6 +747,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/High-Performance-Computing/" rel="tag"># High Performance Computing</a>
+          
+        </div>
+      
 
       
       
@@ -662,8 +788,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/24/2018-04-2018-04-24-source-insight/" rel="next" title="source-insight">
-                <i class="fa fa-chevron-left"></i> source-insight
+              <a href="/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习7-4-归约操作优化/" rel="next" title="高性能计算基础-复习7.4-归约操作优化">
+                <i class="fa fa-chevron-left"></i> 高性能计算基础-复习7.4-归约操作优化
               </a>
             
           </div>
@@ -671,10 +797,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/25/2018-04-2018-04-25-the-life-of-a-web-request/" rel="prev" title="the life of a web request">
-                the life of a web request <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -950,7 +1072,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#集线器"><span class="nav-number">1.</span> <span class="nav-text">集线器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二层交换机"><span class="nav-number">2.</span> <span class="nav-text">二层交换机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三层交换机"><span class="nav-number">3.</span> <span class="nav-text">三层交换机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于流交换的三层交换技术"><span class="nav-number">3.1.</span> <span class="nav-text">基于流交换的三层交换技术</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typora-copy-images-to-figure"><span class="nav-number">1.</span> <span class="nav-text">typora-copy-images-to: figure</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习4-OpenMP"><span class="nav-number"></span> <span class="nav-text">HPC复习4-OpenMP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP简介"><span class="nav-number">1.</span> <span class="nav-text">OpenMP简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP-编译制导"><span class="nav-number">2.</span> <span class="nav-text">OpenMP 编译制导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并行域制导"><span class="nav-number">2.1.</span> <span class="nav-text">并行域制导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据访问相关子句"><span class="nav-number">2.2.</span> <span class="nav-text">数据访问相关子句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行域结构：reduction子句"><span class="nav-number">2.3.</span> <span class="nav-text">并行域结构：reduction子句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务划分并行制导"><span class="nav-number">2.4.</span> <span class="nav-text">任务划分并行制导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步制导"><span class="nav-number">2.5.</span> <span class="nav-text">同步制导</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP库函数"><span class="nav-number">3.</span> <span class="nav-text">OpenMP库函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP环境变量"><span class="nav-number">4.</span> <span class="nav-text">OpenMP环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP示例–性能改善"><span class="nav-number">5.</span> <span class="nav-text">OpenMP示例–性能改善</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子1"><span class="nav-number">5.1.</span> <span class="nav-text">例子1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子2"><span class="nav-number">5.2.</span> <span class="nav-text">例子2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制导指令总结"><span class="nav-number">6.</span> <span class="nav-text">制导指令总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并行域指令"><span class="nav-number">6.1.</span> <span class="nav-text">并行域指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作共享指令"><span class="nav-number">6.2.</span> <span class="nav-text">工作共享指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行域与工作共享指令的结合"><span class="nav-number">6.3.</span> <span class="nav-text">并行域与工作共享指令的结合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步指令"><span class="nav-number">6.4.</span> <span class="nav-text">同步指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据环境指令"><span class="nav-number">6.5.</span> <span class="nav-text">数据环境指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenMP子句总结"><span class="nav-number">7.</span> <span class="nav-text">OpenMP子句总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据作用域属性子句"><span class="nav-number">7.1.</span> <span class="nav-text">数据作用域属性子句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他子句"><span class="nav-number">7.2.</span> <span class="nav-text">其他子句</span></a></li></ol></li></ol></li></div>
             
 
           </div>
