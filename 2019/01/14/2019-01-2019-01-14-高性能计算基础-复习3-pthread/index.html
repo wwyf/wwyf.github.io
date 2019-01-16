@@ -111,20 +111,22 @@
 
 
 
-  <meta name="description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+  <meta name="description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
 <meta name="keywords" content="High Performance Computing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高性能计算基础-复习3-pthread">
 <meta property="og:url" content="https://wwyf.github.io/2019/01/14/2019-01-2019-01-14-高性能计算基础-复习3-pthread/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+<meta property="og:description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-jm61UeXUUc4/XD6AbNTejpI/AAAAAAAAN2k/AHGevmv9O5kY5oRH6DnqEail-W6a8NiIgCHMYCw/s0/Acrobat_2019-01-16_08-53-00.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-BgLlpcl5A-k/XD6ATQaRnAI/AAAAAAAAN2g/DlvaYc1Cp5kLj6O4rNPIOQtAL_rVe-nigCHMYCw/s0/Acrobat_2019-01-16_08-52-27.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-LJMIfdNhooo/XDyQgxv4XJI/AAAAAAAANqI/8lBb1o5SPBUV1Gn6uK0sRuGp0bH87hCJQCHMYCw/s0/Typora_2019-01-14_21-37-07.png">
-<meta property="og:updated_time" content="2019-01-15T14:10:11.014Z">
+<meta property="og:updated_time" content="2019-01-16T01:15:19.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能计算基础-复习3-pthread">
-<meta name="twitter:description" content="typora-copy-images-to: figureHPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/-LJMIfdNhooo/XDyQgxv4XJI/AAAAAAAANqI/8lBb1o5SPBUV1Gn6uK0sRuGp0bH87hCJQCHMYCw/s0/Typora_2019-01-14_21-37-07.png">
+<meta name="twitter:description" content="HPC复习3-pthreadtoturial 这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：  pthread中的hello,world pthread中的临界区 忙等待 互斥量 生产者-消费者同步与信号量 实现路障 读写锁与链表 pthread中的缓存一致性">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-jm61UeXUUc4/XD6AbNTejpI/AAAAAAAAN2k/AHGevmv9O5kY5oRH6DnqEail-W6a8NiIgCHMYCw/s0/Acrobat_2019-01-16_08-53-00.png">
 
 
 
@@ -454,7 +456,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-15 22:10:11" itemprop="dateModified" datetime="2019-01-15T22:10:11+08:00">2019-01-15</time>
+                <time title="Modified: 2019-01-16 09:15:19" itemprop="dateModified" datetime="2019-01-16T09:15:19+08:00">2019-01-16</time>
               
             
           </span>
@@ -554,8 +556,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h2 id="typora-copy-images-to-figure"><a href="#typora-copy-images-to-figure" class="headerlink" title="typora-copy-images-to: figure"></a>typora-copy-images-to: figure</h2><h1 id="HPC复习3-pthread"><a href="#HPC复习3-pthread" class="headerlink" title="HPC复习3-pthread"></a>HPC复习3-pthread</h1><p><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank" rel="noopener">toturial</a></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习3-pthread"><a href="#HPC复习3-pthread" class="headerlink" title="HPC复习3-pthread"></a>HPC复习3-pthread</h1><p><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html" target="_blank" rel="noopener">toturial</a></p>
 <p>这里是高性能计算课程-pthread部分的复习笔记，大概会有以下内容：</p>
 <ol>
 <li>pthread中的hello,world</li>
@@ -628,8 +629,10 @@
 </ol>
 </li>
 </ol>
-<h2 id="读写锁"><a href="#读写锁" class="headerlink" title="读写锁"></a>读写锁</h2><p>使用读写锁，实现多线程共享的链表怎么实现？</p>
-<p>TODO:</p>
+<h2 id="读写锁"><a href="#读写锁" class="headerlink" title="读写锁"></a>读写锁</h2><p>使用读写锁，实现多线程共享的链表怎么实现？不难。</p>
+<p><img src="https://lh3.googleusercontent.com/-jm61UeXUUc4/XD6AbNTejpI/AAAAAAAAN2k/AHGevmv9O5kY5oRH6DnqEail-W6a8NiIgCHMYCw/s0/Acrobat_2019-01-16_08-53-00.png" alt=""></p>
+<p>一个结论：在Insert，Delete操作十分少的时候，使用读写锁的性能更好。</p>
+<p><img src="https://lh3.googleusercontent.com/-BgLlpcl5A-k/XD6ATQaRnAI/AAAAAAAAN2g/DlvaYc1Cp5kLj6O4rNPIOQtAL_rVe-nigCHMYCw/s0/Acrobat_2019-01-16_08-52-27.png" alt=""></p>
 <h2 id="缓存一致性"><a href="#缓存一致性" class="headerlink" title="缓存一致性"></a>缓存一致性</h2><p>书本拿了矩阵-向量乘法的例子，说明了缓存对程序性能的影响</p>
 <ol>
 <li>对于8*8000000的矩阵，伪共享带来了很大的影响<ol>
@@ -1017,7 +1020,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typora-copy-images-to-figure"><span class="nav-number">1.</span> <span class="nav-text">typora-copy-images-to: figure</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习3-pthread"><span class="nav-number"></span> <span class="nav-text">HPC复习3-pthread</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程、线程和pthread"><span class="nav-number">1.</span> <span class="nav-text">进程、线程和pthread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">2.</span> <span class="nav-text">Hello,world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pthread中的临界区"><span class="nav-number">3.</span> <span class="nav-text">pthread中的临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忙等待"><span class="nav-number">4.</span> <span class="nav-text">忙等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥量"><span class="nav-number">5.</span> <span class="nav-text">互斥量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者-消费者同步和信号量"><span class="nav-number">6.</span> <span class="nav-text">生产者-消费者同步和信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路障和条件变量"><span class="nav-number">7.</span> <span class="nav-text">路障和条件变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读写锁"><span class="nav-number">8.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存一致性"><span class="nav-number">9.</span> <span class="nav-text">缓存一致性</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习3-pthread"><span class="nav-number">1.</span> <span class="nav-text">HPC复习3-pthread</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程、线程和pthread"><span class="nav-number">1.1.</span> <span class="nav-text">进程、线程和pthread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">1.2.</span> <span class="nav-text">Hello,world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pthread中的临界区"><span class="nav-number">1.3.</span> <span class="nav-text">pthread中的临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忙等待"><span class="nav-number">1.4.</span> <span class="nav-text">忙等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥量"><span class="nav-number">1.5.</span> <span class="nav-text">互斥量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者-消费者同步和信号量"><span class="nav-number">1.6.</span> <span class="nav-text">生产者-消费者同步和信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路障和条件变量"><span class="nav-number">1.7.</span> <span class="nav-text">路障和条件变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读写锁"><span class="nav-number">1.8.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存一致性"><span class="nav-number">1.9.</span> <span class="nav-text">缓存一致性</span></a></li></ol></li></ol></div>
             
 
           </div>
