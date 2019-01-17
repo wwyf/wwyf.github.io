@@ -111,13 +111,13 @@
 
 
 
-  <meta name="description" content="typora-copy-images-to: figureHPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
+  <meta name="description" content="HPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
 <meta name="keywords" content="High Performance Computing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高性能计算基础-复习5.3-CUDA线程">
 <meta property="og:url" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="typora-copy-images-to: figureHPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
+<meta property="og:description" content="HPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/figure/Acrobat_2019-01-15_15-18-20.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-nSO5ewSSqtw/XD15aShcuWI/AAAAAAAANvw/b4Vgwb5THG0NvN8vTR011C3KATyKXZ1IgCHMYCw/s0/Acrobat_2019-01-15_14-10-49.png">
@@ -135,10 +135,10 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-1kdv3JnV8eg/XD2Hj5fN6JI/AAAAAAAANxQ/pLe-5ghYggQ70bhXCeU5ips2MG02p_8WwCHMYCw/s0/Acrobat_2019-01-15_15-11-11.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-441QzpylRK0/XD2HowdmwLI/AAAAAAAANxU/0nkBL7fTwycSth6o5VV7swq4K9JT_RXUQCHMYCw/s0/Acrobat_2019-01-15_15-11-32.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-8wO_TbAmW08/XD2IhLEAcTI/AAAAAAAANxg/vga83BRrlc4Nk8ebfYTnoOy1FLbJIA6zACHMYCw/s0/Acrobat_2019-01-15_15-15-16.png">
-<meta property="og:updated_time" content="2019-01-15T07:21:49.107Z">
+<meta property="og:updated_time" content="2019-01-17T07:19:21.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能计算基础-复习5.3-CUDA线程">
-<meta name="twitter:description" content="typora-copy-images-to: figureHPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
+<meta name="twitter:description" content="HPC复习5.3-CUDA线程这里主要想想明白一个事： 已知的是，会有多个block，分配到SM核上来执行。 也知道，单一时间上，SM核仅有一个warp在运行。 问题是：  SM核内部的结构是如何的？ warp的实际执行情况是如何的？ warp的并发执行是否会引发一些问题？如何解决？">
 <meta name="twitter:image" content="https://wwyf.github.io/2019/01/15/2019-01-2019-01-15-高性能计算基础-复习5-3-CUDA线程/figure/Acrobat_2019-01-15_15-18-20.png">
 
 
@@ -452,12 +452,24 @@
                 
               
 
-              <time title="Created: 2019-01-15 15:21:22 / Modified: 15:21:49" itemprop="dateCreated datePublished" datetime="2019-01-15T15:21:22+08:00">2019-01-15</time>
+              <time title="Created: 2019-01-15 15:21:22" itemprop="dateCreated datePublished" datetime="2019-01-15T15:21:22+08:00">2019-01-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-17 15:19:21" itemprop="dateModified" datetime="2019-01-17T15:19:21+08:00">2019-01-17</time>
               
             
           </span>
@@ -523,7 +535,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">2k</span>
+                <span title="Symbols count in article">1.9k</span>
               
 
               
@@ -557,8 +569,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<h2 id="typora-copy-images-to-figure"><a href="#typora-copy-images-to-figure" class="headerlink" title="typora-copy-images-to: figure"></a>typora-copy-images-to: figure</h2><h1 id="HPC复习5-3-CUDA线程"><a href="#HPC复习5-3-CUDA线程" class="headerlink" title="HPC复习5.3-CUDA线程"></a>HPC复习5.3-CUDA线程</h1><p>这里主要想想明白一个事：</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HPC复习5-3-CUDA线程"><a href="#HPC复习5-3-CUDA线程" class="headerlink" title="HPC复习5.3-CUDA线程"></a>HPC复习5.3-CUDA线程</h1><p>这里主要想想明白一个事：</p>
 <p>已知的是，会有多个block，分配到SM核上来执行。</p>
 <p>也知道，单一时间上，SM核仅有一个warp在运行。</p>
 <p>问题是：</p>
@@ -1042,7 +1053,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typora-copy-images-to-figure"><span class="nav-number">1.</span> <span class="nav-text">typora-copy-images-to: figure</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习5-3-CUDA线程"><span class="nav-number"></span> <span class="nav-text">HPC复习5.3-CUDA线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SM核架构"><span class="nav-number">1.</span> <span class="nav-text">SM核架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Single-Warp"><span class="nav-number">2.</span> <span class="nav-text">Single Warp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单个warp上可能发生的访存冲突"><span class="nav-number">2.1.</span> <span class="nav-text">单个warp上可能发生的访存冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#warp如何处理分支指令？"><span class="nav-number">2.2.</span> <span class="nav-text">warp如何处理分支指令？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Warp-functions"><span class="nav-number">2.3.</span> <span class="nav-text">Warp functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multi-Warp"><span class="nav-number">3.</span> <span class="nav-text">Multi Warp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#warp之间无序的并发执行会带来哪些问题？"><span class="nav-number">3.1.</span> <span class="nav-text">warp之间无序的并发执行会带来哪些问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#branch如何影响多个warp运行的性能？"><span class="nav-number">3.2.</span> <span class="nav-text">branch如何影响多个warp运行的性能？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPC复习5-3-CUDA线程"><span class="nav-number">1.</span> <span class="nav-text">HPC复习5.3-CUDA线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SM核架构"><span class="nav-number">1.1.</span> <span class="nav-text">SM核架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Single-Warp"><span class="nav-number">1.2.</span> <span class="nav-text">Single Warp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单个warp上可能发生的访存冲突"><span class="nav-number">1.2.1.</span> <span class="nav-text">单个warp上可能发生的访存冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#warp如何处理分支指令？"><span class="nav-number">1.2.2.</span> <span class="nav-text">warp如何处理分支指令？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Warp-functions"><span class="nav-number">1.2.3.</span> <span class="nav-text">Warp functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multi-Warp"><span class="nav-number">1.3.</span> <span class="nav-text">Multi Warp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#warp之间无序的并发执行会带来哪些问题？"><span class="nav-number">1.3.1.</span> <span class="nav-text">warp之间无序的并发执行会带来哪些问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#branch如何影响多个warp运行的性能？"><span class="nav-number">1.3.2.</span> <span class="nav-text">branch如何影响多个warp运行的性能？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
