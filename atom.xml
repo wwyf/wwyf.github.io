@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-01-15T13:48:00.257Z</updated>
+  <updated>2019-02-19T03:22:52.152Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pinpoint-Problem Determination in Large, Dynamic Internet Services</title>
+    <link href="https://wwyf.github.io/2019/02/19/2019-02-2019-02-19-Pinpoint/"/>
+    <id>https://wwyf.github.io/2019/02/19/2019-02-2019-02-19-Pinpoint/</id>
+    <published>2019-02-19T02:36:44.000Z</published>
+    <updated>2019-02-19T03:22:52.152Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Pinpoint-Problem-Determination-in-Large-Dynamic-Internet-Services"><a href="#Pinpoint-Problem-Determination-in-Large-Dynamic-Internet-Services" class="headerlink" title="Pinpoint: Problem Determination in Large, Dynamic Internet Services"></a>Pinpoint: Problem Determination in Large, Dynamic Internet Services</h1><p>年份：2002</p><p>会议/期刊：IPDS</p><h2 id="论文概述"><a href="#论文概述" class="headerlink" title="论文概述"></a>论文概述</h2><ol><li><p>背景：在大规模，分布式且动态变化的系统中，依靠<strong>静态依赖关系</strong>来进行问题定位的方法已经遇到了瓶颈：</p><ol><li>is difficulty of generating and maintaining an accurate model of a constantly evolving Internet service.</li><li>only model a logical system, do not distinguish among replicated components.</li></ol></li><li><p>主要贡献</p><ol><li><p>提出了一种可行的，可动态分析系统中问题的方法</p></li><li><p>提出了一个可以分离错误检测和问题分析的框架</p></li><li><blockquote><p>1) a dynamic analysis approach to problem determination that works well and<br>2) a framework that enables separation of fault detection<br>and problem determination from application-level components.</p></blockquote></li></ol></li><li><p>In this paper, we present a dynamic analysis methodology that automates problem determination in these environments by </p><p>1) coarse-grained(粗粒度) tagging of numerous real client requests as they travel through the system</p><p>2) using <strong>data mining techniques</strong> to correlate the believed failures and successes of these requests to determine which components are most likely to be at fault.</p></li></ol><h2 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h2><p>Pinpoing的框架主要包含三个部件：</p><p><img src="https://i.imgur.com/ckM3ZEW.png" alt=""></p><ol><li>Client Request Traces<ol><li>在通讯层以及中间件中处理</li><li>目的：追踪某请求用到的所有部件</li></ol></li><li>Failure Detection<ol><li>Internal failure detection<ol><li>might be masked before becoming visible to users</li><li>assertions and exceptions</li></ol></li><li>External failure detection<ol><li>detect faults that will be bisible to the user</li></ol></li><li>detection subsystem logs this along with the ID of the client request</li></ol></li><li>Data Clustering Analysis<ol><li><img src="https://i.imgur.com/R0d5RI9.png" alt=""></li></ol></li></ol><h2 id="聚类算法"><a href="#聚类算法" class="headerlink" title="聚类算法"></a>聚类算法</h2><p>在论文3.3节中，作者提到了该框架中的聚类算法。</p><blockquote><p>In our implementation of Pinpoint, we use a hierarchical clustering method, an unweighted pair-group method using arithmetic averages (UPGMA), and calculate distances between components using the Jaccard similarity coefficient.</p></blockquote><p>该算法可以在维基百科<a href="https://en.wikipedia.org/wiki/UPGMA" target="_blank" rel="noopener">wiki</a>上找到相应介绍。</p><h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>实验结果的话主要分为两部分</p><ol><li><p>问题定位的准确性</p><ol><li>比另外两种方法准确（Simple Dependency Analysis， Detection Analysis）</li></ol></li><li><p>该系统对性能的影响</p><ol><li><blockquote><p>We measured a cold server with a warm file cache for three 5-minute runs, and found that the online overhead of Pinpoint to be 8.4%.</p></blockquote></li></ol></li></ol><h2 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h2><p>这一种tracing的方法在现在看起来，tracing的信息少之又少，在追踪的过程中，系统只需要获取两种信息：该请求调用过的所有部件，以及该请求成功/失败与否。</p><p>这种方法虽然简单，不过在一些特定的系统中我想是行之有效的，并且这种方法也的确比以前的方法有了很大的进步。</p><p>这种通过聚类找到问题根因的思想，了解一下吧。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li>Pinpoint: Problem Determination in Large, Dynamic Internet Services</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Pinpoint-Problem-Determination-in
+      
+    
+    </summary>
+    
+      <category term="Paper" scheme="https://wwyf.github.io/categories/Paper/"/>
+    
+    
+      <category term="Paper" scheme="https://wwyf.github.io/tags/Paper/"/>
+    
+      <category term="Tracing" scheme="https://wwyf.github.io/tags/Tracing/"/>
+    
+  </entry>
   
   <entry>
     <title>高性能计算基础-复习4-OpenMP</title>
@@ -536,31 +563,6 @@
     
     
       <category term="Datebase" scheme="https://wwyf.github.io/tags/Datebase/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于word-embedding的理解</title>
-    <link href="https://wwyf.github.io/2018/07/28/2018-07-2018-07-28-%E5%85%B3%E4%BA%8Eword-embedding%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>https://wwyf.github.io/2018/07/28/2018-07-2018-07-28-关于word-embedding的理解/</id>
-    <published>2018-07-28T02:00:47.000Z</published>
-    <updated>2019-01-12T03:33:37.284Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="关于word-embedding的理解与pytorch实现"><a href="#关于word-embedding的理解与pytorch实现" class="headerlink" title="关于word-embedding的理解与pytorch实现"></a>关于word-embedding的理解与pytorch实现</h1><p>在NLP中，计算机需要一种方法，表示一个单词。我们马上可以想到，可以直接使用ascii来保存呀，计算机也能够识别。</p><p>用ascii并不是不可以，但是，大家都知道，如果能够把单词表示成向量的形式，无论在怎样的数学处理中都会更加方便，即使是用ascii，最终也必须在计算机中有一种数学的方法表达，才能够完成后续的语义识别的工作。这种，为单词寻找到一种在计算机中表示的方法，可以称之为”Word embedding”(这里的定义是不完整的，后面继续补充。)</p><p>那么，什么办法可以表示一个单词呢？一种显而易见的办法是使用“one-hot encoding”,也就是说，每一个单词，在这样的一个向量中，都有一个独一不二的索引。对不同的词，便在不同的位置为1，其余的位置为0.</p><p><img src="http://bit.ly/2mNgfSX" alt=""></p><p>不妨将单词向量化后的那一个向量空间称之为单词空间？那么，对于单词空间中的每一个具有“one-hot encoding”性质的向量，我们都能够找到一个单词一一对应。</p><p>“one-hot encoding”已经解决了单词-单词空间向量的映射问题，但是，似乎不太好呢。大家都知道，每一个单词之间都有着或多或少的关联。<strong>one-hot encoding方法，将单词之间可能具有的关联信息全部都抛弃掉，只留下一一对应的性质</strong>，这样的单词嵌入方法，并不是特别的理想。</p><h2 id="真正的word-embedding的定义"><a href="#真正的word-embedding的定义" class="headerlink" title="真正的word-embedding的定义"></a>真正的word-embedding的定义</h2><p>摘自知乎</p><blockquote><p>Embedding在数学上表示一个maping, f: X -&gt; Y， 也就是一个function，其中该函数是injective（就是我们所说的单射函数，每个Y只有唯一的X对应，反之亦然）和structure-preserving (结构保存，比如在X所属的空间上X1 &lt; X2,那么映射后在Y所属空间上同理 Y1 &lt; Y2)。那么对于word embedding，就是将单词word映射到另外一个空间，其中这个映射具有injective和structure-preserving的特点。</p></blockquote><p>个人觉得这位网友说的还是很不错的。word embedding的关键在于两点</p><ol><li>单射</li><li><strong>结构保存</strong>（原本关联度较大的两个词，在新的向量空间中的相似度也应该较大？）</li></ol><h2 id="word-embedding的输入输出"><a href="#word-embedding的输入输出" class="headerlink" title="word-embedding的输入输出"></a>word-embedding的输入输出</h2><p>输入：一个单词<br>输出：这一个单词对应的向量</p><p>其中为了达到<strong>结构保存</strong>的目的，前期还需要很多的语料库进行训练。</p><h2 id="pytorch中的word-embedding"><a href="#pytorch中的word-embedding" class="headerlink" title="pytorch中的word embedding"></a>pytorch中的word embedding</h2><p>pytorch中预先已经提供了很多可用了“神经元层”，其中有一个<code>nn.Embedding(a,b)</code>就是专门用于完成“word embedding”工作的神经元层。该层的功能是：将一个具有$a$个单词的字典中的所有单词，映射到一个$b$维的向量空间中。</p><p>简单的代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line">torch.manual_seed(<span class="number">1</span>)</span><br><span class="line">word_to_ix = &#123;<span class="string">"hello"</span>: <span class="number">0</span>, <span class="string">"world"</span>: <span class="number">1</span>&#125;</span><br><span class="line">embeds = nn.Embedding(<span class="number">2</span>, <span class="number">5</span>)  <span class="comment"># 2 words in vocab, 5 dimensional embeddings</span></span><br><span class="line">lookup_tensor = torch.tensor([word_to_ix[<span class="string">"hello"</span>]], dtype=torch.long)</span><br><span class="line"><span class="comment"># print(lookup_tensor)  # tensor([0])</span></span><br><span class="line">hello_embed = embeds(lookup_tensor) <span class="comment"># 输入单词索引即可</span></span><br><span class="line">print(hello_embed)</span><br></pre></td></tr></table></figure><h2 id="An-Example-N-Gram-Language-Modeling"><a href="#An-Example-N-Gram-Language-Modeling" class="headerlink" title="An Example: N-Gram Language Modeling"></a>An Example: N-Gram Language Modeling</h2><p>([ word_i-2, word_i-1 ], target word)</p><p>官网上提供了一个根据上文预测下一个单词的神经网络以供参考。代码我就不放上来了。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li>pytorch官方教程 <a href="https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html" target="_blank" rel="noopener">https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html</a></li><li>一个知乎的回答：<a href="https://www.zhihu.com/question/32275069/answer/80188672" target="_blank" rel="noopener">https://www.zhihu.com/question/32275069/answer/80188672</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;关于word-embedding的理解与pytorch实现&quot;&gt;&lt;a
-      
-    
-    </summary>
-    
-      <category term="Machine-Learning" scheme="https://wwyf.github.io/categories/Machine-Learning/"/>
-    
-    
-      <category term="Machine-Learning" scheme="https://wwyf.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
