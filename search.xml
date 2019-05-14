@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Travis CI 初入门]]></title>
+    <url>%2F2019%2F05%2F13%2F2019-05-2019-05-13-Travis-CI%2F</url>
+    <content type="text"><![CDATA[Travis CI 初入门准备做软工项目了！我和队友准备实现一个前后端分离的系统，今儿了解到Travis CI这个好东西，便马上来试用了！ 我使用Travis CI的目的主要是： 当我push代码后，Travis CI可以帮我自动配置环境，并运行脚本进行测试 还可以通过一些方法，在测试通过后帮我部署到真实服务器上 也就是说，之后的开发中，我只需要一个push指令，就可以将测试，部署等东东全部自动完成！正所谓持续集成便是如此。 事不宜迟，马上来用。 一个最简单的 例子在我即将开始的项目中，我打算使用flask写一个后端，后端还没写，先把持续集成安排一下？ 12345language: pythoninstall: - pip3 install flaskscript: - python tests/test.py install：安装步骤，准备运行所需环境。 script：运行自己的测试脚本完成单元测试。 在 Travis CI 上看到这个build过程还是很开心的！ 自动部署TODO： 参考链接 https://zhuanlan.zhihu.com/p/25066056]]></content>
+      <categories>
+        <category>try</category>
+      </categories>
+      <tags>
+        <tag>try</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Pinpoint-Problem Determination in Large, Dynamic Internet Services]]></title>
     <url>%2F2019%2F02%2F19%2F2019-02-2019-02-19-Pinpoint%2F</url>
     <content type="text"><![CDATA[Pinpoint: Problem Determination in Large, Dynamic Internet Services年份：2002 会议/期刊：IPDS 论文概述 背景：在大规模，分布式且动态变化的系统中，依靠静态依赖关系来进行问题定位的方法已经遇到了瓶颈： is difficulty of generating and maintaining an accurate model of a constantly evolving Internet service. only model a logical system, do not distinguish among replicated components. 主要贡献 提出了一种可行的，可动态分析系统中问题的方法 提出了一个可以分离错误检测和问题分析的框架 1) a dynamic analysis approach to problem determination that works well and2) a framework that enables separation of fault detectionand problem determination from application-level components. In this paper, we present a dynamic analysis methodology that automates problem determination in these environments by 1) coarse-grained(粗粒度) tagging of numerous real client requests as they travel through the system 2) using data mining techniques to correlate the believed failures and successes of these requests to determine which components are most likely to be at fault. 主要方法Pinpoing的框架主要包含三个部件： Client Request Traces 在通讯层以及中间件中处理 目的：追踪某请求用到的所有部件 Failure Detection Internal failure detection might be masked before becoming visible to users assertions and exceptions External failure detection detect faults that will be bisible to the user detection subsystem logs this along with the ID of the client request Data Clustering Analysis 聚类算法在论文3.3节中，作者提到了该框架中的聚类算法。 In our implementation of Pinpoint, we use a hierarchical clustering method, an unweighted pair-group method using arithmetic averages (UPGMA), and calculate distances between components using the Jaccard similarity coefficient. 该算法可以在维基百科wiki上找到相应介绍。 实验结果实验结果的话主要分为两部分 问题定位的准确性 比另外两种方法准确（Simple Dependency Analysis， Detection Analysis） 该系统对性能的影响 We measured a cold server with a warm file cache for three 5-minute runs, and found that the online overhead of Pinpoint to be 8.4%. 我的想法这一种tracing的方法在现在看起来，tracing的信息少之又少，在追踪的过程中，系统只需要获取两种信息：该请求调用过的所有部件，以及该请求成功/失败与否。 这种方法虽然简单，不过在一些特定的系统中我想是行之有效的，并且这种方法也的确比以前的方法有了很大的进步。 这种通过聚类找到问题根因的思想，了解一下吧。 参考资料 Pinpoint: Problem Determination in Large, Dynamic Internet Services]]></content>
