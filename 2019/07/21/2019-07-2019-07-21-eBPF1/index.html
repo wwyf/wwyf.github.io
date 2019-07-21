@@ -111,19 +111,19 @@
 
 
 
-  <meta name="description" content="（eBPF入门1）Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），这意">
+  <meta name="description" content="eBPF 入门1 | Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），">
 <meta name="keywords" content="Tracing,eBPG">
 <meta property="og:type" content="article">
-<meta property="og:title" content="eBPF1">
+<meta property="og:title" content="eBPF 入门1 | Introduction to xdp and eBPF">
 <meta property="og:url" content="https://wwyf.github.io/2019/07/21/2019-07-2019-07-21-eBPF1/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="（eBPF入门1）Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），这意">
+<meta property="og:description" content="eBPF 入门1 | Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/2YSVgMT.png">
-<meta property="og:updated_time" content="2019-07-21T02:35:40.541Z">
+<meta property="og:updated_time" content="2019-07-21T04:13:23.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="eBPF1">
-<meta name="twitter:description" content="（eBPF入门1）Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），这意">
+<meta name="twitter:title" content="eBPF 入门1 | Introduction to xdp and eBPF">
+<meta name="twitter:description" content="eBPF 入门1 | Introduction to xdp and eBPF 翻译博文https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/  在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），">
 <meta name="twitter:image" content="https://i.imgur.com/2YSVgMT.png">
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>eBPF1 | Blog</title>
+  <title>eBPF 入门1 | Introduction to xdp and eBPF | Blog</title>
   
 
 
@@ -411,7 +411,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">eBPF1
+          <h2 class="post-title" itemprop="name headline">eBPF 入门1 | Introduction to xdp and eBPF
 
               
             
@@ -437,7 +437,7 @@
                 
               
 
-              <time title="Created: 2019-07-21 10:34:46 / Modified: 10:35:40" itemprop="dateCreated datePublished" datetime="2019-07-21T10:34:46+08:00">2019-07-21</time>
+              <time title="Created: 2019-07-21 10:34:46 / Modified: 12:13:23" itemprop="dateCreated datePublished" datetime="2019-07-21T10:34:46+08:00">2019-07-21</time>
             
 
             
@@ -483,7 +483,7 @@
 
           
           
-            <span id="/2019/07/21/2019-07-2019-07-21-eBPF1/" class="leancloud_visitors" data-flag-title="eBPF1">
+            <span id="/2019/07/21/2019-07-2019-07-21-eBPF1/" class="leancloud_visitors" data-flag-title="eBPF 入门1 | Introduction to xdp and eBPF">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -542,7 +542,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="（eBPF入门1）Introduction-to-xdp-and-eBPF"><a href="#（eBPF入门1）Introduction-to-xdp-and-eBPF" class="headerlink" title="（eBPF入门1）Introduction to xdp and eBPF"></a>（eBPF入门1）Introduction to xdp and eBPF</h1><blockquote>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="eBPF-入门1-Introduction-to-xdp-and-eBPF"><a href="#eBPF-入门1-Introduction-to-xdp-and-eBPF" class="headerlink" title="eBPF 入门1 | Introduction to xdp and eBPF"></a>eBPF 入门1 | Introduction to xdp and eBPF</h1><blockquote>
 <p>翻译博文<br><a href="https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/" target="_blank" rel="noopener">https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/</a></p>
 </blockquote>
 <p>在过去几年中，我们已经看到了编程工具包和技术的升级，以克服Linux内核在进行高性能数据包处理时的局限性。 最流行的技术之一是内核旁路（kernel bypass），这意味着跳过内核的网络层并从用户空间进行所有数据包处理。 内核旁路还涉及从用户空间管理NIC，换句话说，依赖于用户空间驱动程序来处理NIC。</p>
@@ -719,6 +719,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/21/2019-07-2019-07-21-eBPF2/" rel="prev" title="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例">
+                eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -793,7 +797,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">64</span>
+                    <span class="site-state-item-count">65</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -899,7 +903,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">24</span>
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1007,7 +1013,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#（eBPF入门1）Introduction-to-xdp-and-eBPF"><span class="nav-number">1.</span> <span class="nav-text">（eBPF入门1）Introduction to xdp and eBPF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BPF-and-eBPF"><span class="nav-number">1.1.</span> <span class="nav-text">BPF and eBPF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eBPF-an-example"><span class="nav-number">1.2.</span> <span class="nav-text">eBPF: an example</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#eBPF-入门1-Introduction-to-xdp-and-eBPF"><span class="nav-number">1.</span> <span class="nav-text">eBPF 入门1 | Introduction to xdp and eBPF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BPF-and-eBPF"><span class="nav-number">1.1.</span> <span class="nav-text">BPF and eBPF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eBPF-an-example"><span class="nav-number">1.2.</span> <span class="nav-text">eBPF: an example</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1041,7 +1047,7 @@
     
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">122k</span>
+    <span title="Symbols count total">132k</span>
   
 
   
@@ -1052,7 +1058,7 @@
     
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">4:04</span>
+    <span title="Reading time total">4:24</span>
   
 </div>
 

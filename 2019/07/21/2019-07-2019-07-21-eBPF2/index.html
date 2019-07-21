@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="使用信号量解决这样的问题 某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。">
-<meta name="keywords" content="test">
+  <meta name="description" content="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例 翻译博文https://sematext.com/blog/linux-kernel-observability-ebpf/  最新的Linux内核版本配备了强大的Linux监控框架，用于内核检测。 它源于历史上被称为BPF的东西。 What is BPF?BPF（Berkeley Packet Filter）是一种非常有效的网络数据包过">
+<meta name="keywords" content="Tracing,eBPF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信号量应用实例">
-<meta property="og:url" content="https://wwyf.github.io/2018/07/13/2018-07-2018-07-13-信号量应用实例/index.html">
+<meta property="og:title" content="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例">
+<meta property="og:url" content="https://wwyf.github.io/2019/07/21/2019-07-2019-07-21-eBPF2/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="使用信号量解决这样的问题 某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。">
+<meta property="og:description" content="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例 翻译博文https://sematext.com/blog/linux-kernel-observability-ebpf/  最新的Linux内核版本配备了强大的Linux监控框架，用于内核检测。 它源于历史上被称为BPF的东西。 What is BPF?BPF（Berkeley Packet Filter）是一种非常有效的网络数据包过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T03:33:37.284Z">
+<meta property="og:updated_time" content="2019-07-21T04:13:23.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信号量应用实例">
-<meta name="twitter:description" content="使用信号量解决这样的问题 某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。">
+<meta name="twitter:title" content="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例">
+<meta name="twitter:description" content="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例 翻译博文https://sematext.com/blog/linux-kernel-observability-ebpf/  最新的Linux内核版本配备了强大的Linux监控框架，用于内核检测。 它源于历史上被称为BPF的东西。 What is BPF?BPF（Berkeley Packet Filter）是一种非常有效的网络数据包过">
 
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/2018/07/13/2018-07-2018-07-13-信号量应用实例/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/07/21/2019-07-2019-07-21-eBPF2/">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>信号量应用实例 | Blog</title>
+  <title>eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例 | Blog</title>
   
 
 
@@ -392,7 +392,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/07/13/2018-07-2018-07-13-信号量应用实例/">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/07/21/2019-07-2019-07-21-eBPF2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
@@ -409,7 +409,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">信号量应用实例
+          <h2 class="post-title" itemprop="name headline">eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例
 
               
             
@@ -435,24 +435,12 @@
                 
               
 
-              <time title="Created: 2018-07-13 00:20:57" itemprop="dateCreated datePublished" datetime="2018-07-13T00:20:57+08:00">2018-07-13</time>
+              <time title="Created: 2019-07-21 12:11:14 / Modified: 12:13:23" itemprop="dateCreated datePublished" datetime="2019-07-21T12:11:14+08:00">2019-07-21</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
               
             
           </span>
@@ -469,7 +457,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/eBPF/" itemprop="url" rel="index"><span itemprop="name">eBPF</span></a></span>
 
                 
                 
@@ -484,8 +472,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/13/2018-07-2018-07-13-信号量应用实例/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/13/2018-07-2018-07-13-信号量应用实例/" itemprop="commentCount"></span>
+                <a href="/2019/07/21/2019-07-2019-07-21-eBPF2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/21/2019-07-2019-07-21-eBPF2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -493,7 +481,7 @@
 
           
           
-            <span id="/2018/07/13/2018-07-2018-07-13-信号量应用实例/" class="leancloud_visitors" data-flag-title="信号量应用实例">
+            <span id="/2019/07/21/2019-07-2019-07-21-eBPF2/" class="leancloud_visitors" data-flag-title="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -518,7 +506,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1.2k</span>
+                <span title="Symbols count in article">9.9k</span>
               
 
               
@@ -532,7 +520,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">2 mins.</span>
+                <span title="Reading time">20 mins.</span>
               
             </div>
           
@@ -552,40 +540,53 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="使用信号量解决这样的问题"><a href="#使用信号量解决这样的问题" class="headerlink" title="使用信号量解决这样的问题"></a>使用信号量解决这样的问题</h2><blockquote>
-<p>某操作系统支持信号量机制，系统中有一组进程A、B、C、D和E共5个合作进程，它们中各有一个操作，分别记为a, b, c, d和e，这些操作需要按下面的时序推进：操作a完成后才可以开始操作b和操作c；操作b完成后才可以开始操作d，操作c和操作d完成后才能开始操作e。请在这5个进程的程序中描述如何利用信号量实现规定的同步，要求说明用到几个信号量，每个信号量的初值是什么。 </p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="eBPF-入门2-eBPF-介绍-捕获系统调用实例"><a href="#eBPF-入门2-eBPF-介绍-捕获系统调用实例" class="headerlink" title="eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例"></a>eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例</h1><blockquote>
+<p>翻译博文<br><a href="https://sematext.com/blog/linux-kernel-observability-ebpf/" target="_blank" rel="noopener">https://sematext.com/blog/linux-kernel-observability-ebpf/</a></p>
 </blockquote>
-<h2 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h2><p>使用信号量实现一些进程的按序执行，一般可以按照这样的做法。</p>
-<p>若B进程必须等候A进程的进行，以下是简单的代码说明</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">s a_finished = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">A</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* a */</span></span><br><span class="line"></span><br><span class="line">    V(a_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* b  */</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="这一道题"><a href="#这一道题" class="headerlink" title="这一道题"></a>这一道题</h2><h3 id="使用到的信号量"><a href="#使用到的信号量" class="headerlink" title="使用到的信号量"></a>使用到的信号量</h3><p>注意，使用的都是计数信号量</p>
-<table>
-<thead>
-<tr>
-<th>信号量名称</th>
-<th>信号量作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a_finished</td>
-<td>将“a已完成任务”作为一种信号，给进程B，进程C领取</td>
-</tr>
-<tr>
-<td>b_finished</td>
-<td>“b已完成任务”，告诉d进程</td>
-</tr>
-<tr>
-<td>c_finished</td>
-<td>“c已完成任务”，告诉e进程</td>
-</tr>
-<tr>
-<td>d_finished</td>
-<td>“d已完成任务”，告诉e进程</td>
-</tr>
-</tbody>
-</table>
-<h3 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">s a_finished = <span class="number">0</span>;</span><br><span class="line">s b_finished = <span class="number">0</span>;</span><br><span class="line">s c_finished = <span class="number">0</span>;</span><br><span class="line">s d_finished = <span class="number">0</span>;</span><br><span class="line">s e_finished = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">A</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* a */</span></span><br><span class="line"></span><br><span class="line">    V(a_finished);</span><br><span class="line">    V(a_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* b  */</span></span><br><span class="line"></span><br><span class="line">    V(b_finished);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">C</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(a_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* c */</span></span><br><span class="line"></span><br><span class="line">    V(c_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">D</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(b_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* d */</span></span><br><span class="line"></span><br><span class="line">    V(d_finished);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">E</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P(d_finished);</span><br><span class="line">    P(c_finished);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* e */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    parbegin(A(),B(),C(),D(),E());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最新的Linux内核版本配备了强大的Linux监控框架，用于内核检测。 它源于历史上被称为BPF的东西。</p>
+<h2 id="What-is-BPF"><a href="#What-is-BPF" class="headerlink" title="What is BPF?"></a>What is BPF?</h2><p>BPF（Berkeley Packet Filter）是一种非常有效的网络数据包过滤机制，旨在避免不必要的用户空间分配。 它直接在内核域中对网络分组数据进行操作。 最熟悉的BPF功能应用与tcpdump工具中使用的过滤器表达式有关。 在引擎盖下，表达式被编译并透明地转换为BPF字节码。 然后将该字节码加载到内核中并应用于原始网络数据包流(raw socket)，从而有效地将那些满足过滤条件的数据包传递给用户空间。</p>
+<h2 id="What-is-eBPF"><a href="#What-is-eBPF" class="headerlink" title="What is eBPF?"></a>What is eBPF?</h2><p>eBPF是BPF Linux可观察性系统的扩展和增强版本。将其视为加强版的BPF。使用eBPF，可以将自定义沙盒字节码附加到几乎每个通过内核符号表导出的函数，而不必担心破坏内核。事实上，eBPF强调跨越用户空间边界时安全的重要性。如果检测到无效指针解引用或达到最大堆栈大小限制，则内核验证程序将拒绝加载任何eBPF程序。不允许循环（除了在编译时已知常量上限的循环），并且只允许在生成的字节码中调用特定eBPF辅助函数的一小部分子集。 eBPF程序保证在某个时间点终止，并且永远不会耗尽系统资源，而内核模块不会导致系统不稳定或导致可怕的内核恐慌。相反，与“自由”内核模块提供的相比，有些人可能会发现eBPF限制性太强，但权衡可能更有利于eBPF而不是“面向模块”的工具，这主要是因为eBPF程序不能损害内核的保证。然而，这不是唯一的好处。</p>
+<h2 id="Why-use-eBPF-for-Linux-monitoring"><a href="#Why-use-eBPF-for-Linux-monitoring" class="headerlink" title="Why use eBPF for Linux monitoring?"></a>Why use eBPF for Linux monitoring?</h2><p>作为Linux内核的核心部分，eBPF不依赖于任何第三方模块或外部依赖项。 它强加了一个稳定的ABI（应用程序二进制接口），使得在较旧的内核上构建的程序可以在较新的内核版本上运行。 eBPF引起的性能开销通常可以忽略不计，因此非常适合应用程序监控和跟踪重载系统。 Windows用户没有eBPF，但他们可以使用Windows事件跟踪。</p>
+<p>eBPF非常灵活，能够跟踪所有主要Linux子系统的几乎任何方面，包括CPU调度程序，内存管理器，网络，系统调用，块设备请求等。 几乎没有极限。</p>
+<p>您可以通过终端运行此命令找到可跟踪符号的完整列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/kallsyms</span><br></pre></td></tr></table></figure>
+<p>上面的命令会产生巨大的输出。 如果我们只对系统调用接口感兴趣，那么一些grep magic将帮助过滤掉不需要的符号名称：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[root@wyf-room wyf]# cat /proc/kallsyms | grep -w -E &quot;sys_.*&quot;</span><br><span class="line">ffffffff8d8afc20 T sys_ni_syscall</span><br><span class="line">ffffffff8def39e0 t sys_dmi_field_show</span><br><span class="line">ffffffff8def3b90 t sys_dmi_modalias_show</span><br><span class="line">ffffffff8e6001c0 R sys_call_table</span><br><span class="line">ffffffff8ea9a280 d sys_table</span><br><span class="line">ffffffff8eaf0ac0 d sys_dmi_attribute_groups</span><br><span class="line">ffffffff8eaf0ae0 d sys_dmi_attribute_group</span><br><span class="line">ffffffff8eaf0b20 d sys_dmi_modalias_attr</span><br><span class="line">ffffffff8eaf0b40 d sys_dmi_chassis_asset_tag_attr</span><br><span class="line">ffffffff8eaf0b80 d sys_dmi_chassis_serial_attr</span><br><span class="line">ffffffff8eaf0bc0 d sys_dmi_chassis_version_attr</span><br><span class="line">ffffffff8eaf0c00 d sys_dmi_chassis_type_attr</span><br><span class="line">ffffffff8eaf0c40 d sys_dmi_chassis_vendor_attr</span><br><span class="line">ffffffff8eaf0c80 d sys_dmi_board_asset_tag_attr</span><br><span class="line">ffffffff8eaf0cc0 d sys_dmi_board_serial_attr</span><br><span class="line">ffffffff8eaf0d00 d sys_dmi_board_version_attr</span><br><span class="line">ffffffff8eaf0d40 d sys_dmi_board_name_attr</span><br><span class="line">ffffffff8eaf0d80 d sys_dmi_board_vendor_attr</span><br><span class="line">ffffffff8eaf0dc0 d sys_dmi_product_family_attr</span><br><span class="line">ffffffff8eaf0e00 d sys_dmi_product_sku_attr</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>不同类型的挂钩点负责对内核中触发的不同事件做出反应。 在特定存储器地址处执行内核例程，数据包的到达或用户空间代码的调用都是通过将eBPF程序分别附加到kprobes，XDP程序到分组入口路径以及分别将用户空间进程附加到用户空间进程而可捕获的事件的示例。</p>
+<blockquote>
+<p>(上面那段不是很会翻译，放上原文) Different types of hook points are responsible for reacting to events being triggered inside the kernel. The execution of the kernel routine at specific memory address, arrival of a network packet or invocation of user space code are all examples of events trappable by attaching eBPF programs to kprobes, XDP programs to packet ingress paths and uprobes to user space processes respectively.</p>
+</blockquote>
+<p>在Sematext，我们对eBPF非常兴奋，并正在探索在服务器监控和容器可见性的背景下利用其功能的方法。 继续阅读。</p>
+<p>让我们深入一点，看看如何构建eBPF程序并将其加载到内核中。</p>
+<h2 id="Anatomy-of-a-Linux-eBPF-Program"><a href="#Anatomy-of-a-Linux-eBPF-Program" class="headerlink" title="Anatomy of a Linux eBPF Program"></a>Anatomy of a Linux eBPF Program</h2><p>在我们开始进一步解释eBPF程序的结构之前，值得一提的是BCC（BPF编译器集合） - 一个抽象字节码加载的工具包，并提供Python和Lua语言的绑定以与底层的eBPF基础设施互操作。 它还包含许多有用的工具，可以让您大概了解通过eBPF能够实现的功能。</p>
+<p>过去，BPF程序是通过原始BPF指令集指令手工生成生成的字节码。 幸运的是，clang编译器（LLVM前端的一部分）可以将C转换为eBPF字节码，并使我们免于使用BPF指令。 截至今天，它是唯一可以产生 eBPF字节码的编译器，尽管也可以从<a href="https://unhandledexpression.com/general/rust/2018/02/02/poc-compiling-to-ebpf-from-rust.html" target="_blank" rel="noopener">Rust生成eBPF字节码</a>。</p>
+<p>成功编译eBPF程序并生成目标文件后，我们就可以将其注入内核。 为此，引入了新的bpf系统调用。 除了加载eBPF字节码之外，这个看似简单的系统调用还有很多功能。 它创建和操作内核映射（稍后将详细介绍Map），这是eBPF基础架构最引人注目的功能之一。 你可以通过阅读bpf手册页（man 2 bpf）来了解更多。</p>
+<p>当用户空间进程决定通过调用bpf系统调用来推送eBPF字节码时，内核将对其进行验证，然后将JIT（转换为机器代码）指令转换为等效的目标体系结构指令集。 结果代码将非常快！ 如果由于任何原因JIT编译器不可用，内核将回退到不具备上述裸机性能的解释器。</p>
+<h2 id="Linux-eBPF-Example"><a href="#Linux-eBPF-Example" class="headerlink" title="Linux eBPF Example"></a>Linux eBPF Example</h2><p>我们现在看一个Linux eBPF程序的例子。 我们的目标是将<strong>捕获setns系统调用</strong>。 进程在希望加入一个新的隔离命名空间时调用此系统调用，该命名空间是在构建子进程描述符之后创建的（子进程可以通过在clone syscall参数中指定标志的位掩码来控制它应该从父进程取消链接的命名空间）。 此系统调用通常用于为进程提供系统资源的隔离概述，例如TCP堆栈，挂载点，PID编号空间等。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/kconfig.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/sched.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/version.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/bpf.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> SEC</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SEC(NAME)                  </span></span><br><span class="line">  __attribute__((section(NAME), used))</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">SEC(<span class="string">"kprobe/sys_setns"</span>)</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kprobe__sys_setns</span><span class="params">(struct pt_regs *ctx)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">char</span> _license[] SEC(<span class="string">"license"</span>) = <span class="string">"GPL"</span>;</span><br><span class="line">__u32 _<span class="function">version <span class="title">SEC</span><span class="params">(<span class="string">"version"</span>)</span> </span>= <span class="number">0xFFFFFFFE</span>;</span><br></pre></td></tr></table></figure>
+<p>以上是最小的eBPF程序。 它由不同的部分组成。 首先，我们包含各种内核头文件，其中包含多种数据类型的定义。 我们还声明了用于在对象文件中生成section的SEC宏，这些section将会稍后由ELF BPF加载器解释。 如果加载程序找不到许可证和版本部分，则会抱怨，因此我们需要提供这两个部分。</p>
+<p>现在是我们的eBPF程序中最有趣的部分 - setns系统调用的实际挂钩点。 通过使用kprobe__前缀启动函数名并绑定相应的SEC宏，我们指示内核虚拟机将检测回调附加到sys_setns符号，该符号将触发我们的eBPF程序，并在每次调度syscall时执行函数体内的代码。 每个eBPF程序都有一个执行上下文。 对于内核探测器，这是处理器寄存器（pt_regs结构）的当前状态，它包含libc在从用户到内核空间转换时放置的函数参数。 要编译程序（llvm和clang应该安装并正确配置），我们可以使用以下命令（请注意你需要通过LINUX_HEADERS env变量指定内核头的路径）其中clang将生成我们的中间LLVM表示 程序和LLVM编译器将生成最终的eBPF字节码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ clang -D__KERNEL__ -D__ASM_SYSREG_H</span><br><span class="line">         -Wunused</span><br><span class="line">         -Wall</span><br><span class="line">         -Wno-compare-distinct-pointer-types</span><br><span class="line">         -Wno-pointer-sign</span><br><span class="line">         -O2 -S -emit-llvm ns.c</span><br><span class="line">         -I $LINUX_HEADERS/source/include</span><br><span class="line">         -I $LINUX_HEADERS/source/include/generated/uapi</span><br><span class="line">         -I $LINUX_HEADERS/source/arch/x86/include</span><br><span class="line">         -I $LINUX_HEADERS/build/include</span><br><span class="line">         -I $LINUX_HEADERS/build/arch/x86/include</span><br><span class="line">         -I $LINUX_HEADERS/build/include/uapi</span><br><span class="line">         -I $LINUX_HEADERS/build/include/generated/uapi</span><br><span class="line">         -I $LINUX_HEADERS/build/arch/x86/include/generated</span><br><span class="line">         -o - | llc -march=bpf -filetype=obj -o ns.o</span><br></pre></td></tr></table></figure>
+<p>您可以使用readelf工具来查看ELF部分和目标文件的符号表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ readelf -a -S ns.o</span><br><span class="line">…</span><br><span class="line"> 2: 0000000000000000         0 NOTYPE  GLOBAL DEFAULT        4 _license</span><br><span class="line"> 3: 0000000000000000         0 NOTYPE  GLOBAL DEFAULT        5 _version</span><br><span class="line"> 4: 0000000000000000         0 NOTYPE  GLOBAL DEFAULT        3 kprobe__sys_setns</span><br></pre></td></tr></table></figure>
+<p>上面的输出证明符号表是按预期构建的。 我们有一个有效的eBPF目标文件，现在是时候将它加载到内核中并看到魔术发生了。</p>
+<h2 id="Attaching-eBPF-Programs-with-Go"><a href="#Attaching-eBPF-Programs-with-Go" class="headerlink" title="Attaching eBPF Programs with Go"></a>Attaching eBPF Programs with Go</h2><p>我们已经提到了BCC以及如何在为eBPF提供好用的接口的同时完成繁重的工作。 为了构建和运行eBPF程序，BCC需要在目标节点上安装LLVM和内核头文件，有时我们可能无法进行权衡。 在这种情况下，如果我们可以运送在二进制文件的数据段中的结果ELF对象并最大化跨机器的可移植性，那将是理想的。</p>
+<p>除了为libbcc提供绑定外，gobpf包还能够从预编译的字节码加载eBPF程序。 如果我们将它与可以在Go应用程序中嵌入blob的packr等工具结合起来，我们就拥有了所有需要的成分来分配我们的二进制文件，并且运行时依赖性为零。</p>
+<p>我们将略微修改eBPF程序，以便在触发kprobe时将其打印到内核跟踪管道。 为简洁起见，我们不会包含printt宏的定义以及其他eBPF辅助函数，但您可以在此头文件中找到它们。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SEC(<span class="string">"kprobe/sys_setns"</span>)</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kprobe__sys_setns</span><span class="params">(struct pt_regs *ctx)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> fd = (<span class="keyword">int</span>)PT_REGS_PARM1(ctx);</span><br><span class="line">  <span class="keyword">int</span> pid = bpf_get_current_pid_tgid() &gt;&gt; <span class="number">32</span>;</span><br><span class="line">  printt(<span class="string">"process with pid %d joined ns through fd %d"</span>, pid, fd);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在我们可以开始编写处理eBPF字节码加载的Go代码。 我们将在gobpf上实现一个小抽象（KprobeTracer）：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">"bytes"</span></span><br><span class="line">  <span class="string">"errors"</span></span><br><span class="line">  <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line">  bpflib <span class="string">"github.com/iovisor/gobpf/elf"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> KprobeTracer <span class="keyword">struct</span> &#123;</span><br><span class="line">  <span class="comment">// bytecode is the byte stream with embedded eBPF program</span></span><br><span class="line">  bytecode []<span class="keyword">byte</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// eBPF module associated with this tracer. The module is a  collection of maps, probes, etc.</span></span><br><span class="line">  mod *bpflib.Module</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewKprobeTracer</span><span class="params">(bytecode []<span class="keyword">byte</span>)</span> <span class="params">(*KprobeTracer, error)</span></span> &#123;</span><br><span class="line">   mod := bpflib.NewModuleFromReader(bytes.NewReader(bytecode))</span><br><span class="line">   <span class="keyword">if</span> mod == <span class="literal">nil</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">nil</span>, errors.New(<span class="string">"ebpf is not supported"</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> KprobeTracer&#123;mod: mod, bytecode: bytecode&#125;, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// EnableAllKprobes enables all kprobes/kretprobes in the module. The argument</span></span><br><span class="line"><span class="comment">// determines the maximum number of instances of the probed functions the can</span></span><br><span class="line"><span class="comment">// be handled simultaneously.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(t *KprobeTracer)</span> <span class="title">EnableAllKprobes</span><span class="params">(maxActive <span class="keyword">int</span>)</span> <span class="title">error</span></span> &#123;</span><br><span class="line"></span><br><span class="line">  params := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]*bpflib.PerfMap)</span><br><span class="line"></span><br><span class="line">  err := t.mod.Load(params)</span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> fmt.Errorf(<span class="string">"unable to load module: %v"</span>, err)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  err = t.mod.EnableKprobes(maxActive)</span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> fmt.Errorf(<span class="string">"cannot initialize kprobes: %v"</span>, err)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们准备引导内核探针跟踪器:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">"log"</span></span><br><span class="line">  <span class="string">"github.com/gobuffalo/packr"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  box := packr.NewBox(<span class="string">"/directory/to/your/object/files"</span>)</span><br><span class="line">  bytecode, err := box.Find(<span class="string">"ns.o"</span>)</span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">      log.Fatal(err)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ktracer, err := NewKprobeTracer(bytecode)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">     log.Fatal(err)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> err := ktracer.EnableAllKprobes(<span class="number">10</span>); err != <span class="literal">nil</span> &#123;</span><br><span class="line">     log.Fatal(err)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用<code>sudo cat /sys/kernel/debug/tracing/trace_pipe</code>  读取推送到管道的调试信息。 测试eBPF程序的最简单方法是将其附加到正在运行的Docker容器中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it nginx /bin/bash</span><br></pre></td></tr></table></figure>
+<p>在幕后，容器运行时将bash进程重新关联到nginx容器的命名空间。 我们通过PT_REGS_PARM1宏捕获的第一个参数是命名空间的文件描述符，该文件描述符用<code>/proc/&lt;pid&gt;/ns</code>目录中的符号链接表示。 好极了！ 因此，我们可以在每次进程加入命名空间时进行监视。 它可能不是非常有用的东西，但它说明了捕获系统调用执行并访问其参数是多么容易。</p>
+<h2 id="Using-eBPF-Maps"><a href="#Using-eBPF-Maps" class="headerlink" title="Using eBPF Maps"></a>Using eBPF Maps</h2><p>将结果写入跟踪管道有利于调试，但对于生产环境，我们肯定需要一种更复杂的机制来在用户和内核空间之间共享状态。 这就是eBPF的Map有用的地方。 它们代表了用于数据聚合的非常有效的内核键/值存储，并且可以从用户空间异步访问。 有许多类型的eBPF MAP，但对于这个特定的用例，我们将依赖BPF_MAP_TYPE_PERF_EVENT_ARRAY地图。 它可以存储通过perf事件环缓冲区推送的自定义结构，并广播到用户空间进程。</p>
+<p>Go-bpf允许将perf MAP创建和事件流传输到提供的Go通道。 我们可以添加以下代码来将C结构传输到我们的程序中。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">rxChan := <span class="built_in">make</span>(<span class="keyword">chan</span> []<span class="keyword">byte</span>)</span><br><span class="line">lostChan := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">uint64</span>)</span><br><span class="line">pmap, err := bpflib.InitPerfMap(</span><br><span class="line">  t.mod,</span><br><span class="line">  mapName,</span><br><span class="line">  rxChan,</span><br><span class="line">  lostChan,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> quit, err</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> _, found := t.maps[mapName]; !found &#123;</span><br><span class="line">  t.maps[mapName] = pmap</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">for</span> &#123;</span><br><span class="line">     <span class="keyword">select</span> &#123;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">case</span> pe := &lt;-rxChan:</span><br><span class="line">        nsJoin := (*C.struct_ns_evt_t)(unsafe.Pointer(&amp;(*pe)[<span class="number">0</span>]))</span><br><span class="line">        log.Info(nsJoin)</span><br><span class="line"></span><br><span class="line">     <span class="keyword">case</span> l := &lt;-lostChan:</span><br><span class="line">        <span class="keyword">if</span> lost != <span class="literal">nil</span> &#123;</span><br><span class="line">           lost(l)</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line">pmap.PollStart()</span><br></pre></td></tr></table></figure>
+<p>我们初始化接收器和丢失事件通道，并将它们与模块引用和我们应该使用的事件的perf映射的名称一起传递给<code>InitPerfMap</code>函数。 每次在接收器通道上推送新事件时，我们将原始指针转换为我们的eBPF程序中定义的C struct（ns_evt_t）。 我们还需要声明一个perf map并通过bpf_perf_event_output helper生成结构：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> bpf_map_def SEC(<span class="string">"maps/ns"</span>) ns_map = &#123;</span><br><span class="line">  .<span class="keyword">type</span> = BPF_MAP_TYPE_HASH,</span><br><span class="line">  .key_size = sizeof(u32),</span><br><span class="line">  .value_size = sizeof(<span class="keyword">struct</span> ns_evt_t),</span><br><span class="line">  .max_entries = <span class="number">1024</span>,</span><br><span class="line">  .pinning = <span class="number">0</span>,</span><br><span class="line">  .namespace = <span class="string">""</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> ns_evt_t evt = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Initialize structure fields.*/</span></span><br><span class="line">u32 cpu = bpf_get_smp_processor_id();</span><br><span class="line">bpf_perf_event_output(ctx, &amp;ns_map,</span><br><span class="line">                     cpu,</span><br><span class="line">                     &amp;evt, sizeof(evt));</span><br></pre></td></tr></table></figure>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>eBPF不断发展并得到更广泛的采用。 随着每个内核的发布，新功能和改进正在得到解决。 低开销和本机可编程性支持使其对各种用例非常有吸引力。 例如，Suricata入侵检测系统使用它在Linux网络堆栈的早期阶段实现高级套接字负载平衡策略和数据包过滤。 Cilium严重依赖eBPF来为容器提供复杂的安全策略。 Sematext Agent利用eBPF精确定位有趣的事件，例如杀死信号广播或用于Docker和Kubernetes监控的OOM通知，以及定期服务器监控。 它还通过使用eBPF捕获TCP / UDP流量统计信息，为网络监控提供了有效的网络跟踪器。 看来eBPF的目标是通过Linux内核工具成为Linux监控的事实标准。</p>
 
       
     </div>
@@ -638,7 +639,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
+            <a href="/tags/Tracing/" rel="tag"># Tracing</a>
+          
+            <a href="/tags/eBPF/" rel="tag"># eBPF</a>
           
         </div>
       
@@ -677,8 +680,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/08/2018-07-2018-07-08-使用信号量解决互斥问题/" rel="next" title="使用信号量解决互斥问题">
-                <i class="fa fa-chevron-left"></i> 使用信号量解决互斥问题
+              <a href="/2019/07/21/2019-07-2019-07-21-eBPF1/" rel="next" title="eBPF 入门1 | Introduction to xdp and eBPF">
+                <i class="fa fa-chevron-left"></i> eBPF 入门1 | Introduction to xdp and eBPF
               </a>
             
           </div>
@@ -686,10 +689,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/26/2018-07-2018-07-26-ftp服务器-内网穿透/" rel="prev" title="ftp服务器+内网穿透">
-                ftp服务器+内网穿透 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -981,7 +980,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用信号量解决这样的问题"><span class="nav-number">1.</span> <span class="nav-text">使用信号量解决这样的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些说明"><span class="nav-number">2.</span> <span class="nav-text">一些说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这一道题"><span class="nav-number">3.</span> <span class="nav-text">这一道题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用到的信号量"><span class="nav-number">3.1.</span> <span class="nav-text">使用到的信号量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码说明"><span class="nav-number">3.2.</span> <span class="nav-text">代码说明</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#eBPF-入门2-eBPF-介绍-捕获系统调用实例"><span class="nav-number">1.</span> <span class="nav-text">eBPF 入门2 | eBPF 介绍 + 捕获系统调用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-BPF"><span class="nav-number">1.1.</span> <span class="nav-text">What is BPF?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-eBPF"><span class="nav-number">1.2.</span> <span class="nav-text">What is eBPF?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-use-eBPF-for-Linux-monitoring"><span class="nav-number">1.3.</span> <span class="nav-text">Why use eBPF for Linux monitoring?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anatomy-of-a-Linux-eBPF-Program"><span class="nav-number">1.4.</span> <span class="nav-text">Anatomy of a Linux eBPF Program</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-eBPF-Example"><span class="nav-number">1.5.</span> <span class="nav-text">Linux eBPF Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attaching-eBPF-Programs-with-Go"><span class="nav-number">1.6.</span> <span class="nav-text">Attaching eBPF Programs with Go</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-eBPF-Maps"><span class="nav-number">1.7.</span> <span class="nav-text">Using eBPF Maps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">1.8.</span> <span class="nav-text">Conclusion</span></a></li></ol></li></ol></div>
             
 
           </div>
