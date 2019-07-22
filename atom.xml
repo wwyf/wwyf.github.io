@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyf.github.io/"/>
-  <updated>2019-07-21T08:19:46.212Z</updated>
+  <updated>2019-07-22T06:00:28.249Z</updated>
   <id>https://wwyf.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>k8s初部署</title>
+    <link href="https://wwyf.github.io/2019/07/22/2019-07-2019-07-22-k8s%E5%88%9D%E9%83%A8%E7%BD%B2/"/>
+    <id>https://wwyf.github.io/2019/07/22/2019-07-2019-07-22-k8s初部署/</id>
+    <published>2019-07-22T05:58:53.000Z</published>
+    <updated>2019-07-22T06:00:28.249Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="在kubernete上部署服务"><a href="#在kubernete上部署服务" class="headerlink" title="在kubernete上部署服务"></a>在kubernete上部署服务</h1><ol><li>部署kubernetes dashboard</li><li>部署sockshop</li><li>部署拓扑关系的那个服务</li><li>部署docker版的bbc（或eBPF）</li></ol><p>[toc]</p><h2 id="关于国内源"><a href="#关于国内源" class="headerlink" title="关于国内源"></a>关于国内源</h2><ol><li>dockerhub速度很低，可使用该方式解决：<ol><li><a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">daocloud</a></li><li><code>curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io</code></li><li>一条命令，让docker的镜像源设置为daocloud</li></ol></li><li>kubernetes的各种镜像源的替代选择，参考 <a href="https://xuxinkun.github.io/2019/06/11/cn-registry/" target="_blank" rel="noopener">link</a> <a href="https://github.com/Azure/container-service-for-azure-china/tree/master/aks#22-container-registry-proxy" target="_blank" rel="noopener">Azure</a></li></ol><table><thead><tr><th style="text-align:left">global</th><th style="text-align:left">proxy in China</th><th style="text-align:left">format</th><th style="text-align:left">example</th></tr></thead><tbody><tr><td style="text-align:left"><a href="https://xuxinkun.github.io/2019/06/11/cn-registry/hub.docker.com" target="_blank" rel="noopener">dockerhub</a>(docker.io)</td><td style="text-align:left"><a href="http://mirror.azk8s.cn/help/docker-registry-proxy-cache.html" target="_blank" rel="noopener">dockerhub.azk8s.cn</a></td><td style="text-align:left"><code>dockerhub.azk8s.cn/&lt;repo-name&gt;/&lt;image-name&gt;:&lt;version&gt;</code></td><td style="text-align:left"><code>dockerhub.azk8s.cn/microsoft/azure-cli:2.0.61``dockerhub.azk8s.cn/library/nginx:1.15</code></td></tr><tr><td style="text-align:left">gcr.io</td><td style="text-align:left"><a href="http://mirror.azk8s.cn/help/gcr-proxy-cache.html" target="_blank" rel="noopener">gcr.azk8s.cn</a></td><td style="text-align:left"><code>gcr.azk8s.cn/&lt;repo-name&gt;/&lt;image-name&gt;:&lt;version&gt;</code></td><td style="text-align:left"><code>gcr.azk8s.cn/google_containers/hyperkube-amd64:v1.13.5</code></td></tr><tr><td style="text-align:left">quay.io</td><td style="text-align:left"><a href="http://mirror.azk8s.cn/help/quay-proxy-cache.html" target="_blank" rel="noopener">quay.azk8s.cn</a></td><td style="text-align:left"><code>quay.azk8s.cn/&lt;repo-name&gt;/&lt;image-name&gt;:&lt;version&gt;</code></td><td style="text-align:left"><code>quay.azk8s.c</code></td></tr></tbody></table><blockquote><p>Note: k8s.gcr.io would redirect to <code>gcr.io/google-containers</code>, following image urls are identical:<br><code>k8s.gcr.io/XXX</code> -&gt; <code>gcr.azk8s.cn/google-containers/XXXXX</code></p></blockquote><h2 id="部署kubernetes-dashboard"><a href="#部署kubernetes-dashboard" class="headerlink" title="部署kubernetes dashboard"></a>部署kubernetes dashboard</h2><p><a href="https://github.com/kubernetes/dashboard" target="_blank" rel="noopener">link</a></p><p>官网教程是这个：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml</span><br></pre></td></tr></table></figure><p>其实kubeasz默认就部署好了。不过我就是一直访问不了，没想到踩坑了。</p><p>坑点：</p><ol><li>镜像不要用k8s.grc.io，连不上的</li><li>安全机制似乎做得很好，我必须在集群里才能够访问，集群外的话就访问不了<br>注意这个accept-hosts选项， 我以前没有设置，就一直访问不上去。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl proxy --address=&apos;0.0.0.0&apos; --accept-hosts=&apos;^*$&apos;</span><br></pre></td></tr></table></figure></li></ol><h2 id="部署-Weave"><a href="#部署-Weave" class="headerlink" title="部署 Weave"></a>部署 Weave</h2><p><a href="https://www.weave.works/docs/scope/latest/installing/#k8s" target="_blank" rel="noopener">link</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">kubectl apply -f &quot;https://cloud.weave.works/k8s/scope.yaml?k8s-version=$(kubectl version | base64 | tr -d &apos;\n&apos;)&quot;</span><br></pre></td></tr></table></figure><h2 id="部署sockshop"><a href="#部署sockshop" class="headerlink" title="部署sockshop"></a>部署sockshop</h2><p><a href="https://github.com/microservices-demo/microservices-demo" target="_blank" rel="noopener">https://github.com/microservices-demo/microservices-demo</a><br><a href="https://microservices-demo.github.io/deployment/kubernetes-start.html" target="_blank" rel="noopener">https://microservices-demo.github.io/deployment/kubernetes-start.html</a></p><p>Deploy Sock ShopClone the microservices-demo repositoryGo to the deploy/kubernetes folder</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl create namespace sock-shop</span><br><span class="line">kubectl apply -f complete-demo.yaml</span><br></pre></td></tr></table></figure><p>还需要使用这条指令看看端口</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get service -n sock-shop</span><br></pre></td></tr></table></figure><p>能够看到以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">root@v0:~/microservices-demo/deploy/kubernetes# kubectl get service -n sock-shop</span><br><span class="line">NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE</span><br><span class="line">carts          ClusterIP   10.68.94.55     &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">carts-db       ClusterIP   10.68.180.121   &lt;none&gt;        27017/TCP      5d14h</span><br><span class="line">catalogue      ClusterIP   10.68.231.124   &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">catalogue-db   ClusterIP   10.68.156.86    &lt;none&gt;        3306/TCP       5d14h</span><br><span class="line">front-end      NodePort    10.68.65.34     &lt;none&gt;        80:30001/TCP   5d14h</span><br><span class="line">orders         ClusterIP   10.68.228.228   &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">orders-db      ClusterIP   10.68.86.56     &lt;none&gt;        27017/TCP      5d14h</span><br><span class="line">payment        ClusterIP   10.68.171.122   &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">queue-master   ClusterIP   10.68.50.241    &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">rabbitmq       ClusterIP   10.68.253.8     &lt;none&gt;        5672/TCP       5d14h</span><br><span class="line">shipping       ClusterIP   10.68.24.98     &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">user           ClusterIP   10.68.151.220   &lt;none&gt;        80/TCP         5d14h</span><br><span class="line">user-db        ClusterIP   10.68.67.241    &lt;none&gt;        27017/TCP      5d14h</span><br><span class="line">root@v0:~/microservices-demo/deploy/kubernetes#</span><br></pre></td></tr></table></figure><p>可以看到前端使用NodePort的方式对外展示。端口为30001</p><p>等待部署完成还需要一点时间，大概机器比较菜吧，等了10多分钟才部署完。</p><h2 id="排查问题：coreDNS"><a href="#排查问题：coreDNS" class="headerlink" title="排查问题：coreDNS"></a>排查问题：coreDNS</h2><p>发现coreDNS老是OOMKilled ?????</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl edit -n kube-system deployment.apps/coredns</span><br><span class="line">kubectl edit -n kube-system replicaset.apps/coredns-55f46dd959</span><br></pre></td></tr></table></figure><p>尝试修改了内存上限。</p><p>未果，尚待解决</p><h2 id="部署docker版的eBPF"><a href="#部署docker版的eBPF" class="headerlink" title="部署docker版的eBPF"></a>部署docker版的eBPF</h2><p>想起来，docker本身的隔离机制，似乎并不影响BPF程序注入内核。这就给这个 monitoring-as-a-service 的实现提供了理论保证。</p><p>TODO：尚待解决</p><h2 id="一些奇怪的地方"><a href="#一些奇怪的地方" class="headerlink" title="一些奇怪的地方"></a>一些奇怪的地方</h2><p>pod 删除的时候卡住，可以了解一下这个：</p><p><a href="https://stackoverflow.com/questions/35453792/pods-stuck-in-terminating-status" target="_blank" rel="noopener">https://stackoverflow.com/questions/35453792/pods-stuck-in-terminating-status</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;在kubernete上部署服务&quot;&gt;&lt;a href=&quot;#在kuber
+      
+    
+    </summary>
+    
+      <category term="K8s" scheme="https://wwyf.github.io/categories/K8s/"/>
+    
+    
+      <category term="K8s" scheme="https://wwyf.github.io/tags/K8s/"/>
+    
+  </entry>
   
   <entry>
     <title>eBPF 入门3 | 了解BCC与bpftrace</title>
@@ -539,31 +564,6 @@
     
     
       <category term="Distributed System" scheme="https://wwyf.github.io/tags/Distributed-System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wwyf.github.io/2019/01/12/test-2018-hello-world/"/>
-    <id>https://wwyf.github.io/2019/01/12/test-2018-hello-world/</id>
-    <published>2019-01-12T07:36:03.302Z</published>
-    <updated>2019-01-12T07:36:03.302Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test-imag"><a href="#test-imag" class="headerlink" title="test imag"></a>test imag</h2><p><img src="https://i.loli.net/2018/01/24/5a6875a4acc53.png" alt="这是使用公共图床上传的图片"></p><!-- ![](figure/2018-04-21-16-26-20.png) --><img src="/2019/01/12/test-2018-hello-world/2018-04-21-16-26-20.png" title="test"><h2 id="test-math"><a href="#test-math" class="headerlink" title="test math"></a>test math</h2><p>$$ a^2 = b $$</p><h2 id="test-chinese"><a href="#test-chinese" class="headerlink" title="test chinese"></a>test chinese</h2><p>这是中文。</p><h2 id="换了个头像"><a href="#换了个头像" class="headerlink" title="换了个头像"></a>换了个头像</h2><p><img src="http://blog.wwyf.top/logo.jpg" alt=""></p><h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><p>可以在<code>_posts</code>文件夹下创建自己的文件夹，然后hexo是不会管你的文件夹的！<br>继续测试。</p><p><img src="2018-05-05-11-31-29.png" alt="测试文件夹下放图片"></p><p>使用 typora的话，设置图片根目录后可以很方便的复制粘贴图片。</p><p><img src="1525494633350.png" alt="1525494633350"></p><h2 id="写好了一个脚本"><a href="#写好了一个脚本" class="headerlink" title="写好了一个脚本"></a>写好了一个脚本</h2><p>这个脚本用来自动创建一个新页面，并且填写yml模板信息</p><h2 id="测试脚注"><a href="#测试脚注" class="headerlink" title="测试脚注"></a>测试脚注</h2><p>脚注是<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="用来测试的脚注">[1]</span></a></sup></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">用来测试的脚注<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;head
-      
-    
-    </summary>
-    
-      <category term="test" scheme="https://wwyf.github.io/categories/test/"/>
-    
-    
-      <category term="test" scheme="https://wwyf.github.io/tags/test/"/>
     
   </entry>
   
