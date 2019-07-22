@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="在kubernete上部署服务 部署kubernetes dashboard 部署sockshop 部署拓扑关系的那个服务 部署docker版的bbc（或eBPF）  [toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http:/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-22T06:00:28.249Z">
+<meta property="og:updated_time" content="2019-07-22T08:26:24.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="k8s初部署">
 <meta name="twitter:description" content="在kubernete上部署服务 部署kubernetes dashboard 部署sockshop 部署拓扑关系的那个服务 部署docker版的bbc（或eBPF）  [toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http:/">
@@ -435,7 +435,7 @@
                 
               
 
-              <time title="Created: 2019-07-22 13:58:53 / Modified: 14:00:28" itemprop="dateCreated datePublished" datetime="2019-07-22T13:58:53+08:00">2019-07-22</time>
+              <time title="Created: 2019-07-22 13:58:53 / Modified: 16:26:24" itemprop="dateCreated datePublished" datetime="2019-07-22T13:58:53+08:00">2019-07-22</time>
             
 
             
@@ -614,8 +614,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl edit -n kube-system deployment.apps/coredns</span><br><span class="line">kubectl edit -n kube-system replicaset.apps/coredns-55f46dd959</span><br></pre></td></tr></table></figure>
 <p>尝试修改了内存上限。</p>
 <p>未果，尚待解决</p>
+<p>解决了！！</p>
+<p>参考链接</p>
+<p><a href="https://coredns.io/plugins/loop/#troubleshooting" target="_blank" rel="noopener">link</a><br><a href="https://blog.csdn.net/Fear_w/article/details/88242170" target="_blank" rel="noopener">link2</a></p>
+<p>修改<code>/etc/resolv.conf</code> 就好了。</p>
 <h2 id="部署docker版的eBPF"><a href="#部署docker版的eBPF" class="headerlink" title="部署docker版的eBPF"></a>部署docker版的eBPF</h2><p>想起来，docker本身的隔离机制，似乎并不影响BPF程序注入内核。这就给这个 monitoring-as-a-service 的实现提供了理论保证。</p>
-<p>TODO：尚待解决</p>
+<p>TODO：尚待实现</p>
 <h2 id="一些奇怪的地方"><a href="#一些奇怪的地方" class="headerlink" title="一些奇怪的地方"></a>一些奇怪的地方</h2><p>pod 删除的时候卡住，可以了解一下这个：</p>
 <p><a href="https://stackoverflow.com/questions/35453792/pods-stuck-in-terminating-status" target="_blank" rel="noopener">https://stackoverflow.com/questions/35453792/pods-stuck-in-terminating-status</a></p>
 
@@ -1058,7 +1062,7 @@
     
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">4:53</span>
+    <span title="Reading time total">4:54</span>
   
 </div>
 
