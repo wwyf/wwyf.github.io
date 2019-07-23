@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="在kubernete上部署服务[toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io 一条命令，让docker的镜像源设置为daocloud   kubernetes的各种镜像">
+  <meta name="description" content="在kubernete上部署服务 部署kubernetes dashboard 部署sockshop 部署拓扑关系的那个服务 部署docker版的bbc（或eBPF）  [toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http:/">
 <meta name="keywords" content="K8s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="k8s初部署">
 <meta property="og:url" content="https://wwyf.github.io/2019/07/22/2019-07-2019-07-22-k8s初部署/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="在kubernete上部署服务[toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io 一条命令，让docker的镜像源设置为daocloud   kubernetes的各种镜像">
+<meta property="og:description" content="在kubernete上部署服务 部署kubernetes dashboard 部署sockshop 部署拓扑关系的那个服务 部署docker版的bbc（或eBPF）  [toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http:/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-22T11:25:32.224Z">
+<meta property="og:updated_time" content="2019-07-23T03:43:18.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="k8s初部署">
-<meta name="twitter:description" content="在kubernete上部署服务[toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io 一条命令，让docker的镜像源设置为daocloud   kubernetes的各种镜像">
+<meta name="twitter:description" content="在kubernete上部署服务 部署kubernetes dashboard 部署sockshop 部署拓扑关系的那个服务 部署docker版的bbc（或eBPF）  [toc] 关于国内源 dockerhub速度很低，可使用该方式解决： daocloud curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http:/">
 
 
 
@@ -435,12 +435,24 @@
                 
               
 
-              <time title="Created: 2019-07-22 13:58:53 / Modified: 19:25:32" itemprop="dateCreated datePublished" datetime="2019-07-22T13:58:53+08:00">2019-07-22</time>
+              <time title="Created: 2019-07-22 13:58:53" itemprop="dateCreated datePublished" datetime="2019-07-22T13:58:53+08:00">2019-07-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-23 11:43:18" itemprop="dateModified" datetime="2019-07-23T11:43:18+08:00">2019-07-23</time>
               
             
           </span>
@@ -540,7 +552,13 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="在kubernete上部署服务"><a href="#在kubernete上部署服务" class="headerlink" title="在kubernete上部署服务"></a>在kubernete上部署服务</h1><p>[toc]</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="在kubernete上部署服务"><a href="#在kubernete上部署服务" class="headerlink" title="在kubernete上部署服务"></a>在kubernete上部署服务</h1><ol>
+<li>部署kubernetes dashboard</li>
+<li>部署sockshop</li>
+<li>部署拓扑关系的那个服务</li>
+<li>部署docker版的bbc（或eBPF）</li>
+</ol>
+<p>[toc]</p>
 <h2 id="关于国内源"><a href="#关于国内源" class="headerlink" title="关于国内源"></a>关于国内源</h2><ol>
 <li>dockerhub速度很低，可使用该方式解决：<ol>
 <li><a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">daocloud</a></li>
@@ -593,6 +611,8 @@
 <li>安全机制似乎做得很好，我必须在集群里才能够访问，集群外的话就访问不了<br>注意这个accept-hosts选项， 我以前没有设置，就一直访问不上去。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl proxy --address=&apos;0.0.0.0&apos; --accept-hosts=&apos;^*$&apos;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>然后有一个issue，注意一下</p>
+<p><a href="https://github.com/kubernetes/dashboard/issues/2735" target="_blank" rel="noopener">https://github.com/kubernetes/dashboard/issues/2735</a></p>
 <h2 id="部署-Weave"><a href="#部署-Weave" class="headerlink" title="部署 Weave"></a>部署 Weave</h2><p><a href="https://www.weave.works/docs/scope/latest/installing/#k8s" target="_blank" rel="noopener">link</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">kubectl apply -f &quot;https://cloud.weave.works/k8s/scope.yaml?k8s-version=$(kubectl version | base64 | tr -d &apos;\n&apos;)&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="部署sockshop"><a href="#部署sockshop" class="headerlink" title="部署sockshop"></a>部署sockshop</h2><p><a href="https://github.com/microservices-demo/microservices-demo" target="_blank" rel="noopener">https://github.com/microservices-demo/microservices-demo</a><br><a href="https://microservices-demo.github.io/deployment/kubernetes-start.html" target="_blank" rel="noopener">https://microservices-demo.github.io/deployment/kubernetes-start.html</a></p>
@@ -1060,7 +1080,7 @@
     
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">154k</span>
+    <span title="Symbols count total">155k</span>
   
 
   
