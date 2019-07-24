@@ -111,14 +111,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://wwyf.github.io/tags/index.html">
+  <meta name="description" content="Tracing Part2 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system - part 2  本节旨在快速概述我们编写BPF程序的各种方式以及使用BCC开源项目的一些实际示例。 编写eBPF程序最简单的方法是简单地将伪程序指令列表指定到一个数组中，直接指向托管程序">
+<meta name="keywords" content="Tracing,eBPF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tracing2">
+<meta property="og:url" content="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing2/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Tracing Part2 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system - part 2  本节旨在快速概述我们编写BPF程序的各种方式以及使用BCC开源项目的一些实际示例。 编写eBPF程序最简单的方法是简单地将伪程序指令列表指定到一个数组中，直接指向托管程序">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T02:52:44.093Z">
+<meta property="og:updated_time" content="2019-07-24T14:28:41.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="tracing2">
+<meta name="twitter:description" content="Tracing Part2 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system - part 2  本节旨在快速概述我们编写BPF程序的各种方式以及使用BCC开源项目的一些实际示例。 编写eBPF程序最简单的方法是简单地将伪程序指令列表指定到一个数组中，直接指向托管程序">
 
 
 
@@ -127,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/tags/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing2/">
 
 
 
@@ -137,7 +141,7 @@
   };
 </script>
 
-  <title>tags | Blog</title>
+  <title>tracing2 | Blog</title>
   
 
 
@@ -261,7 +265,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -366,186 +370,373 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wyf">
+      <meta itemprop="description" content="bilibala~ bilibala~">
+      <meta itemprop="image" content="/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">tags
-
-</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body han-init-context">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h2 class="post-title" itemprop="name headline">tracing2
+
               
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-                
-                  
-                
+                <span class="post-meta-item-text">Posted on</span>
               
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
+
               
                 
-                  
+              
+
+              <time title="Created: 2019-07-24 22:23:45 / Modified: 22:28:41" itemprop="dateCreated datePublished" datetime="2019-07-24T22:23:45+08:00">2019-07-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tracing/" itemprop="url" rel="index"><span itemprop="name">Tracing</span></a></span>
+
+                
                 
               
-                
-                  
-                
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/24/2019-07-2019-07-24-tracing2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/24/2019-07-2019-07-24-tracing2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/07/24/2019-07-2019-07-24-tracing2/" class="leancloud_visitors" data-flag-title="tracing2">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
               
-                
-                  
-                
+                <span class="post-meta-item-text">Views: </span>
               
-                
-                  
-                
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
               
-                
-                  
-                
+
               
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
                 
-                  
+                  <span class="post-meta-item-text">Symbols count in article: </span>
                 
+                <span title="Symbols count in article">6.4k</span>
               
-                
-                  
-                
+
               
-                
-                  
-                
+                <span class="post-meta-divider">|</span>
               
-                
-                  
-                
+
               
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
                 
-                  
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
+                <span title="Reading time">13 mins.</span>
               
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              26 tags in total
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Computer-Network/" style="font-size: 24px; color: #4f4f4f">Computer Network</a> <a href="/tags/Data-Analysis/" style="font-size: 12px; color: #ccc">Data Analysis</a> <a href="/tags/Datebase/" style="font-size: 12px; color: #ccc">Datebase</a> <a href="/tags/Distributed-System/" style="font-size: 12px; color: #ccc">Distributed System</a> <a href="/tags/High-Performance-Computing/" style="font-size: 30px; color: #111">High Performance Computing</a> <a href="/tags/Http/" style="font-size: 12px; color: #ccc">Http</a> <a href="/tags/K8s/" style="font-size: 12px; color: #ccc">K8s</a> <a href="/tags/Machine-Learning/" style="font-size: 12px; color: #ccc">Machine-Learning</a> <a href="/tags/OpenGL/" style="font-size: 12px; color: #ccc">OpenGL</a> <a href="/tags/OpenMP/" style="font-size: 15px; color: #adadad">OpenMP</a> <a href="/tags/Operating-System/" style="font-size: 12px; color: #ccc">Operating System</a> <a href="/tags/Paper/" style="font-size: 12px; color: #ccc">Paper</a> <a href="/tags/Python/" style="font-size: 18px; color: #8e8e8e">Python</a> <a href="/tags/Tools/" style="font-size: 27px; color: #303030">Tools</a> <a href="/tags/Tracing/" style="font-size: 27px; color: #303030">Tracing</a> <a href="/tags/eBPF/" style="font-size: 21px; color: #6f6f6f">eBPF</a> <a href="/tags/eBPG/" style="font-size: 12px; color: #ccc">eBPG</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/leetcode/" style="font-size: 21px; color: #6f6f6f">leetcode</a> <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a> <a href="/tags/test/" style="font-size: 30px; color: #111">test</a> <a href="/tags/try/" style="font-size: 15px; color: #adadad">try</a> <a href="/tags/多播/" style="font-size: 12px; color: #ccc">多播</a> <a href="/tags/并发/" style="font-size: 15px; color: #adadad">并发</a> <a href="/tags/广播/" style="font-size: 12px; color: #ccc">广播</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
       
       
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Tracing-Part2-Linux-中的新一代-tracing-技术"><a href="#Tracing-Part2-Linux-中的新一代-tracing-技术" class="headerlink" title="Tracing Part2 | Linux 中的新一代 tracing 技术"></a>Tracing Part2 | Linux 中的新一代 tracing 技术</h1><blockquote>
+<p>翻译自<br><a href="https://vncz.js.org/ebpf2/" target="_blank" rel="noopener">New generation tracing technologies for Linux operating system - part 2</a></p>
+</blockquote>
+<p>本节旨在快速概述我们编写BPF程序的各种方式以及使用BCC开源项目的一些实际示例。</p>
+<p>编写eBPF程序最简单的方法是简单地将伪程序指令列表指定到一个数组中，直接指向托管程序。</p>
+<p>通常，从eBPF程序创建，加载和获取结果的过程是：</p>
+<ol>
+<li>定义伪装配指令数组</li>
+<li>创建（最终）Maps，以便在eBPF程序和用户空间程序之间交换数据。</li>
+<li>加载程序，指定程序类型</li>
+<li>将程序附加到目标（套接字，Kprobe，Uprobe，静态跟踪点）</li>
+<li>收集结果。</li>
+</ol>
+<p>不幸的是，直接使用伪汇编代码可能过于复杂。</p>
+<p>例如，让我们考虑一个简单的程序，它会在被调用时递增内部计数器。 生成的伪汇编代码如下所示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bpf_insn</span> <span class="title">prog</span>[] = &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Put 0 (the map key) on the stack */</span></span><br><span class="line">BPF_ST_MEM(BPF_W, BPF_REG_10, <span class="number">-4</span>, <span class="number">0</span>),</span><br><span class="line"><span class="comment">/* Put frame pointer into R2 */</span></span><br><span class="line">BPF_MOV64_REG(BPF_REG_2, BPF_REG_10),</span><br><span class="line"><span class="comment">/* Decrement pointer by four */</span></span><br><span class="line">BPF_ALU64_IMM(BPF_ADD, BPF_REG_2, <span class="number">-4</span>),</span><br><span class="line"><span class="comment">/* Put map_fd into R1 */</span></span><br><span class="line">BPF_LD_MAP_FD(BPF_REG_1, map_fd),</span><br><span class="line"><span class="comment">/* Load current count from map into R0 */</span></span><br><span class="line">BPF_RAW_INSN(BPF_JMP | BPF_CALL, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, BPF_FUNC_map_lookup_elem),</span><br><span class="line"><span class="comment">/* If returned value NULL, skip two instructions and return */</span></span><br><span class="line">BPF_JMP_IMM(BPF_JEQ, BPF_REG_0, <span class="number">0</span>, <span class="number">2</span>),</span><br><span class="line"><span class="comment">/* Put 1 into R1 */</span></span><br><span class="line">BPF_MOV64_IMM(BPF_REG_1, <span class="number">1</span>),</span><br><span class="line"><span class="comment">/* Increment value by 1 */</span></span><br><span class="line">BPF_RAW_INSN(BPF_STX | BPF_XADD | BPF_DW, BPF_REG_0, BPF_REG_1, <span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line"><span class="comment">/* Return from program */</span></span><br><span class="line">BPF_EXIT_INSN(),</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>另一方面，如果我们考虑一个可以执行相同操作的C程序，那么就完全不同了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">counter +=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>事实证明，直接使用伪汇编代码是可行的，但它很容易搞错。 因此，用高级语言编写代码很重要，因为它更容易推理。</p>
+<p>此外，内核提供的用于处理eBPF的API非常冗长，需要大量的样板代码才能开始使用eBPF程序，</p>
+<p>幸运的是，对于我们来说，编写简单的eBPF指令和处理原始API并不是必需的。 LLVM为BFP程序提供后端：它意味着模块可以直接用C语言编写，并利用更高级库提供的功能，以及使用函数调用约定来指示程序如何操作以及在何处连接。</p>
+<h2 id="BCC"><a href="#BCC" class="headerlink" title="BCC"></a>BCC</h2><p>BCC（BPF编译器集合）是一个旨在使BPF程序更易于编写的工具包。 它隐藏了为了将BPF与您的应用程序集成而必须遵循的冗长而冗长的工作流程，也避免了有时也需要在Linux源代码树中直接编译的麻烦。</p>
+<p>该工具包提供：</p>
+<ol>
+<li>用于简化eBPF工作流程的共享库</li>
+<li>多种编程语言的绑定（Python，Lua，Go）</li>
+<li>用于跟踪正在运行的系统的单用途和多用途工具（也可作为编写BPF程序的介绍）</li>
+<li>C语言后端（由LLVM提供支持），可将代码转换为eBPF汇编指令</li>
+</ol>
+<p>基本上，我们的意思是插入一些约定，以便编写更简单的程序，并尝试尽可能地跳过处理真实的基础指令。</p>
+<p>例如，为了在特定的内核函数上附加Kprobe，我们可以简单地声明一个具有相同目标函数和kprobe<strong>前缀的函数。 换句话说，如果我们想在tcp_v4_connect上附加一个探针，我们所要做的就是声明一个名为kprobe</strong>tcp_v4_connect的函数</p>
+<p>底层编译器基础结构将负责确定要做什么（附加Kprobe）以及在何处执行（tcp_v4_connect）。 Uprobes也是如此，或者附加到跟踪点等等。</p>
+<p>它还提供处理Map和在BPF程序和用户空间之间交换数据的工具。</p>
+<p>BCC背后的整个概念是确保开发人员可以专注于编写实际的BPF程序，而不必花费太多时间来确定如何与Maps交换数据或如何确保程序正确加载到内核以及试图尽快得到真相（检测无法运行的程序并提前告知它而不是等待验证者拒绝它）。</p>
+<p>现在是一个BCC程序的基本示例，它跟踪所有IPv4连接尝试，即使它们最终失败。 读者应该很容易注意到程序的结构分为两部分：第一部分是BPF代码本身，以字符串的形式写在C中。第二部分是使用Python从程序中收集的结果 向最终用户显示数据。 用于Python的BCC库提供了许多有用的工具来显示数据并从中生成统计数据。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;uapi/linux/ptrace.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;net/sock.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bcc/proto.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">BPF_HASH(currsock, u32, struct sock *);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kprobe__tcp_v4_connect</span><span class="params">(struct pt_regs *ctx, struct sock *sk)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  u32 pid = bpf_get_current_pid_tgid();</span><br><span class="line">  currsock.update(&amp;pid, &amp;sk);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kretprobe__tcp_v4_connect</span><span class="params">(struct pt_regs *ctx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> ret = PT_REGS_RC(ctx);</span><br><span class="line">  u32 pid = bpf_get_current_pid_tgid();</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">sock</span> **<span class="title">skpp</span>;</span></span><br><span class="line">  skpp = currsock.lookup(&amp;pid);</span><br><span class="line">  <span class="keyword">if</span> (skpp == <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">// missed entry</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (ret != <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// failed to send SYNC packet, may not have populated</span></span><br><span class="line">  <span class="comment">// socket __sk_common.&#123;skc_rcv_saddr, ...&#125;</span></span><br><span class="line"></span><br><span class="line">  currsock.<span class="keyword">delete</span>(&amp;pid);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// pull in details</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sock</span> *<span class="title">skp</span> = *<span class="title">skpp</span>;</span></span><br><span class="line">u32 saddr = <span class="number">0</span>, daddr = <span class="number">0</span>;</span><br><span class="line">u16 dport = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">bpf_probe_read(&amp;saddr, <span class="keyword">sizeof</span>(saddr), &amp;skp-&gt;__sk_common.skc_rcv_saddr);</span><br><span class="line">bpf_probe_read(&amp;daddr, <span class="keyword">sizeof</span>(daddr), &amp;skp-&gt;__sk_common.skc_daddr);</span><br><span class="line">bpf_probe_read(&amp;dport, <span class="keyword">sizeof</span>(dport), &amp;skp-&gt;__sk_common.skc_dport);</span><br><span class="line"></span><br><span class="line"><span class="comment">// output</span></span><br><span class="line">bpf_trace_printk(<span class="string">"trace_tcp4connect %x %x %d\\n"</span>, saddr, daddr, ntohs(dport));</span><br><span class="line">currsock.<span class="keyword">delete</span>(&amp;pid);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">from</span> bcc <span class="keyword">import</span> BPF</span><br><span class="line"><span class="comment"># define BPF program</span></span><br><span class="line">bpf_text = <span class="string">"""</span></span><br><span class="line"><span class="string"># 如前面的c程序所示</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># initialize BPF</span></span><br><span class="line">b = BPF(text=bpf_text)</span><br><span class="line"><span class="comment"># header</span></span><br><span class="line">print(<span class="string">"%-6s %-12s %-16s %-16s %-4s"</span> % (<span class="string">"PID"</span>, <span class="string">"COMM"</span>, <span class="string">"SADDR"</span>, <span class="string">"DADDR"</span>,<span class="string">"DPORT"</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inet_ntoa</span><span class="params">(addr)</span>:</span></span><br><span class="line">    dq = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">4</span>):</span><br><span class="line">      dq = dq + str(addr &amp; <span class="number">0xff</span>)</span><br><span class="line">    <span class="keyword">if</span> (i != <span class="number">3</span>):</span><br><span class="line">      dq = dq + <span class="string">'.'</span></span><br><span class="line">      addr = addr &gt;&gt; <span class="number">8</span></span><br><span class="line">    <span class="keyword">return</span> dq</span><br><span class="line"><span class="comment"># filter and format output</span></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    <span class="comment"># Read messages from kernel pipe</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        (task, pid, cpu, flags, ts, msg) = b.trace_fields()</span><br><span class="line">        (_tag, saddr_hs, daddr_hs, dport_s) = msg.split(<span class="string">" "</span>)</span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">    <span class="comment"># Ignore messages from other tracers</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="comment"># Ignore messages from other tracers</span></span><br><span class="line">    <span class="keyword">if</span> _tag != <span class="string">"trace_tcp4connect"</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    print(<span class="string">"%-6d %-12.12s %-16s %-16s %-4s"</span> % (pid, task, inet_ntoa(int(saddr_hs, <span class="number">16</span>)), inet_ntoa(int(daddr_hs, <span class="number">16</span>)), dport_s))</span><br></pre></td></tr></table></figure>
+<h2 id="Use-case-hardware-offload"><a href="#Use-case-hardware-offload" class="headerlink" title="Use case: hardware offload"></a>Use case: hardware offload</h2><p>eBPF开辟了许多新的可能性。 然而，eBPF所获得的改进（特别是成为有状态机器的能力）也可以应用并反向移植到网络使用，提供新的有趣用例：其中我们将花费几段时间来解决附加负载到硬件上的问题。</p>
+<p>最初TCP是为不可靠的低速网络而设计的，但随着互联网在骨干传输速度方面的增长（使用光纤载波，千兆以太网和万兆以太网链路）以及更快，更可靠的接入机制（如DSL和电缆调制解调器） 每秒处理的数据量增长令人难以置信，并将继续增加。</p>
+<p>从本质上讲，网络已经成为一种应用程序总线，尽管它不是构建一个应用程序总线的理想场所。 今天的网络包含数百万个端点，物联网带来了大量的新设备。 互联网巨大且嘈杂：可能在10Gb网络上，每秒可以飞行1400万个数据包。 这应该让我们知道在不阻塞网络的情况下处理单个数据包需要多少毫秒。</p>
+<p>而且，网络的内在不可靠性使事情更加复杂化。 TCP正在为我们提供有关数据包状态的绝佳保证，但这种可靠性感会带来复杂性和开销方面的成本。指出我们进行TCP对话时背景中发生的一些事情：</p>
+<ol>
+<li>3路握手连接建立</li>
+<li>显式确认数据包</li>
+<li>校验和和序列号计算</li>
+<li>用于拥塞控制的滑动窗口</li>
+<li>连接终止</li>
+</ol>
+<p>事实证明，主机系统上的TCP软件实现需要大量的计算能力。 虽然这在消费者方面不是问题（终端用户真的不可能通过其网络活动使整个CPU和内存饱和），但这是骨干提供商目前面临的问题。</p>
+<p>多年来，人们一直都很感兴趣，研究以及尝试创建能够将对数据包的处理下放到单独的硬件的系统，实际上有两个主要原因：</p>
+<ol>
+<li>性能：要处理的数据包数量不断增加，这会使内存和CPU饱和。 迫切需要使用专用硬件进行数据包处理。</li>
+<li>网络演进：即使我们 - 作为最终用户 - 没有真正实现它，网络也在不断发展。一个很好的例子是Tcp Fast Open技术。它是由Google和其他一些人开发的，旨在大幅缩短获取网站的时间。对于大多数操作系统，TCP / IP堆栈耦合在内核中，因此工作组将TFO实现推送到上游内核。问题在于说服所有软件和硬件供应商在当前内核版本上重新设置他们的所有软件，这是他们通常尽可能避免的事情，因为突破性变化的数量可能很高。内核和TCP / IP堆栈之间的这种耦合也可能带来安全问题。有许多软件在多年的内核上运行，其中一些甚至可能在TCP / IP堆栈中存在安全问题（如TCP解析器中的某些内容），这使得这些系统非常容易受到攻击。这个问题迫使Google和Facebook等大公司提出在用户空间中移动整个TCP / IP堆栈的想法，而不是在内核中。</li>
+</ol>
+<p>之前曾尝试在Linux内核中推广通用的网络负载下放 - 但是唯一成功的网络可下放的范围非常有限。</p>
+<p>第一次尝试是TOE（TCP offload 引擎） - 一种使用内核补丁允许系统将部分TCP处理（特别是标头）offload到专用硬件的提议。 然而，内核开发人员反对这项技术有几个原因，包括：</p>
+<ol>
+<li>硬件的局限性：有时候，即使专用硬件加快了数据包处理速度，实际上PCI总线并不像今天这么快，导致新的瓶颈令人沮丧</li>
+<li>安全性：专用硬件中的错误可能会危及整个系统，并且它打破了内核始终可以访问所有资源的假设</li>
+<li>复杂性：启用此技术后，内核提供的某些重要服务（如服务质量）不起作用</li>
+<li>专有：为了启用此引擎，仍然需要一个与硬件供应商配合使用的自定义网络驱动程序，并且大部分时间都是封闭源。</li>
+</ol>
+<p>eBPF在桌面上带来了新的可能性，提供了一个标准的统一框架，可以为内核提供一般的卸载机制，原因多种多样; 特别是其中：</p>
+<ol>
+<li>它是一个定义良好的语言和机器，具有受限的资源，寄存器和指令集。 它的功能是众所周知的，所以有一种标准化的方法。</li>
+<li>它是数据包处理中不同工具的构建块（例如tf和XDP，它们正是系统中我们可能希望卸载处理的点）</li>
+<li>eBPF旨在并行运行</li>
+</ol>
+<p>编程模型通过验证器几乎遵循与普通BFP程序相同的路径，唯一改变的是JIT，因为编译的代码应该适合将要执行它的设备。</p>
+<p>许多验证者基础设施通常在翻译过程中重新使用; 这个原因激发了将内部验证器数据结构暴露给外部分析器的想法。 鉴于内核是开源的，很容易找到发生这种分离的提交SHA。</p>
+<p>但是，大多数情况下内置验证程序是不够的，因为您可能需要进行自定义验证，例如验证当前网卡是否能够执行代码。 此时，供应商通常会扩展验证程序，从网卡收集数据（此过程称为大写读取）并检查支持的指令集以及可以加载的最大图像大小。</p>
+<p>如果由于某种原因，网卡无法处理特定的BPF程序，最好的办法是回退到CPU上的常规软件处理。</p>
+<p>您可以对数据包执行的操作和操作范围是扩展的，它取决于卡，但统一正在进行中。 最常见的包括</p>
+<ol>
+<li>ALU指令</li>
+<li>数据包修改（在元数据字段，标头和有效负载上）</li>
+<li>重定向/删除/通行证</li>
+<li>基本地图（用于统计和信息收集）</li>
+<li>结合上面列出的所有操作。</li>
+</ol>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wechat.jpg" alt="wyf WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="wyf Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tracing/" rel="tag"># Tracing</a>
+          
+            <a href="/tags/eBPF/" rel="tag"># eBPF</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+            <span class="post-meta-divider">|</span>
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/2019-07-2019-07-24-tracing1/" rel="next" title="tracing1">
+                <i class="fa fa-chevron-left"></i> tracing1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -579,8 +770,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -808,6 +1008,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tracing-Part2-Linux-中的新一代-tracing-技术"><span class="nav-number">1.</span> <span class="nav-text">Tracing Part2 | Linux 中的新一代 tracing 技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BCC"><span class="nav-number">1.1.</span> <span class="nav-text">BCC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-case-hardware-offload"><span class="nav-number">1.2.</span> <span class="nav-text">Use case: hardware offload</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1433,6 +1650,25 @@
 
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 16021,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
   
@@ -1454,7 +1690,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#more");
   
   </script>
 

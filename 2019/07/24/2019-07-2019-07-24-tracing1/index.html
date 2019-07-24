@@ -111,25 +111,18 @@
 
 
 
-  <meta name="description" content="matlibplot 相关题目在这节课中，老师给我们讲了python中matplotlib库的用法，基于这些，我完成了以下三道习题。 第一题  该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。 1234567891011x = np.linspace(0,2,50)y = np.sin(x-2) * np.sin(x-2) * np.exp(-x**2)p">
-<meta name="keywords" content="Python">
+  <meta name="description" content="Tracing Part1 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system  在软件工程中，跟踪是通过将程序附加到受控系统中的各种探测点并收集信息来检查和记录有关软件执行的信息的能力。 此信息通常由软件开发人员用于调试目的，以及系统管理员用于保持对系统本身的控制。">
+<meta name="keywords" content="Tracing,eBPF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="matlibplot.pyplot的使用">
-<meta property="og:url" content="https://wwyf.github.io/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/index.html">
+<meta property="og:title" content="tracing1">
+<meta property="og:url" content="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing1/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="matlibplot 相关题目在这节课中，老师给我们讲了python中matplotlib库的用法，基于这些，我完成了以下三道习题。 第一题  该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。 1234567891011x = np.linspace(0,2,50)y = np.sin(x-2) * np.sin(x-2) * np.exp(-x**2)p">
+<meta property="og:description" content="Tracing Part1 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system  在软件工程中，跟踪是通过将程序附加到受控系统中的各种探测点并收集信息来检查和记录有关软件执行的信息的能力。 此信息通常由软件开发人员用于调试目的，以及系统管理员用于保持对系统本身的控制。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-Aae8ozqHe9Y/WwmYqG774oI/AAAAAAAAIBs/Xxt9JYakSLkQcixclsrdCLn03a3r7dUUgCHMYCw/s0/Acrobat_2018-05-27_01-26-00.png">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-GAGUouCHD5Q/WwmZBaFnWgI/AAAAAAAAIB0/2gHHcX9ycZwNrudSTXXPHVlTJ75XPgZCgCHMYCw/s0/Typora_2018-05-27_01-27-34.png">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-pW38bOuWQ1o/WwmZK6-93RI/AAAAAAAAIB4/_HaQ0cbw2i0QG6oN_x2fqjdhjYIxQdUpgCHMYCw/s0/Acrobat_2018-05-27_01-28-12.png">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-QnpNTzDT-aY/WwmZRBpPQtI/AAAAAAAAIB8/2-FK9r2_ydsjxG92OL-DlpHz8LnG08GXwCHMYCw/s0/Typora_2018-05-27_01-28-38.png">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-zggHcCV9uGY/WwmZWNuaN9I/AAAAAAAAICA/C7Je5XQCUnMAJsVZVFKdEthfpe6ERRhtwCHMYCw/s0/Acrobat_2018-05-27_01-28-57.png">
-<meta property="og:image" content="https://lh3.googleusercontent.com/-TTnRiT58NZ4/WwmZc7MENhI/AAAAAAAAICI/mhozONBX_NgNSE6KLCHSLX006flazqbEQCHMYCw/s0/Snipaste_2018-05-27_01-29-24.png">
-<meta property="og:updated_time" content="2019-01-12T03:33:37.284Z">
+<meta property="og:updated_time" content="2019-07-24T14:28:41.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="matlibplot.pyplot的使用">
-<meta name="twitter:description" content="matlibplot 相关题目在这节课中，老师给我们讲了python中matplotlib库的用法，基于这些，我完成了以下三道习题。 第一题  该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。 1234567891011x = np.linspace(0,2,50)y = np.sin(x-2) * np.sin(x-2) * np.exp(-x**2)p">
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/-Aae8ozqHe9Y/WwmYqG774oI/AAAAAAAAIBs/Xxt9JYakSLkQcixclsrdCLn03a3r7dUUgCHMYCw/s0/Acrobat_2018-05-27_01-26-00.png">
+<meta name="twitter:title" content="tracing1">
+<meta name="twitter:description" content="Tracing Part1 | Linux 中的新一代 tracing 技术 翻译自New generation tracing technologies for Linux operating system  在软件工程中，跟踪是通过将程序附加到受控系统中的各种探测点并收集信息来检查和记录有关软件执行的信息的能力。 此信息通常由软件开发人员用于调试目的，以及系统管理员用于保持对系统本身的控制。">
 
 
 
@@ -138,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://wwyf.github.io/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/">
+  <link rel="canonical" href="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing1/">
 
 
 
@@ -148,7 +141,7 @@
   };
 </script>
 
-  <title>matlibplot.pyplot的使用 | Blog</title>
+  <title>tracing1 | Blog</title>
   
 
 
@@ -399,7 +392,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/">
+    <link itemprop="mainEntityOfPage" href="https://wwyf.github.io/2019/07/24/2019-07-2019-07-24-tracing1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wyf">
@@ -416,7 +409,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">matlibplot.pyplot的使用
+          <h2 class="post-title" itemprop="name headline">tracing1
 
               
             
@@ -442,24 +435,12 @@
                 
               
 
-              <time title="Created: 2018-05-26 19:02:35" itemprop="dateCreated datePublished" datetime="2018-05-26T19:02:35+08:00">2018-05-26</time>
+              <time title="Created: 2019-07-24 21:46:48 / Modified: 22:28:41" itemprop="dateCreated datePublished" datetime="2019-07-24T21:46:48+08:00">2019-07-24</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-12 11:33:37" itemprop="dateModified" datetime="2019-01-12T11:33:37+08:00">2019-01-12</time>
               
             
           </span>
@@ -476,7 +457,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tracing/" itemprop="url" rel="index"><span itemprop="name">Tracing</span></a></span>
 
                 
                 
@@ -491,8 +472,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/" itemprop="commentCount"></span>
+                <a href="/2019/07/24/2019-07-2019-07-24-tracing1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/24/2019-07-2019-07-24-tracing1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -500,7 +481,7 @@
 
           
           
-            <span id="/2018/05/26/2018-05-2018-05-26-matlibplot-pyplot的使用/" class="leancloud_visitors" data-flag-title="matlibplot.pyplot的使用">
+            <span id="/2019/07/24/2019-07-2019-07-24-tracing1/" class="leancloud_visitors" data-flag-title="tracing1">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -525,7 +506,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">1.5k</span>
+                <span title="Symbols count in article">8.1k</span>
               
 
               
@@ -539,7 +520,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">3 mins.</span>
+                <span title="Reading time">16 mins.</span>
               
             </div>
           
@@ -559,26 +540,94 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="matlibplot-相关题目"><a href="#matlibplot-相关题目" class="headerlink" title="matlibplot 相关题目"></a>matlibplot 相关题目</h1><p>在这节课中，老师给我们讲了python中<code>matplotlib</code>库的用法，基于这些，我完成了以下三道习题。</p>
-<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p><img src="https://lh3.googleusercontent.com/-Aae8ozqHe9Y/WwmYqG774oI/AAAAAAAAIBs/Xxt9JYakSLkQcixclsrdCLn03a3r7dUUgCHMYCw/s0/Acrobat_2018-05-27_01-26-00.png" alt=""></p>
-<!-- [t1] -->
-<p>该题需要我们在$ [0,2] $这个区间内画出这个函数的图，并且增加一些适合的标签和题目。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">2</span>,<span class="number">50</span>)</span><br><span class="line">y = np.sin(x<span class="number">-2</span>) * np.sin(x<span class="number">-2</span>) * np.exp(-x**<span class="number">2</span>)</span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.xlabel(<span class="string">"x"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"y"</span>)</span><br><span class="line">plt.ylim(<span class="number">-0.1</span>, <span class="number">1</span>)</span><br><span class="line">plt.title(<span class="string">r"$f(x) = sin^2(x-2)e^&#123;-x^2&#125;$"</span>)</span><br><span class="line">plt.annotate(<span class="string">'local max'</span>, xy=(<span class="number">0.22</span>, <span class="number">0.9</span>), xytext=(<span class="number">0.13</span>, <span class="number">0.5</span>),</span><br><span class="line">            arrowprops=dict(facecolor=<span class="string">'black'</span>, shrink=<span class="number">0.05</span>))</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>运行的结果可见下图</p>
-<p><img src="https://lh3.googleusercontent.com/-GAGUouCHD5Q/WwmZBaFnWgI/AAAAAAAAIB0/2gHHcX9ycZwNrudSTXXPHVlTJ75XPgZCgCHMYCw/s0/Typora_2018-05-27_01-27-34.png" alt=""></p>
-<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>这一道题的题目可见：</p>
-<p><img src="https://lh3.googleusercontent.com/-pW38bOuWQ1o/WwmZK6-93RI/AAAAAAAAIB4/_HaQ0cbw2i0QG6oN_x2fqjdhjYIxQdUpgCHMYCw/s0/Acrobat_2018-05-27_01-28-12.png" alt=""></p>
-<p>在这里，题目要求我们自己给出方程的$y = Xb+z$各个量的值，然后使用$X$和$y$去反过来估计出原来的$b$。</p>
-<p>根据题目提示，此处为多元线性回归模型，使用最小二乘法即可，在<code>scipy</code>模块中有<code>leastsq</code>函数，可以用来寻找此种回归模型的解。于是我的代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">X = np.random.normal(loc=<span class="number">5</span>,scale=<span class="number">5</span>,size=(<span class="number">20</span>,<span class="number">10</span>))</span><br><span class="line">b = np.random.normal(loc=<span class="number">0</span>,scale=<span class="number">5</span>,size=<span class="number">10</span>)</span><br><span class="line">z = np.random.normal(size=<span class="number">20</span>)</span><br><span class="line">y = np.dot(X,b) + z</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始向量</span></span><br><span class="line">b_e = np.ones(<span class="number">10</span>)</span><br><span class="line">print(b_e)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 误差函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error</span><span class="params">(p,xxx,yyy)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.dot(xxx,p)-yyy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最小二乘法</span></span><br><span class="line">b_e,cost=leastsq(error,b_e,args=(X,y)) </span><br><span class="line"></span><br><span class="line">plt.figure(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">"index"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"value"</span>)</span><br><span class="line">plt.plot(b, <span class="string">'rx'</span>, label=<span class="string">"True coefficients"</span>)</span><br><span class="line">plt.plot(b_e, <span class="string">'b'</span>, label=<span class="string">"Estimated coefficients"</span>)</span><br><span class="line">plt.legend(bbox_to_anchor=(<span class="number">1.05</span>, <span class="number">1</span>), loc=<span class="number">2</span>, borderaxespad=<span class="number">0.</span>)</span><br><span class="line">plt.axis([<span class="number">0</span>,<span class="number">9</span>,<span class="number">-10</span>,<span class="number">10</span>])</span><br><span class="line">plt.hlines(<span class="number">0</span>,<span class="number">0</span>,<span class="number">9</span> ,colors = <span class="string">"c"</span>, linestyles = <span class="string">"dashed"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>运行后，结果可见下图</p>
-<p><img src="https://lh3.googleusercontent.com/-QnpNTzDT-aY/WwmZRBpPQtI/AAAAAAAAIB8/2-FK9r2_ydsjxG92OL-DlpHz8LnG08GXwCHMYCw/s0/Typora_2018-05-27_01-28-38.png" alt=""></p>
-<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p>该题题面如下：</p>
-<p><img src="https://lh3.googleusercontent.com/-zggHcCV9uGY/WwmZWNuaN9I/AAAAAAAAICA/C7Je5XQCUnMAJsVZVFKdEthfpe6ERRhtwCHMYCw/s0/Acrobat_2018-05-27_01-28-57.png" alt=""></p>
-<p>这一道题主要要求我们掌握关于直方图的绘制以及核函数密度估计的方法。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.normal(scale=<span class="number">100</span>, size=<span class="number">10000</span>)</span><br><span class="line">kernel = stats.gaussian_kde(data)</span><br><span class="line">full_data = np.linspace(<span class="number">-500</span>,<span class="number">500</span>,<span class="number">10000</span>)</span><br><span class="line">est_data = kernel.evaluate(full_data)</span><br><span class="line">plt.figure(<span class="number">3</span>)</span><br><span class="line">plt.hist(data, <span class="number">30</span>, density=<span class="keyword">True</span>)</span><br><span class="line">plt.plot(full_data, est_data)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>运行的结果可见下图：</p>
-<p><img src="https://lh3.googleusercontent.com/-TTnRiT58NZ4/WwmZc7MENhI/AAAAAAAAICI/mhozONBX_NgNSE6KLCHSLX006flazqbEQCHMYCw/s0/Snipaste_2018-05-27_01-29-24.png" alt=""></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Tracing-Part1-Linux-中的新一代-tracing-技术"><a href="#Tracing-Part1-Linux-中的新一代-tracing-技术" class="headerlink" title="Tracing Part1 | Linux 中的新一代 tracing 技术"></a>Tracing Part1 | Linux 中的新一代 tracing 技术</h1><blockquote>
+<p>翻译自<br><a href="https://vncz.js.org/ebpf/" target="_blank" rel="noopener">New generation tracing technologies for Linux operating system</a></p>
+</blockquote>
+<p>在软件工程中，跟踪是通过将程序附加到受控系统中的各种探测点并收集信息来检查和记录有关软件执行的信息的能力。 此信息通常由软件开发人员用于调试目的，以及系统管理员用于保持对系统本身的控制。</p>
+<p>在系统的不同级别上存在许多探测点：它们可以在我能深入检查的函数执行，例如，调用某个函数的参数; 它们可以放在内核中，例如，进入系统并由系统处理的网络数据包; 我们可以检查正在创建/暂停/终止的进程; 但它们也可以是应用程序级事件，如垃圾收集器的调用（如果由运行时环境提供），方法调用和依赖于运行时的事件（如NodeJS的http请求）。</p>
+<p>无论来源如何，每当出现上述有趣事件之一时，跟踪工具允许我们执行某些有用的操作，例如在控制台上打印消息，检查事件的上下文，收集一些统计信息（系统需要多长时间处理 一个网络数据包或运行垃圾收集器），以便我们可以清楚地知道发生了什么。</p>
+<p>所有跟踪工具最重要的要求之一是对系统的低开销。 如果跟踪工具使得系统速度减慢，那么获得的指标可能会产生误导。 此外，跟踪工具意味着在生产和开发模式下连续运行 。因此我们必须在系统上具有非常低开销的tracing工具。</p>
+<p>多年来，很多跟踪工具和技术已经为Linux开发出来。 在增加的开销，易用性，他们能够提取的信息水平以及提供的功能以及最重要的限制方面，有些人比其他人更好; 所以 - 在进入eBPF之前（并理解为什么需要另外的跟踪技术），对Linux中的跟踪环境进行高级概述是有益的。</p>
+<h2 id="Kernel-level-tracing-technologies-overview"><a href="#Kernel-level-tracing-technologies-overview" class="headerlink" title="Kernel level tracing technologies overview"></a>Kernel level tracing technologies overview</h2><p>有了某些内核技术，跟踪才得以进行。 最重要的是，我们有一些用户空间跟踪工具，它们使用上述作为构建块从系统中提取信息并收集有用的数据。</p>
+<h3 id="Trace-points"><a href="#Trace-points" class="headerlink" title="Trace points"></a>Trace points</h3><p>Linux内核中有一种机制已经存在至少10年，称为静态跟踪点。 跟踪点是一个驻留在内核代码中的静态占位符，内核的特定部分的开发人员认为它可以作为挂钩点用于调试代码。</p>
+<p>静态指的是它是一个固定点。 跟踪点的数量及其位置实际上取决于内核版本，更重要的是取决于内核开发人员对该特定区域的看法。 截至今天，当前内核版本有超过700个跟踪点，当然，所有这些都是无操作（即 - 没有执行任何操作）。</p>
+<p>跟踪点真的是多种多样的，包括调度程序事件（新进程创建，进程切换，进程分支），网络事件（进入数据包，数据包出去），文件系统和阻塞IO事件（读，写）等内容。 每个内核系统调用甚至都有跟踪点（这是程序从内核请求服务的程序化方式，形成进程和操作系统之间的基本接口）。 所有内核版本都在其文档中包含可用跟踪点列表。</p>
+<p>内核提供API（通过一组头文件）以便于使用这些跟踪点。 这些头包含一组宏，可用于设置内核模块以响应特定事件。 也可以根据我们的需要定义一个事件类（基本上是一组事件），并为整个类指定一个唯一的处理程序（将要执行的函数）。</p>
+<p>目前几乎所有可用的跟踪工具都可以使用跟踪点附加到所需事件，收集信息并执行有用的统计和分析。</p>
+<p>此外，Trace Point概念也到了系统的更高层次。 各种运行时环境实现了我们可以附加到其中并从中收集信息的详细跟踪点。 例如，在NodeJS中，您可以跟踪何时调用垃圾收集器，何时调用函数，或何时创建类对象，或何时发生IO阻塞操作。</p>
+<p>静态跟踪点的流行和易用性导致它们被放置在许多常见的服务器应用程序中，包括MySQL和PostgreSQL等数据库，您可以使用query<strong>start和query</strong>done跟踪点检查查询执行时间。</p>
+<p>Trace Point的最大限制是，正如其名称所示，它们的静态特性。 如果我们有兴趣跟踪原始开发人员在跟踪点放置期间没有真正考虑的软件的特定区域，我们唯一的可能性是分叉源代码，放置所需的跟踪点并运行fork来收集数据。 希望应该可以回馈主分支，但这可能是一个漫长的过程。</p>
+<p>如果软件是封闭源代码，我们的可能性更小：唯一的方法是联系供应商并开始交易以获得软件的自定义构建，或等待更新。</p>
+<h3 id="Dynamic-Probes"><a href="#Dynamic-Probes" class="headerlink" title="Dynamic Probes"></a>Dynamic Probes</h3><p>Kprobes和Uprobes是内核中内置的另一种机制。 这些已经存在了一段时间，可用于动态探测系统。</p>
+<p>Kprobes和Uprobes不是将静态挂钩点放入内核或编程语言运行时环境或服务器应用程序中，而是允许我们在开发过程中随意选择函数，并在它之上附加程序，而无需在软件中进行任何准备或预置代码。 它既可以是用户空间功能（Uprobes），也可以是内核模块功能（Kprobes）。</p>
+<p>它的工作方式与调试器断点非常相似：每当遇到探测时，都会抛出异常; 一个特殊的异常处理程序将捕获异常并执行与我们附加的探测相关的操作。</p>
+<p>上面有一种替代实现方式更有效：不是抛出导致从内核空间到用户空间的上下文切换的异常（如果谈论Kprobe），只需用提供处理程序的跳转指令替换探测器。</p>
+<p>Kprobes和Uprobes共享许多基础架构和功能集。 但是，由于它们在用户或内核空间中工作，因此存在一些小差异：</p>
+<ol>
+<li>Kprobes是全局性的，而Uprobes是本地的。 Uprobe专门附加在正在创建的进程上，不会影响其他正在运行的进程。 另一方面，Kprobes是全局的，因为它们直接附加在内核函数上，通常，不能保证获得进程句柄。</li>
+<li>Uprobes支持动作和过滤的条件执行 - 此外，在用户空间上附加多个探测是一种预期的方案。</li>
+</ol>
+<h2 id="User-Level-Tracing-Tools"><a href="#User-Level-Tracing-Tools" class="headerlink" title="User Level Tracing Tools"></a>User Level Tracing Tools</h2><p>由于跟踪点和探测都是内核级技术，因此利用这些技术需要编写一个内核模块，该模块将附加到所选事件并以某种方式将其导出到最终用户应用程序 - 或最终在模块本身中收集数据。</p>
+<p>显然，编写内核模块通常不是一个好主意，必须认真对待：即使是最小的错误也可能导致内核panic（这意味着系统停止），而且，处理内核模块意味着大多数隔离过程模型提供的保证可能不可用。</p>
+<p>因此，当您编写内核模块时，您获得的所有跟踪信息不仅限于您当前的进程或shell：相反，您将获得可能不感兴趣的进程和子系统的事件。</p>
+<p>此外，内核跟踪路径是全局的：如果另一个程序使用上面列出的某种内核技术启动跟踪过程，它最终可能会覆盖您的跟踪例程。</p>
+<p>幸运的是，这种内核级技术并不是由用户直接使用。 这绝对是可能的，但其背后的目的是提供构建块来创建更精确和复杂的通用工具，能够从系统收集信息，而无需编写任何代码并保留完全从用户空间工作的可能性。</p>
+<p>我们将快速浏览两个最着名的，但是，正如您在上一张图片中可能已经注意到的那样，跟踪工具还有很多。</p>
+<h3 id="perf"><a href="#perf" class="headerlink" title="perf"></a>perf</h3><p> perf是Linux用户的主要跟踪工具。 它的源代码在Linux内核中，因此您可以通过基本安装获得它。 它最初被设想为从系统性能计数器收集信息的简单工具，但它的功能集一点一点地增加并成为通用的跟踪工具。 它以相对有效的方式将所有收集的数据转储到文件（perf.data），最终可以在以后发布。</p>
+<p> 它错过了一些高级功能（例如，它不能执行功能流程，因为它具有更好的安全性/错误检查功能，因此不那么容易破解）。 它仍然可以进行分析（采样），CPU性能计数器，用户级堆栈转换，并且它可以使用debuginfo进行本地变量的行跟踪。 它还支持多个并发用户。</p>
+<h3 id="ftrace"><a href="#ftrace" class="headerlink" title="ftrace"></a>ftrace</h3><p>ftrace是一个内核跟踪器，允许您监视内核的许多不同区域和活动。 即使它随内核一起提供，它也是独立开发的，其发布周期比内核本身更快。 实际上，每两到三个周期就会将新版本拉入内核树。</p>
+<p>此工具从驻留在/sys/kernel/debug/tracing中的特殊文件系统读取数据。此目录包含多个文件，这些文件表示我们要跟踪的系统部分。 阅读该文件的内容是我们检查系统并弄清楚发生了什么所需要的全部内容。</p>
+<p>还有一个更高级别的工具trace-cmd为您打开ftrace的输出文件，并找出我们可以使用命令行参数查询的有趣事件。</p>
+<h3 id="Performance-limitations"><a href="#Performance-limitations" class="headerlink" title="Performance limitations"></a>Performance limitations</h3><p>这些工具（以及其他工具）都基于将收集的信息直接写入文件的概念。 为了提取我们需要的信息，我们必须将所有这些文件加载到后处理应用程序中（或最终传输这些文件），解析当前行，更新统计信息，然后移动到下一行。 不幸的是，如果所需的统计信息非常具体，您可能需要编写我们自己的后期处理应用程序。</p>
+<p>只要后处理在一台单独的机器上进行就可以了（最好不要在生产中 - 或者至少在单独的过程中），但是如果我们想要收集实时数据，那么它实际上效率很低，所以完全不适用于 实时场景。</p>
+<h2 id="eBPF"><a href="#eBPF" class="headerlink" title="eBPF"></a>eBPF</h2><p>eBPF（代表扩展的Berkley数据包过滤器）是一种相对较新的内核技术（它自3.15起正式成为内核的一部分，但其大多数功能都是在以下内核版本中引入的），旨在提供统一的跟踪解决方案以及克服所有问题 和当前跟踪工具的限制。</p>
+<p>BPF代表Berkley Packet Filtering  -  eBPF诞生的原始技术，它比Linux内核本身存在的时间更长。</p>
+<p>BPF背后的想法是提供一种分析和过滤网络数据包的方法，以便通过用户空间程序提供的简单无状态表达式进行监控。 此表达式一旦附加到目标套接字，将确保通过该套接字的每个数据包将针对它进行测试。</p>
+<p>根据表达式求值返回的（布尔值），可以执行多个动作：丢弃数据包，记录数据包或让数据包继续处理管道。</p>
+<p>不同的工具可以直接使用BPF表达式（tcpdump，wireshark），但是当然任何用户程序都可能使用套接字API附加自定义BPF程序。 由于这种机制，开发起来非常简单，例如，在最终应用程序甚至可以看到它们之前，每个应用程序防火墙消除了数据包。</p>
+<p>最初的BFP发行版以用户空间库的形式出现，但由于性能原因，很快决定将其移入内核：网络数据包处理必须非常高效。</p>
+<p>当网络流量很高时，在将不需要的数据包发送到用户空间之前过滤掉有很多潜在的性能提升：移动通用数据结构（不仅限于套接字，它也可以是文件描述符或内存） 从内核空间到用户空间不仅仅是复制一些内存区域的问题。 它还需要从数据结构本身修剪无用/无法访问的信息，更新进程的资源引用计数器以及使资源通过整个操作系统安全管道。 在内核空间中丢弃数据包（一般来说，避免将内容发送到用户空间），特别是当负载很高时，可以带来显着的性能提升。</p>
+<p>显然，BPF程序运行起来非常重要，因为在高流量情况下，每个开销都会在很大程度上影响性能。</p>
+<p>由于这种“移动”，BPF现在也在内核内部的多个区域内使用（内部数据包过滤，用于流量控制的数据包分类器等）。</p>
+<p>幸运的是，BPF被定义为虚拟机，它几乎是图灵完整且兼容的，只有两个寄存器：累加器和索引。 该机器还有一个小内存区域，隐含地包含正在处理的数据包和有限的指令集。</p>
+<p>这意味着每条BPF指令都可以轻松映射到x86指令序列，并且两个寄存器可以直接映射到CPU寄存器上 - 这表明不是解析表达式并在运行时对其进行评估，而是从BPF生成本机指令 计划是一种可行的方式。</p>
+<p>的确，那件事发生了。 多年来，内核维护人员开始考虑将过滤表达式编译为最流行的体系结构（X86，X64，ARM，PowerPC）的高度优化的机器代码，而不是在运行时解析和执行它们。这是是一个好主意：BFP将成为 基本上很少的本机程序将被加载到内核并以机器速度执行的程序了。</p>
+<p>这需要开发一个JIT编译器，该编译器最终在2011年作为内核补丁登陆，并且最初只适用于x86-64架构。 （公平地说，这不是一场特别的革命，因为自2005年以来FreeBSD一直在使用JIT进行BPF计划）</p>
+<p>回到跟踪工具：虽然这些工具继续发展很大，但是内核仍然缺乏可编写脚本的动态跟踪系统，而是存在于其他系统上：DTrace（一个可编写脚本的跟踪工具）是最令人羡慕的，它可用 在Solaris，MacOS，NetBSD和FreeBSD上。 它允许系统分析业内无法比拟的范围和精度，以及大量的仪器供应商。</p>
+<p>尽管Oracle在许可许可下发布了它，但将DTrace移植到Linux仍然存在问题：</p>
+<ol>
+<li>技术问题：DTrace具有内核中的一些功能，特别是处理无效内存访问的代码和一些基本的检测提供程序。 根据原作者的说法，它不到1500行代码，但是Linux和类UNIX操作系统家族之间的深刻差异使这件事变得微不足道，几乎无法克服，但无论如何都是可行的。</li>
+</ol>
+<ol>
+<li>许可问题：虽然DTrace是在CCDL许可下发布的，但Oracle仍然拥有该软件。 CDDL有一些GPL中没有的限制：因此，将GPL代码（Linux内核）与CDDL代码（DTrace）相结合将导致工作在许可证不一致且无法合法分发。 Oracle希望将DTrace用于Linux，但将其直接集成到内核中显然会导致法律问题，并且最终的补丁会被拒绝，因此他们将其实现为双层内核模块。不幸的是，内核模块的版权有点不清楚。 GPL涵盖了衍生作品，但衍生作品的定义仍然是个人的，没有明确定义。利用明确导出的API可能不足以构成衍生作品 - 另一方面，它可能。 Oracle似乎认为它们是合法的，因此添加了足够的内核代码（并在GPL术语下发布）以支持DTrace，同时保持DTrace的CCDL核心分离。内核实际上有两级暴露（非用户空间）API - 通过EXPORT_SYMBOL（）导出的API和通过EXPORT_SYMBOL_GPL（）导出的API。通过EXPORT_SYMBOL_GPL（）导出的符号只能由声称为GPL的模块使用，否则内核拒绝加载它们。当然，作为DTrace的版权所有者，Oracle可以通过在GPL和CDDL下双重许可DTrace来解决问题。事实上，他们并没有暗示他们认为将其保持在不兼容的许可证下有足够的价值。</li>
+</ol>
+<p>虽然一些开发人员正在考虑向内核添加LUA解释器和虚拟机的想法，但事情却朝着不同的方向发展.3.15内核版本带来了eBPF的第一个版本。 基本上，语言分为两种变体：经典BPF和内部BPF。 后者是现有基础设施的改进和扩展版本，将寄存器数量从2扩展到10，提供对内核功能的有限访问，并添加真正接近真实CPU提供的指令，更重要的是 - 更容易 使用像GCC和LLVM这样的编译器工具链来生成。</p>
+<p>最初，内部BPF，正如名称所声称的那样，并没有暴露，因为开发人员担心这种实现会随着时间的推移而改变，因此他们倾向于从经典BPF程序到内部BPF指令进行内部转换，至少最初是这样。</p>
+<p>在3.16 BPF之后，当经典BPF被证明是稳定的并且所有关于实现变化的担忧消失时，决定将其重命名为扩展BPF并将其暴露给一般用途。</p>
+<p>跟踪是首次使用eBPF进行测试的用例之一，因为乍一看它似乎能够解决不同的痛点，其中缺乏可编写脚本的系统以及快速探测处理。</p>
+<p>在跟踪子系统内（独立于跟踪工具），给定的过滤器表达式通常被解析并表示为一个简单的树，每个内部节点代表一个运算符。 每次遇到跟踪点时，将走这棵树以评估当前存在的特定数据值的每个操作; 如果结果在树的顶部为真，则会触发跟踪点并发出相关信息。 换句话说，大多数跟踪工具都包含一个自己的小解析器和解释器，用于这个特定目的。</p>
+<p>使用扩展的BPF，在另一个头上，将解析器留在原位，但使用JIT编译器删除解释器。 结果令人印象深刻，这表明值得继续以这种方式进行挖掘。</p>
+<p>对于记录，一旦开发人员决定向用户空间公开和改进内部BPF，eBPF的用例就会爆炸。 使用eBPF而不是仅仅过滤数据包，您可以创建虚拟网络，根据您的偏好路由数据包，您可以允许或禁止特定系统调用特定进程，但更重要的是显着改进当前跟踪子系统。 eBPF在功能方面（克服静态跟踪点的限制或简化U / Kprobes的数据收集）和性能（它是一种以机器速度运行的可编程内核技术）开辟了新的可能性。</p>
+<p>此外，无论技术和性能如何改进，具有可编写脚本的跟踪环境的能力都改变了一个重要的事实：到目前为止，度量标准是供应商选择的，封闭源和不完整的。 这迫使所有系统工程师开发推理技术 - 将来自多个工具的源和数据结合起来，试图弄清楚系统中发生了什么。 使用BPF，最终可以编写一个程序，能够准确地收集您正在寻找的信息。</p>
+<h2 id="eBPF-anatomy"><a href="#eBPF-anatomy" class="headerlink" title="eBPF anatomy"></a>eBPF anatomy</h2><h3 id="Verifier"><a href="#Verifier" class="headerlink" title="Verifier"></a>Verifier</h3><p>BPF程序被加载并直接执行到内核中。 这意味着它正在跳过系统在用户空间中自动进行的大量安全检查。 例如，BPF程序中的错误可能会导致内核崩溃（可能会停止整个系统），或者循环情况会冻结整个系统（调度程序无法停止程序，因为我们不在 我们在用户空间中的流程抽象）。</p>
+<p>因此，确保加载的程序是“安全的”绝对至关重要。 验证器完成此检查 - 该软件对正在加载的字节代码执行2阶段静态代码分析。 特别是：</p>
+<ol>
+<li>每个程序加载的指令不超过4096个：eBPF可能会处理大量数据，因此加载的程序很小并且不会成为系统的瓶颈非常重要。</li>
+<li>检查循环和循环流：这些是不允许的，因为它们是不可预测的，并且可能在计算时间方面爆炸并成为系统的瓶颈。</li>
+<li>无法访问的指令：这是为了确保BPF程序很小，加载速度快，执行速度快。 BPF程序应该具有运行所必需的功能。</li>
+<li>跳转错误：验证程序确保跳转发生在程序边界内，而不是任何任意内存位置。这是至关重要的，因为BPF程序不应该损害系统，移动控制流或写入属于其他进程的内存</li>
+<li>路径和流量评估：验证程序正在遍历程序并保持寄存器和堆栈状态的跟踪。如果有任何机会出现堆栈溢出或注册表溢出/下溢，验证程序将拒绝执行代码。同样，这是为了确保BPF程序不会损害系统。</li>
+<li>参数有效性：这是为了确保程序试图在只读寄存器中写入，或者将一大块数据写入较小的寄存器，访问不存在的寄存器，调用未授权的内核函数。</li>
+</ol>
+<p>这些检查以及此处未列出的许多检查，它为我们提供了任何BPF程序的绝佳保证：它是沙箱。 它既不会伤害也不会减慢系统的速度。 这意味着生产安全。</p>
+<p>如果您是软件供应商，并且您想向一家大公司提出您的软件，请说“请在您的计算机上运行此仪器软件”，或者您又是一家安全公司 - 您希望客户端安装特定的内核模块 在他们的生产机器上，公司的安全政策和担忧可能会减慢首次运行的时间。</p>
+<p>通常，如果您是一家公司并且必须安装第三方内核模块，那么您必须承担风险。 您可能需要分析，分解，甚至可能需要手动检查源代码，以确保模块不会嗅探数据或在系统上运行恶意代码。</p>
+<p>BPF正在改变规则。 如果您提供的BPF程序能够实现相同的功能，那么我现在有一套由验证程序提供的保证，因为它是一个带有一组有限指令的沙盒程序，默认情况下它不会损害 系统。 这是BPF计划获得大量支持的原因之一。</p>
+<h3 id="Maps"><a href="#Maps" class="headerlink" title="Maps"></a>Maps</h3><p>BPF程序在内核中运行，但它们仍然必须以某种方式与用户空间程序进行通信，以便随时发回收集的信息以及最终累积的数据。 Maps用于此目的。</p>
+<p>Maps是分配的通用内存区域（确切地说，它被声明为不透明的数据结构），可用于将数据从用户空间传输到内核，反之亦然 - 以及作为多个BPF程序之间的共享内存区域。 它最初被设想为哈希表，但是后续的内核版本也支持数组映射和其他数据结构。</p>
+<p>这可能看起来只是一个小的补充（它实际上只是一个读/写内存区域），但它正在显着改变跟踪场景，特别是在实时用例中。</p>
+<p>正如我们之前所探讨的，我们提到的所有跟踪工具都有一个特定的限制，它们已经遭受了多年的困扰：收集的数据必须以工具相关的格式写在磁盘上，然后，为了收集所需的统计信息， 我们不得不在我们的应用程序中再次加载该文件，解析它并提取所需的信息。</p>
+<p>另一方面，使用Maps不需要存储数据，也不需要将数据解析回来进行后期处理：您只需将自己的结构直接从BPF程序返回到用户应用程序，就像您希望的那样 很容易为您的目的消耗，并最终直接从BPF程序收集统计数据（如递增计数器）。</p>
 
       
     </div>
@@ -631,7 +680,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Tracing/" rel="tag"># Tracing</a>
+          
+            <a href="/tags/eBPF/" rel="tag"># eBPF</a>
           
         </div>
       
@@ -670,8 +721,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/20/2018-05-2018-05-20-Numpy实战/" rel="next" title="Numpy实战">
-                <i class="fa fa-chevron-left"></i> Numpy实战
+              <a href="/2019/07/22/2019-07-2019-07-22-k8s初部署/" rel="next" title="k8s初部署">
+                <i class="fa fa-chevron-left"></i> k8s初部署
               </a>
             
           </div>
@@ -680,8 +731,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/03/2018-06-2018-06-03-scipy题目/" rel="prev" title="scipy题目">
-                scipy题目 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/24/2019-07-2019-07-24-tracing2/" rel="prev" title="tracing2">
+                tracing2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -980,7 +1031,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matlibplot-相关题目"><span class="nav-number">1.</span> <span class="nav-text">matlibplot 相关题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题"><span class="nav-number">1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二题"><span class="nav-number">1.2.</span> <span class="nav-text">第二题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题"><span class="nav-number">1.3.</span> <span class="nav-text">第三题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tracing-Part1-Linux-中的新一代-tracing-技术"><span class="nav-number">1.</span> <span class="nav-text">Tracing Part1 | Linux 中的新一代 tracing 技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel-level-tracing-technologies-overview"><span class="nav-number">1.1.</span> <span class="nav-text">Kernel level tracing technologies overview</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trace-points"><span class="nav-number">1.1.1.</span> <span class="nav-text">Trace points</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Probes"><span class="nav-number">1.1.2.</span> <span class="nav-text">Dynamic Probes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User-Level-Tracing-Tools"><span class="nav-number">1.2.</span> <span class="nav-text">User Level Tracing Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#perf"><span class="nav-number">1.2.1.</span> <span class="nav-text">perf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftrace"><span class="nav-number">1.2.2.</span> <span class="nav-text">ftrace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance-limitations"><span class="nav-number">1.2.3.</span> <span class="nav-text">Performance limitations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eBPF"><span class="nav-number">1.3.</span> <span class="nav-text">eBPF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eBPF-anatomy"><span class="nav-number">1.4.</span> <span class="nav-text">eBPF anatomy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Verifier"><span class="nav-number">1.4.1.</span> <span class="nav-text">Verifier</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maps"><span class="nav-number">1.4.2.</span> <span class="nav-text">Maps</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
